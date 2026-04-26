@@ -102,6 +102,38 @@ jobs:
             publish/${{ matrix.service }}/ \
             "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:~/preptm/Backend/Stage/${{ matrix.service }}/"
 
+      - name: Register systemd service
+        run: |
+          DLL=$(basename "${{ matrix.project }}" .csproj)
+          REMOTE_HOME=$(ssh "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}" 'echo $HOME')
+          DEPLOY_DIR="${REMOTE_HOME}/preptm/Backend/Stage/${{ matrix.service }}"
+          cat > /tmp/${{ matrix.systemd }}.service << UNIT
+          [Unit]
+          Description=PrepTM ${{ matrix.service }}
+          After=network.target
+
+          [Service]
+          WorkingDirectory=${DEPLOY_DIR}
+          ExecStart=/usr/bin/dotnet ${DEPLOY_DIR}/${DLL}.dll
+          Restart=always
+          RestartSec=10
+          KillSignal=SIGINT
+          SyslogIdentifier=${{ matrix.systemd }}
+          User=${{ secrets.DEPLOY_USER }}
+          Environment=ASPNETCORE_ENVIRONMENT=Staging
+          Environment=DOTNET_PRINT_TELEMETRY_MESSAGE=false
+
+          [Install]
+          WantedBy=multi-user.target
+          UNIT
+          scp /tmp/${{ matrix.systemd }}.service \
+            "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:/tmp/${{ matrix.systemd }}.service"
+          ssh "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}" "
+            sudo mv /tmp/${{ matrix.systemd }}.service /etc/systemd/system/${{ matrix.systemd }}.service
+            sudo systemctl daemon-reload
+            sudo systemctl enable ${{ matrix.systemd }}
+          "
+
       - name: Start service
         run: |
           ssh "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}" \
