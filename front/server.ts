@@ -71,6 +71,7 @@ export function app(): express.Express {
     // Angular 19 requires an explicit allowlist of hostnames.
     // Without this, CommonEngine silently falls back to empty CSR HTML for every request.
     allowedHosts: [
+      'stageui.preptm.com',
       'stage.preptm.com',
       'www.preptm.com',
       'preptm.com',
