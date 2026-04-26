@@ -98,6 +98,7 @@ jobs:
         run: |
           rsync -az --delete \
             --exclude='appsettings.Development.json' \
+            --rsync-path="mkdir -p ~/preptm/Backend/Stage/${{ matrix.service }} && rsync" \
             publish/${{ matrix.service }}/ \
             "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:~/preptm/Backend/Stage/${{ matrix.service }}/"
 
