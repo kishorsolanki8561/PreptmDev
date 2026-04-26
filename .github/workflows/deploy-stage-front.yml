@@ -11,7 +11,7 @@ on:
 jobs:
   deploy:
     name: Build & Deploy
-    runs-on: ubuntu-latest   # builds on GitHub's servers, not yours
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
@@ -26,6 +26,7 @@ jobs:
         working-directory: front
         run: npm ci
 
+      # environment.staging.ts is automatically used here via --configuration=staging
       - name: Build staging
         working-directory: front
         run: npm run build:stage
@@ -46,5 +47,7 @@ jobs:
 
       - name: Reload SSR process (zero-downtime)
         run: |
-          ssh "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}" \
-            "cd ~ && pm2 reload StageFront --update-env && pm2 save"
+          ssh "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}" "
+            cp ~/preptm/FrontEnd/Stage/client/preptm/ecosystem.config.cjs ~/ecosystem.config.cjs
+            cd ~ && pm2 reload ecosystem.config.cjs --update-env && pm2 save
+          "

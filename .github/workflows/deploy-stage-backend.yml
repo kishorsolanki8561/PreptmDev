@@ -8,6 +8,14 @@ on:
       - '.github/workflows/deploy-stage-backend.yml'
   workflow_dispatch:
 
+# GitHub Secrets required (one per service — full JSON content):
+#   STAGE_APPSETTINGS_GATEWAY
+#   STAGE_APPSETTINGS_FRONT
+#   STAGE_APPSETTINGS_MASTER
+#   STAGE_APPSETTINGS_DROPDOWN
+#   STAGE_APPSETTINGS_FILEUPLOAD
+#   STAGE_APPSETTINGS_TRANSLATION
+
 jobs:
   deploy:
     name: Deploy ${{ matrix.service }}
@@ -16,31 +24,35 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          # systemd: exact service name on your server.
-          # Find them with: systemctl list-units --type=service | grep preptm
           - service: Gateway
             project: backend/5GStudyGateway/Gateway.csproj
             systemd: preptm-gateway
+            secret_suffix: GATEWAY
 
           - service: FrontMicroService
             project: backend/FrontMicroService/FrontMicroService.csproj
             systemd: preptm-front-api
+            secret_suffix: FRONT
 
           - service: MasterMicroService
             project: backend/MasterMicroService/MasterMicroService.csproj
             systemd: preptm-master-api
+            secret_suffix: MASTER
 
           - service: AllDropDownMicroService
             project: backend/AllDropDownMicroService/AllDropDownMicroService.csproj
             systemd: preptm-dropdown-api
+            secret_suffix: DROPDOWN
 
           - service: FileUploaderMicroService
             project: backend/FileUploaderMicroService/FileUploaderMicroService.csproj
             systemd: preptm-fileupload-api
+            secret_suffix: FILEUPLOAD
 
           - service: TranslationMicroService
             project: backend/TranslationMicroService/TranslationMicroService.csproj
             systemd: preptm-translation-api
+            secret_suffix: TRANSLATION
 
     steps:
       - uses: actions/checkout@v4
@@ -56,6 +68,19 @@ jobs:
             -o publish/${{ matrix.service }} \
             --no-self-contained
 
+      - name: Inject staging appsettings
+        # Writes the GitHub Secret (full JSON) as appsettings.json.
+        # The secret name is built dynamically: STAGE_APPSETTINGS_<SUFFIX>
+        # Store each service's complete appsettings.json content as the secret value.
+        env:
+          APPSETTINGS: ${{ secrets[format('STAGE_APPSETTINGS_{0}', matrix.secret_suffix)] }}
+        run: |
+          if [ -z "$APPSETTINGS" ]; then
+            echo "::error::Secret STAGE_APPSETTINGS_${{ matrix.secret_suffix }} is not set in GitHub Secrets"
+            exit 1
+          fi
+          printf '%s' "$APPSETTINGS" > "publish/${{ matrix.service }}/appsettings.json"
+
       - name: Set up SSH agent
         uses: webfactory/ssh-agent@v0.9.0
         with:
@@ -70,11 +95,9 @@ jobs:
             "sudo systemctl stop ${{ matrix.systemd }} || true"
 
       - name: Upload build artifacts to server
-        # appsettings*.json excluded — server keeps its own credentials in place
         run: |
           rsync -az --delete \
-            --exclude='appsettings*.json' \
-            --exclude='*.pfx' \
+            --exclude='appsettings.Development.json' \
             publish/${{ matrix.service }}/ \
             "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:~/preptm/Backend/Stage/${{ matrix.service }}/"
 

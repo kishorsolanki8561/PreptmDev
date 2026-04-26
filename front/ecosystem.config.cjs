@@ -25,7 +25,8 @@ module.exports = {
       exec_mode: "fork",
       env: {
         NODE_ENV: "production",
-        PORT: 4003
+        PORT: 4003,
+        API_URL: "https://sapi.preptm.com/api"
       },
       error_file: "./preptm/logs/stage-error.log",
       out_file:   "./preptm/logs/stage-out.log",
