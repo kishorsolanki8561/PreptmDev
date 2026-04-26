@@ -1,21 +1,21 @@
 #!/usr/bin/env bash
 # One-time server setup for PrepTM staging environment.
-# Run once on the Ubuntu server as your deploy user (not root).
+# Run once on your Ubuntu server as your deploy user (NOT root):
 #   bash deploy/scripts/server-setup.sh
 set -euo pipefail
 
 DEPLOY_USER=$(whoami)
 HOME_DIR=$HOME
 
-echo "──────────────────────────────────────────────"
+echo "══════════════════════════════════════════════"
 echo " PrepTM — Server Setup"
 echo " User : $DEPLOY_USER"
 echo " Home : $HOME_DIR"
-echo "──────────────────────────────────────────────"
+echo "══════════════════════════════════════════════"
 
 # ── 1. Directory structure ────────────────────────────────────────────────────
 echo ""
-echo "[1/7] Creating directory structure..."
+echo "[1/8] Creating directory structure..."
 mkdir -p "$HOME_DIR/preptm/FrontEnd/Stage/client/preptm"
 mkdir -p "$HOME_DIR/preptm/FrontEnd/Prod/client/preptm"
 mkdir -p "$HOME_DIR/preptm/Admin/Stage"
@@ -26,8 +26,8 @@ echo "    Done."
 
 # ── 2. Node.js 20 ────────────────────────────────────────────────────────────
 echo ""
-echo "[2/7] Checking Node.js..."
-if command -v node &>/dev/null; then
+echo "[2/8] Checking Node.js..."
+if command -v node &>/dev/null && [[ "$(node -v)" == v20* ]]; then
     echo "    Node $(node -v) already installed — skipping."
 else
     echo "    Installing Node.js 20..."
@@ -36,9 +36,25 @@ else
     echo "    Node $(node -v) installed."
 fi
 
-# ── 3. PM2 ───────────────────────────────────────────────────────────────────
+# ── 3. .NET 6 ────────────────────────────────────────────────────────────────
 echo ""
-echo "[3/7] Checking PM2..."
+echo "[3/8] Checking .NET 6..."
+if dotnet --list-runtimes 2>/dev/null | grep -q "Microsoft.NETCore.App 6"; then
+    echo "    .NET 6 already installed — skipping."
+else
+    echo "    Installing .NET 6..."
+    # Microsoft package feed for Ubuntu
+    wget -q https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/packages-microsoft-prod.deb
+    sudo dpkg -i packages-microsoft-prod.deb
+    rm packages-microsoft-prod.deb
+    sudo apt-get update -qq
+    sudo apt-get install -y dotnet-sdk-6.0
+    echo "    .NET $(dotnet --version) installed."
+fi
+
+# ── 4. PM2 ───────────────────────────────────────────────────────────────────
+echo ""
+echo "[4/8] Checking PM2..."
 if command -v pm2 &>/dev/null; then
     echo "    PM2 $(pm2 -v) already installed — skipping."
 else
@@ -49,9 +65,9 @@ else
     echo "    PM2 installed and startup configured."
 fi
 
-# ── 4. Certbot ───────────────────────────────────────────────────────────────
+# ── 5. Certbot ───────────────────────────────────────────────────────────────
 echo ""
-echo "[4/7] Checking Certbot..."
+echo "[5/8] Checking Certbot..."
 if command -v certbot &>/dev/null; then
     echo "    Certbot already installed — skipping."
 else
@@ -61,9 +77,9 @@ else
     echo "    Certbot installed."
 fi
 
-# ── 5. Nginx catch-all self-signed cert ──────────────────────────────────────
+# ── 6. Nginx catch-all self-signed cert ──────────────────────────────────────
 echo ""
-echo "[5/7] Nginx catch-all certificate..."
+echo "[6/8] Nginx catch-all certificate..."
 if [ -f /etc/ssl/certs/nginx-catch-all.crt ]; then
     echo "    Already exists — skipping."
 else
@@ -74,85 +90,118 @@ else
     echo "    Created."
 fi
 
-# ── 6. Sudoers for Nginx reload and service restarts ─────────────────────────
+# ── 7. Sudoers for service restarts ──────────────────────────────────────────
 echo ""
-echo "[6/7] Sudoers for deploy user..."
+echo "[7/8] Sudoers for deploy user..."
 SUDOERS_FILE="/etc/sudoers.d/preptm-deploy"
 if [ -f "$SUDOERS_FILE" ]; then
     echo "    Already configured — skipping."
 else
     sudo tee "$SUDOERS_FILE" > /dev/null <<EOF
-# Allow the deploy user to control Nginx and PrepTM systemd services
-# without a password (required for GitHub Actions CI/CD).
+# Allow the deploy user (GitHub Actions self-hosted runner) to control
+# Nginx and PrepTM backend services without a password prompt.
 $DEPLOY_USER ALL=(ALL) NOPASSWD: /bin/systemctl reload nginx
 $DEPLOY_USER ALL=(ALL) NOPASSWD: /bin/systemctl start preptm-*
 $DEPLOY_USER ALL=(ALL) NOPASSWD: /bin/systemctl stop preptm-*
 $DEPLOY_USER ALL=(ALL) NOPASSWD: /bin/systemctl restart preptm-*
 EOF
     sudo chmod 0440 "$SUDOERS_FILE"
-    echo "    Sudoers entry written to $SUDOERS_FILE."
+    echo "    Written to $SUDOERS_FILE."
 fi
 
-# ── 7. SSH authorized key check ──────────────────────────────────────────────
+# ── 8. GitHub Actions self-hosted runner ─────────────────────────────────────
 echo ""
-echo "[7/7] SSH authorized_keys..."
-if [ ! -f "$HOME_DIR/.ssh/authorized_keys" ]; then
-    mkdir -p "$HOME_DIR/.ssh"
-    chmod 700 "$HOME_DIR/.ssh"
-    touch "$HOME_DIR/.ssh/authorized_keys"
-    chmod 600 "$HOME_DIR/.ssh/authorized_keys"
-    echo "    Created empty authorized_keys — add your deploy public key to it."
+echo "[8/8] GitHub Actions runner..."
+RUNNER_DIR="$HOME_DIR/actions-runner"
+if [ -d "$RUNNER_DIR" ]; then
+    echo "    Runner directory already exists — skipping download."
 else
-    KEYS=$(wc -l < "$HOME_DIR/.ssh/authorized_keys")
-    echo "    $KEYS key(s) already present."
+    echo "    Downloading latest runner..."
+    mkdir -p "$RUNNER_DIR"
+    cd "$RUNNER_DIR"
+
+    # Detect architecture
+    ARCH=$(uname -m)
+    case $ARCH in
+        x86_64)  RUNNER_ARCH="x64"   ;;
+        aarch64) RUNNER_ARCH="arm64" ;;
+        *)       echo "    Unsupported arch: $ARCH"; exit 1 ;;
+    esac
+
+    RUNNER_VERSION=$(curl -s https://api.github.com/repos/actions/runner/releases/latest \
+        | grep '"tag_name"' | sed 's/.*"v\([^"]*\)".*/\1/')
+    RUNNER_FILE="actions-runner-linux-${RUNNER_ARCH}-${RUNNER_VERSION}.tar.gz"
+
+    curl -fsSL "https://github.com/actions/runner/releases/download/v${RUNNER_VERSION}/${RUNNER_FILE}" \
+        -o "$RUNNER_FILE"
+    tar xzf "$RUNNER_FILE"
+    rm "$RUNNER_FILE"
+    echo "    Runner v${RUNNER_VERSION} downloaded to $RUNNER_DIR"
 fi
 
-# ── Next steps ───────────────────────────────────────────────────────────────
+# ── Final instructions ────────────────────────────────────────────────────────
 cat <<'NEXT'
 
 ══════════════════════════════════════════════════════════════════
  MANUAL STEPS — complete these in order
 ══════════════════════════════════════════════════════════════════
 
-1. Add your deploy SSH public key to ~/.ssh/authorized_keys
+── A. Register the GitHub Actions runner ─────────────────────────
 
-2. Install Nginx site configs:
-     sudo cp deploy/nginx/00-catch-all.conf /etc/nginx/sites-available/00-catch-all
-     sudo cp deploy/nginx/stageui.preptm.com.conf /etc/nginx/sites-available/stageui.preptm.com
-     sudo cp deploy/nginx/stageadmin.preptm.com.conf /etc/nginx/sites-available/stageadmin.preptm.com
-     sudo ln -sf /etc/nginx/sites-available/00-catch-all     /etc/nginx/sites-enabled/
-     sudo ln -sf /etc/nginx/sites-available/stageui.preptm.com   /etc/nginx/sites-enabled/
-     sudo ln -sf /etc/nginx/sites-available/stageadmin.preptm.com /etc/nginx/sites-enabled/
-     sudo rm -f /etc/nginx/sites-enabled/default
+  1. Open: https://github.com/<your-org>/PreptmDev/settings/actions/runners/new
+     (Settings → Actions → Runners → New self-hosted runner → Linux)
 
-3. Point DNS for stageui.preptm.com and stageadmin.preptm.com to this server IP,
-   then get SSL certificates:
-     sudo certbot --nginx -d stageui.preptm.com
-     sudo certbot --nginx -d stageadmin.preptm.com
+  2. Copy the token shown on that page, then run:
+       cd ~/actions-runner
+       ./config.sh --url https://github.com/<your-org>/PreptmDev --token <TOKEN>
+       # Accept all defaults when prompted; set a descriptive name like "preptm-stage"
 
-4. Test and reload Nginx:
-     sudo nginx -t && sudo systemctl reload nginx
+  3. Install and start as a systemd service (stays running after reboot):
+       sudo ./svc.sh install
+       sudo ./svc.sh start
 
-5. Add these secrets to your GitHub repo
-   (Settings → Secrets → Actions → New repository secret):
-     DEPLOY_SSH_KEY  — private key matching the public key in authorized_keys
-     DEPLOY_HOST     — server IP or hostname
-     DEPLOY_USER     — SSH username (ubuntu / your username)
+  4. Verify it shows as "Idle" in the GitHub UI.
 
-6. After the first CI/CD run deploys the frontend, start PM2:
-     cd ~
-     pm2 start ecosystem.config.cjs
-     pm2 save
+── B. Install Nginx site configs ────────────────────────────────
 
-7. Verify the backend systemd service names match the workflow matrix.
-   Check existing services:
-     systemctl list-units --type=service | grep preptm
-   Update the `systemd:` fields in deploy-stage-backend.yml to match.
+  sudo cp deploy/nginx/00-catch-all.conf /etc/nginx/sites-available/00-catch-all
+  sudo cp deploy/nginx/stageui.preptm.com.conf    /etc/nginx/sites-available/stageui.preptm.com
+  sudo cp deploy/nginx/stageadmin.preptm.com.conf /etc/nginx/sites-available/stageadmin.preptm.com
 
-8. For each backend service, the appsettings.json on the server is NOT
-   overwritten by CI/CD (intentional). Place the staging appsettings.json
-   manually at:
-     ~/preptm/Backend/Stage/<ServiceName>/appsettings.json
+  sudo ln -sf /etc/nginx/sites-available/00-catch-all            /etc/nginx/sites-enabled/
+  sudo ln -sf /etc/nginx/sites-available/stageui.preptm.com      /etc/nginx/sites-enabled/
+  sudo ln -sf /etc/nginx/sites-available/stageadmin.preptm.com   /etc/nginx/sites-enabled/
+  sudo rm -f /etc/nginx/sites-enabled/default
+
+── C. Point DNS then get SSL certificates ───────────────────────
+
+  (DNS A records for stageui.preptm.com and stageadmin.preptm.com
+   must point to this server's IP before running Certbot.)
+
+  sudo certbot --nginx -d stageui.preptm.com
+  sudo certbot --nginx -d stageadmin.preptm.com
+  sudo nginx -t && sudo systemctl reload nginx
+
+── D. First frontend deployment ─────────────────────────────────
+
+  After the first CI run deploys the frontend files, start PM2:
+    cd ~
+    pm2 start ecosystem.config.cjs
+    pm2 save
+
+── E. Backend systemd service names ─────────────────────────────
+
+  The workflow uses names like preptm-gateway, preptm-front-api, etc.
+  Check what's actually on your server:
+    systemctl list-units --type=service | grep preptm
+
+  Update the `systemd:` fields in deploy-stage-backend.yml to match.
+
+── F. Backend appsettings.json ──────────────────────────────────
+
+  CI/CD never overwrites appsettings*.json (intentional — credentials
+  stay on the server). Place staging config manually at:
+    ~/preptm/Backend/Stage/<ServiceName>/appsettings.json
 
 ══════════════════════════════════════════════════════════════════
 NEXT
