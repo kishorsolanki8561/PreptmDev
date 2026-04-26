@@ -1,0 +1,85 @@
+<app-page-header [breadcrumb]="breadcrumb">
+    <nz-space>
+        <app-button *nzSpaceItem type="back"></app-button>
+    </nz-space>
+</app-page-header>
+<app-form [addUpdateFn$]="_articleServervice.addUpdate" [form]="form" [initialData]="_article"
+    [formElements]="formElements" navigationUrlOnSuccess="/transaction/article">
+      <!-- FAQ section -->
+      <nz-collapse style="margin-bottom: 8px;">
+        <nz-collapse-panel [nzHeader]="'FAQ'" [nzActive]="false" [nzDisabled]="false">
+            <div *ngIf="!form.disabled" [formGroup]="faqForm">
+                <div class="grid grid-cols-4 gap-4">
+                    <app-text class="col-span-2" [formControlName]="'que'" [label]="'Question'" [form]="faqForm"
+                    (onFocusOut)="translate($event,$any(faqForm.get('queHindi')))"
+                        [placeholder]="'Question'"></app-text>
+                    <app-text class="col-span-2" [formControlName]="'ans'" [label]="'Answer'" [form]="faqForm"
+                    (onFocusOut)="translate($event,$any(faqForm.get('ansHindi')))"
+                        [placeholder]="'Answer'"></app-text>
+                    <app-text class="col-span-2" [formControlName]="'queHindi'" [label]="'Question(Hindi)'"
+                        [form]="faqForm" [placeholder]="'Question(Hindi)'"></app-text>
+                    <app-text class="col-span-2" [formControlName]="'ansHindi'" [label]="'Answer(Hindi)'"
+                        [form]="faqForm" [placeholder]="'Answer(Hindi)'"></app-text>
+                    <div class="text-left" *ngIf="faqForm.enabled">
+                        <button [disabled]="!(faqForm.value.que || faqForm.value.ans)" *ngIf="faqForm.value.id==0"
+                            nz-button (click)="addFaqData(faqForm.value)" nzType="primary" class="my-4 p-2 btn">
+                            <span nz-icon nzType="plus" nzTheme="outline" class="align-text-top"></span>
+                            Add
+                        </button>
+                        <button *ngIf="faqForm.value.id >0" nz-button (click)="addFaqData(faqForm.value)"
+                            nzType="primary" class="my-4 p-2 btn">
+                            <span nz-icon nzType="edit" nzTheme="outline" class="align-text-top"></span>
+                            Update
+                        </button>
+                        <button [disabled]="!(faqForm.value.que || faqForm.value.ans)" nz-button
+                            (click)="resetFaq(faqForm.value);" nzType="text" class="my-4 p-2 btn">
+                            <span nz-icon nzType="sync" nzTheme="outline" class="align-text-top"></span>
+                            Reset
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+            <ng-container *ngIf="_article.articleFaqsDTOs && _article.articleFaqsDTOs.length > 0">
+                <nz-table #table nzShowSizeChanger [nzData]="_article.articleFaqsDTOs" [nzShowPagination]="false"
+                    [nzLoading]="false" [nzHideOnSinglePage]="false" [nzScroll]="{ y: '520px' }"
+                    [nzTableLayout]="'auto'">
+                    <thead>
+                        <tr>
+                            <th nzLeft nzWidth="40px">SN</th>
+                            <th nzLeft nzWidth="40px">Question</th>
+                            <th nzLeft nzWidth="40px">Answer</th>
+                            <th nzRight nzWidth="40px">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let data of table.nzData;let i=index">
+                            <td>{{i+1}}</td>
+                            <td>{{data.que}}</td>
+                            <td>{{data.ans}}</td>
+                            <td>
+                                <!-- delete -->
+                                <!--  (nzOnConfirm)="faqDelete(data.id,deleteBtn)" -->
+                                <button [disabled]="isUpdateFaq" nz-button [nzLoading]="false" #deleteBtn
+                                    nzShape="circle" nzDanger class="mx-1" nz-popconfirm [nzIcon]="iconTpl">
+                                    <span nz-icon nzType="delete" *ngIf="!deleteBtn.nzLoading" nzTheme="twotone"
+                                        (click)="deleteFaq(i,deleteBtn)" [nzTwotoneColor]="'#f00'"></span>
+                                </button>
+                                <!-- edit -->
+                                <!-- (click)="faqedit(data.id)" -->
+                                <button (click)="updateFaq(data,i)" [disabled]="isUpdateFaq" nz-button nzShape="circle"
+                                    class="mx-1">
+                                    <span nz-icon nzType="edit" nzTheme="outline"></span>
+                                </button>
+                                <ng-template #iconTpl>
+                                    <span nz-icon nzType="question-circle-o" style="color: red;"></span>
+                                </ng-template>
+                            </td>
+                        </tr>
+                    </tbody>
+                </nz-table>
+            </ng-container>
+        </nz-collapse-panel>
+    </nz-collapse>
+
+</app-form>

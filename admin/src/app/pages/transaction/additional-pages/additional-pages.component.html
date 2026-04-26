@@ -1,0 +1,8 @@
+<app-page-header [breadcrumb]="breadcrumb" addButtonUrl="/transaction/additional-pages/add">
+    <!-- <app-button [routerLink]="['/master/assets/add']" type="add"></app-button> -->
+</app-page-header>
+<main class="card">
+    <app-table [initialData]="initialData" [columns]="columns"
+        [getDataFn$]="_additionalPagesService.getAdditionalpagesList" editPageUrl='/transaction/additional-pages/edit'
+        viewPageUrl='/transaction/additional-pages'></app-table>
+</main>

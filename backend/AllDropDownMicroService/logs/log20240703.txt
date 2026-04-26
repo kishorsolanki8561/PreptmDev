@@ -1,0 +1,786 @@
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-03 00:02 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.Security.Cryptography.CryptographicException: An error occurred during a cryptographic operation.
+ ---> System.FormatException: Malformed input: 17 is an invalid input length.
+   at Microsoft.Extensions.Internal.WebEncoders.GetNumBase64PaddingCharsToAddForDecode(Int32 inputLength)
+   at Microsoft.Extensions.Internal.WebEncoders.GetArraySizeRequiredToDecode(Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input, Int32 offset, Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input)
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 44
+   at CommonService.JWT.JwtMiddleware.Invoke(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\JWT\JwtMiddleware.cs:line 73
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-03 00:02 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.Security.Cryptography.CryptographicException: An error occurred during a cryptographic operation.
+ ---> System.FormatException: Malformed input: 17 is an invalid input length.
+   at Microsoft.Extensions.Internal.WebEncoders.GetNumBase64PaddingCharsToAddForDecode(Int32 inputLength)
+   at Microsoft.Extensions.Internal.WebEncoders.GetArraySizeRequiredToDecode(Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input, Int32 offset, Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input)
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 44
+   at CommonService.JWT.JwtMiddleware.Invoke(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\JWT\JwtMiddleware.cs:line 73
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-03 15:24 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.Security.Cryptography.CryptographicException: An error occurred during a cryptographic operation.
+ ---> System.FormatException: Malformed input: 17 is an invalid input length.
+   at Microsoft.Extensions.Internal.WebEncoders.GetNumBase64PaddingCharsToAddForDecode(Int32 inputLength)
+   at Microsoft.Extensions.Internal.WebEncoders.GetArraySizeRequiredToDecode(Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input, Int32 offset, Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input)
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 44
+   at CommonService.JWT.JwtMiddleware.Invoke(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\JWT\JwtMiddleware.cs:line 73
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-03 15:24 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.Security.Cryptography.CryptographicException: An error occurred during a cryptographic operation.
+ ---> System.FormatException: Malformed input: 17 is an invalid input length.
+   at Microsoft.Extensions.Internal.WebEncoders.GetNumBase64PaddingCharsToAddForDecode(Int32 inputLength)
+   at Microsoft.Extensions.Internal.WebEncoders.GetArraySizeRequiredToDecode(Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input, Int32 offset, Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input)
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 44
+   at CommonService.JWT.JwtMiddleware.Invoke(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\JWT\JwtMiddleware.cs:line 73
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-03 15:26 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.Security.Cryptography.CryptographicException: An error occurred during a cryptographic operation.
+ ---> System.FormatException: Malformed input: 17 is an invalid input length.
+   at Microsoft.Extensions.Internal.WebEncoders.GetNumBase64PaddingCharsToAddForDecode(Int32 inputLength)
+   at Microsoft.Extensions.Internal.WebEncoders.GetArraySizeRequiredToDecode(Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input, Int32 offset, Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input)
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 44
+   at CommonService.JWT.JwtMiddleware.Invoke(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\JWT\JwtMiddleware.cs:line 73
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-03 15:26 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.Security.Cryptography.CryptographicException: An error occurred during a cryptographic operation.
+ ---> System.FormatException: Malformed input: 17 is an invalid input length.
+   at Microsoft.Extensions.Internal.WebEncoders.GetNumBase64PaddingCharsToAddForDecode(Int32 inputLength)
+   at Microsoft.Extensions.Internal.WebEncoders.GetArraySizeRequiredToDecode(Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input, Int32 offset, Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input)
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 44
+   at CommonService.JWT.JwtMiddleware.Invoke(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\JWT\JwtMiddleware.cs:line 73
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-03 15:29 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.Security.Cryptography.CryptographicException: An error occurred during a cryptographic operation.
+ ---> System.FormatException: Malformed input: 17 is an invalid input length.
+   at Microsoft.Extensions.Internal.WebEncoders.GetNumBase64PaddingCharsToAddForDecode(Int32 inputLength)
+   at Microsoft.Extensions.Internal.WebEncoders.GetArraySizeRequiredToDecode(Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input, Int32 offset, Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input)
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 44
+   at CommonService.JWT.JwtMiddleware.Invoke(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\JWT\JwtMiddleware.cs:line 73
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-03 15:30 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.Security.Cryptography.CryptographicException: An error occurred during a cryptographic operation.
+ ---> System.FormatException: Malformed input: 17 is an invalid input length.
+   at Microsoft.Extensions.Internal.WebEncoders.GetNumBase64PaddingCharsToAddForDecode(Int32 inputLength)
+   at Microsoft.Extensions.Internal.WebEncoders.GetArraySizeRequiredToDecode(Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input, Int32 offset, Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input)
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 44
+   at CommonService.JWT.JwtMiddleware.Invoke(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\JWT\JwtMiddleware.cs:line 73
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-03 15:31 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.Security.Cryptography.CryptographicException: An error occurred during a cryptographic operation.
+ ---> System.FormatException: Malformed input: 17 is an invalid input length.
+   at Microsoft.Extensions.Internal.WebEncoders.GetNumBase64PaddingCharsToAddForDecode(Int32 inputLength)
+   at Microsoft.Extensions.Internal.WebEncoders.GetArraySizeRequiredToDecode(Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input, Int32 offset, Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input)
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 44
+   at CommonService.JWT.JwtMiddleware.Invoke(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\JWT\JwtMiddleware.cs:line 73
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-03 15:31 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.Security.Cryptography.CryptographicException: An error occurred during a cryptographic operation.
+ ---> System.FormatException: Malformed input: 17 is an invalid input length.
+   at Microsoft.Extensions.Internal.WebEncoders.GetNumBase64PaddingCharsToAddForDecode(Int32 inputLength)
+   at Microsoft.Extensions.Internal.WebEncoders.GetArraySizeRequiredToDecode(Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input, Int32 offset, Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input)
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 44
+   at CommonService.JWT.JwtMiddleware.Invoke(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\JWT\JwtMiddleware.cs:line 73
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-03 15:33 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.Security.Cryptography.CryptographicException: An error occurred during a cryptographic operation.
+ ---> System.FormatException: Malformed input: 17 is an invalid input length.
+   at Microsoft.Extensions.Internal.WebEncoders.GetNumBase64PaddingCharsToAddForDecode(Int32 inputLength)
+   at Microsoft.Extensions.Internal.WebEncoders.GetArraySizeRequiredToDecode(Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input, Int32 offset, Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input)
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 44
+   at CommonService.JWT.JwtMiddleware.Invoke(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\JWT\JwtMiddleware.cs:line 73
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-03 15:33 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.Security.Cryptography.CryptographicException: An error occurred during a cryptographic operation.
+ ---> System.FormatException: Malformed input: 17 is an invalid input length.
+   at Microsoft.Extensions.Internal.WebEncoders.GetNumBase64PaddingCharsToAddForDecode(Int32 inputLength)
+   at Microsoft.Extensions.Internal.WebEncoders.GetArraySizeRequiredToDecode(Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input, Int32 offset, Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input)
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 44
+   at CommonService.JWT.JwtMiddleware.Invoke(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\JWT\JwtMiddleware.cs:line 73
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-03 15:34 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.Security.Cryptography.CryptographicException: An error occurred during a cryptographic operation.
+ ---> System.FormatException: Malformed input: 17 is an invalid input length.
+   at Microsoft.Extensions.Internal.WebEncoders.GetNumBase64PaddingCharsToAddForDecode(Int32 inputLength)
+   at Microsoft.Extensions.Internal.WebEncoders.GetArraySizeRequiredToDecode(Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input, Int32 offset, Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input)
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 44
+   at CommonService.JWT.JwtMiddleware.Invoke(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\JWT\JwtMiddleware.cs:line 73
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-03 15:34 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.Security.Cryptography.CryptographicException: An error occurred during a cryptographic operation.
+ ---> System.FormatException: Malformed input: 17 is an invalid input length.
+   at Microsoft.Extensions.Internal.WebEncoders.GetNumBase64PaddingCharsToAddForDecode(Int32 inputLength)
+   at Microsoft.Extensions.Internal.WebEncoders.GetArraySizeRequiredToDecode(Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input, Int32 offset, Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input)
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 44
+   at CommonService.JWT.JwtMiddleware.Invoke(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\JWT\JwtMiddleware.cs:line 73
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-03 15:35 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.Security.Cryptography.CryptographicException: An error occurred during a cryptographic operation.
+ ---> System.FormatException: Malformed input: 17 is an invalid input length.
+   at Microsoft.Extensions.Internal.WebEncoders.GetNumBase64PaddingCharsToAddForDecode(Int32 inputLength)
+   at Microsoft.Extensions.Internal.WebEncoders.GetArraySizeRequiredToDecode(Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input, Int32 offset, Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input)
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 44
+   at CommonService.JWT.JwtMiddleware.Invoke(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\JWT\JwtMiddleware.cs:line 73
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-03 15:36 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.Security.Cryptography.CryptographicException: An error occurred during a cryptographic operation.
+ ---> System.FormatException: Malformed input: 17 is an invalid input length.
+   at Microsoft.Extensions.Internal.WebEncoders.GetNumBase64PaddingCharsToAddForDecode(Int32 inputLength)
+   at Microsoft.Extensions.Internal.WebEncoders.GetArraySizeRequiredToDecode(Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input, Int32 offset, Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input)
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 44
+   at CommonService.JWT.JwtMiddleware.Invoke(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\JWT\JwtMiddleware.cs:line 73
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-03 15:44 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.Security.Cryptography.CryptographicException: An error occurred during a cryptographic operation.
+ ---> System.FormatException: Malformed input: 65 is an invalid input length.
+   at Microsoft.Extensions.Internal.WebEncoders.GetNumBase64PaddingCharsToAddForDecode(Int32 inputLength)
+   at Microsoft.Extensions.Internal.WebEncoders.GetArraySizeRequiredToDecode(Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input, Int32 offset, Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input)
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 44
+   at CommonService.JWT.JwtMiddleware.Invoke(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\JWT\JwtMiddleware.cs:line 73
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-03 15:44 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.Security.Cryptography.CryptographicException: An error occurred during a cryptographic operation.
+ ---> System.FormatException: Malformed input: 65 is an invalid input length.
+   at Microsoft.Extensions.Internal.WebEncoders.GetNumBase64PaddingCharsToAddForDecode(Int32 inputLength)
+   at Microsoft.Extensions.Internal.WebEncoders.GetArraySizeRequiredToDecode(Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input, Int32 offset, Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input)
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 44
+   at CommonService.JWT.JwtMiddleware.Invoke(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\JWT\JwtMiddleware.cs:line 73
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-03 15:46 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.Security.Cryptography.CryptographicException: An error occurred during a cryptographic operation.
+ ---> System.FormatException: Malformed input: 129 is an invalid input length.
+   at Microsoft.Extensions.Internal.WebEncoders.GetNumBase64PaddingCharsToAddForDecode(Int32 inputLength)
+   at Microsoft.Extensions.Internal.WebEncoders.GetArraySizeRequiredToDecode(Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input, Int32 offset, Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input)
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 44
+   at CommonService.JWT.JwtMiddleware.Invoke(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\JWT\JwtMiddleware.cs:line 73
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<>
+2024-07-03 16:03 
+
+<KISHOR> 
+ Application startup exception Error Level: [Fatal] 
+--------------------Message--------------------
+Application startup exception
+--------------------Exception--------------------
+System.InvalidOperationException: Unable to resolve service for type 'CommonService.Other.HelperService' while attempting to activate 'CommonService.Middlewares.EncryptionMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<>
+2024-07-03 16:04 
+
+<KISHOR> 
+ Application startup exception Error Level: [Fatal] 
+--------------------Message--------------------
+Application startup exception
+--------------------Exception--------------------
+System.InvalidOperationException: Cannot resolve scoped service 'CommonService.Other.HelperService' from root provider.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(ServiceCallSite callSite, IServiceScope scope, IServiceScope rootScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<>
+2024-07-03 16:06 
+
+<KISHOR> 
+ Application startup exception Error Level: [Fatal] 
+--------------------Message--------------------
+Application startup exception
+--------------------Exception--------------------
+System.InvalidOperationException: Cannot resolve scoped service 'CommonService.Other.HelperService' from root provider.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(ServiceCallSite callSite, IServiceScope scope, IServiceScope rootScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-03 16:40 
+
+<KISHOR> 
+ Connection id ""0HN4RA2K5Q6H7"", Request id ""0HN4RA2K5Q6H7:00000003"": An unhandled exception was thrown by the application. Error Level: [Error] 
+--------------------Message--------------------
+Connection id ""0HN4RA2K5Q6H7"", Request id ""0HN4RA2K5Q6H7:00000003"": An unhandled exception was thrown by the application.
+--------------------Exception--------------------
+System.OperationCanceledException: The operation was canceled.
+   at System.Threading.CancellationToken.ThrowOperationCanceledException()
+   at System.Threading.CancellationToken.ThrowIfCancellationRequested()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseStream.WriteAsync(ReadOnlyMemory`1 source, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserScriptMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.InvokeCore(HttpContext context, PathString matchedPath, PathString remainingPath)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-03 20:36 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.ArgumentNullException: String reference not set to an instance of a String. (Parameter 's')
+   at System.Text.Encoding.GetBytes(String s)
+   at System.Text.UTF8Encoding.UTF8EncodingSealed.GetBytes(String s)
+   at CommonService.Other.HelperService.Decrypt(String Text) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\HelperService.cs:line 73
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 35
+   at CommonService.JWT.JwtMiddleware.Invoke(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\JWT\JwtMiddleware.cs:line 73
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-03 20:36 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.ArgumentNullException: String reference not set to an instance of a String. (Parameter 's')
+   at System.Text.Encoding.GetBytes(String s)
+   at System.Text.UTF8Encoding.UTF8EncodingSealed.GetBytes(String s)
+   at CommonService.Other.HelperService.Decrypt(String Text) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\HelperService.cs:line 73
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 35
+   at CommonService.JWT.JwtMiddleware.Invoke(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\JWT\JwtMiddleware.cs:line 73
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-03 20:41 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.ArgumentNullException: String reference not set to an instance of a String. (Parameter 's')
+   at System.Text.Encoding.GetBytes(String s)
+   at System.Text.UTF8Encoding.UTF8EncodingSealed.GetBytes(String s)
+   at CommonService.Other.HelperService.Decrypt(String Text) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\HelperService.cs:line 73
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 36
+   at CommonService.JWT.JwtMiddleware.Invoke(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\JWT\JwtMiddleware.cs:line 73
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-03 20:41 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.ArgumentNullException: String reference not set to an instance of a String. (Parameter 's')
+   at System.Text.Encoding.GetBytes(String s)
+   at System.Text.UTF8Encoding.UTF8EncodingSealed.GetBytes(String s)
+   at CommonService.Other.HelperService.Decrypt(String Text) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\HelperService.cs:line 73
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 36
+   at CommonService.JWT.JwtMiddleware.Invoke(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\JWT\JwtMiddleware.cs:line 73
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-03 20:41 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.ArgumentNullException: String reference not set to an instance of a String. (Parameter 's')
+   at System.Text.Encoding.GetBytes(String s)
+   at System.Text.UTF8Encoding.UTF8EncodingSealed.GetBytes(String s)
+   at CommonService.Other.HelperService.Decrypt(String Text) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\HelperService.cs:line 73
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 36
+   at CommonService.JWT.JwtMiddleware.Invoke(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\JWT\JwtMiddleware.cs:line 73
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-03 20:42 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.ArgumentNullException: String reference not set to an instance of a String. (Parameter 's')
+   at System.Text.Encoding.GetBytes(String s)
+   at System.Text.UTF8Encoding.UTF8EncodingSealed.GetBytes(String s)
+   at CommonService.Other.HelperService.Decrypt(String Text) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\HelperService.cs:line 73
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 36
+   at CommonService.JWT.JwtMiddleware.Invoke(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\JWT\JwtMiddleware.cs:line 73
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-03 20:42 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.ArgumentNullException: String reference not set to an instance of a String. (Parameter 's')
+   at System.Text.Encoding.GetBytes(String s)
+   at System.Text.UTF8Encoding.UTF8EncodingSealed.GetBytes(String s)
+   at CommonService.Other.HelperService.Decrypt(String Text) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\HelperService.cs:line 73
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 36
+   at CommonService.JWT.JwtMiddleware.Invoke(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\JWT\JwtMiddleware.cs:line 73
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-03 23:13 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_ContentType(StringValues value)
+   at Microsoft.AspNetCore.Http.DefaultHttpResponse.set_ContentType(String value)
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 56
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-03 23:13 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_ContentType(StringValues value)
+   at Microsoft.AspNetCore.Http.DefaultHttpResponse.set_ContentType(String value)
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 56
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-03 23:13 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_ContentType(StringValues value)
+   at Microsoft.AspNetCore.Http.DefaultHttpResponse.set_ContentType(String value)
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 56
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-03 23:13 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_ContentType(StringValues value)
+   at Microsoft.AspNetCore.Http.DefaultHttpResponse.set_ContentType(String value)
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 56
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-03 23:17 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_ContentType(StringValues value)
+   at Microsoft.AspNetCore.Http.DefaultHttpResponse.set_ContentType(String value)
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 56
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-03 23:17 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_ContentType(StringValues value)
+   at Microsoft.AspNetCore.Http.DefaultHttpResponse.set_ContentType(String value)
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 56
+
+--------------------Log End--------------------

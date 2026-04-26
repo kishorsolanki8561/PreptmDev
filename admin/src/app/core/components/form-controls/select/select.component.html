@@ -1,0 +1,19 @@
+<label *ngIf="label" class="lbl">
+  {{label}}
+  <span *ngIf="isFormControl">{{formField.hasValidator(Validators.required)?'*':''}}</span>
+</label>
+<nz-select [nzStatus]="hasError?'error':''" [nzSize]="'large'" class="w-full form-select" nzShowSearch
+  [nzAllowClear]="clearable" [nzMode]="multiple?'multiple':'default'" [nzDisabled]="isDisabled ? true : false"
+  (nzBlur)="touched()" (ngModelChange)="onChange($event)" [nzPlaceHolder]="placeholder" [(ngModel)]="value">
+  <nz-option nzCustomContent [nzLabel]="item.text"
+    [nzValue]="replaceValueWithKey? (otherKeyValue ? item.otherData[otherKeyValue] : item.text):item.value"
+    *ngFor="let item of items" [nzHide]="isSelected(replaceValueWithKey?item.text:item.value)">
+    <span *ngIf="!addPrefixIconClass;else otherPrefixIconClass">
+      {{item.text}}
+    </span>
+    <ng-template #otherPrefixIconClass>
+      <i [class]="otherKeyValue ? item.otherData[otherKeyValue] : item.text" aria-hidden="true"> </i> {{item.text}}
+    </ng-template>
+  </nz-option>
+</nz-select>
+<app-error-messages *ngIf="isFormControl" [formField]="formField" [label]="label"></app-error-messages>

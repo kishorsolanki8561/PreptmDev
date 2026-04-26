@@ -1,0 +1,13 @@
+<div class="err-list"
+  [ngClass]="{'justify-content-end':maxLength,'justify-content-between':maxLength && formField.touched && (formField.hasError('required') || formField.hasError('email') || formField.hasError('pattern') || formField.hasError('max'))}">
+  <ng-container *ngIf="formField?.touched">
+    <span class="err text-left" *ngIf="formField?.hasError('required')">{{ label + ' '}} is required</span>
+    <span class="err text-left" *ngIf="formField?.hasError('FileRequired')">{{ label + ' '}} is required</span>
+    <span class="err text-left" *ngIf="formField?.hasError('email') || formField?.hasError('pattern')">{{ label +' '}} is wrong</span>
+    <span class="err text-left" *ngIf="formField?.hasError('max')"> {{formField.errors?.['max'].max + ''}} is maximum value</span>
+    <p class="err text-left m-0" *ngIf="formField?.hasError('maxLine')">maximum {{formField.errors?.['maxLine'].length}} lines allowed</p>
+    <p class="err text-left m-0" *ngIf="formField?.hasError('maxCharEachLine')">maximum {{formField.errors?.['maxCharEachLine'].length}} characters allowed in each line</p>
+    <p class="err text-left m-0" *ngIf="formField?.hasError('minLengthArr')">minimum {{formField.errors?.['minLengthArr'].length}} records required</p>
+  </ng-container>
+  <span  class="word-counter " *ngIf="maxLength">{{formField.value?.length || 0}} {{'/'+ maxLength}}</span>
+</div>

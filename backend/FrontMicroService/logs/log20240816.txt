@@ -1,0 +1,300 @@
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-16 22:00 
+
+<KISHOR> 
+ File Name :- ArticleService.cs Method Name :- GetFrontRecruitmentList Error Level: [Error] 
+--------------------Message--------------------
+File Name :- ArticleService.cs Method Name :- GetFrontRecruitmentList
+--------------------Exception--------------------
+System.Data.DataException: Error parsing column 4 (ArticleTypeSlug=test - String)
+ ---> System.MissingMethodException: Attempted to access a missing method.
+   at ModelService.Model.Front.ArticleDTO.ArticleListDTO.set_ArticleTypeSlug(String value)
+   at Deserialize4bb0f82f-8203-44c7-810e-55d6d2dc6266(IDataReader )
+   --- End of inner exception stack trace ---
+   at CommonService.Dapper.DapperGenericRepo.QueryList[T](String query, Object perams) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 187
+   at FrontMicroService.Service.ArticleService.GetArticles(ArticleFilterDTO filterModel) in D:\Project\5GStudy\taiyari-backend\FrontMicroService\Service\ArticleService.cs:line 24
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-16 22:00 
+
+<KISHOR> 
+ File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync Error Level: [Error] 
+--------------------Message--------------------
+File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync
+--------------------Exception--------------------
+System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at CommonService.Other.HelperService.Decrypt(String Text) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\HelperService.cs:line 75
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 68
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-16 22:00 
+
+<KISHOR> 
+ File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync Error Level: [Error] 
+--------------------Message--------------------
+File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync
+--------------------Exception--------------------
+System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at CommonService.Other.HelperService.Decrypt(String Text) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\HelperService.cs:line 75
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 68
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-16 22:01 
+
+<KISHOR> 
+ File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync Error Level: [Error] 
+--------------------Message--------------------
+File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync
+--------------------Exception--------------------
+System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at CommonService.Other.HelperService.Decrypt(String Text) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\HelperService.cs:line 75
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 68
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-16 22:01 
+
+<KISHOR> 
+ File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync Error Level: [Error] 
+--------------------Message--------------------
+File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync
+--------------------Exception--------------------
+System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at CommonService.Other.HelperService.Decrypt(String Text) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\HelperService.cs:line 75
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 68
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-16 22:02 
+
+<KISHOR> 
+ File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync Error Level: [Error] 
+--------------------Message--------------------
+File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync
+--------------------Exception--------------------
+System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at CommonService.Other.HelperService.Decrypt(String Text) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\HelperService.cs:line 75
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 68
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-16 22:02 
+
+<KISHOR> 
+ File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync Error Level: [Error] 
+--------------------Message--------------------
+File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync
+--------------------Exception--------------------
+System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at CommonService.Other.HelperService.Decrypt(String Text) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\HelperService.cs:line 75
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 68
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-16 22:02 
+
+<KISHOR> 
+ File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync Error Level: [Error] 
+--------------------Message--------------------
+File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync
+--------------------Exception--------------------
+System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at CommonService.Other.HelperService.Decrypt(String Text) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\HelperService.cs:line 75
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 68
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-16 22:02 
+
+<KISHOR> 
+ File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync Error Level: [Error] 
+--------------------Message--------------------
+File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync
+--------------------Exception--------------------
+System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at CommonService.Other.HelperService.Decrypt(String Text) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\HelperService.cs:line 75
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 68
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-16 22:03 
+
+<KISHOR> 
+ File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync Error Level: [Error] 
+--------------------Message--------------------
+File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync
+--------------------Exception--------------------
+System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at CommonService.Other.HelperService.Decrypt(String Text) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\HelperService.cs:line 75
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 68
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-16 22:03 
+
+<KISHOR> 
+ File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync Error Level: [Error] 
+--------------------Message--------------------
+File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync
+--------------------Exception--------------------
+System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at CommonService.Other.HelperService.Decrypt(String Text) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\HelperService.cs:line 75
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 68
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-16 22:05 
+
+<KISHOR> 
+ File Name :- ArticleService.cs Method Name :- GetArticleDetails Error Level: [Error] 
+--------------------Message--------------------
+File Name :- ArticleService.cs Method Name :- GetArticleDetails
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function Sp_FrontArticleDetails has too many arguments specified.
+   at CommonService.Dapper.DapperGenericRepo.QueryMultiple(String query, Object perams)
+   at FrontMicroService.Service.ArticleService.GetArticleDetails(Nullable`1 id, String slugUrl, Boolean IsAdminView) in D:\Project\5GStudy\taiyari-backend\FrontMicroService\Service\ArticleService.cs:line 48
+ClientConnectionId:183d2f56-c456-4f5d-8907-0458ac50a2bf
+Error Number:8144,State:2,Class:16
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-16 22:07 
+
+<KISHOR> 
+ File Name :- ArticleService.cs Method Name :- GetArticleDetails Error Level: [Error] 
+--------------------Message--------------------
+File Name :- ArticleService.cs Method Name :- GetArticleDetails
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Procedure or function Sp_FrontArticleDetails has too many arguments specified.
+   at CommonService.Dapper.DapperGenericRepo.QueryMultiple(String query, Object perams)
+   at FrontMicroService.Service.ArticleService.GetArticleDetails(Nullable`1 id, String slugUrl, Boolean IsAdminView)
+ClientConnectionId:183d2f56-c456-4f5d-8907-0458ac50a2bf
+Error Number:8144,State:2,Class:16
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-16 22:08 
+
+<KISHOR> 
+ File Name :- ArticleService.cs Method Name :- GetArticleDetails Error Level: [Error] 
+--------------------Message--------------------
+File Name :- ArticleService.cs Method Name :- GetArticleDetails
+--------------------Exception--------------------
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at FrontMicroService.Service.ArticleService.GetArticleDetails(Nullable`1 id, String slugUrl, Boolean IsAdminView)
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-16 22:09 
+
+<KISHOR> 
+ File Name :- ArticleService.cs Method Name :- GetArticleDetails Error Level: [Error] 
+--------------------Message--------------------
+File Name :- ArticleService.cs Method Name :- GetArticleDetails
+--------------------Exception--------------------
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at FrontMicroService.Service.ArticleService.GetArticleDetails(Nullable`1 id, String slugUrl, Boolean IsAdminView)
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-16 22:09 
+
+<KISHOR> 
+ File Name :- ArticleService.cs Method Name :- GetArticleDetails Error Level: [Error] 
+--------------------Message--------------------
+File Name :- ArticleService.cs Method Name :- GetArticleDetails
+--------------------Exception--------------------
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at FrontMicroService.Service.ArticleService.GetArticleDetails(Nullable`1 id, String slugUrl, Boolean IsAdminView)
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-16 22:10 
+
+<KISHOR> 
+ File Name :- ArticleService.cs Method Name :- GetArticleDetails Error Level: [Error] 
+--------------------Message--------------------
+File Name :- ArticleService.cs Method Name :- GetArticleDetails
+--------------------Exception--------------------
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at FrontMicroService.Service.ArticleService.GetArticleDetails(Nullable`1 id, String slugUrl, Boolean IsAdminView)
+
+--------------------Log End--------------------

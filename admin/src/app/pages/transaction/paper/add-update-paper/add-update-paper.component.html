@@ -1,0 +1,9 @@
+<app-page-header [breadcrumb]="breadcrumb">
+    <nz-space>
+        <app-button *nzSpaceItem type="back"></app-button>
+    </nz-space>
+</app-page-header>
+<app-form [addUpdateFn$]="_paperService.addUpdate" [form]="form" [initialData]="paper"
+    [formElements]="formElements" navigationUrlOnSuccess="/transaction/paper">
+</app-form>
+

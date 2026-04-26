@@ -1,0 +1,52 @@
+<section class="mt-8 max-w-[1280px] mx-auto px-4">
+  <div class="flex items-center justify-between mb-3 px-1">
+    <h2 class="text-xs font-bold text-neutral-600 uppercase tracking-widest" i18n>Browse by Category</h2>
+  </div>
+
+  <!-- Skeleton -->
+  @if (isLoading()) {
+    <div class="flex gap-3 overflow-x-auto pb-2">
+      @for (i of [0,1,2,3,4,5,6,7]; track $index) {
+        <div class="flex-shrink-0 w-20 flex flex-col items-center gap-2 animate-pulse">
+          <div class="h-14 w-14 rounded-xl bg-neutral-200"></div>
+          <div class="h-3 w-14 rounded bg-neutral-100"></div>
+        </div>
+      }
+    </div>
+  }
+
+  <!-- Category chips -->
+  @if (!isLoading()) {
+    @if (categories().length) {
+      <div class="flex gap-3 overflow-x-auto pb-2 scrollbar-none">
+        @for (category of categories(); track category.value) {
+          <a [routerLink]="['/', category.otherData?.slugUrl || '']"
+            class="flex-shrink-0 flex flex-col items-center gap-1.5 group cursor-pointer w-[72px]">
+            <div class="h-14 w-14 rounded-xl bg-white border border-neutral-200 flex items-center justify-center
+                        group-hover:shadow-card-hover group-hover:border-brand-200 transition-all duration-200 overflow-hidden">
+              @if (category.otherData?.icon) {
+                <img [src]="category.otherData.icon" [alt]="category.text"
+                  class="h-9 w-9 object-contain"
+                  width="36" height="36"
+                  [attr.loading]="'lazy'"
+                  (error)="showFallback($event, category.text)">
+              } @else {
+                <!-- SVG fallback icon -->
+                <span class="text-lg font-bold text-brand-600">
+                  {{ category.text?.charAt(0)?.toUpperCase() }}
+                </span>
+              }
+            </div>
+            <span class="text-[11px] text-neutral-600 text-center leading-tight line-clamp-2
+                         group-hover:text-brand-600 transition-colors w-full">
+              {{ category.text }}
+            </span>
+          </a>
+        }
+      </div>
+    } @else {
+      <!-- No categories -->
+      <p class="text-sm text-neutral-400 py-4 text-center" i18n>No categories available</p>
+    }
+  }
+</section>

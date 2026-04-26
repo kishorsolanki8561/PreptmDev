@@ -1,0 +1,116 @@
+<!-- Hero -->
+<section class="bg-gradient-to-br from-brand-50 via-white to-white border-b border-neutral-100 py-10 px-4">
+  <div class="max-w-[1280px] mx-auto text-center">
+    <span class="inline-block text-xs font-semibold text-brand-600 bg-brand-100 rounded-full px-3 py-1 mb-3">
+      India's #1 Govt Job Portal
+    </span>
+    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-neutral-900 mb-2 leading-tight" i18n>
+      Latest Government Jobs &amp; Exam Updates
+    </h1>
+    <p class="text-sm sm:text-base text-neutral-500 mb-6" i18n>
+      Real-time alerts for SSC, UPSC, RRB, Banking, State PSC and more
+    </p>
+    <div class="flex items-center justify-center gap-3 flex-wrap">
+      <a routerLink="/jobs"
+        class="inline-flex items-center px-5 py-2.5 bg-brand-600 text-white text-sm font-semibold rounded-full
+               hover:bg-brand-700 transition-colors shadow-sm" i18n>
+        Browse Jobs
+      </a>
+      <a href="https://play.google.com/store/apps/details?id=com.preptm.study" target="_blank"
+        rel="noopener"
+        class="inline-flex items-center px-5 py-2.5 bg-white border border-neutral-200 text-neutral-700
+               text-sm font-medium rounded-full hover:bg-neutral-50 transition-colors" i18n>
+        Download App
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Banner: SSR renders real content (no placeholder) so the browser fetches
+     the LCP image immediately. JS chunk is split via @defer so it does not
+     inflate the main bundle (preserves FCP). prefetch on immediate downloads
+     the chunk in parallel; hydrate on idle wires up interactivity when free. -->
+<div class="max-w-[1280px] mx-auto px-4 mt-6">
+  @defer (hydrate on idle; prefetch on immediate) {
+    <preptm-banner></preptm-banner>
+  }
+</div>
+
+<!-- Categories -->
+<preptm-categories></preptm-categories>
+
+<!-- Post sections — SSR renders full content; hydration deferred to idle so
+     the main thread is free for LCP/FCP and Angular bootstrap first.
+     Post cards are plain links — they work before hydration via SSR HTML. -->
+@defer (hydrate on idle) {
+  <div class="max-w-[1280px] mx-auto px-4 mt-8 mb-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
+
+      @if (isLoading() || allPosts()?.recentPosts?.length) {
+        <preptm-post-container viewMoreUrl="/latest" [showLoader]="isLoading()"
+          i18n-heading heading="Recent" [posts]="allPosts()?.recentPosts">
+        </preptm-post-container>
+      }
+
+      @if (isLoading() || allPosts()?.expiredSoonPosts?.length) {
+        <preptm-post-container viewMoreUrl="/expiresoon" [showLoader]="isLoading()"
+          i18n-heading heading="Expire Soon" [posts]="allPosts()?.expiredSoonPosts">
+        </preptm-post-container>
+      }
+
+      @if (isLoading() || allPosts()?.recruitments?.length) {
+        <preptm-post-container viewMoreUrl="/jobs" [showLoader]="isLoading()"
+          i18n-heading heading="Recruitments" [posts]="allPosts()?.recruitments">
+        </preptm-post-container>
+      }
+
+      @if (isLoading() || allPosts()?.results?.length) {
+        <preptm-post-container viewMoreUrl="/results" [showLoader]="isLoading()"
+          i18n-heading heading="Results" [posts]="allPosts()?.results">
+        </preptm-post-container>
+      }
+
+      @if (isLoading() || allPosts()?.admissions?.length) {
+        <preptm-post-container viewMoreUrl="/admissions" [showLoader]="isLoading()"
+          i18n-heading heading="Admissions" [posts]="allPosts()?.admissions">
+        </preptm-post-container>
+      }
+
+      @if (isLoading() || allPosts()?.schemes?.length) {
+        <preptm-post-container viewMoreUrl="/schemes" [showLoader]="isLoading()"
+          i18n-heading heading="Schemes" [posts]="allPosts()?.schemes">
+        </preptm-post-container>
+      }
+
+      @if (isLoading() || allPosts()?.exams?.length) {
+        <preptm-post-container viewMoreUrl="/exams" [showLoader]="isLoading()"
+          i18n-heading heading="Exams" [posts]="allPosts()?.exams">
+        </preptm-post-container>
+      }
+
+      @if (isLoading() || allPosts()?.admitCards?.length) {
+        <preptm-post-container viewMoreUrl="/admit-cards" [showLoader]="isLoading()"
+          i18n-heading heading="Admit Cards" [posts]="allPosts()?.admitCards">
+        </preptm-post-container>
+      }
+
+      @if (isLoading() || allPosts()?.upComingPosts?.length) {
+        <preptm-post-container viewMoreUrl="/upcoming" [showLoader]="isLoading()"
+          i18n-heading heading="Upcoming" [posts]="allPosts()?.upComingPosts">
+        </preptm-post-container>
+      }
+
+      @if (isLoading() || allPosts()?.privateRecruitments?.length) {
+        <preptm-post-container viewMoreUrl="/private-jobs" [showLoader]="isLoading()"
+          i18n-heading heading="Private Jobs" [posts]="allPosts()?.privateRecruitments">
+        </preptm-post-container>
+      }
+
+    </div>
+  </div>
+}
+
+<!-- About — SSR-rendered, hydrated on idle (no interactivity needed) -->
+@defer (hydrate on idle) {
+  <preptm-about-site></preptm-about-site>
+}

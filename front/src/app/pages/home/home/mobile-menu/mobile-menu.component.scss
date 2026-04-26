@@ -1,0 +1,51 @@
+@import 'src/assets/css/variables.scss';
+
+.custom-slider {
+  overflow-x: scroll;
+  // text-wrap: nowrap;
+  display: flex;
+  margin-top: 8px;
+  // margin-left: 8px;
+
+  .slide-item {
+    // display: inline-block;
+    min-width: 80px;
+    max-width: 80px;
+    min-height: 100px;
+    text-align: center;
+    color: $primary-color;
+
+    .menu-image {
+      margin: 5px 10px;
+      background-color: $primary-color-light;
+      border-radius: 50%;
+      border: 1px solid $primary-color;
+      height: 60px;
+      width: 60px;
+
+      position: relative;
+
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+      }
+    }
+
+    label {
+      font-size: 12px;
+    }
+  }
+
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+  scrollbar-width: none;
+
+  /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+  }
+}

@@ -1,0 +1,67 @@
+@if (type() === 'spinner') {
+  <img src="assets/img/spinner.svg" class="h-6 w-6 animate-spin" alt="loading" width="24" height="24">
+}
+
+@if (type() === 'card') {
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+    @for (i of items(); track $index) {
+      <div class="bg-white rounded-lg border border-neutral-200 p-3 animate-pulse">
+        <div class="h-4 bg-neutral-200 rounded w-full mb-2"></div>
+        <div class="h-3 bg-neutral-100 rounded w-3/4 mb-4"></div>
+        <div class="flex gap-2">
+          <div class="h-5 bg-neutral-100 rounded-full w-20"></div>
+          <div class="h-5 bg-neutral-100 rounded-full w-16"></div>
+        </div>
+      </div>
+    }
+  </div>
+}
+
+@if (type() === 'list') {
+  <div class="space-y-2">
+    @for (i of items(); track $index) {
+      <div class="bg-white rounded-lg border border-neutral-200 p-3 flex items-center gap-3 animate-pulse">
+        <div class="flex-1">
+          <div class="h-4 bg-neutral-200 rounded w-3/4 mb-2"></div>
+          <div class="h-3 bg-neutral-100 rounded w-1/2"></div>
+        </div>
+        <div class="h-5 bg-neutral-100 rounded-full w-16 flex-shrink-0"></div>
+      </div>
+    }
+  </div>
+}
+
+@if (type() === 'detail') {
+  <div class="animate-pulse">
+    <div class="flex gap-2 mb-6">
+      <div class="h-3 bg-neutral-200 rounded w-12"></div>
+      <div class="h-3 bg-neutral-200 rounded w-4"></div>
+      <div class="h-3 bg-neutral-200 rounded w-24"></div>
+      <div class="h-3 bg-neutral-200 rounded w-4"></div>
+      <div class="h-3 bg-neutral-200 rounded w-32"></div>
+    </div>
+    <div class="h-7 bg-neutral-200 rounded w-4/5 mb-2"></div>
+    <div class="h-5 bg-neutral-100 rounded w-3/5 mb-6"></div>
+    <div class="flex gap-2 mb-6">
+      <div class="h-6 bg-neutral-100 rounded-full w-20"></div>
+      <div class="h-6 bg-neutral-100 rounded-full w-28"></div>
+      <div class="h-6 bg-neutral-100 rounded-full w-16"></div>
+    </div>
+    <div class="bg-neutral-50 rounded-xl border border-neutral-200 p-4 mb-6 grid grid-cols-2 lg:grid-cols-4 gap-4">
+      @for (i of [0,1,2,3]; track $index) {
+        <div>
+          <div class="h-3 bg-neutral-200 rounded w-16 mb-2"></div>
+          <div class="h-5 bg-neutral-300 rounded w-20"></div>
+        </div>
+      }
+    </div>
+    <div class="space-y-2 mb-6">
+      <div class="h-3 bg-neutral-100 rounded w-[90%]"></div>
+      <div class="h-3 bg-neutral-100 rounded w-[85%]"></div>
+      <div class="h-3 bg-neutral-100 rounded w-[95%]"></div>
+      <div class="h-3 bg-neutral-100 rounded w-[80%]"></div>
+      <div class="h-3 bg-neutral-100 rounded w-[88%]"></div>
+      <div class="h-3 bg-neutral-100 rounded w-[70%]"></div>
+    </div>
+  </div>
+}

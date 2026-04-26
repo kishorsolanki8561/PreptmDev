@@ -1,0 +1,15 @@
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2026-04-21 23:42 
+
+<KISHOR> 
+ File Name :- DashboardService.cs Method Name :- GetFrontDashboardList Error Level: [Error] 
+--------------------Message--------------------
+File Name :- DashboardService.cs Method Name :- GetFrontDashboardList
+--------------------Exception--------------------
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FrontMicroService.Service.DashboardService.GetFrontDashboardList(DashboradFilterModel filterModel) in D:\Project\preptm\backend\FrontMicroService\Service\DashboardService.cs:line 80
+
+--------------------Log End--------------------

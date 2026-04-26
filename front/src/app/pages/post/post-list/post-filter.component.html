@@ -1,0 +1,123 @@
+<!-- Desktop sticky sidebar (hidden on mobile) -->
+<div class="hidden lg:block sticky top-20">
+  <div class="bg-white rounded-xl border border-neutral-200 overflow-hidden">
+    <div class="flex items-center justify-between px-4 py-3 bg-neutral-50 border-b border-neutral-100">
+      <div class="flex items-center gap-2">
+        <svg class="h-3.5 w-3.5 text-neutral-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707L13 13.414V19a1 1 0 01-.553.894l-4 2A1 1 0 017 21v-7.586L3.293 6.707A1 1 0 013 6V4z"/>
+        </svg>
+        <span class="text-xs font-bold text-neutral-600 uppercase tracking-widest" i18n>Filters</span>
+      </div>
+      @if (filter.departmentId || filter.jobDesignationId || filter.qualificationId || filter.eligibilityId || filter.categoryId) {
+        <button (click)="cleared.emit()"
+          class="text-xs text-red-500 hover:text-red-700 font-medium transition-colors" i18n>
+          Clear all
+        </button>
+      }
+    </div>
+    <div class="p-4 space-y-4">
+
+      <!-- Department -->
+      <div>
+        <label class="text-[11px] font-semibold text-neutral-400 uppercase tracking-wider mb-1.5 block" i18n>Department</label>
+        <preptm-searchable-select
+          [value]="filter.departmentId"
+          (valueChange)="filter.departmentId = $event; filterChange.emit()"
+          [options]="ddls?.ddlDepartment ?? []"
+          [allowClear]="!!filter.departmentId"
+          i18n-placeholder placeholder="All departments">
+        </preptm-searchable-select>
+      </div>
+
+      @if (type != postType.SCHEME) {
+        <div>
+          <label class="text-[11px] font-semibold text-neutral-400 uppercase tracking-wider mb-1.5 block" i18n>Category</label>
+          <preptm-searchable-select
+            [value]="filter.categoryId"
+            (valueChange)="filter.categoryId = $event; filterChange.emit()"
+            [options]="ddls?.ddlCategory ?? []"
+            [allowClear]="!!filter.categoryId"
+            [disabled]="!!categorySlug"
+            i18n-placeholder placeholder="All categories">
+          </preptm-searchable-select>
+        </div>
+      }
+
+      @if (type === postType.RECRUITMENT) {
+        <div>
+          <label class="text-[11px] font-semibold text-neutral-400 uppercase tracking-wider mb-1.5 block" i18n>Qualification</label>
+          <preptm-searchable-select
+            [value]="filter.qualificationId"
+            (valueChange)="filter.qualificationId = $event; filterChange.emit()"
+            [options]="ddls?.ddlQualification ?? []"
+            [allowClear]="!!filter.qualificationId"
+            i18n-placeholder placeholder="Any qualification">
+          </preptm-searchable-select>
+        </div>
+        <div>
+          <label class="text-[11px] font-semibold text-neutral-400 uppercase tracking-wider mb-1.5 block" i18n>Designation</label>
+          <preptm-searchable-select
+            [value]="filter.jobDesignationId"
+            (valueChange)="filter.jobDesignationId = $event; filterChange.emit()"
+            [options]="ddls?.ddlJobDesignation ?? []"
+            [allowClear]="!!filter.jobDesignationId"
+            i18n-placeholder placeholder="Any designation">
+          </preptm-searchable-select>
+        </div>
+      }
+
+      @if (type === postType.SCHEME) {
+        <div>
+          <label class="text-[11px] font-semibold text-neutral-400 uppercase tracking-wider mb-1.5 block" i18n>Eligibility</label>
+          <preptm-searchable-select
+            [value]="filter.eligibilityId"
+            (valueChange)="filter.eligibilityId = $event; filterChange.emit()"
+            [options]="ddlLookup?.[ddlLookupEnum.SchemeEligibility] ?? []"
+            [allowClear]="!!filter.eligibilityId"
+            i18n-placeholder placeholder="Any eligibility">
+          </preptm-searchable-select>
+        </div>
+      }
+
+    </div>
+  </div>
+
+  <!-- App promo / custom ads below filter -->
+  <div class="mt-4">
+    <app-custom-ads></app-custom-ads>
+  </div>
+</div>
+
+<!-- Mobile: horizontal filter chips (visible on mobile, hidden on lg+) -->
+<div class="lg:hidden flex gap-2 overflow-x-auto pb-2 mb-4 scrollbar-none">
+  <div class="min-w-[130px]">
+    <preptm-searchable-select
+      [value]="filter.departmentId"
+      (valueChange)="filter.departmentId = $event; filterChange.emit()"
+      [options]="ddls?.ddlDepartment ?? []"
+      [allowClear]="!!filter.departmentId"
+      i18n-placeholder placeholder="Department">
+    </preptm-searchable-select>
+  </div>
+
+  @if (type != postType.SCHEME) {
+    <div class="min-w-[130px]">
+      <preptm-searchable-select
+        [value]="filter.categoryId"
+        (valueChange)="filter.categoryId = $event; filterChange.emit()"
+        [options]="ddls?.ddlCategory ?? []"
+        [allowClear]="!!filter.categoryId"
+        [disabled]="!!categorySlug"
+        i18n-placeholder placeholder="Category">
+      </preptm-searchable-select>
+    </div>
+  }
+
+  @if (filter.departmentId || filter.jobDesignationId || filter.qualificationId || filter.eligibilityId || filter.categoryId) {
+    <button (click)="cleared.emit()"
+      class="flex-shrink-0 text-xs text-red-500 border border-red-200 rounded-full px-3 py-1 bg-white" i18n>
+      Clear
+    </button>
+  }
+</div>

@@ -1,0 +1,59 @@
+<!-- Skeleton while loading -->
+@if (isLoading()) {
+  <div class="w-full h-36 sm:h-48 lg:h-56 rounded-xl bg-neutral-200 animate-pulse"></div>
+}
+
+<!-- Carousel once data arrives -->
+@if (!isLoading() && banners().length) {
+  <div class="banner-wrap relative h-36 sm:h-48 lg:h-56 rounded-xl overflow-hidden shadow-sm">
+
+    <!-- Scroll track — CSS Scroll Snap, no JS library needed -->
+    <div #track class="banner-track">
+      @for (item of banners(); track $index; let i = $index) {
+        <a [href]="item.url || null"
+          [target]="item.url ? '_blank' : '_self'"
+          rel="noopener"
+          class="banner-slide block relative flex-shrink-0 w-full h-full bg-neutral-100">
+
+          <img
+            [src]="item.attachmentUrl"
+            [alt]="item.title"
+            (error)="onImgError($event)"
+            class="w-full h-full object-cover"
+            width="1200" height="224"
+            [attr.loading]="i === 0 ? 'eager' : 'lazy'"
+            [attr.fetchpriority]="i === 0 ? 'high' : 'auto'">
+
+          <!-- Gradient overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none"></div>
+
+          <!-- Title -->
+          @if (item.title) {
+            <div class="absolute bottom-0 left-0 right-0 px-4 pb-3 pt-8">
+              <p class="text-white text-sm sm:text-base font-semibold leading-snug line-clamp-1 drop-shadow">
+                {{ item.title }}
+              </p>
+            </div>
+          }
+        </a>
+      }
+    </div>
+
+    <!-- Dot indicators -->
+    @if (banners().length > 1) {
+      <div class="absolute bottom-2 left-0 right-0 flex items-center justify-center gap-1.5 pointer-events-none">
+        @for (item of banners(); track $index; let i = $index) {
+          <button
+            class="pointer-events-auto rounded-full transition-all duration-300"
+            [class]="i === activeIndex()
+              ? 'w-4 h-1.5 bg-white'
+              : 'w-1.5 h-1.5 bg-white/55 hover:bg-white/80'"
+            [attr.aria-label]="'Go to slide ' + (i + 1)"
+            (click)="goTo(i)">
+          </button>
+        }
+      </div>
+    }
+
+  </div>
+}

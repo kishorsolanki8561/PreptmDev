@@ -1,0 +1,63 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="MDL\Master\AdditionalPages_MDL.cs" />
+    <Compile Remove="MDL\Master\AssetsMaster_MDL.cs" />
+    <Compile Remove="MDL\Master\BannerMaster_MDL.cs" />
+    <Compile Remove="MDL\Master\BlockType_MDL.cs" />
+    <Compile Remove="MDL\Master\Bookmark_MDL.cs" />
+    <Compile Remove="MDL\Master\CategoryMaster_MDL.cs" />
+    <Compile Remove="MDL\Master\DepartmentMaster_MDL.cs" />
+    <Compile Remove="MDL\Master\FrontUser_MDL.cs" />
+    <Compile Remove="MDL\Master\GroupMaster_MDL.cs" />
+    <Compile Remove="MDL\Master\JobDesignationMaster_MDL.cs" />
+    <Compile Remove="MDL\Master\Logs_MDL.cs" />
+    <Compile Remove="MDL\Master\LookupType_MDL.cs" />
+    <Compile Remove="MDL\Master\Lookup_MDL.cs" />
+    <Compile Remove="MDL\Master\MenuMasterMapping_MDL.cs" />
+    <Compile Remove="MDL\Master\MenuMaster_MDL.cs" />
+    <Compile Remove="MDL\Master\PageComponentAction_MDL.cs" />
+    <Compile Remove="MDL\Master\PageComponentPermission_MDL.cs" />
+    <Compile Remove="MDL\Master\PageComponent_MDL.cs" />
+    <Compile Remove="MDL\Master\PageMaster_MDL.cs" />
+    <Compile Remove="MDL\Master\PopularSearch_MDL.cs" />
+    <Compile Remove="MDL\Master\QualificationMaster_MDL.cs" />
+    <Compile Remove="MDL\Master\State_MDL.cs" />
+    <Compile Remove="MDL\Master\SubCategory_MDL.cs" />
+    <Compile Remove="MDL\Master\UserFeedback_MDL.cs" />
+    <Compile Remove="MDL\Master\UserType_MDL.cs" />
+    <Compile Remove="MDL\Master\User_MDL.cs" />
+    <Compile Remove="MDL\Translation\SchemeAttchamentLookup_MDL.cs" />
+    <Compile Remove="MDL\Translation\SchemeContactDetailsLookup_MDL.cs" />
+    <Compile Remove="MDL\Translation\SchemeDocumentLookup_MDL.cs" />
+    <Compile Remove="MDL\Translation\SchemeEligibilityLookup_MDL.cs" />
+    <Compile Remove="MDL\Translation\SchemeHowToApplyAndQuickLinkLookup_MDL.cs" />
+    <Compile Remove="MDL\Translation\Scheme_MDL.cs" />
+    <Compile Remove="MDL\Translation\SiteMap_MDL.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.20" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.20">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.20" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="MDL\Master\" />
+  </ItemGroup>
+
+</Project>

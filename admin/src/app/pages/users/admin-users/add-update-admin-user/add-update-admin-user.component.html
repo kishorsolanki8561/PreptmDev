@@ -1,0 +1,8 @@
+<app-page-header [breadcrumb]="breadcrumb">
+    <nz-space>
+        <app-button *nzSpaceItem type="back"></app-button>
+    </nz-space>
+</app-page-header>
+
+
+<app-form [addUpdateFn$]="usersService.addUpdateAdminUser" [form]="form" [initialData]="userData" [formElements]="formElements" navigationUrlOnSuccess="/users"></app-form>

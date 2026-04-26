@@ -1,0 +1,50 @@
+<div class="max-w-3xl mx-auto px-4 py-10">
+
+  <!-- Page title -->
+  <div class="mb-8 pb-4 border-b border-neutral-200">
+    <h1 class="text-2xl font-bold text-neutral-900">
+      @if (pageType===AdditionalPages.TermsConditions) {
+        <span i18n>Terms &amp; Conditions</span>
+      }
+      @if (pageType===AdditionalPages.PrivacyPolicy) {
+        <span i18n>Privacy Policy</span>
+      }
+      @if (pageType===AdditionalPages.AboutUs) {
+        <span i18n>About Us</span>
+      }
+      @if (pageType===AdditionalPages.ManageAccount) {
+        <span i18n>Manage Account</span>
+      }
+    </h1>
+  </div>
+
+  <!-- Skeleton -->
+  @if (isLoading) {
+    <div class="space-y-3 animate-pulse">
+      <div class="h-4 bg-neutral-200 rounded w-full"></div>
+      <div class="h-4 bg-neutral-200 rounded w-[92%]"></div>
+      <div class="h-4 bg-neutral-200 rounded w-[85%]"></div>
+      <div class="h-4 bg-neutral-100 rounded w-full mt-6"></div>
+      <div class="h-4 bg-neutral-100 rounded w-[88%]"></div>
+      <div class="h-4 bg-neutral-100 rounded w-[95%]"></div>
+      <div class="h-4 bg-neutral-100 rounded w-[70%]"></div>
+    </div>
+  }
+
+  <!-- Content -->
+  @if (!isLoading) {
+    <div [innerHTML]="data" class="editor prose-sm"></div>
+  }
+
+</div>
+
+<!-- About Us schema.org -->
+@if (pageType===AdditionalPages.AboutUs) {
+  <div itemprop="Organization" itemscope itemtype="https://schema.org/Organization">
+    <meta itemprop="url" content="https://preptm.com">
+    <meta itemprop="logo" content="https://preptm.com/assets/img/logo-black-bg.png">
+    <meta itemprop="name" content="Preptm">
+    <meta itemprop="description" content="Preptm is an online education platform dedicated to providing quality content and timely updates to government job aspirants in India.">
+    <meta itemprop="email" content="thepreptm@gmail.com">
+  </div>
+}

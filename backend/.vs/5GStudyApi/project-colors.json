@@ -1,0 +1,66 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "f1d67dde-ece7-4a8c-ac60-998dec8f899f": {
+      "ProjectGuid": "f1d67dde-ece7-4a8c-ac60-998dec8f899f",
+      "DisplayName": "MasterMicroService",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "dcb035f8-f1b5-49df-92f2-d5f3e5e07a9e": {
+      "ProjectGuid": "dcb035f8-f1b5-49df-92f2-d5f3e5e07a9e",
+      "DisplayName": "ModelService",
+      "ColorIndex": 1
+    },
+    "97a08332-0e49-4874-84ea-a6dd20f26c0c": {
+      "ProjectGuid": "97a08332-0e49-4874-84ea-a6dd20f26c0c",
+      "DisplayName": "CommonService",
+      "ColorIndex": 2
+    },
+    "423bb429-b1ca-43bf-ba0d-1533791a8696": {
+      "ProjectGuid": "423bb429-b1ca-43bf-ba0d-1533791a8696",
+      "DisplayName": "MasterMicroService",
+      "ColorIndex": 3
+    },
+    "e59e44b2-4d33-4cec-88da-272d3670e09f": {
+      "ProjectGuid": "e59e44b2-4d33-4cec-88da-272d3670e09f",
+      "DisplayName": "AllDropDownMicroService",
+      "ColorIndex": 4
+    },
+    "3cfb6d64-e8f9-44b8-b4cf-1ad10aea2070": {
+      "ProjectGuid": "3cfb6d64-e8f9-44b8-b4cf-1ad10aea2070",
+      "DisplayName": "Gateway",
+      "ColorIndex": 5
+    },
+    "25875967-503b-4c9d-982b-ca7d4560c5cf": {
+      "ProjectGuid": "25875967-503b-4c9d-982b-ca7d4560c5cf",
+      "DisplayName": "RecruitmentMicroService",
+      "ColorIndex": 6
+    },
+    "d095b09b-5fe5-4eeb-bcc7-e8c386013caa": {
+      "ProjectGuid": "d095b09b-5fe5-4eeb-bcc7-e8c386013caa",
+      "DisplayName": "FileUploaderMicroService",
+      "ColorIndex": 7
+    },
+    "d8a58df4-2cb4-4dd4-a679-8e76821bee1f": {
+      "ProjectGuid": "d8a58df4-2cb4-4dd4-a679-8e76821bee1f",
+      "DisplayName": "TranslationMicroService",
+      "ColorIndex": 8
+    },
+    "1a710541-9609-4b1e-92eb-13d00cea3aae": {
+      "ProjectGuid": "1a710541-9609-4b1e-92eb-13d00cea3aae",
+      "DisplayName": "TranslationMicroService",
+      "ColorIndex": 9
+    },
+    "a1df1af7-48ef-48f8-b27b-aab2890e62d2": {
+      "ProjectGuid": "a1df1af7-48ef-48f8-b27b-aab2890e62d2",
+      "DisplayName": "FrontMicroService",
+      "ColorIndex": 10
+    }
+  },
+  "NextColorIndex": 11
+}

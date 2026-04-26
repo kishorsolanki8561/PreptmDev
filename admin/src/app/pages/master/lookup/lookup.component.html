@@ -1,0 +1,7 @@
+<app-page-header [breadcrumb]="breadcrumb" addButtonUrl="/master/lookup/add">
+</app-page-header>
+<main class="card">
+    <app-table [initialData]="initialData" [columns]="columns" [getDataFn$]="masterService.getLookupMasterList"
+        [changeStatusFn$]="masterService.changeStatusLookupMaster" editPageUrl='/master/lookup/edit'
+        viewPageUrl='/master/lookup' [deleteFn$]="masterService.deleteLookupMaster" [filter]="filter"></app-table>
+</main>

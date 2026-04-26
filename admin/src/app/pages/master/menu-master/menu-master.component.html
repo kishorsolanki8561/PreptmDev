@@ -1,0 +1,15 @@
+<app-page-header [breadcrumb]="breadcrumb"  addButtonUrl="add">
+    <!-- <app-button [routerLink]="['add']" type="add"></app-button> -->
+</app-page-header>
+<main class="card">
+    <app-table 
+    [initialData]="initialData"
+    [columns]="columns"
+    [getDataFn$]="masterService.getMenuList"
+    [changeStatusFn$]="masterService.changeStatusMenu"
+    editPageUrl = '/master/menu/edit'
+    viewPageUrl = '/master/menu'
+    [deleteFn$]="masterService.deleteMenu"
+    [filter]="filter"
+    ></app-table>
+</main>

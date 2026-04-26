@@ -1,0 +1,289 @@
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-04 22:43 
+
+<KISHOR> 
+ File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync Error Level: [Error] 
+--------------------Message--------------------
+File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync
+--------------------Exception--------------------
+System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at CommonService.Other.HelperService.Decrypt(String Text) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\HelperService.cs:line 75
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 63
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-04 22:43 
+
+<KISHOR> 
+ File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync Error Level: [Error] 
+--------------------Message--------------------
+File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync
+--------------------Exception--------------------
+System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at CommonService.Other.HelperService.Decrypt(String Text) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\HelperService.cs:line 75
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 63
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-04 22:43 
+
+<KISHOR> 
+ File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync Error Level: [Error] 
+--------------------Message--------------------
+File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync
+--------------------Exception--------------------
+System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at CommonService.Other.HelperService.Decrypt(String Text) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\HelperService.cs:line 75
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 63
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-04 22:44 
+
+<KISHOR> 
+ File Name :- FileUploader.cs Method Name :- GetFilesPath Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploader.cs Method Name :- GetFilesPath
+--------------------Exception--------------------
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'D:\home\administrator\preptm\BackEnd\Stage\fileuploadservice\Content'.
+   at CommonService.Other.FileUploader.GetDirectories(String fileName) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\FileUploader.cs:line 125
+   at CommonService.Other.FileUploader.GetFilesPath(String path) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\FileUploader.cs:line 98
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-04 22:44 
+
+<KISHOR> 
+ File Name :- FileUploader.cs Method Name :- GetFilesPath Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploader.cs Method Name :- GetFilesPath
+--------------------Exception--------------------
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'D:\home\administrator\preptm\BackEnd\Stage\fileuploadservice\Content'.
+   at CommonService.Other.FileUploader.GetDirectories(String fileName) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\FileUploader.cs:line 125
+   at CommonService.Other.FileUploader.GetFilesPath(String path) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\FileUploader.cs:line 98
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-04 22:45 
+
+<KISHOR> 
+ File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync Error Level: [Error] 
+--------------------Message--------------------
+File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync
+--------------------Exception--------------------
+System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at CommonService.Other.HelperService.Decrypt(String Text) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\HelperService.cs:line 75
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 63
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-04 23:07 
+
+<KISHOR> 
+ File Name :- FileUploader.cs Method Name :- PostGoogleFile Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploader.cs Method Name :- PostGoogleFile
+--------------------Exception--------------------
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.Net.WebClient.GetWebResponse(WebRequest request)
+   at System.Net.WebClient.DownloadBits(WebRequest request, Stream writeStream)
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadData(Uri address)
+   at System.Net.WebClient.DownloadData(String address)
+   at CommonService.Other.FileUploader.PostGoogleFile(String url) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\FileUploader.cs:line 65
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-04 23:07 
+
+<KISHOR> 
+ File Name :- UserService.cs Method Name :- UpdateFCMToken Error Level: [Error] 
+--------------------Message--------------------
+File Name :- UserService.cs Method Name :- UpdateFCMToken
+--------------------Exception--------------------
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at CommonService.Other.FileUploader.PostGoogleFile(String url) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\FileUploader.cs:line 73
+   at FrontMicroService.Service.AdditionalPagesService.getProfileByGoogle(String url) in D:\Project\5GStudy\taiyari-backend\FrontMicroService\Service\AdditionalPagesService.cs:line 64
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-04 23:08 
+
+<KISHOR> 
+ File Name :- FileUploader.cs Method Name :- PostGoogleFile Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploader.cs Method Name :- PostGoogleFile
+--------------------Exception--------------------
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.Net.WebClient.GetWebResponse(WebRequest request)
+   at System.Net.WebClient.DownloadBits(WebRequest request, Stream writeStream)
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadData(Uri address)
+   at System.Net.WebClient.DownloadData(String address)
+   at CommonService.Other.FileUploader.PostGoogleFile(String url) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\FileUploader.cs:line 65
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-04 23:08 
+
+<KISHOR> 
+ File Name :- UserService.cs Method Name :- UpdateFCMToken Error Level: [Error] 
+--------------------Message--------------------
+File Name :- UserService.cs Method Name :- UpdateFCMToken
+--------------------Exception--------------------
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at CommonService.Other.FileUploader.PostGoogleFile(String url) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\FileUploader.cs:line 73
+   at FrontMicroService.Service.AdditionalPagesService.getProfileByGoogle(String url) in D:\Project\5GStudy\taiyari-backend\FrontMicroService\Service\AdditionalPagesService.cs:line 64
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-04 23:09 
+
+<KISHOR> 
+ File Name :- FileUploader.cs Method Name :- PostGoogleFile Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploader.cs Method Name :- PostGoogleFile
+--------------------Exception--------------------
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.Net.WebClient.GetWebResponse(WebRequest request)
+   at System.Net.WebClient.DownloadBits(WebRequest request, Stream writeStream)
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadData(Uri address)
+   at System.Net.WebClient.DownloadData(String address)
+   at CommonService.Other.FileUploader.PostGoogleFile(String url) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\FileUploader.cs:line 65
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-04 23:09 
+
+<KISHOR> 
+ File Name :- UserService.cs Method Name :- UpdateFCMToken Error Level: [Error] 
+--------------------Message--------------------
+File Name :- UserService.cs Method Name :- UpdateFCMToken
+--------------------Exception--------------------
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at CommonService.Other.FileUploader.PostGoogleFile(String url) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\FileUploader.cs:line 73
+   at FrontMicroService.Service.AdditionalPagesService.getProfileByGoogle(String url) in D:\Project\5GStudy\taiyari-backend\FrontMicroService\Service\AdditionalPagesService.cs:line 67
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-04 23:10 
+
+<KISHOR> 
+ File Name :- FileUploader.cs Method Name :- PostGoogleFile Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploader.cs Method Name :- PostGoogleFile
+--------------------Exception--------------------
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.Net.WebClient.GetWebResponse(WebRequest request)
+   at System.Net.WebClient.DownloadBits(WebRequest request, Stream writeStream)
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadData(Uri address)
+   at System.Net.WebClient.DownloadData(String address)
+   at CommonService.Other.FileUploader.PostGoogleFile(String url) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\FileUploader.cs:line 65
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-04 23:10 
+
+<KISHOR> 
+ File Name :- UserService.cs Method Name :- UpdateFCMToken Error Level: [Error] 
+--------------------Message--------------------
+File Name :- UserService.cs Method Name :- UpdateFCMToken
+--------------------Exception--------------------
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at CommonService.Other.FileUploader.PostGoogleFile(String url) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\FileUploader.cs:line 73
+   at FrontMicroService.Service.AdditionalPagesService.getProfileByGoogle(String url) in D:\Project\5GStudy\taiyari-backend\FrontMicroService\Service\AdditionalPagesService.cs:line 67
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-04 23:10 
+
+<KISHOR> 
+ File Name :- FileUploader.cs Method Name :- PostGoogleFile Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploader.cs Method Name :- PostGoogleFile
+--------------------Exception--------------------
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.Net.WebClient.GetWebResponse(WebRequest request)
+   at System.Net.WebClient.DownloadBits(WebRequest request, Stream writeStream)
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadData(Uri address)
+   at System.Net.WebClient.DownloadData(String address)
+   at CommonService.Other.FileUploader.PostGoogleFile(String url) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\FileUploader.cs:line 65
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-04 23:10 
+
+<KISHOR> 
+ File Name :- UserService.cs Method Name :- UpdateFCMToken Error Level: [Error] 
+--------------------Message--------------------
+File Name :- UserService.cs Method Name :- UpdateFCMToken
+--------------------Exception--------------------
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at CommonService.Other.FileUploader.PostGoogleFile(String url) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\FileUploader.cs:line 73
+   at FrontMicroService.Service.AdditionalPagesService.getProfileByGoogle(String url) in D:\Project\5GStudy\taiyari-backend\FrontMicroService\Service\AdditionalPagesService.cs:line 67
+
+--------------------Log End--------------------

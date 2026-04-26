@@ -1,0 +1,320 @@
+@if (isLoading) {
+  <div class="max-w-[1280px] mx-auto px-4 py-6">
+    <preptm-loader type="detail"></preptm-loader>
+  </div>
+}
+
+@if (!post && !isLoading) {
+  <preptm-no-records></preptm-no-records>
+}
+
+@if (post) {
+  <div itemscope itemtype="https://schema.org/Article"
+    class="max-w-[1280px] mx-auto px-4 py-6 lg:flex lg:gap-6">
+
+    <meta itemprop="mainEntityOfPage" [content]="platformLocation.href">
+    <meta itemprop="inLanguage" [content]="lang">
+    <meta itemprop="keywords" [content]="post.keywords">
+    <meta itemprop="url" [content]="platformLocation.href">
+    <meta itemprop="headline" [content]="post.title">
+
+    <article class="flex-1 min-w-0">
+      <preptm-breadcrumb [breadcrumb]="breadcrumb" class="mb-4 block"></preptm-breadcrumb>
+
+      <!-- Title + meta -->
+      <div class="bg-white rounded-xl border border-neutral-200 p-4 sm:p-6 mb-4">
+        <h1 class="text-xl sm:text-2xl font-bold text-neutral-900 leading-snug mb-3" itemprop="headline">
+          {{post.title}}
+        </h1>
+        <div class="flex flex-wrap items-center gap-2 text-sm text-neutral-500">
+          <div class="flex items-center gap-1.5"
+            itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <img src="assets/img/boy.png" alt="Author" width="24" height="24" class="h-6 w-6 rounded-full object-cover" [attr.loading]="'lazy'">
+            <span class="font-medium text-neutral-700" itemprop="name">Suresh</span>
+            <meta itemprop="url" content="https://www.preptm.com/assets/img/writter.jpg">
+          </div>
+          <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+            <meta itemprop="name" content="Preptm">
+            <meta itemprop="url" content="https://www.preptm.com">
+            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+              <meta itemprop="url" [content]="preptmLogo">
+            </div>
+          </div>
+          @if (post.publishedDate) {
+            <span class="text-neutral-400">·</span>
+            <span>
+              {{post.publishedDate | date:DATE_FORMAT}}
+              <meta itemprop="datePublished" [content]="post.publishedDate + '+05:30'">
+            </span>
+          }
+          @if (post.departmentName) {
+            <a [routerLink]="['/department', post.departmentSlugUrl]"
+              class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700 hover:bg-blue-100 transition-colors">
+              {{post.departmentName}}
+            </a>
+          }
+          @if (post.stateName) {
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-neutral-100 text-neutral-600">
+              {{post.stateName | titlecase}}
+            </span>
+          }
+        </div>
+      </div>
+
+      <!-- Short description -->
+      @if (shortDesc?.length) {
+        <div class="bg-white rounded-xl border border-neutral-200 p-4 sm:p-6 mb-4">
+          @for (desc of shortDesc; track $index) {
+            <p class="text-sm text-neutral-700 leading-relaxed mb-2 last:mb-0">{{desc}}</p>
+          }
+          <meta itemprop="description" [content]="shortDesc.join(' ')">
+        </div>
+      }
+
+      <!-- Highlights -->
+      @if (post.startDate || post.lastDate || post.extendedDate || post.correctionLastDate || post.admitCardDate || post.feePaymentLastDate || post.examMode || post.minAge || post.maxAge || post.salary || post.totalPost) {
+        <div class="bg-white rounded-xl border border-neutral-200 mb-4 overflow-hidden">
+          <div class="px-4 py-3 border-b border-neutral-100">
+            <h2 class="text-xs font-bold text-neutral-600 uppercase tracking-widest" i18n>Highlights</h2>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 divide-x divide-y divide-neutral-100">
+            @if (post.startDate) {
+              <div class="flex flex-col p-3">
+                <span class="text-[11px] font-medium text-neutral-400 uppercase tracking-wider mb-1" i18n>Start Date</span>
+                <span class="text-sm font-semibold text-neutral-800">{{post.startDate | date:DATE_FORMAT}}</span>
+              </div>
+            }
+            @if (post.lastDate) {
+              <div class="flex flex-col p-3">
+                <span class="text-[11px] font-medium text-neutral-400 uppercase tracking-wider mb-1" i18n>End Date</span>
+                <span class="text-sm font-semibold text-neutral-800">{{post.lastDate | date:DATE_FORMAT}}</span>
+              </div>
+            }
+            @if (post.extendedDate) {
+              <div class="flex flex-col p-3">
+                <span class="text-[11px] font-medium text-neutral-400 uppercase tracking-wider mb-1" i18n>Extended Date</span>
+                <span class="text-sm font-semibold text-amber-600">{{post.extendedDate | date:DATE_FORMAT}}</span>
+              </div>
+            }
+            @if (post.admitCardDate) {
+              <div class="flex flex-col p-3">
+                <span class="text-[11px] font-medium text-neutral-400 uppercase tracking-wider mb-1" i18n>Admit Card</span>
+                <span class="text-sm font-semibold text-neutral-800">{{post.admitCardDate | date:DATE_FORMAT}}</span>
+              </div>
+            }
+            @if (post.feePaymentLastDate) {
+              <div class="flex flex-col p-3">
+                <span class="text-[11px] font-medium text-neutral-400 uppercase tracking-wider mb-1" i18n>Fee Payment</span>
+                <span class="text-sm font-semibold text-neutral-800">{{post.feePaymentLastDate | date:DATE_FORMAT}}</span>
+              </div>
+            }
+            @if (post.correctionLastDate) {
+              <div class="flex flex-col p-3">
+                <span class="text-[11px] font-medium text-neutral-400 uppercase tracking-wider mb-1" i18n>Correction Date</span>
+                <span class="text-sm font-semibold text-neutral-800">{{post.correctionLastDate | date:DATE_FORMAT}}</span>
+              </div>
+            }
+            @if (post.examMode) {
+              <div class="flex flex-col p-3">
+                <span class="text-[11px] font-medium text-neutral-400 uppercase tracking-wider mb-1" i18n>Exam Mode</span>
+                <span class="text-sm font-semibold text-neutral-800">
+                  @if (post.examMode==ExamModeEnum.Online) { <span i18n>Online</span> }
+                  @if (post.examMode==ExamModeEnum.Offline) { <span i18n>Offline</span> }
+                  @if (post.examMode==ExamModeEnum.OnlineOffline) { <span i18n>Online / Offline</span> }
+                </span>
+              </div>
+            }
+            @if (post.salary) {
+              <div class="flex flex-col p-3">
+                <span class="text-[11px] font-medium text-neutral-400 uppercase tracking-wider mb-1" i18n>Fee</span>
+                <span class="text-sm font-semibold text-neutral-800">{{post.salary}}</span>
+              </div>
+            }
+            @if (post.totalPost) {
+              <div class="flex flex-col p-3">
+                <span class="text-[11px] font-medium text-neutral-400 uppercase tracking-wider mb-1" i18n>Available Seats</span>
+                <span class="text-sm font-semibold text-neutral-800">{{post.totalPost}}</span>
+              </div>
+            }
+            @if (post.minAge) {
+              <div class="flex flex-col p-3">
+                <span class="text-[11px] font-medium text-neutral-400 uppercase tracking-wider mb-1" i18n>Min Age</span>
+                <span class="text-sm font-semibold text-neutral-800">{{post.minAge}} <span i18n>yrs</span></span>
+              </div>
+            }
+            @if (post.maxAge) {
+              <div class="flex flex-col p-3">
+                <span class="text-[11px] font-medium text-neutral-400 uppercase tracking-wider mb-1" i18n>Max Age</span>
+                <span class="text-sm font-semibold text-neutral-800">{{post.maxAge}} <span i18n>yrs</span></span>
+              </div>
+            }
+          </div>
+        </div>
+      }
+
+      <!-- Thumbnail -->
+      @if (post.thumbnail) {
+        <div class="bg-white rounded-xl border border-neutral-200 p-4 mb-4 text-center">
+          <meta itemprop="image" [content]="post.thumbnail">
+          <meta itemprop="thumbnailUrl" [content]="post.thumbnail">
+          <preptm-image [alt]="post.title" [onlyLow]="false" className="max-h-64 mx-auto rounded-lg" [src]="post.thumbnail" [priority]="true"></preptm-image>
+          @if (post.thumbnailCredit) {
+            <p class="text-xs text-neutral-400 mt-2">Photo by <span [innerHTML]="post.thumbnailCredit"></span></p>
+          }
+        </div>
+      }
+
+      <!-- Qualifications + Designations -->
+      @if (post.qualification?.length || post.designation?.length) {
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
+          @if (post.qualification?.length) {
+            <div class="bg-white rounded-xl border border-neutral-200 p-4">
+              <h2 class="text-xs font-bold text-neutral-600 uppercase tracking-widest mb-3" i18n>Qualifications</h2>
+              <ul class="space-y-1.5">
+                @for (q of post.qualification; track $index) {
+                  <li class="flex items-start gap-2 text-sm text-neutral-700">
+                    <img src="assets/img/check-circle.svg" alt="" width="16" height="16" class="h-4 w-4 mt-0.5 flex-shrink-0" [attr.loading]="'lazy'">
+                    <span>{{q}}</span>
+                  </li>
+                }
+              </ul>
+            </div>
+          }
+          @if (post.designation?.length) {
+            <div class="bg-white rounded-xl border border-neutral-200 p-4">
+              <h2 class="text-xs font-bold text-neutral-600 uppercase tracking-widest mb-3" i18n>Designations</h2>
+              <ul class="space-y-1.5">
+                @for (d of post.designation; track $index) {
+                  <li class="flex items-start gap-2 text-sm text-neutral-700">
+                    <img src="assets/img/check-circle.svg" alt="" width="16" height="16" class="h-4 w-4 mt-0.5 flex-shrink-0" [attr.loading]="'lazy'">
+                    <span>{{d}}</span>
+                  </li>
+                }
+              </ul>
+            </div>
+          }
+        </div>
+      }
+
+      <!-- Main body -->
+      @if (post.description) {
+        <div class="bg-white rounded-xl border border-neutral-200 p-4 sm:p-6 mb-4">
+          <div itemprop="articleBody" [innerHTML]="post.description" class="editor"></div>
+        </div>
+      }
+
+      <app-custom-ads></app-custom-ads>
+
+      <!-- How to apply -->
+      @if (post.howToApply?.length && post.howToApply[0]?.title) {
+        <div class="bg-white rounded-xl border border-neutral-200 p-4 sm:p-6 mb-4"
+          itemscope itemtype="https://schema.org/HowTo">
+          <meta itemprop="url" [content]="post.title">
+          <h2 class="text-sm font-bold text-neutral-700 uppercase tracking-widest mb-4" i18n>How to Apply</h2>
+          <ol class="space-y-4">
+            @for (step of post.howToApply; track $index; let i = $index) {
+              @if (step.title || step.description) {
+                <li itemprop="step" itemscope itemtype="https://schema.org/HowToStep" class="flex gap-3">
+                  <span class="flex-shrink-0 h-6 w-6 rounded-full bg-brand-100 text-brand-700 text-xs font-bold flex items-center justify-center mt-0.5">{{i+1}}</span>
+                  <div class="flex-1 min-w-0">
+                    @if (step.title) {
+                      <p class="text-sm font-semibold text-neutral-800 mb-1" itemprop="name">{{step.title}}</p>
+                    }
+                    @if (step.description) {
+                      <p class="text-sm text-neutral-600 editor" itemprop="text" [innerHTML]="step.description"></p>
+                    }
+                    @if (step.url) {
+                      <preptm-image [alt]="step.title" [showPreview]="true" [onlyLow]="false" [src]="step.url"></preptm-image>
+                    }
+                  </div>
+                </li>
+              }
+            }
+          </ol>
+        </div>
+      }
+
+      <!-- Images -->
+      @if (post.documents?.length) {
+        <div class="bg-white rounded-xl border border-neutral-200 p-4 sm:p-6 mb-4">
+          <h2 class="text-xs font-bold text-neutral-600 uppercase tracking-widest mb-4" i18n>Images</h2>
+          <div class="flex flex-wrap gap-3 justify-center">
+            @for (docUrl of post.documents; track $index; let i = $index) {
+              <preptm-image className="detailsImages" [onlyMedium]="true"
+                [alt]="'document-' + i" [showPreview]="true" [onlyLow]="false" [src]="docUrl">
+              </preptm-image>
+            }
+          </div>
+        </div>
+      }
+
+      <!-- Action buttons -->
+      <div class="flex flex-wrap gap-3 mb-4 justify-center">
+        @if (post.applyLink) {
+          <a [href]="post.applyLink" target="_blank" rel="noopener"
+            class="inline-flex items-center gap-2 px-5 py-2.5 bg-green-600 text-white text-sm font-semibold rounded-full hover:bg-green-700 transition-colors">
+            <img src="assets/img/hand-pointer.svg" alt="" width="16" height="16" class="h-4 w-4" [attr.loading]="'lazy'">
+            <span i18n>Apply Now</span>
+          </a>
+        }
+        @if (post.notificationLink) {
+          <a [href]="post.notificationLink" target="_blank" rel="noopener"
+            class="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-600 text-white text-sm font-semibold rounded-full hover:bg-brand-700 transition-colors">
+            <img src="assets/img/bell.svg" alt="" width="16" height="16" class="h-4 w-4" [attr.loading]="'lazy'">
+            <span i18n>Notification</span>
+          </a>
+        }
+        @if (post.officialLink) {
+          <a [href]="post.officialLink" target="_blank" rel="noopener"
+            class="inline-flex items-center gap-2 px-5 py-2.5 bg-white border border-neutral-200 text-neutral-700 text-sm font-medium rounded-full hover:bg-neutral-50 transition-colors">
+            <img src="assets/img/globe-btn.svg" alt="" width="16" height="16" class="h-4 w-4" [attr.loading]="'lazy'">
+            <span i18n>Official Website</span>
+          </a>
+        }
+        @if (post.otherLinksList?.[0]?.title) {
+          @for (link of post.otherLinksList; track $index) {
+            @if (link.url && link.title) {
+              <a [href]="link.url" target="_blank" rel="noopener"
+                class="inline-flex items-center gap-2 px-5 py-2.5 bg-amber-500 text-white text-sm font-medium rounded-full hover:bg-amber-600 transition-colors">
+                <img src="assets/img/check-circle-btn.svg" [alt]="link.title" width="16" height="16" class="h-4 w-4" [attr.loading]="'lazy'">
+                {{link.title}}
+              </a>
+            }
+          }
+        }
+      </div>
+
+      <!-- Related links -->
+      @if (post.relatedCatSubCat?.length) {
+        <div class="bg-white rounded-xl border border-neutral-200 p-4 mb-4">
+          <h2 class="text-xs font-bold text-neutral-600 uppercase tracking-widest mb-3" i18n>Related Links</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            @for (item of post.relatedCatSubCat; track $index; let i = $index) {
+              <preptm-post [minimal]="false" [post]="item" [index]="i + 1"></preptm-post>
+            }
+          </div>
+        </div>
+      }
+
+      @if (shareContent) {
+        <div class="lg:hidden">
+          <preptm-share-buttons [content]="shareContent"></preptm-share-buttons>
+        </div>
+      }
+    </article>
+
+    <!-- Sidebar — desktop only, hydrated on idle -->
+    @defer (hydrate on idle) {
+      <aside class="hidden lg:block w-64 flex-shrink-0">
+        <div class="sticky top-20 space-y-4">
+          @if (shareContent) {
+            <div class="bg-white rounded-xl border border-neutral-200 p-4">
+              <preptm-share-buttons [content]="shareContent"></preptm-share-buttons>
+            </div>
+          }
+          <app-custom-ads></app-custom-ads>
+        </div>
+      </aside>
+    }
+  </div>
+}

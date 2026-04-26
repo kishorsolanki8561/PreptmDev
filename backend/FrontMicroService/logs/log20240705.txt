@@ -1,0 +1,86 @@
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-05 12:01 
+
+<KISHOR> 
+ File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync Error Level: [Error] 
+--------------------Message--------------------
+File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync
+--------------------Exception--------------------
+System.InvalidOperationException: Response Content-Length mismatch: too many bytes written (9580 of 7169).
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.VerifyAndUpdateWrite(Int32 count)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FirstWriteAsyncInternal(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.WritePipeAsync(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseStream.WriteAsync(Byte[] buffer, Int32 offset, Int32 count, CancellationToken cancellationToken)
+   at System.IO.Stream.WriteAsync(Byte[] buffer, Int32 offset, Int32 count)
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 63
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-05 12:01 
+
+<KISHOR> 
+ Connection id ""0HN4SNF74DSVE"", Request id ""0HN4SNF74DSVE:00000009"": An unhandled exception was thrown by the application. Error Level: [Error] 
+--------------------Message--------------------
+Connection id ""0HN4SNF74DSVE"", Request id ""0HN4SNF74DSVE:00000009"": An unhandled exception was thrown by the application.
+--------------------Exception--------------------
+System.InvalidOperationException: Response Content-Length mismatch: too few bytes written (0 of 7169).
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-05 12:01 
+
+<KISHOR> 
+ File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync Error Level: [Error] 
+--------------------Message--------------------
+File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync
+--------------------Exception--------------------
+System.InvalidOperationException: Response Content-Length mismatch: too many bytes written (9580 of 7169).
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.VerifyAndUpdateWrite(Int32 count)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FirstWriteAsyncInternal(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.WritePipeAsync(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseStream.WriteAsync(Byte[] buffer, Int32 offset, Int32 count, CancellationToken cancellationToken)
+   at System.IO.Stream.WriteAsync(Byte[] buffer, Int32 offset, Int32 count)
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 63
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-05 12:01 
+
+<KISHOR> 
+ Connection id ""0HN4SNGHC0KOR"", Request id ""0HN4SNGHC0KOR:00000009"": An unhandled exception was thrown by the application. Error Level: [Error] 
+--------------------Message--------------------
+Connection id ""0HN4SNGHC0KOR"", Request id ""0HN4SNGHC0KOR:00000009"": An unhandled exception was thrown by the application.
+--------------------Exception--------------------
+System.InvalidOperationException: Response Content-Length mismatch: too few bytes written (0 of 7169).
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-05 12:07 
+
+<KISHOR> 
+ File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync Error Level: [Error] 
+--------------------Message--------------------
+File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync
+--------------------Exception--------------------
+System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at CommonService.Other.HelperService.Decrypt(String Text) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\HelperService.cs:line 75
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 51
+
+--------------------Log End--------------------

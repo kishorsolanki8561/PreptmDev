@@ -1,0 +1,19 @@
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-11-23 18:00 
+
+<KISHOR> 
+ File Name :- DashboardService.cs Method Name :- GetFrontDashboardList Error Level: [Error] 
+--------------------Message--------------------
+File Name :- DashboardService.cs Method Name :- GetFrontDashboardList
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+ ---> System.ComponentModel.Win32Exception (53): The network path was not found.
+   at CommonService.Dapper.DapperGenericRepo.QueryMultiple(String query, Object perams) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 215
+   at FrontMicroService.Service.DashboardService.GetFrontDashboardList(DashboradFilterModel filterModel) in D:\Project\5GStudy\taiyari-backend\FrontMicroService\Service\DashboardService.cs:line 69
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+
+--------------------Log End--------------------

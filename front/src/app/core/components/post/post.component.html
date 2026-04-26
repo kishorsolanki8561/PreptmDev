@@ -1,0 +1,60 @@
+<a [routerLink]="['/', post().blockTypeSlug, post().slugUrl]"
+  class="group relative flex items-start gap-2 p-3 bg-white rounded-lg border border-neutral-200
+         hover:shadow-card-hover hover:border-neutral-300 transition-all duration-200 cursor-pointer overflow-hidden"
+  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+
+  <meta itemprop="position" [content]="index()" />
+  <meta itemprop="url" [content]="document.location.origin + '/' + post().blockTypeSlug + '/' + post().slugUrl" />
+
+  <!-- Left colour accent bar -->
+  <div class="absolute left-0 top-0 bottom-0 w-[3px] rounded-l-lg" [ngClass]="accentBar()"></div>
+
+  <!-- Main content -->
+  <div class="flex-1 min-w-0 pl-1">
+
+    <!-- Title -->
+    <h2 class="text-sm font-medium text-neutral-800 leading-snug line-clamp-2 group-hover:text-brand-700 transition-colors"
+      itemprop="name">
+      {{ post().title }}
+    </h2>
+
+    <!-- Meta row -->
+    <div class="flex flex-wrap items-center gap-1.5 mt-1.5">
+
+      <!-- Post-type badge -->
+      @if (post().moduleName) {
+        <span class="inline-flex items-center text-[10px] font-semibold rounded px-1.5 py-0.5"
+          [ngClass]="badgeCls()">
+          {{ post().moduleName | titlecase }}
+        </span>
+      }
+
+      <!-- Vacancy count -->
+      @if (post().totalPost) {
+        <span class="inline-flex items-center text-[10px] text-neutral-500 bg-neutral-50 border border-neutral-100 rounded px-1.5 py-0.5">
+          {{ post().totalPost | number }} Posts
+        </span>
+      }
+
+      <!-- Last date -->
+      @if (post().lastDate && !minimal()) {
+        <span class="inline-flex items-center text-[10px] text-neutral-400">
+          · Last {{ post().lastDate | date:'d MMM yy' }}
+        </span>
+      }
+    </div>
+
+  </div>
+
+  <!-- Right side badges -->
+  <div class="flex flex-col items-end gap-1 flex-shrink-0 pt-0.5">
+    @if (post()['isNew']) {
+      <span class="inline-block h-2 w-2 rounded-full bg-green-500" title="New"></span>
+    }
+    @if ((post().reminingFewDays ?? 0) > 0) {
+      <span class="text-[10px] font-bold bg-red-500 text-white rounded px-1.5 py-0.5 leading-tight">
+        {{ post().reminingFewDays }}d
+      </span>
+    }
+  </div>
+</a>

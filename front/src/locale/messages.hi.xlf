@@ -1,0 +1,1415 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="2821179408673282599" datatype="html">
+        <source>Home</source>
+        <target>à¤¹à¥‹à¤®</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/breadcrumb/breadcrumb.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="395898887883156035" datatype="html">
+        <source>Sorry, the page you visited does not exist.</source>
+        <target>à¤•à¥à¤·à¤®à¤¾ à¤•à¤°à¥‡à¤‚, à¤†à¤ªà¤¨à¥‡ à¤œà¥‹ à¤ªà¥ƒà¤·à¥à¤  à¤¦à¥‡à¤–à¤¾ à¤µà¤¹ à¤®à¥Œà¤œà¥‚à¤¦ à¤¨à¤¹à¥€à¤‚ à¤¹à¥ˆà¥¤</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/no-records/no-records.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6817336836600293476" datatype="html">
+        <source>Back Home</source>
+        <target>à¤¹à¥‹à¤® à¤ªà¤° à¤µà¤¾à¤ªà¤¸ à¤œà¤¾à¤à¤‚</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/no-records/no-records.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7419704019640008953" datatype="html">
+        <source>Share</source>
+        <target>à¤¸à¤¾à¤à¤¾ à¤•à¤°à¥‡à¤‚</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/share-buttons/share-buttons.component.html</context>
+          <context context-type="linenumber">40,41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3589357089999192033" datatype="html">
+        <source>Preptm Logo</source>
+        <target>à¤ªà¥à¤°à¥‡à¤ªà¤Ÿà¥€à¤à¤® à¤²à¥‹à¤—à¥‹</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3444004279954316841" datatype="html">
+        <source> Making the job hunt easy for you with all the latest job notifications and up-to-date information. </source>
+        <target>à¤¸à¤­à¥€ à¤¨à¤µà¥€à¤¨à¤¤à¤® à¤¨à¥Œà¤•à¤°à¥€ à¤¸à¥‚à¤šà¤¨à¤¾à¤“à¤‚ à¤”à¤° à¤²à¥‡à¤Ÿà¥‡à¤¸à¥à¤Ÿ à¤œà¤¾à¤¨à¤•à¤¾à¤°à¥€ à¤•à¥‡ à¤¸à¤¾à¤¥ à¤†à¤ªà¤•à¥‡ à¤²à¤¿à¤ à¤¨à¥Œà¤•à¤°à¥€ à¤•à¥€ à¤–à¥‹à¤œ à¤•à¥‹ à¤†à¤¸à¤¾à¤¨ à¤¬à¤¨à¤¾à¤¯à¥‡à¥¤</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5047869673541564519" datatype="html">
+        <source>Download app from play store</source>
+        <target>à¤ªà¥à¤²à¥‡ à¤¸à¥à¤Ÿà¥‹à¤° à¤¸à¥‡ à¤à¤ª à¤¡à¤¾à¤‰à¤¨à¤²à¥‹à¤¡ à¤•à¤°à¥‡à¤‚</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6663336624063256423" datatype="html">
+        <source>WhatsApp Share</source>
+        <target>à¤µà¥à¤¹à¤¾à¤Ÿà¥à¤¸à¤à¤ª à¤ªà¤° à¤¸à¤¾à¤à¤¾ à¤•à¤°à¥‡à¤‚</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9199677421881026415" datatype="html">
+        <source>WhatsApp</source>
+        <target>à¤µà¥à¤¹à¤¾à¤Ÿà¥à¤¸à¤à¤ª</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4830791894121761354" datatype="html">
+        <source>Facebook Share</source>
+        <target>à¤«à¥‡à¤¸à¤¬à¥à¤• à¤ªà¤° à¤¸à¤¾à¤à¤¾ à¤•à¤°à¥‡à¤‚</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">27,28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8790918354594417962" datatype="html">
+        <source>Facebook</source>
+        <target>à¤«à¥‡à¤¸à¤¬à¥à¤•</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5517055453513499745" datatype="html">
+        <source>Instagram Share</source>
+        <target>à¤‡à¤‚à¤¸à¥à¤Ÿà¤¾à¤—à¥à¤°à¤¾à¤® à¤ªà¤° à¤¸à¤¾à¤à¤¾ à¤•à¤°à¥‡à¤‚</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">31,32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3080109816219994129" datatype="html">
+        <source>Instagram</source>
+        <target>à¤‡à¤‚à¤¸à¥à¤Ÿà¤¾à¤—à¥à¤°à¤¾à¤®</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1819152639996211208" datatype="html">
+        <source>X Share</source>
+        <target>X à¤ªà¤° à¤¸à¤¾à¤à¤¾ à¤•à¤°à¥‡à¤‚</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1715373473261069991" datatype="html">
+        <source>Twitter</source>
+        <target>à¤Ÿà¥à¤µà¤¿à¤Ÿà¤°</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7282881410031106032" datatype="html">
+        <source>Telegram Share</source>
+        <target>à¤Ÿà¥‡à¤²à¥€à¤—à¥à¤°à¤¾à¤® à¤ªà¤° à¤¸à¤¾à¤à¤¾ à¤•à¤°à¥‡à¤‚</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">37,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3618113761309540743" datatype="html">
+        <source>Telegram</source>
+        <target>à¤Ÿà¥‡à¤²à¥€à¤—à¥à¤°à¤¾à¤®</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1140327701924892323" datatype="html">
+        <source>Quick Links</source>
+        <target>à¤²à¤¿à¤‚à¤•à¥à¤¸</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">43,44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2047711072972209539" datatype="html">
+        <source>Accountant</source>
+        <target>à¤…à¤•à¤¾à¤‰à¤‚à¤Ÿà¥‡à¤‚à¤Ÿ</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">45,46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5133492730804332637" datatype="html">
+        <source>Admission</source>
+        <target>à¤ªà¥à¤°à¤µà¥‡à¤¶</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">46,47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6319029068592040867" datatype="html">
+        <source>Agriculture</source>
+        <target>à¤•à¥ƒà¤·à¤¿</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">47,48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="798669171616965554" datatype="html">
+        <source>Airforce</source>
+        <target>à¤µà¤¾à¤¯à¥à¤¸à¥‡à¤¨à¤¾</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">48,49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2852998942559119165" datatype="html">
+        <source>Banking</source>
+        <target>à¤¬à¥ˆà¤‚à¤•à¤¿à¤‚à¤—</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">49,50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4765906364144483440" datatype="html">
+        <source>Civil Services</source>
+        <target>à¤¸à¤¿à¤µà¤¿à¤² à¤¸à¥‡à¤µà¤¾</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">50,51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5905679463912747161" datatype="html">
+        <source>Engineering</source>
+        <target>à¤‡à¤‚à¤œà¥€à¤¨à¤¿à¤¯à¤°à¤¿à¤‚à¤—</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">51,52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5253222992448855648" datatype="html">
+        <source>Examination</source>
+        <target>à¤ªà¤°à¥€à¤•à¥à¤·à¤¾</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">52,53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1035713859463417870" datatype="html">
+        <source>High Court</source>
+        <target>à¤‰à¤šà¥à¤š à¤¨à¥à¤¯à¤¾à¤¯à¤¾à¤²à¤¯</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">53,54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5944488753746113803" datatype="html">
+        <source>Insurance</source>
+        <target>à¤¬à¥€à¤®à¤¾</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">54,55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5693935181671647951" datatype="html">
+        <source>Language Translator</source>
+        <target>à¤­à¤¾à¤·à¤¾ à¤…à¤¨à¥à¤µà¤¾à¤¦à¤•</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">55,56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5898106319446332360" datatype="html">
+        <source>Medical</source>
+        <target>à¤šà¤¿à¤•à¤¿à¤¤à¥à¤¸à¤¾</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">56,57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6064460815793997751" datatype="html">
+        <source>Police</source>
+        <target>à¤ªà¥à¤²à¤¿à¤¸</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">57,58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6255701642155098381" datatype="html">
+        <source>Railway</source>
+        <target>à¤°à¥‡à¤²à¤µà¥‡</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">58,59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5764079100090156871" datatype="html">
+        <source>Teaching</source>
+        <target>à¤¶à¤¿à¤•à¥à¤·à¤£</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">59,60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3979962687792847615" datatype="html">
+        <source>Typing</source>
+        <target>à¤Ÿà¤¾à¤‡à¤ªà¤¿à¤‚à¤—</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">60,61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5539833462297888878" datatype="html">
+        <source>Articles</source>
+        <target>à¤²à¥‡à¤–</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">61,62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3817498941817715969" datatype="html">
+        <source>Pages</source>
+        <target>à¤ªà¥ƒà¤·à¥à¤ </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">65,66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2501489806101473286" datatype="html">
+        <source>About us</source>
+        <target>à¤¹à¤®à¤¾à¤°à¥‡ à¤¬à¤¾à¤°à¥‡ à¤®à¥‡à¤‚</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">67,68</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/additional-pages/additional-pages.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8525213662266893834" datatype="html">
+        <source>Contact us</source>
+        <target>à¤¸à¤‚à¤ªà¤°à¥à¤• à¤•à¤°à¥‡à¤‚</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">68,69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2598703394778941061" datatype="html">
+        <source>Disclaimer</source>
+        <target>à¤…à¤¸à¥à¤µà¥€à¤•à¤°à¤£</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">69,70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8439955599488894226" datatype="html">
+        <source>Privacy Policy</source>
+        <target>à¤—à¥‹à¤ªà¤¨à¥€à¤¯à¤¤à¤¾ à¤¨à¥€à¤¤à¤¿</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">70,71</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/additional-pages/additional-pages.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3042681697799212465" datatype="html">
+        <source>Terms &amp; conditions</source>
+        <target>à¤¨à¤¿à¤¯à¤® à¤”à¤° à¤¶à¤°à¥à¤¤à¥‡à¤‚</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">71,72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3001619990214474060" datatype="html">
+        <source>Sitemap</source>
+        <target>à¤¸à¤¾à¤‡à¤Ÿà¤®à¥ˆà¤ª</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/footer/footer.component.html</context>
+          <context context-type="linenumber">72,73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3712763448239725249" datatype="html">
+        <source>Search here</source>
+        <target>à¤¯à¤¹à¤¾à¤ à¤–à¥‹à¤œà¥‡à¤‚</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/header/header.component.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4997182893037887427" datatype="html">
+        <source>Search for</source>
+        <target>à¤–à¥‹à¤œà¥‡à¤‚</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/header/header.component.html</context>
+          <context context-type="linenumber">39,40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3453929685926629133" datatype="html">
+        <source>Change Language</source>
+        <target>à¤­à¤¾à¤·à¤¾ à¤¬à¤¦à¤²à¥‡à¤‚</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/header/header.component.html</context>
+          <context context-type="linenumber">79</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3229595422546554334" datatype="html">
+        <source>Jobs</source>
+        <target>à¤¨à¥Œà¤•à¤°à¤¿à¤¯à¤¾à¤‚</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/header/header.component.html</context>
+          <context context-type="linenumber">104</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home/mobile-menu/mobile-menu.component.html</context>
+          <context context-type="linenumber">7,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8920113254859722371" datatype="html">
+        <source>Admit Cards</source>
+        <target>à¤ªà¥à¤°à¤µà¥‡à¤¶ à¤ªà¤¤à¥à¤°</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/header/header.component.html</context>
+          <context context-type="linenumber">105</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home/home.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home/mobile-menu/mobile-menu.component.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4117223982312042991" datatype="html">
+        <source>Syllabus</source>
+        <target>à¤ªà¤¾à¤ à¥à¤¯à¤•à¥à¤°à¤®</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/header/header.component.html</context>
+          <context context-type="linenumber">106</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home/mobile-menu/mobile-menu.component.html</context>
+          <context context-type="linenumber">26,27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5968132631442328843" datatype="html">
+        <source>Results</source>
+        <target>à¤ªà¤°à¤¿à¤£à¤¾à¤®</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/header/header.component.html</context>
+          <context context-type="linenumber">107</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home/home.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home/mobile-menu/mobile-menu.component.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3620668876378879803" datatype="html">
+        <source>Exams</source>
+        <target>à¤ªà¤°à¥€à¤•à¥à¤·à¤¾à¤à¤‚</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/header/header.component.html</context>
+          <context context-type="linenumber">108</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home/home.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home/mobile-menu/mobile-menu.component.html</context>
+          <context context-type="linenumber">45,46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1036233208904152310" datatype="html">
+        <source>Admissions</source>
+        <target>à¤ªà¥à¤°à¤µà¥‡à¤¶</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/header/header.component.html</context>
+          <context context-type="linenumber">109</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home/home.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home/mobile-menu/mobile-menu.component.html</context>
+          <context context-type="linenumber">51,52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1960412477402020893" datatype="html">
+        <source>Schemes</source>
+        <target>à¤¯à¥‹à¤œà¤¨à¤¾à¤à¤‚</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/header/header.component.html</context>
+          <context context-type="linenumber">110</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home/mobile-menu/mobile-menu.component.html</context>
+          <context context-type="linenumber">20,21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3303852097031321192" datatype="html">
+        <source>Terms &amp; Conditions</source>
+        <target>à¤¨à¤¿à¤¯à¤® à¤”à¤° à¤¶à¤°à¥à¤¤à¥‡à¤‚</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/additional-pages/additional-pages.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1911827420209807833" datatype="html">
+        <source>Manage Account</source>
+        <target>à¤–à¤¾à¤¤à¤¾ à¤ªà¥à¤°à¤¬à¤‚à¤§à¤¨</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/additional-pages/additional-pages.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2820031676440667416" datatype="html">
+        <source>Latest</source>
+        <target>à¤¨à¤µà¥€à¤¨à¤¤à¤®</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/article/article-details/article-details.component.html</context>
+          <context context-type="linenumber">105,106</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6472599282785029372" datatype="html">
+        <source>View All</source>
+        <target>à¤¸à¤­à¥€ à¤¦à¥‡à¤–à¥‡à¤‚</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/article/article-details/article-details.component.html</context>
+          <context context-type="linenumber">106,107</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3679012116144418793" datatype="html">
+        <source>This may interest you</source>
+        <target>à¤¯à¤¹ à¤†à¤ªà¤•à¥‹ à¤°à¥à¤šà¤¿à¤•à¤° à¤²à¤— à¤¸à¤•à¤¤à¤¾ à¤¹à¥ˆ</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/article/article-details/article-details.component.html</context>
+          <context context-type="linenumber">115,116</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3724475073526050715" datatype="html">
+        <source>Related</source>
+        <target>à¤¸à¤‚à¤¬à¤‚à¤§à¤¿à¤¤</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/article/article-details/article-details.component.html</context>
+          <context context-type="linenumber">123,124</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/article/article-details/article-details.component.html</context>
+          <context context-type="linenumber">124,125</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="759687838251957893" datatype="html">
+        <source>Contact Us</source>
+        <target>à¤¸à¤‚à¤ªà¤°à¥à¤• à¤•à¤°à¥‡à¤‚</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact-us/contact-us.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4484843059099497490" datatype="html">
+        <source>Leave a Message</source>
+        <target>à¤¸à¤‚à¤¦à¥‡à¤¶ à¤›à¥‹à¤¡à¤¼à¥‡à¤‚</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact-us/contact-us.component.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3527923064152247568" datatype="html">
+        <source>Message Type*</source>
+        <target>à¤¸à¤‚à¤¦à¥‡à¤¶ à¤ªà¥à¤°à¤•à¤¾à¤°*</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact-us/contact-us.component.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3011407243753708483" datatype="html">
+        <source>Select a option and change input text above</source>
+        <target>à¤à¤• à¤µà¤¿à¤•à¤²à¥à¤ª à¤šà¥à¤¨à¥‡à¤‚ à¤”à¤° à¤Šà¤ªà¤° à¤‡à¤¨à¤ªà¥à¤Ÿ à¤¬à¤¦à¤²à¥‡à¤‚</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact-us/contact-us.component.html</context>
+          <context context-type="linenumber">16,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5142121607419820567" datatype="html">
+        <source>Your Message*</source>
+        <target>à¤†à¤ªà¤•à¤¾ à¤¸à¤‚à¤¦à¥‡à¤¶*</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact-us/contact-us.component.html</context>
+          <context context-type="linenumber">22,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5819426584430687397" datatype="html">
+        <source>Leave your message here...</source>
+        <target>à¤…à¤ªà¤¨à¤¾ à¤¸à¤‚à¤¦à¥‡à¤¶ à¤¯à¤¹à¤¾à¤ à¤›à¥‹à¤¡à¤¼à¥‡à¤‚...</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact-us/contact-us.component.html</context>
+          <context context-type="linenumber">23,24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3388399251950847920" datatype="html">
+        <source>Your message...</source>
+        <target>à¤†à¤ªà¤•à¤¾ à¤¸à¤‚à¤¦à¥‡à¤¶...</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact-us/contact-us.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6924053821463290251" datatype="html">
+        <source> Send Message</source>
+        <target>à¤¸à¤‚à¤¦à¥‡à¤¶ à¤­à¥‡à¤œà¥‡à¤‚</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact-us/contact-us.component.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3262236020277300799" datatype="html">
+        <source>Phone</source>
+        <target>à¤«à¥‹à¤¨</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/department/department-details/department-details.component.html</context>
+          <context context-type="linenumber">23,24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4768749765465246664" datatype="html">
+        <source>Email</source>
+        <target>à¤ˆà¤®à¥‡à¤²</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/department/department-details/department-details.component.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1340298141300120234" datatype="html">
+        <source>Social media</source>
+        <target>à¤¸à¥‹à¤¶à¤² à¤®à¥€à¤¡à¤¿à¤¯à¤¾</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/department/department-details/department-details.component.html</context>
+          <context context-type="linenumber">39,40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5637472420847663616" datatype="html">
+        <source> Website</source>
+        <target>à¤µà¥‡à¤¬à¤¸à¤¾à¤‡à¤Ÿ</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/department/department-details/department-details.component.html</context>
+          <context context-type="linenumber">59,60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6304432362546770951" datatype="html">
+        <source>Address</source>
+        <target>à¤ªà¤¤à¤¾</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/department/department-details/department-details.component.html</context>
+          <context context-type="linenumber">70,71</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="471816275243265264" datatype="html">
+        <source>Location</source>
+        <target>à¤¸à¥à¤¥à¤¾à¤¨</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/department/department-details/department-details.component.html</context>
+          <context context-type="linenumber">77,78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4005887006865402093" datatype="html">
+        <source>ðŸ”” Latest notification of </source>
+        <target>ðŸ”” à¤¨à¤µà¥€à¤¨à¤¤à¤® à¤¸à¥‚à¤šà¤¨à¤¾ </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/department/department-details/department-details.component.html</context>
+          <context context-type="linenumber">88,89</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1721692072968146561" datatype="html">
+        <source>Ganesh Chaturthi Special</source>
+        <target>à¤—à¤£à¥‡à¤¶ à¤šà¤¤à¥à¤°à¥à¤¥à¥€ à¤µà¤¿à¤¶à¥‡à¤·</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home/custom-button/custom-button.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4911843450729688319" datatype="html">
+        <source>Recent</source>
+        <target>à¤¹à¤¾à¤² à¤¹à¥€ à¤®à¥‡à¤‚</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home/home.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8643470425179114282" datatype="html">
+        <source>Expire Soon</source>
+        <target>à¤œà¤²à¥à¤¦à¥€ à¤¸à¤®à¤¾à¤ªà¥à¤¤ à¤¹à¥‹à¤¨à¥‡ à¤µà¤¾à¤²à¤¾</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home/home.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6145608661889312011" datatype="html">
+        <source>Recruitments</source>
+        <target>à¤­à¤°à¥à¤¤à¤¿à¤¯à¤¾à¤‚</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home/home.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8725224299321680590" datatype="html">
+        <source>Upcoming</source>
+        <target>à¤†à¤—à¤¾à¤®à¥€</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home/home.component.html</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9055872601839389899" datatype="html">
+        <source> More...</source>
+        <target>à¤”à¤°...</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home/post-container/post-container.component.html</context>
+          <context context-type="linenumber">21,22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="327853893306460458" datatype="html">
+        <source> Department </source>
+        <target>à¤µà¤¿à¤­à¤¾à¤—</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/notes-paper-syllabus/nps-details/nps-details.component.html</context>
+          <context context-type="linenumber">37,38</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/admission-details/admission-details.component.html</context>
+          <context context-type="linenumber">43,44</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/post-containt-details/post-containt-details.component.html</context>
+          <context context-type="linenumber">43,44</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/recruitment-details/recruitment-details.component.html</context>
+          <context context-type="linenumber">44,45</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/scheme-details/scheme-details.component.html</context>
+          <context context-type="linenumber">52,53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2956056528330437143" datatype="html">
+        <source>Highlights</source>
+        <target>à¤®à¥à¤–à¥à¤¯ à¤¬à¤¿à¤‚à¤¦à¥</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/admission-details/admission-details.component.html</context>
+          <context context-type="linenumber">65,67</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/post-containt-details/post-containt-details.component.html</context>
+          <context context-type="linenumber">65,66</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/recruitment-details/recruitment-details.component.html</context>
+          <context context-type="linenumber">69,70</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/scheme-details/scheme-details.component.html</context>
+          <context context-type="linenumber">77,79</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3604386807230411192" datatype="html">
+        <source>Start Date</source>
+        <target>à¤†à¤°à¤‚à¤­ à¤¤à¤¿à¤¥à¤¿</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/admission-details/admission-details.component.html</context>
+          <context context-type="linenumber">75,76</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/post-containt-details/post-containt-details.component.html</context>
+          <context context-type="linenumber">75,76</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/recruitment-details/recruitment-details.component.html</context>
+          <context context-type="linenumber">81,82</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/scheme-details/scheme-details.component.html</context>
+          <context context-type="linenumber">86,87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7379726829888309084" datatype="html">
+        <source>End Date</source>
+        <target>à¤¸à¤®à¤¾à¤ªà¥à¤¤à¤¿ à¤¤à¤¿à¤¥à¤¿</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/admission-details/admission-details.component.html</context>
+          <context context-type="linenumber">85,86</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/post-containt-details/post-containt-details.component.html</context>
+          <context context-type="linenumber">85,86</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/recruitment-details/recruitment-details.component.html</context>
+          <context context-type="linenumber">92,93</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/scheme-details/scheme-details.component.html</context>
+          <context context-type="linenumber">96,97</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4610561849873160846" datatype="html">
+        <source>Extended date</source>
+        <target>à¤µà¤¿à¤¸à¥à¤¤à¤¾à¤°à¤¿à¤¤ à¤¤à¤¿à¤¥à¤¿</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/admission-details/admission-details.component.html</context>
+          <context context-type="linenumber">95,96</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/post-containt-details/post-containt-details.component.html</context>
+          <context context-type="linenumber">95,96</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/recruitment-details/recruitment-details.component.html</context>
+          <context context-type="linenumber">103,104</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/scheme-details/scheme-details.component.html</context>
+          <context context-type="linenumber">106,107</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="53848600839482801" datatype="html">
+        <source>Correction last date</source>
+        <target>à¤¸à¥à¤§à¤¾à¤° à¤•à¥€ à¤…à¤‚à¤¤à¤¿à¤® à¤¤à¤¿à¤¥à¤¿</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/admission-details/admission-details.component.html</context>
+          <context context-type="linenumber">105,106</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/post-containt-details/post-containt-details.component.html</context>
+          <context context-type="linenumber">105,106</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/recruitment-details/recruitment-details.component.html</context>
+          <context context-type="linenumber">114,115</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/scheme-details/scheme-details.component.html</context>
+          <context context-type="linenumber">126,127</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="926173096293784933" datatype="html">
+        <source>Admit card date</source>
+        <target>à¤ªà¥à¤°à¤µà¥‡à¤¶ à¤ªà¤¤à¥à¤° à¤¤à¤¿à¤¥à¤¿</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/admission-details/admission-details.component.html</context>
+          <context context-type="linenumber">115,116</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/recruitment-details/recruitment-details.component.html</context>
+          <context context-type="linenumber">124,125</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4631233756110102543" datatype="html">
+        <source>Payment Last Date</source>
+        <target>à¤­à¥à¤—à¤¤à¤¾à¤¨ à¤•à¥€ à¤…à¤‚à¤¤à¤¿à¤® à¤¤à¤¿à¤¥à¤¿</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/admission-details/admission-details.component.html</context>
+          <context context-type="linenumber">125,126</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/post-containt-details/post-containt-details.component.html</context>
+          <context context-type="linenumber">116,117</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/recruitment-details/recruitment-details.component.html</context>
+          <context context-type="linenumber">134,135</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1626188924003238277" datatype="html">
+        <source>Exam Mode</source>
+        <target>à¤ªà¤°à¥€à¤•à¥à¤·à¤¾ à¤•à¤¾ à¤®à¥‹à¤¡</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/admission-details/admission-details.component.html</context>
+          <context context-type="linenumber">135,136</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/recruitment-details/recruitment-details.component.html</context>
+          <context context-type="linenumber">144,145</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8870711330013548872" datatype="html">
+        <source>Online</source>
+        <target>à¤‘à¤¨à¤²à¤¾à¤‡à¤¨</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/admission-details/admission-details.component.html</context>
+          <context context-type="linenumber">137,138</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/recruitment-details/recruitment-details.component.html</context>
+          <context context-type="linenumber">146,147</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/scheme-details/scheme-details.component.html</context>
+          <context context-type="linenumber">149,150</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="313850810538580916" datatype="html">
+        <source>Offline</source>
+        <target>à¤‘à¤«à¤²à¤¾à¤‡à¤¨</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/admission-details/admission-details.component.html</context>
+          <context context-type="linenumber">138,139</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/recruitment-details/recruitment-details.component.html</context>
+          <context context-type="linenumber">147,148</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/scheme-details/scheme-details.component.html</context>
+          <context context-type="linenumber">150,151</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1076715939729696355" datatype="html">
+        <source>Online / Offline</source>
+        <target>à¤‘à¤¨à¤²à¤¾à¤‡à¤¨ / à¤‘à¤«à¤²à¤¾à¤‡à¤¨</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/admission-details/admission-details.component.html</context>
+          <context context-type="linenumber">139,140</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/recruitment-details/recruitment-details.component.html</context>
+          <context context-type="linenumber">148,149</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/scheme-details/scheme-details.component.html</context>
+          <context context-type="linenumber">151,152</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5451026347645529518" datatype="html">
+        <source>Mininum Age</source>
+        <target>à¤¨à¥à¤¯à¥‚à¤¨à¤¤à¤® à¤†à¤¯à¥</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/admission-details/admission-details.component.html</context>
+          <context context-type="linenumber">149,150</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/recruitment-details/recruitment-details.component.html</context>
+          <context context-type="linenumber">158,159</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/scheme-details/scheme-details.component.html</context>
+          <context context-type="linenumber">161,162</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2994225279079745831" datatype="html">
+        <source> Years </source>
+        <target>à¤µà¤°à¥à¤·</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/admission-details/admission-details.component.html</context>
+          <context context-type="linenumber">151,152</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/admission-details/admission-details.component.html</context>
+          <context context-type="linenumber">164,165</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/recruitment-details/recruitment-details.component.html</context>
+          <context context-type="linenumber">160,161</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/recruitment-details/recruitment-details.component.html</context>
+          <context context-type="linenumber">173,174</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/scheme-details/scheme-details.component.html</context>
+          <context context-type="linenumber">163,164</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/scheme-details/scheme-details.component.html</context>
+          <context context-type="linenumber">176,177</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8756466335621794438" datatype="html">
+        <source>Maximum Age</source>
+        <target>à¤…à¤§à¤¿à¤•à¤¤à¤® à¤†à¤¯à¥</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/admission-details/admission-details.component.html</context>
+          <context context-type="linenumber">162,163</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/recruitment-details/recruitment-details.component.html</context>
+          <context context-type="linenumber">171,172</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/scheme-details/scheme-details.component.html</context>
+          <context context-type="linenumber">174,175</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1666887226757993490" datatype="html">
+        <source>Fee</source>
+        <target>à¤¶à¥à¤²à¥à¤•</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/admission-details/admission-details.component.html</context>
+          <context context-type="linenumber">174,175</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/scheme-details/scheme-details.component.html</context>
+          <context context-type="linenumber">137,138</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5387566043287118561" datatype="html">
+        <source>Available Seats</source>
+        <target>à¤‰à¤ªà¤²à¤¬à¥à¤§ à¤¸à¥€à¤Ÿà¥‡à¤‚</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/admission-details/admission-details.component.html</context>
+          <context context-type="linenumber">185,186</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8777809717184382694" datatype="html">
+        <source>Qualifications</source>
+        <target>à¤¯à¥‹à¤—à¥à¤¯à¤¤à¤¾à¤à¤‚</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/admission-details/admission-details.component.html</context>
+          <context context-type="linenumber">207,208</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/admission-details/admission-details.component.html</context>
+          <context context-type="linenumber">208,209</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/recruitment-details/recruitment-details.component.html</context>
+          <context context-type="linenumber">210,211</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/recruitment-details/recruitment-details.component.html</context>
+          <context context-type="linenumber">211,212</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2935340112478452786" datatype="html">
+        <source>Designation</source>
+        <target>à¤ªà¤¦</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/admission-details/admission-details.component.html</context>
+          <context context-type="linenumber">220,221</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/admission-details/admission-details.component.html</context>
+          <context context-type="linenumber">221,222</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/post-list/post-list.component.html</context>
+          <context context-type="linenumber">41,42</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/post-list/post-list.component.html</context>
+          <context context-type="linenumber">43,44</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/recruitment-details/recruitment-details.component.html</context>
+          <context context-type="linenumber">223,224</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/recruitment-details/recruitment-details.component.html</context>
+          <context context-type="linenumber">224,225</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9079991239691826789" datatype="html">
+        <source>How to apply</source>
+        <target>à¤†à¤µà¥‡à¤¦à¤¨ à¤•à¥ˆà¤¸à¥‡ à¤•à¤°à¥‡à¤‚</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/admission-details/admission-details.component.html</context>
+          <context context-type="linenumber">246,247</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/post-containt-details/post-containt-details.component.html</context>
+          <context context-type="linenumber">151,152</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/recruitment-details/recruitment-details.component.html</context>
+          <context context-type="linenumber">248,249</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/scheme-details/scheme-details.component.html</context>
+          <context context-type="linenumber">235,236</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="414887388288176527" datatype="html">
+        <source>Images</source>
+        <target>à¤›à¤µà¤¿à¤¯à¤¾à¤‚</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/admission-details/admission-details.component.html</context>
+          <context context-type="linenumber">266,267</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/admission-details/admission-details.component.html</context>
+          <context context-type="linenumber">267,268</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/post-containt-details/post-containt-details.component.html</context>
+          <context context-type="linenumber">170,171</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/post-containt-details/post-containt-details.component.html</context>
+          <context context-type="linenumber">171,172</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/recruitment-details/recruitment-details.component.html</context>
+          <context context-type="linenumber">269,270</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/recruitment-details/recruitment-details.component.html</context>
+          <context context-type="linenumber">270,271</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/scheme-details/scheme-details.component.html</context>
+          <context context-type="linenumber">280,281</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/scheme-details/scheme-details.component.html</context>
+          <context context-type="linenumber">281,282</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4391289919356861627" datatype="html">
+        <source>Apply</source>
+        <target>à¤†à¤µà¥‡à¤¦à¤¨ à¤•à¤°à¥‡à¤‚</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/admission-details/admission-details.component.html</context>
+          <context context-type="linenumber">285,286</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/recruitment-details/recruitment-details.component.html</context>
+          <context context-type="linenumber">304,305</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/scheme-details/scheme-details.component.html</context>
+          <context context-type="linenumber">353,354</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8044304973848447418" datatype="html">
+        <source>Notification</source>
+        <target>à¤¸à¥‚à¤šà¤¨à¤¾</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/admission-details/admission-details.component.html</context>
+          <context context-type="linenumber">292,293</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/post-containt-details/post-containt-details.component.html</context>
+          <context context-type="linenumber">213,214</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/recruitment-details/recruitment-details.component.html</context>
+          <context context-type="linenumber">311,312</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6899776632589966571" datatype="html">
+        <source>website</source>
+        <target>à¤µà¥‡à¤¬à¤¸à¤¾à¤‡à¤Ÿ</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/admission-details/admission-details.component.html</context>
+          <context context-type="linenumber">298,300</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/recruitment-details/recruitment-details.component.html</context>
+          <context context-type="linenumber">318,320</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5288210860972403382" datatype="html">
+        <source>Related Links</source>
+        <target>à¤¸à¤‚à¤¬à¤‚à¤§à¤¿à¤¤ à¤²à¤¿à¤‚à¤•</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/admission-details/admission-details.component.html</context>
+          <context context-type="linenumber">317,318</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/admission-details/admission-details.component.html</context>
+          <context context-type="linenumber">318,319</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5555132989294603452" datatype="html">
+        <source>This May interest You</source>
+        <target>à¤¯à¤¹ à¤†à¤ªà¤•à¥‹ à¤°à¥à¤šà¤¿à¤•à¤° à¤²à¤— à¤¸à¤•à¤¤à¤¾ à¤¹à¥ˆ</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/post-containt-details/post-containt-details.component.html</context>
+          <context context-type="linenumber">229,230</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4163272119298020373" datatype="html">
+        <source>Filters</source>
+        <target>à¤«à¤¼à¤¿à¤²à¥à¤Ÿà¤°</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/post-list/post-list.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8700121026680200191" datatype="html">
+        <source>Clear</source>
+        <target>à¤¸à¤¾à¤«à¤¼ à¤•à¤°à¥‡à¤‚</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/post-list/post-list.component.html</context>
+          <context context-type="linenumber">9,10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/post-list/post-list.component.html</context>
+          <context context-type="linenumber">62,63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3955967824702499842" datatype="html">
+        <source>Department</source>
+        <target>à¤µà¤¿à¤­à¤¾à¤—</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/post-list/post-list.component.html</context>
+          <context context-type="linenumber">13,15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/post-list/post-list.component.html</context>
+          <context context-type="linenumber">16,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4495621702964721668" datatype="html">
+        <source>Categorise</source>
+        <target>à¤¶à¥à¤°à¥‡à¤£à¥€</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/post-list/post-list.component.html</context>
+          <context context-type="linenumber">22,23</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/post-list/post-list.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="605720257764850532" datatype="html">
+        <source>Qualification</source>
+        <target>à¤¯à¥‹à¤—à¥à¤¯à¤¤à¤¾</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/post-list/post-list.component.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/post-list/post-list.component.html</context>
+          <context context-type="linenumber">36,37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2830773843208995940" datatype="html">
+        <source>Eligibility</source>
+        <target>à¤ªà¤¾à¤¤à¥à¤°à¤¤à¤¾</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/post-list/post-list.component.html</context>
+          <context context-type="linenumber">50,51</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/post-list/post-list.component.html</context>
+          <context context-type="linenumber">52,53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2080931434761286982" datatype="html">
+        <source> Search Results for </source>
+        <target>à¤¯à¤¹ à¤–à¥‹à¤œà¥‡ </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/post-list/post-list.component.html</context>
+          <context context-type="linenumber">70,71</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="498286527813307230" datatype="html">
+        <source>Salary</source>
+        <target>à¤µà¥‡à¤¤à¤¨</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/recruitment-details/recruitment-details.component.html</context>
+          <context context-type="linenumber">183,184</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8955863609617577960" datatype="html">
+        <source>Center Level</source>
+        <target>à¤•à¥‡à¤‚à¤¦à¥à¤° à¤¸à¥à¤¤à¤°</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/scheme-details/scheme-details.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8228098617971333632" datatype="html">
+        <source>State Level</source>
+        <target>à¤°à¤¾à¤œà¥à¤¯ à¤¸à¥à¤¤à¤°</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/scheme-details/scheme-details.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1035216493918017571" datatype="html">
+        <source>Postpone Date</source>
+        <target>à¤¸à¥à¤¥à¤—à¤¿à¤¤ à¤¤à¤¿à¤¥à¤¿</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/scheme-details/scheme-details.component.html</context>
+          <context context-type="linenumber">116,117</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7454948663060185252" datatype="html">
+        <source>Mode of Apply</source>
+        <target>à¤†à¤µà¥‡à¤¦à¤¨ à¤•à¤¾ à¤¤à¤°à¥€à¤•à¤¾</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/scheme-details/scheme-details.component.html</context>
+          <context context-type="linenumber">147,148</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7871821868333367332" datatype="html">
+        <source>Eligilibility</source>
+        <target>à¤ªà¤¾à¤¤à¥à¤°à¤¤à¤¾</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/scheme-details/scheme-details.component.html</context>
+          <context context-type="linenumber">199,200</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/scheme-details/scheme-details.component.html</context>
+          <context context-type="linenumber">200,201</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4450110402290172592" datatype="html">
+        <source>Documents Required</source>
+        <target>à¤†à¤µà¤¶à¥à¤¯à¤• à¤¦à¤¸à¥à¤¤à¤¾à¤µà¥‡à¤œ</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/scheme-details/scheme-details.component.html</context>
+          <context context-type="linenumber">212,213</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/scheme-details/scheme-details.component.html</context>
+          <context context-type="linenumber">213,214</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="592184995594667555" datatype="html">
+        <source>Contact Persons</source>
+        <target>à¤¸à¤‚à¤ªà¤°à¥à¤• à¤•à¥‡ à¤²à¤¿à¤ à¤µà¥à¤¯à¤•à¥à¤¤à¤¿</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/scheme-details/scheme-details.component.html</context>
+          <context context-type="linenumber">254,255</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/scheme-details/scheme-details.component.html</context>
+          <context context-type="linenumber">255,256</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1452087992857320332" datatype="html">
+        <source>Video&apos;s</source>
+        <target>à¤µà¥€à¤¡à¤¿à¤¯à¥‹</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/scheme-details/scheme-details.component.html</context>
+          <context context-type="linenumber">314,315</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/scheme-details/scheme-details.component.html</context>
+          <context context-type="linenumber">315,316</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4733307402565258070" datatype="html">
+        <source>Documents</source>
+        <target>à¤¦à¤¸à¥à¤¤à¤¾à¤µà¥‡à¤œ</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/scheme-details/scheme-details.component.html</context>
+          <context context-type="linenumber">333,334</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/scheme-details/scheme-details.component.html</context>
+          <context context-type="linenumber">334,335</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5481284030283031915" datatype="html">
+        <source>Website</source>
+        <target>à¤µà¥‡à¤¬à¤¸à¤¾à¤‡à¤Ÿ</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/post/scheme-details/scheme-details.component.html</context>
+          <context context-type="linenumber">360,361</context>
+        </context-group>
+      </trans-unit>
+          <trans-unit id="36693503864247562" datatype="html">
+        <source>Search…</source>
+        <target>खोजें…</target>
+      </trans-unit>
+      <trans-unit id="7839102902838664367" datatype="html">
+        <source>No results</source>
+        <target>कोई परिणाम नहीं</target>
+      </trans-unit>
+      <trans-unit id="1512770327284860739" datatype="html">
+        <source>All departments</source>
+        <target>सभी विभाग</target>
+      </trans-unit>
+      <trans-unit id="3393133458004181121" datatype="html">
+        <source>All categories</source>
+        <target>सभी श्रेणियाँ</target>
+      </trans-unit>
+      <trans-unit id="1806667489382256324" datatype="html">
+        <source>Category</source>
+        <target>श्रेणी</target>
+      </trans-unit>
+      <trans-unit id="6365454132960987374" datatype="html">
+        <source>Any qualification</source>
+        <target>कोई भी योग्यता</target>
+      </trans-unit>
+      <trans-unit id="8490836879014905972" datatype="html">
+        <source>Any designation</source>
+        <target>कोई भी पदनाम</target>
+      </trans-unit>
+      <trans-unit id="2767460301380981297" datatype="html">
+        <source>Any eligibility</source>
+        <target>कोई भी पात्रता</target>
+      </trans-unit>
+      <trans-unit id="1734661473802845396" datatype="html">
+        <source> Clear all </source>
+        <target> सभी साफ करें </target>
+      </trans-unit>
+      <trans-unit id="1238583382012712938" datatype="html">
+        <source> Clear </source>
+        <target> साफ करें </target>
+      </trans-unit>
+      <trans-unit id="141046754522048456" datatype="html">
+        <source>Search Results for</source>
+        <target>खोज परिणाम:</target>
+      </trans-unit>
+      <trans-unit id="3036936886709469748" datatype="html">
+        <source> results found</source>
+        <target> परिणाम मिले</target>
+      </trans-unit>
+      <trans-unit id="6406631892262292392" datatype="html">
+        <source>Private Jobs</source>
+        <target>प्राइवेट नौकरियाँ</target>
+      </trans-unit>
+      <trans-unit id="3967248343916117939" datatype="html">
+        <source>Browse by Category</source>
+        <target>श्रेणी द्वारा ब्राउज़ करें</target>
+      </trans-unit>
+      <trans-unit id="1682186126721664618" datatype="html">
+        <source>No categories available</source>
+        <target>कोई श्रेणी उपलब्ध नहीं</target>
+      </trans-unit>
+      <trans-unit id="6107582634033821978" datatype="html">
+        <source> Latest Government Jobs &amp; Exam Updates </source>
+        <target> नवीनतम सरकारी नौकरियाँ और परीक्षा अपडेट </target>
+      </trans-unit>
+      <trans-unit id="2752831036156995591" datatype="html">
+        <source> Real-time alerts for SSC, UPSC, RRB, Banking, State PSC and more </source>
+        <target> SSC, UPSC, RRB, बैंकिंग, राज्य PSC और अधिक के लिए रीयल-टाइम अलर्ट </target>
+      </trans-unit>
+      <trans-unit id="5251833624144964416" datatype="html">
+        <source> Browse Jobs </source>
+        <target> नौकरियाँ ब्राउज़ करें </target>
+      </trans-unit>
+      <trans-unit id="2361465803857228950" datatype="html">
+        <source> Download App </source>
+        <target> ऐप डाउनलोड करें </target>
+      </trans-unit>    </body>
+  </file>
+</xliff>
+

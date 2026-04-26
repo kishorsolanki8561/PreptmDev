@@ -1,0 +1,27 @@
+<label *ngIf="label" class="lbl">
+  {{label}}
+  <span *ngIf="isFormControl">{{formField.hasValidator(Validators.required)?'*':''}}</span>
+</label>
+<!-- <nz-input-group [ngClass]="{'txt-box':isPassword}" [nzSuffix]="isPassword?suffixTemplate:''">
+
+  <input class="txt-box" [nzStatus]="hasError?'error':''" nz-input nzSize="large" autocomplete="off"
+    [attr.maxlength]="maxLength" [placeholder]="placeholder" [(ngModel)]="value" [disabled]="isDisabled"
+    (input)="onChange($event)" (blur)="touched()" [type]="!passwordVisible && isPassword ? 'password' : 'text'"
+    (keypress)="onKeyPress($event)" />
+
+</nz-input-group> -->
+
+
+<nz-textarea-count>
+  <textarea (focusout)="focusOut()" class="txt-box" style="height:auto" [nzStatus]="hasError?'error':''" nz-input [placeholder]="placeholder"
+    [(ngModel)]="value" [disabled]="isDisabled" (input)="onChange($event)" (blur)="touched()"
+    (keypress)="onKeyPress($event)"></textarea>
+</nz-textarea-count>
+
+
+<app-error-messages *ngIf="isFormControl" [formField]="formField" [label]="label"
+  [maxLength]="maxLength"></app-error-messages>
+<!-- <ng-template #suffixTemplate>
+  <span class="cursor-pointer" nz-icon [nzType]="passwordVisible ? 'eye-invisible' : 'eye'"
+    (click)="passwordVisible = !passwordVisible"></span>
+</ng-template> -->

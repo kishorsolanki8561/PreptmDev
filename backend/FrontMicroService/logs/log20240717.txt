@@ -1,0 +1,68 @@
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-17 21:59 
+
+<KISHOR> 
+ File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync Error Level: [Error] 
+--------------------Message--------------------
+File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync
+--------------------Exception--------------------
+System.InvalidOperationException: Response Content-Length mismatch: too many bytes written (44 of 16).
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.VerifyAndUpdateWrite(Int32 count)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FirstWriteAsyncInternal(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.WritePipeAsync(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseStream.WriteAsync(Byte[] buffer, Int32 offset, Int32 count, CancellationToken cancellationToken)
+   at System.IO.Stream.WriteAsync(Byte[] buffer, Int32 offset, Int32 count)
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context)
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-17 21:59 
+
+<KISHOR> 
+ Connection id ""0HN56FKJ66J4G"", Request id ""0HN56FKJ66J4G:00000009"": An unhandled exception was thrown by the application. Error Level: [Error] 
+--------------------Message--------------------
+Connection id ""0HN56FKJ66J4G"", Request id ""0HN56FKJ66J4G:00000009"": An unhandled exception was thrown by the application.
+--------------------Exception--------------------
+System.InvalidOperationException: Response Content-Length mismatch: too few bytes written (0 of 16).
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-17 22:00 
+
+<KISHOR> 
+ File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync Error Level: [Error] 
+--------------------Message--------------------
+File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync
+--------------------Exception--------------------
+System.InvalidOperationException: Response Content-Length mismatch: too many bytes written (44 of 16).
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.VerifyAndUpdateWrite(Int32 count)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FirstWriteAsyncInternal(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.WritePipeAsync(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseStream.WriteAsync(Byte[] buffer, Int32 offset, Int32 count, CancellationToken cancellationToken)
+   at System.IO.Stream.WriteAsync(Byte[] buffer, Int32 offset, Int32 count)
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context)
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-17 22:00 
+
+<KISHOR> 
+ Connection id ""0HN56FKJ66J4G"", Request id ""0HN56FKJ66J4G:00000013"": An unhandled exception was thrown by the application. Error Level: [Error] 
+--------------------Message--------------------
+Connection id ""0HN56FKJ66J4G"", Request id ""0HN56FKJ66J4G:00000013"": An unhandled exception was thrown by the application.
+--------------------Exception--------------------
+System.InvalidOperationException: Response Content-Length mismatch: too few bytes written (0 of 16).
+
+--------------------Log End--------------------

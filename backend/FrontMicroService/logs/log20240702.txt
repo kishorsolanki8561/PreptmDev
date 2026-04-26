@@ -1,0 +1,25 @@
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-02 23:06 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.Security.Cryptography.CryptographicException: An error occurred during a cryptographic operation.
+ ---> System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharArray(Char[] inArray, Int32 offset, Int32 length)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input, Int32 offset, Char[] buffer, Int32 bufferOffset, Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input, Int32 offset, Int32 count)
+   at Microsoft.Extensions.Internal.WebEncoders.Base64UrlDecode(String input)
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.DataProtection.DataProtectionCommonExtensions.Unprotect(IDataProtector protector, String protectedData)
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 35
+   at CommonService.JWT.JwtMiddleware.Invoke(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\JWT\JwtMiddleware.cs:line 73
+
+--------------------Log End--------------------

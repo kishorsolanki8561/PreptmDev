@@ -1,0 +1,16 @@
+<label *ngIf="label" class="lbl">
+    {{label}}
+    <span *ngIf="isFormControl">{{formField.hasValidator(Validators.required)?'*':''}}</span>
+</label>
+<div>
+    <nz-radio-group nzSize="large" [(ngModel)]="value" [disabled]="isDisabled" (focusout)="focusOut()"
+        (input)="onChange($event)">
+        <ng-container *ngFor="let item of optionList">
+            <label nz-radio-button [nzValue]="item.value">{{item.text}}</label>
+        </ng-container>
+    </nz-radio-group>
+</div>
+
+
+<app-error-messages *ngIf="isFormControl" [formField]="formField" [label]="label"
+    [maxLength]="maxLength"></app-error-messages>

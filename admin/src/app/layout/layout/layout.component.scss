@@ -1,0 +1,30 @@
+img {
+    transition: width 0.5s, height 0.5s;
+}
+
+.logo {
+    margin: 40px auto;
+
+    img {
+        height: 100px;
+        width: 100px;
+        border-radius: 56%;
+        margin: 0 auto;
+    }
+}
+
+.collapsed-logo {
+    margin: 40px auto;
+
+    img {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+}
+
+.scrollabel {
+    max-height: 100vh;
+    overflow-y: auto;
+}

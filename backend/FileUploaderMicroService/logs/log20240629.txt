@@ -1,0 +1,134 @@
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-06-29 18:20 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- uploadFile Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- uploadFile
+--------------------Exception--------------------
+System.Runtime.InteropServices.ExternalException (0x80004005): A generic error occurred in GDI+.
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 207
+   at FileUploaderMicroService.Service.FileUploaderService.FileUpload(IFormFile aFormFile, Boolean isWebp, Boolean isTh1200x628, Boolean isTh360x180, Boolean isTh120x68) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 149
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-06-29 18:20 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- SaveFile Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- SaveFile
+--------------------Exception--------------------
+System.Runtime.InteropServices.ExternalException (0x80004005): A generic error occurred in GDI+.
+   at FileUploaderMicroService.Service.FileUploaderService.FileUpload(IFormFile aFormFile, Boolean isWebp, Boolean isTh1200x628, Boolean isTh360x180, Boolean isTh120x68) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 173
+   at FileUploaderMicroService.Service.FileUploaderService.uploadFile(IFormFile aFormFile, String path, String fileName) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 93
+   at FileUploaderMicroService.Service.FileUploaderService.SaveFile(IFormFile formFile, String path, String filename) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 29
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-06-29 18:22 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- uploadFile Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- uploadFile
+--------------------Exception--------------------
+System.Runtime.InteropServices.ExternalException (0x80004005): A generic error occurred in GDI+.
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 210
+   at FileUploaderMicroService.Service.FileUploaderService.FileUpload(IFormFile aFormFile, Boolean isWebp, Boolean isTh1200x628, Boolean isTh360x180, Boolean isTh120x68) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 149
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-06-29 18:22 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- SaveFile Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- SaveFile
+--------------------Exception--------------------
+System.Runtime.InteropServices.ExternalException (0x80004005): A generic error occurred in GDI+.
+   at FileUploaderMicroService.Service.FileUploaderService.FileUpload(IFormFile aFormFile, Boolean isWebp, Boolean isTh1200x628, Boolean isTh360x180, Boolean isTh120x68) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 173
+   at FileUploaderMicroService.Service.FileUploaderService.uploadFile(IFormFile aFormFile, String path, String fileName) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 93
+   at FileUploaderMicroService.Service.FileUploaderService.SaveFile(IFormFile formFile, String path, String filename) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 29
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-06-29 18:23 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- uploadFile Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- uploadFile
+--------------------Exception--------------------
+System.IO.FileNotFoundException: The original image file does not exist.
+File name: '/2024/66217182_01.webp'
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 210
+   at FileUploaderMicroService.Service.FileUploaderService.FileUpload(IFormFile aFormFile, Boolean isWebp, Boolean isTh1200x628, Boolean isTh360x180, Boolean isTh120x68) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 149
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-06-29 18:23 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- SaveFile Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- SaveFile
+--------------------Exception--------------------
+System.IO.FileNotFoundException: The original image file does not exist.
+File name: '/2024/66217182_01.webp'
+   at FileUploaderMicroService.Service.FileUploaderService.FileUpload(IFormFile aFormFile, Boolean isWebp, Boolean isTh1200x628, Boolean isTh360x180, Boolean isTh120x68) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 173
+   at FileUploaderMicroService.Service.FileUploaderService.uploadFile(IFormFile aFormFile, String path, String fileName) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 93
+   at FileUploaderMicroService.Service.FileUploaderService.SaveFile(IFormFile formFile, String path, String filename) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 29
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-06-29 18:27 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- uploadFile Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- uploadFile
+--------------------Exception--------------------
+System.Runtime.InteropServices.ExternalException (0x80004005): A generic error occurred in GDI+.
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 210
+   at FileUploaderMicroService.Service.FileUploaderService.FileUpload(IFormFile aFormFile, Boolean isWebp, Boolean isTh1200x628, Boolean isTh360x180, Boolean isTh120x68) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 149
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-06-29 18:27 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- SaveFile Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- SaveFile
+--------------------Exception--------------------
+System.Runtime.InteropServices.ExternalException (0x80004005): A generic error occurred in GDI+.
+   at FileUploaderMicroService.Service.FileUploaderService.FileUpload(IFormFile aFormFile, Boolean isWebp, Boolean isTh1200x628, Boolean isTh360x180, Boolean isTh120x68) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 173
+   at FileUploaderMicroService.Service.FileUploaderService.uploadFile(IFormFile aFormFile, String path, String fileName) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 93
+   at FileUploaderMicroService.Service.FileUploaderService.SaveFile(IFormFile formFile, String path, String filename) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 29
+
+--------------------Log End--------------------

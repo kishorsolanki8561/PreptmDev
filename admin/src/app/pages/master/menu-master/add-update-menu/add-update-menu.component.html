@@ -1,0 +1,8 @@
+<app-page-header [breadcrumb]="breadcrumb">
+    <nz-space>
+        <app-button *nzSpaceItem type="back"></app-button>
+    </nz-space>
+</app-page-header>
+
+
+<app-form [addUpdateFn$]="masterService.addUpdateMenu" [form]="form" [initialData]="menu" [formElements]="formElements" navigationUrlOnSuccess="/master/menu"></app-form>

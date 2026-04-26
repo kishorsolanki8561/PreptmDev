@@ -1,0 +1,62 @@
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-29 21:47 
+
+<KISHOR> 
+ File Name :- ArticleService.cs Method Name :- GetArticles Error Level: [Error] 
+--------------------Message--------------------
+File Name :- ArticleService.cs Method Name :- GetArticles
+--------------------Exception--------------------
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at FrontMicroService.Service.ArticleService.GetArticles(ArticleFilterDTO filterModel) in D:\Project\5GStudy\taiyari-backend\FrontMicroService\Service\ArticleService.cs:line 40
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-29 21:48 
+
+<KISHOR> 
+ File Name :- ArticleService.cs Method Name :- GetArticles Error Level: [Error] 
+--------------------Message--------------------
+File Name :- ArticleService.cs Method Name :- GetArticles
+--------------------Exception--------------------
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at FrontMicroService.Service.ArticleService.GetArticles(ArticleFilterDTO filterModel) in D:\Project\5GStudy\taiyari-backend\FrontMicroService\Service\ArticleService.cs:line 40
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-29 23:20 
+
+<KISHOR> 
+ File Name :- ArticleService.cs Method Name :- GetArticles Error Level: [Error] 
+--------------------Message--------------------
+File Name :- ArticleService.cs Method Name :- GetArticles
+--------------------Exception--------------------
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FrontMicroService.Service.ArticleService.GetArticles(ArticleFilterDTO filterModel) in D:\Project\5GStudy\taiyari-backend\FrontMicroService\Service\ArticleService.cs:line 27
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-29 23:20 
+
+<KISHOR> 
+ File Name :- ArticleService.cs Method Name :- GetArticles Error Level: [Error] 
+--------------------Message--------------------
+File Name :- ArticleService.cs Method Name :- GetArticles
+--------------------Exception--------------------
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FrontMicroService.Service.ArticleService.GetArticles(ArticleFilterDTO filterModel) in D:\Project\5GStudy\taiyari-backend\FrontMicroService\Service\ArticleService.cs:line 27
+
+--------------------Log End--------------------

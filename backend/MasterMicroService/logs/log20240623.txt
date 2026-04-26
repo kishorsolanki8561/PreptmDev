@@ -1,0 +1,54 @@
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-06-23 14:32 
+
+<KISHOR> 
+ File Name :- AdditionalPagesService.cs Method Name :- AddUpdate Error Level: [Error] 
+--------------------Message--------------------
+File Name :- AdditionalPagesService.cs Method Name :- AddUpdate
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Column names in each table must be unique. Column name 'DescriptionJson' in table 'DepartmentMaster' is specified more than once.
+   at CommonService.Dapper.DapperGenericRepo.AddUpdate(String aQuery, Object aObj, SqlTransaction aSqlTransaction, Nullable`1 aCommondTimeout, Boolean SCOPE) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 39
+   at MasterMicroService.Service.AdditionalPagesService.AddUpdate(AdditionalPagesModel model) in D:\Project\5GStudy\taiyari-backend\MasterMicroService\Service\AdditionalPagesService.cs:line 22
+ClientConnectionId:facb6895-3e43-4adb-a7cd-43f159110bed
+Error Number:2705,State:4,Class:16
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-06-23 14:33 
+
+<KISHOR> 
+ File Name :- AdditionalPagesService.cs Method Name :- AddUpdate Error Level: [Error] 
+--------------------Message--------------------
+File Name :- AdditionalPagesService.cs Method Name :- AddUpdate
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Column names in each table must be unique. Column name 'DescriptionJson' in table 'DepartmentMaster' is specified more than once.
+   at CommonService.Dapper.DapperGenericRepo.AddUpdate(String aQuery, Object aObj, SqlTransaction aSqlTransaction, Nullable`1 aCommondTimeout, Boolean SCOPE) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 39
+   at MasterMicroService.Service.AdditionalPagesService.AddUpdate(AdditionalPagesModel model) in D:\Project\5GStudy\taiyari-backend\MasterMicroService\Service\AdditionalPagesService.cs:line 22
+ClientConnectionId:facb6895-3e43-4adb-a7cd-43f159110bed
+Error Number:2705,State:4,Class:16
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-06-23 14:34 
+
+<KISHOR> 
+ File Name :- AdditionalPagesService.cs Method Name :- AddUpdate Error Level: [Error] 
+--------------------Message--------------------
+File Name :- AdditionalPagesService.cs Method Name :- AddUpdate
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Column names in each table must be unique. Column name 'DescriptionJson' in table 'DepartmentMaster' is specified more than once.
+   at CommonService.Dapper.DapperGenericRepo.AddUpdate(String aQuery, Object aObj, SqlTransaction aSqlTransaction, Nullable`1 aCommondTimeout, Boolean SCOPE) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 39
+   at MasterMicroService.Service.AdditionalPagesService.AddUpdate(AdditionalPagesModel model) in D:\Project\5GStudy\taiyari-backend\MasterMicroService\Service\AdditionalPagesService.cs:line 22
+ClientConnectionId:facb6895-3e43-4adb-a7cd-43f159110bed
+Error Number:2705,State:4,Class:16
+
+--------------------Log End--------------------

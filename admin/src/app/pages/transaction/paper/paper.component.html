@@ -1,0 +1,9 @@
+<app-page-header [breadcrumb]="breadcrumb" addButtonUrl="/transaction/paper/add">
+</app-page-header>
+
+<main class="card">
+    <app-table [initialData]="papers" [columns]="columns" [getDataFn$]="_paperService.getList"
+        [changeStatusFn$]="_paperService.changeStatus" editPageUrl='/transaction/paper/edit'
+        viewPageUrl='/transaction/paper' [progressUpdateFn$]="_paperService.updateProgress" 
+        [deleteFn$]="_paperService.delete" [filter]="filter"></app-table>
+</main>

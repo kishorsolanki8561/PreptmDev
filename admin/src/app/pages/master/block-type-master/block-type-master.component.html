@@ -1,0 +1,9 @@
+<app-page-header [breadcrumb]="breadcrumb" addButtonUrl="/master/blocktype/add">
+    <!-- <app-button [routerLink]="['/master/blocktype/add']" type="add"></app-button> -->
+</app-page-header>
+<main class="card">
+    <app-table [initialData]="initialData" [columns]="columns" [getDataFn$]="masterService.getBlockTypeMasterList"
+        [changeStatusFn$]="masterService.changeStatusBlockTypeMaster" editPageUrl='/master/blocktype/edit'
+        viewPageUrl='/master/blocktype'
+        [deleteFn$]="masterService.deleteBlockTypeMaster" [filter]="filter"></app-table>
+</main>

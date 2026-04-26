@@ -1,0 +1,8 @@
+<app-page-header [breadcrumb]="breadcrumb" addButtonUrl="/master/role/add">
+    <!-- <app-button [routerLink]="['/master/role/add']" type="add"></app-button> -->
+</app-page-header>
+<main class="card">
+    <app-table [initialData]="initialData" [columns]="columns" [getDataFn$]="_usersService.getUsersTypeList"
+        [changeStatusFn$]="_usersService.changeStatusUsersType" editPageUrl='/master/role/edit' viewPageUrl='/master/role'
+        [deleteFn$]="_usersService.deleteUsersType"     [filter]="filter" ></app-table>
+</main>

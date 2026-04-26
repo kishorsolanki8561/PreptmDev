@@ -1,0 +1,14 @@
+.spacer {
+    height: 64px;
+}
+
+.main-content {
+    min-height: calc(100vh - 50px);
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 90%;
+        // width: 945px;
+    }
+}

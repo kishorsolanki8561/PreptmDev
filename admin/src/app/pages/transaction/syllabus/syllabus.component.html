@@ -1,0 +1,9 @@
+<app-page-header [breadcrumb]="breadcrumb" addButtonUrl="/transaction/syllabus/add">
+</app-page-header>
+
+<main class="card">
+    <app-table [initialData]="syllabus" [columns]="columns" [getDataFn$]="_syllabusService.getList"
+        [changeStatusFn$]="_syllabusService.changeStatus" editPageUrl='/transaction/syllabus/edit'
+        viewPageUrl='/transaction/syllabus' [progressUpdateFn$]="_syllabusService.updateProgress"
+        [deleteFn$]="_syllabusService.delete" [filter]="filter"></app-table>
+</main>

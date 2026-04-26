@@ -1,0 +1,190 @@
+@if (!post) {
+  <div class="max-w-[1280px] mx-auto px-4 py-6">
+    <preptm-loader type="detail"></preptm-loader>
+  </div>
+}
+
+@if (post) {
+  <div itemscope itemtype="https://schema.org/Article"
+    class="max-w-[1280px] mx-auto px-4 py-6 lg:flex lg:gap-6">
+
+    <meta itemprop="mainEntityOfPage" [content]="platformLocation.href">
+    <meta itemprop="inLanguage" [content]="lang">
+    <meta itemprop="keywords" [content]="post.keywords">
+    <meta itemprop="url" [content]="platformLocation.href">
+    <meta itemprop="headline" [content]="post.title">
+
+    <!-- ── Article main ── -->
+    <article class="flex-1 min-w-0 min-h-0">
+      <preptm-breadcrumb [breadcrumb]="breadcrumb" class="mb-4 block"></preptm-breadcrumb>
+
+      <!-- Title card -->
+      <div class="bg-white rounded-xl border border-neutral-200 p-4 sm:p-6 mb-4">
+        <h1 class="text-xl sm:text-2xl font-bold text-neutral-900 leading-snug mb-4" itemprop="name">
+          {{post.title}}
+        </h1>
+
+        <!-- Author + date row -->
+        <div class="flex flex-wrap items-center gap-3 text-sm text-neutral-500 pt-3 border-t border-neutral-100">
+          <div class="flex items-center gap-2"
+            itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <img src="assets/img/boy.png" alt="Author" width="28" height="28"
+              class="h-7 w-7 rounded-full object-cover ring-2 ring-neutral-100" [attr.loading]="'lazy'">
+            <div>
+              <span class="text-xs font-semibold text-neutral-700 block leading-none" itemprop="name">Suresh</span>
+              <meta itemprop="url" content="https://www.preptm.com/assets/img/writter.jpg">
+            </div>
+          </div>
+
+          @if (post.modifiedDate) {
+            <span class="flex items-center gap-1.5 text-xs text-neutral-400">
+              <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              </svg>
+              {{post.modifiedDate | date:DATE_FORMAT}}
+              <meta itemprop="datePublished" [content]="post.modifiedDate + '+05:30'">
+            </span>
+          }
+
+          <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+            <meta itemprop="name" content="Preptm">
+            <meta itemprop="url" content="https://www.preptm.com">
+            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+              <meta itemprop="url" [content]="preptmLogo">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Short description -->
+      @if (shortDesc?.length) {
+        <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 sm:p-5 mb-4">
+          @for (desc of shortDesc; track $index) {
+            <p class="text-sm text-amber-900 leading-relaxed mb-2 last:mb-0">{{desc}}</p>
+          }
+          <meta itemprop="description" [content]="shortDesc.join(' ')">
+        </div>
+      }
+
+      <preptm-ads [isArticle]="true"></preptm-ads>
+
+      <!-- Featured thumbnail -->
+      @if (post.thumbnail) {
+        <div class="bg-white rounded-xl border border-neutral-200 overflow-hidden mb-4">
+          <meta itemprop="image" [content]="post.thumbnail">
+          <meta itemprop="thumbnailUrl" [content]="post.thumbnail">
+          <!-- Above-the-fold image on desktop — mark as LCP candidate -->
+          <preptm-image [alt]="post.title" [onlyLow]="false" [skipSmall]="true"
+            [priority]="true"
+            className="w-full max-h-96 object-cover mx-auto" [src]="post.thumbnail">
+          </preptm-image>
+          @if (post.thumbnailCredit) {
+            <p class="text-xs text-neutral-400 text-center px-4 py-2">
+              Photo: <span [innerHTML]="post.thumbnailCredit"></span>
+            </p>
+          }
+        </div>
+      }
+
+      <!-- Main body -->
+      <div class="bg-white rounded-xl border border-neutral-200 p-4 sm:p-6 mb-4">
+        <div itemprop="articleBody" [innerHTML]="post.description" class="editor article-prose"></div>
+      </div>
+
+      <!-- Tags -->
+      @if (post.tags?.length) {
+        <div class="bg-white rounded-xl border border-neutral-200 p-4 mb-4">
+          <div class="flex flex-wrap gap-2 items-center">
+            <span class="text-xs font-semibold text-neutral-500 uppercase tracking-wider" i18n>Tags:</span>
+            @for (tag of post.tags; track tag.slugUrl) {
+              <a [routerLink]="['/topic', tag.slugUrl]"
+                class="px-3 py-1 rounded-full text-xs font-medium bg-neutral-100 text-neutral-700
+                       hover:bg-brand-50 hover:text-brand-700 transition-colors">
+                #{{tag.tag}}
+              </a>
+            }
+          </div>
+        </div>
+      }
+
+      <!-- FAQs -->
+      @if (post.articleFaqs?.length) {
+        <div class="bg-white rounded-xl border border-neutral-200 p-4 sm:p-6 mb-4"
+          itemscope itemtype="https://schema.org/FAQPage">
+          <h2 class="text-sm font-bold text-neutral-700 uppercase tracking-widest mb-4" i18n>Frequently Asked Questions</h2>
+          <div class="space-y-3">
+            @for (faq of post.articleFaqs; track $index) {
+              <details class="group border border-neutral-200 rounded-lg overflow-hidden"
+                itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <summary class="flex items-center justify-between p-4 cursor-pointer bg-neutral-50 hover:bg-neutral-100 transition-colors list-none">
+                  <span class="text-sm font-semibold text-neutral-800 pr-4" itemprop="name">{{faq.que}}</span>
+                  <svg class="h-4 w-4 text-neutral-400 flex-shrink-0 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-4 pb-4 pt-3 text-sm text-neutral-700 leading-relaxed border-t border-neutral-100"
+                  itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <span itemprop="text">{{faq.ans}}</span>
+                </div>
+              </details>
+            }
+          </div>
+        </div>
+      }
+    </article>
+
+    <!-- ── Sidebar — desktop only, hydrated on idle ── -->
+    @defer (hydrate on idle) {
+      <aside class="hidden lg:block w-64 flex-shrink-0">
+        <div class="sticky top-20 space-y-4">
+
+          @if (latestList?.length) {
+            <div class="bg-white rounded-xl border border-neutral-200 overflow-hidden">
+              <div class="flex items-center justify-between px-4 py-2.5 border-b border-neutral-100 bg-neutral-50">
+                <div class="flex items-center gap-2">
+                  <span class="inline-block w-2 h-2 rounded-full bg-brand-500"></span>
+                  <h3 class="text-xs font-bold text-neutral-600 uppercase tracking-widest" i18n>Latest</h3>
+                </div>
+                <a routerLink="/latest" class="text-xs text-brand-600 hover:underline" i18n>All →</a>
+              </div>
+              <div class="p-2 flex flex-col gap-1.5">
+                @for (item of latestList; track $index; let i = $index) {
+                  <preptm-post [post]="item" [index]="i + 1" [minimal]="true"></preptm-post>
+                }
+              </div>
+            </div>
+          }
+
+          @if (post.recruitments?.length) {
+            <div class="bg-white rounded-xl border border-neutral-200 overflow-hidden">
+              <div class="px-4 py-2.5 border-b border-neutral-100 bg-neutral-50 flex items-center gap-2">
+                <span class="inline-block w-2 h-2 rounded-full bg-blue-500"></span>
+                <h3 class="text-xs font-bold text-neutral-600 uppercase tracking-widest" i18n>Related Jobs</h3>
+              </div>
+              <div class="p-2 flex flex-col gap-1.5">
+                @for (item of post.recruitments; track $index; let i = $index) {
+                  <preptm-post [post]="item" [index]="i + 1" [minimal]="true"></preptm-post>
+                }
+              </div>
+            </div>
+          }
+
+          @if (post.blockContents?.length) {
+            <div class="bg-white rounded-xl border border-neutral-200 overflow-hidden">
+              <div class="px-4 py-2.5 border-b border-neutral-100 bg-neutral-50 flex items-center gap-2">
+                <span class="inline-block w-2 h-2 rounded-full bg-green-500"></span>
+                <h3 class="text-xs font-bold text-neutral-600 uppercase tracking-widest" i18n>Related</h3>
+              </div>
+              <div class="p-2 flex flex-col gap-1.5">
+                @for (item of post.blockContents; track $index; let i = $index) {
+                  <preptm-post [post]="item" [index]="i + 1"></preptm-post>
+                }
+              </div>
+            </div>
+          }
+
+        </div>
+      </aside>
+    }
+  </div>
+}

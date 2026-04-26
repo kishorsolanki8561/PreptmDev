@@ -1,0 +1,207 @@
+
+--------------------Log Start --------------------::1<::1>
+2024-06-09 19:03 
+
+<KISHOR> 
+ File Name :- AdditionalPagesService.cs Method Name :- GetList Error Level: [Error] 
+--------------------Source Context --------------------
+() 
+--------------------Message--------------------
+File Name :- AdditionalPagesService.cs Method Name :- GetList
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near '*'.
+   at CommonService.Dapper.DapperGenericRepo.QueryList[T](String query, Object perams) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 185
+   at MasterMicroService.Service.AdditionalPagesService.GetList() in D:\Project\5GStudy\taiyari-backend\MasterMicroService\Service\AdditionalPagesService.cs:line 77
+ClientConnectionId:056ed1f7-f3dd-4384-a280-b274f57fc308
+Error Number:102,State:1,Class:15
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------::1<::1>
+2024-06-09 19:05 
+
+<KISHOR> 
+ File Name :- AdditionalPagesService.cs Method Name :- GetList Error Level: [Error] 
+--------------------Source Context --------------------
+() 
+--------------------Message--------------------
+File Name :- AdditionalPagesService.cs Method Name :- GetList
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near '*'.
+   at CommonService.Dapper.DapperGenericRepo.QueryList[T](String query, Object perams) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 185
+   at MasterMicroService.Service.AdditionalPagesService.GetList() in D:\Project\5GStudy\taiyari-backend\MasterMicroService\Service\AdditionalPagesService.cs:line 77
+ClientConnectionId:27bf1909-beca-42df-a8da-4c18dc911a87
+Error Number:102,State:1,Class:15
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------::1<::1>
+2024-06-09 19:06 
+
+<KISHOR> 
+ File Name :- AdditionalPagesService.cs Method Name :- GetList Error Level: [Error] 
+--------------------Source Context --------------------
+() 
+--------------------Message--------------------
+File Name :- AdditionalPagesService.cs Method Name :- GetList
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near '*'.
+   at CommonService.Dapper.DapperGenericRepo.QueryList[T](String query, Object perams)
+   at MasterMicroService.Service.AdditionalPagesService.GetList() in D:\Project\5GStudy\taiyari-backend\MasterMicroService\Service\AdditionalPagesService.cs:line 77
+ClientConnectionId:27bf1909-beca-42df-a8da-4c18dc911a87
+Error Number:102,State:1,Class:15
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------::1<::1>
+2024-06-09 19:07 
+
+<KISHOR> 
+ File Name :- AdditionalPagesService.cs Method Name :- GetList Error Level: [Error] 
+--------------------Source Context --------------------
+() 
+--------------------Message--------------------
+File Name :- AdditionalPagesService.cs Method Name :- GetList
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near '*'.
+   at CommonService.Dapper.DapperGenericRepo.QueryList[T](String query, Object perams)
+   at MasterMicroService.Service.AdditionalPagesService.GetList() in D:\Project\5GStudy\taiyari-backend\MasterMicroService\Service\AdditionalPagesService.cs:line 77
+ClientConnectionId:27bf1909-beca-42df-a8da-4c18dc911a87
+Error Number:102,State:1,Class:15
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+<::1>
+2024-06-09 19:08 
+
+<KISHOR> 
+ File Name :- AdditionalPagesService.cs Method Name :- GetList Error Level: [Error] 
+--------------------Source Context --------------------
+() 
+--------------------Message--------------------
+File Name :- AdditionalPagesService.cs Method Name :- GetList
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near '*'.
+   at CommonService.Dapper.DapperGenericRepo.QueryList[T](String query, Object perams) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 185
+   at MasterMicroService.Service.AdditionalPagesService.GetList() in D:\Project\5GStudy\taiyari-backend\MasterMicroService\Service\AdditionalPagesService.cs:line 77
+ClientConnectionId:5912731d-bbe6-4f26-b2d8-8c987fe6268e
+Error Number:102,State:1,Class:15
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+<::1>
+2024-06-09 19:11 
+
+<KISHOR> 
+ File Name :- AdditionalPagesService.cs Method Name :- GetList Error Level: [Error] 
+--------------------Source Context --------------------
+() 
+--------------------Message--------------------
+File Name :- AdditionalPagesService.cs Method Name :- GetList
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near '*'.
+   at CommonService.Dapper.DapperGenericRepo.QueryList[T](String query, Object perams) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 185
+   at MasterMicroService.Service.AdditionalPagesService.GetList() in D:\Project\5GStudy\taiyari-backend\MasterMicroService\Service\AdditionalPagesService.cs:line 77
+ClientConnectionId:5912731d-bbe6-4f26-b2d8-8c987fe6268e
+Error Number:102,State:1,Class:15
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+<::1>
+2024-06-09 19:14 
+
+<KISHOR> 
+ File Name :- AdditionalPagesService.cs Method Name :- GetList Error Level: [Error] 
+--------------------Source Context --------------------
+() 
+--------------------Message--------------------
+File Name :- AdditionalPagesService.cs Method Name :- GetList
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near '*'.
+   at CommonService.Dapper.DapperGenericRepo.QueryList[T](String query, Object perams) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 185
+   at MasterMicroService.Service.AdditionalPagesService.GetList() in D:\Project\5GStudy\taiyari-backend\MasterMicroService\Service\AdditionalPagesService.cs:line 77
+ClientConnectionId:a16615e5-0725-4531-aa0c-920bc63238df
+Error Number:102,State:1,Class:15
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+<::1>
+2024-06-09 19:24 
+
+<KISHOR> 
+ File Name :- AdditionalPagesService.cs Method Name :- GetList Error Level: [Error] 
+--------------------Source Context --------------------
+() 
+--------------------Message--------------------
+File Name :- AdditionalPagesService.cs Method Name :- GetList
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near '*'.
+   at CommonService.Dapper.DapperGenericRepo.QueryList[T](String query, Object perams)
+   at MasterMicroService.Service.AdditionalPagesService.GetList() in D:\Project\5GStudy\taiyari-backend\MasterMicroService\Service\AdditionalPagesService.cs:line 77
+ClientConnectionId:cc28064b-01ab-4cb5-b3de-6a7d22bc4179
+Error Number:102,State:1,Class:15
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+<::1>
+2024-06-09 19:25 
+
+<KISHOR> 
+ File Name :- AdditionalPagesService.cs Method Name :- GetList Error Level: [Error] 
+--------------------Source Context --------------------
+() 
+--------------------Message--------------------
+File Name :- AdditionalPagesService.cs Method Name :- GetList
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near '*'.
+   at CommonService.Dapper.DapperGenericRepo.QueryList[T](String query, Object perams)
+   at MasterMicroService.Service.AdditionalPagesService.GetList() in D:\Project\5GStudy\taiyari-backend\MasterMicroService\Service\AdditionalPagesService.cs:line 77
+ClientConnectionId:cc28064b-01ab-4cb5-b3de-6a7d22bc4179
+Error Number:102,State:1,Class:15
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-06-09 19:26 
+
+<KISHOR> 
+ File Name :- AdditionalPagesService.cs Method Name :- GetList Error Level: [Error] 
+--------------------Source Context --------------------
+() 
+--------------------Message--------------------
+File Name :- AdditionalPagesService.cs Method Name :- GetList
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near '*'.
+   at CommonService.Dapper.DapperGenericRepo.QueryList[T](String query, Object perams) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 185
+   at MasterMicroService.Service.AdditionalPagesService.GetList() in D:\Project\5GStudy\taiyari-backend\MasterMicroService\Service\AdditionalPagesService.cs:line 77
+ClientConnectionId:86dbde5c-5df5-4d3b-bc0c-5b42549ae53b
+Error Number:102,State:1,Class:15
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-06-09 19:31 
+
+<KISHOR> 
+ File Name :- AdditionalPagesService.cs Method Name :- GetList Error Level: [Error] 
+--------------------Source Context --------------------
+() 
+--------------------Message--------------------
+File Name :- AdditionalPagesService.cs Method Name :- GetList
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near '*'.
+   at CommonService.Dapper.DapperGenericRepo.QueryList[T](String query, Object perams) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 185
+   at MasterMicroService.Service.AdditionalPagesService.GetList() in D:\Project\5GStudy\taiyari-backend\MasterMicroService\Service\AdditionalPagesService.cs:line 77
+ClientConnectionId:c2cbd403-82a6-44ee-9410-084bc3b22baa
+Error Number:102,State:1,Class:15
+
+--------------------Log End--------------------

@@ -1,0 +1,303 @@
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2026-04-22 19:32 
+
+<KISHOR> 
+ File Name :- SchemeService.cs Method Name :- GetModuleWiseDataByIdAndSlug Error Level: [Error] 
+--------------------Message--------------------
+File Name :- SchemeService.cs Method Name :- GetModuleWiseDataByIdAndSlug
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'dbo.SchemeAttachmentLookup'.
+   at CommonService.Dapper.DapperGenericRepo.QueryMultiple(String query, Object perams) in D:\Project\preptm\backend\CommonService\Dapper\DapperGenericRepo.cs:line 219
+   at FrontMicroService.Service.SchemeService.GetModuleWiseDataByIdAndSlug(Nullable`1 id, String slugUrl, Boolean IsAdminView) in D:\Project\preptm\backend\FrontMicroService\Service\SchemeService.cs:line 26
+ClientConnectionId:e40f6530-b0f7-4f09-88f8-a76759e466c1
+Error Number:208,State:1,Class:16
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2026-04-22 19:32 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FrontMicroService.Service.SchemeService.GetModuleWiseDataByIdAndSlug(Nullable`1 id, String slugUrl, Boolean IsAdminView) in D:\Project\preptm\backend\FrontMicroService\Service\SchemeService.cs:line 71
+   at FrontMicroService.Controllers.SchemeController.GetSchemeDataByIdAndSlug(Nullable`1 id, String slugUrl) in D:\Project\preptm\backend\FrontMicroService\Controllers\SchemeController.cs:line 21
+   at lambda_method119(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at CommonService.JWT.JwtMiddleware.Invoke(HttpContext context) in D:\Project\preptm\backend\CommonService\JWT\JwtMiddleware.cs:line 75
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2026-04-22 19:32 
+
+<KISHOR> 
+ File Name :- SchemeService.cs Method Name :- GetModuleWiseDataByIdAndSlug Error Level: [Error] 
+--------------------Message--------------------
+File Name :- SchemeService.cs Method Name :- GetModuleWiseDataByIdAndSlug
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'dbo.SchemeAttachmentLookup'.
+   at CommonService.Dapper.DapperGenericRepo.QueryMultiple(String query, Object perams) in D:\Project\preptm\backend\CommonService\Dapper\DapperGenericRepo.cs:line 219
+   at FrontMicroService.Service.SchemeService.GetModuleWiseDataByIdAndSlug(Nullable`1 id, String slugUrl, Boolean IsAdminView) in D:\Project\preptm\backend\FrontMicroService\Service\SchemeService.cs:line 26
+ClientConnectionId:e40f6530-b0f7-4f09-88f8-a76759e466c1
+Error Number:208,State:1,Class:16
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2026-04-22 19:32 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FrontMicroService.Service.SchemeService.GetModuleWiseDataByIdAndSlug(Nullable`1 id, String slugUrl, Boolean IsAdminView) in D:\Project\preptm\backend\FrontMicroService\Service\SchemeService.cs:line 71
+   at FrontMicroService.Controllers.SchemeController.GetSchemeDataByIdAndSlug(Nullable`1 id, String slugUrl) in D:\Project\preptm\backend\FrontMicroService\Controllers\SchemeController.cs:line 21
+   at lambda_method119(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at CommonService.JWT.JwtMiddleware.Invoke(HttpContext context) in D:\Project\preptm\backend\CommonService\JWT\JwtMiddleware.cs:line 75
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2026-04-22 22:33 
+
+<KISHOR> 
+ File Name :- DashboardService.cs Method Name :- GetFrontDashboardList Error Level: [Error] 
+--------------------Message--------------------
+File Name :- DashboardService.cs Method Name :- GetFrontDashboardList
+--------------------Exception--------------------
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FrontMicroService.Service.DashboardService.GetFrontDashboardList(DashboradFilterModel filterModel) in D:\Project\preptm\backend\FrontMicroService\Service\DashboardService.cs:line 80
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2026-04-22 22:40 
+
+<KISHOR> 
+ File Name :- SchemeService.cs Method Name :- GetModuleWiseDataByIdAndSlug Error Level: [Error] 
+--------------------Message--------------------
+File Name :- SchemeService.cs Method Name :- GetModuleWiseDataByIdAndSlug
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'dbo.SchemeAttachmentLookup'.
+   at CommonService.Dapper.DapperGenericRepo.QueryMultiple(String query, Object perams) in D:\Project\preptm\backend\CommonService\Dapper\DapperGenericRepo.cs:line 219
+   at FrontMicroService.Service.SchemeService.GetModuleWiseDataByIdAndSlug(Nullable`1 id, String slugUrl, Boolean IsAdminView) in D:\Project\preptm\backend\FrontMicroService\Service\SchemeService.cs:line 26
+ClientConnectionId:b200ec84-4aae-4a8f-bccc-cfd0aa9fb526
+Error Number:208,State:1,Class:16
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2026-04-22 22:40 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FrontMicroService.Service.SchemeService.GetModuleWiseDataByIdAndSlug(Nullable`1 id, String slugUrl, Boolean IsAdminView) in D:\Project\preptm\backend\FrontMicroService\Service\SchemeService.cs:line 71
+   at FrontMicroService.Controllers.SchemeController.GetSchemeDataByIdAndSlug(Nullable`1 id, String slugUrl) in D:\Project\preptm\backend\FrontMicroService\Controllers\SchemeController.cs:line 21
+   at lambda_method48(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at CommonService.JWT.JwtMiddleware.Invoke(HttpContext context) in D:\Project\preptm\backend\CommonService\JWT\JwtMiddleware.cs:line 75
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2026-04-22 23:18 
+
+<KISHOR> 
+ File Name :- SchemeService.cs Method Name :- GetModuleWiseDataByIdAndSlug Error Level: [Error] 
+--------------------Message--------------------
+File Name :- SchemeService.cs Method Name :- GetModuleWiseDataByIdAndSlug
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'dbo.SchemeAttachmentLookup'.
+   at CommonService.Dapper.DapperGenericRepo.QueryMultiple(String query, Object perams) in D:\Project\preptm\backend\CommonService\Dapper\DapperGenericRepo.cs:line 219
+   at FrontMicroService.Service.SchemeService.GetModuleWiseDataByIdAndSlug(Nullable`1 id, String slugUrl, Boolean IsAdminView) in D:\Project\preptm\backend\FrontMicroService\Service\SchemeService.cs:line 26
+ClientConnectionId:d4e00ef8-487c-4f3f-a205-697b31efedcc
+Error Number:208,State:1,Class:16
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2026-04-22 23:18 
+
+<KISHOR> 
+ File Name :- SchemeService.cs Method Name :- GetModuleWiseDataByIdAndSlug Error Level: [Error] 
+--------------------Message--------------------
+File Name :- SchemeService.cs Method Name :- GetModuleWiseDataByIdAndSlug
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'dbo.SchemeAttachmentLookup'.
+   at CommonService.Dapper.DapperGenericRepo.QueryMultiple(String query, Object perams) in D:\Project\preptm\backend\CommonService\Dapper\DapperGenericRepo.cs:line 219
+   at FrontMicroService.Service.SchemeService.GetModuleWiseDataByIdAndSlug(Nullable`1 id, String slugUrl, Boolean IsAdminView) in D:\Project\preptm\backend\FrontMicroService\Service\SchemeService.cs:line 26
+ClientConnectionId:eba467c4-98f0-48e3-93a1-4c4c68f769dd
+Error Number:208,State:1,Class:16
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2026-04-22 23:23 
+
+<KISHOR> 
+ File Name :- SchemeService.cs Method Name :- GetModuleWiseDataByIdAndSlug Error Level: [Error] 
+--------------------Message--------------------
+File Name :- SchemeService.cs Method Name :- GetModuleWiseDataByIdAndSlug
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'dbo.SchemeAttachmentLookup'.
+   at CommonService.Dapper.DapperGenericRepo.QueryMultiple(String query, Object perams) in D:\Project\preptm\backend\CommonService\Dapper\DapperGenericRepo.cs:line 219
+   at FrontMicroService.Service.SchemeService.GetModuleWiseDataByIdAndSlug(Nullable`1 id, String slugUrl, Boolean IsAdminView) in D:\Project\preptm\backend\FrontMicroService\Service\SchemeService.cs:line 26
+ClientConnectionId:d0731c38-74f3-4642-9970-001eb1bad45d
+Error Number:208,State:1,Class:16
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2026-04-22 23:23 
+
+<KISHOR> 
+ File Name :- SchemeService.cs Method Name :- GetModuleWiseDataByIdAndSlug Error Level: [Error] 
+--------------------Message--------------------
+File Name :- SchemeService.cs Method Name :- GetModuleWiseDataByIdAndSlug
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'dbo.SchemeAttachmentLookup'.
+   at CommonService.Dapper.DapperGenericRepo.QueryMultiple(String query, Object perams) in D:\Project\preptm\backend\CommonService\Dapper\DapperGenericRepo.cs:line 219
+   at FrontMicroService.Service.SchemeService.GetModuleWiseDataByIdAndSlug(Nullable`1 id, String slugUrl, Boolean IsAdminView) in D:\Project\preptm\backend\FrontMicroService\Service\SchemeService.cs:line 26
+ClientConnectionId:d0731c38-74f3-4642-9970-001eb1bad45d
+Error Number:208,State:1,Class:16
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2026-04-22 23:23 
+
+<KISHOR> 
+ File Name :- SchemeService.cs Method Name :- GetModuleWiseDataByIdAndSlug Error Level: [Error] 
+--------------------Message--------------------
+File Name :- SchemeService.cs Method Name :- GetModuleWiseDataByIdAndSlug
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'dbo.SchemeAttachmentLookup'.
+   at CommonService.Dapper.DapperGenericRepo.QueryMultiple(String query, Object perams) in D:\Project\preptm\backend\CommonService\Dapper\DapperGenericRepo.cs:line 219
+   at FrontMicroService.Service.SchemeService.GetModuleWiseDataByIdAndSlug(Nullable`1 id, String slugUrl, Boolean IsAdminView) in D:\Project\preptm\backend\FrontMicroService\Service\SchemeService.cs:line 26
+ClientConnectionId:d0731c38-74f3-4642-9970-001eb1bad45d
+Error Number:208,State:1,Class:16
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2026-04-22 23:26 
+
+<KISHOR> 
+ File Name :- SchemeService.cs Method Name :- GetModuleWiseDataByIdAndSlug Error Level: [Error] 
+--------------------Message--------------------
+File Name :- SchemeService.cs Method Name :- GetModuleWiseDataByIdAndSlug
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'dbo.SchemeAttachmentLookup'.
+   at CommonService.Dapper.DapperGenericRepo.QueryMultiple(String query, Object perams) in D:\Project\preptm\backend\CommonService\Dapper\DapperGenericRepo.cs:line 219
+   at FrontMicroService.Service.SchemeService.GetModuleWiseDataByIdAndSlug(Nullable`1 id, String slugUrl, Boolean IsAdminView) in D:\Project\preptm\backend\FrontMicroService\Service\SchemeService.cs:line 26
+ClientConnectionId:d46f9fe0-6d74-4201-8911-178511197b97
+Error Number:208,State:1,Class:16
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2026-04-22 23:36 
+
+<KISHOR> 
+ File Name :- SchemeService.cs Method Name :- GetModuleWiseDataByIdAndSlug Error Level: [Error] 
+--------------------Message--------------------
+File Name :- SchemeService.cs Method Name :- GetModuleWiseDataByIdAndSlug
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'dbo.SchemeAttachmentLookup'.
+   at CommonService.Dapper.DapperGenericRepo.QueryMultiple(String query, Object perams) in D:\Project\preptm\backend\CommonService\Dapper\DapperGenericRepo.cs:line 219
+   at FrontMicroService.Service.SchemeService.GetModuleWiseDataByIdAndSlug(Nullable`1 id, String slugUrl, Boolean IsAdminView) in D:\Project\preptm\backend\FrontMicroService\Service\SchemeService.cs:line 26
+ClientConnectionId:f622f63a-3cfc-4955-8b38-4776ad5a6bab
+Error Number:208,State:1,Class:16
+
+--------------------Log End--------------------

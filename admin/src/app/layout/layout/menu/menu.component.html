@@ -1,0 +1,26 @@
+<ng-container *ngFor="let menu of menus">
+    <!-- rendering expandable menu -->
+    <li *ngIf="menu.hashChild" nz-submenu [nzTitle]="menu.menuName" [nzIcon]="menu.iconClass || 'menu'">
+        <ul>
+            <li *ngFor="let page of menu.pages" nz-menu-item [routerLinkActiveOptions]="{exact:true}"
+                [routerLink]="page.pageUrl" routerLinkActive="ant-menu-item-selected">
+                <!-- <span nz-icon [nzType]="page.icon || 'file'"></span> -->
+                <span class="material-symbols-outlined">
+                    {{page.icon || 'star'}}
+                </span>
+                <span>{{page.name}}</span>
+            </li>
+            <app-menu [menus]="menu.childParentMenuList"></app-menu>
+        </ul>
+    </li>
+
+    <!-- rendering menu -->
+    <li *ngIf="!menu.hashChild && menu.pages.length" nz-menu-item
+        [routerLink]="menu.pages.pageUrl" routerLinkActive="ant-menu-item-selected" [routerLinkActiveOptions]="{exact:true}">
+        <!-- <span nz-icon [nzType]="menu.icon || 'file'"></span> -->
+        <span class="material-symbols-outlined">
+            {{menu.icon || 'star'}}
+        </span>
+        <span>{{menu.menuName}}</span>
+    </li>
+</ng-container>

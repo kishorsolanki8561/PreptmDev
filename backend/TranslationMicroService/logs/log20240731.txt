@@ -1,0 +1,23 @@
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-31 18:19 
+
+<KISHOR> 
+ File Name :- RecruitmentService.cs Method Name :- RecruitmentService Error Level: [Error] 
+--------------------Message--------------------
+File Name :- RecruitmentService.cs Method Name :- RecruitmentService
+--------------------Exception--------------------
+Newtonsoft.Json.JsonSerializationException: JSON root object has multiple properties. The root object must have a single property in order to create a valid XML document. Consider specifying a DeserializeRootElementName. Path 'Title', line 3, position 10.
+   at Newtonsoft.Json.Converters.XmlNodeConverter.DeserializeNode(JsonReader reader, IXmlDocument document, XmlNamespaceManager manager, IXmlNode currentNode)
+   at Newtonsoft.Json.Converters.XmlNodeConverter.ReadJson(JsonReader reader, Type objectType, Object existingValue, JsonSerializer serializer)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.DeserializeConvertable(JsonConverter converter, JsonReader reader, Type objectType, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeXNode(String value, String deserializeRootElementName, Boolean writeArrayAttribute, Boolean encodeSpecialCharacters)
+   at CommonService.Other.SPResultHandler.ConvertJsonToXml[T](T json) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\SPResultHandler.cs:line 68
+   at TranslationMicroService.Service.RecruitmentService.AddUpdate(RecruitmentModel model) in D:\Project\5GStudy\taiyari-backend\TranslationMicroService\Service\RecruitmentService.cs:line 39
+
+--------------------Log End--------------------

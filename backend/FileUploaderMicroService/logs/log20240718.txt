@@ -1,0 +1,93 @@
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-18 19:59 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail
+--------------------Exception--------------------
+System.IO.IOException: The filename, directory name, or volume label syntax is incorrect. : 'D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\ContentD:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Content\2024\OriginalAttachment\1025_36.webp'
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at SixLabors.ImageSharp.IO.LocalFileSystem.OpenRead(String path)
+   at SixLabors.ImageSharp.Image.Load(DecoderOptions options, String path)
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 261
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-18 22:33 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- uploadFile Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- uploadFile
+--------------------Exception--------------------
+System.IO.IOException: The filename, directory name, or volume label syntax is incorrect. : 'D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\ContentD:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Content\2024\OriginalAttachment\1025_36.webp'
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 281
+   at FileUploaderMicroService.Service.FileUploaderService.FileUpload(List`1 aFormFile, Boolean isThumbnail) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 192
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-18 22:50 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail
+--------------------Exception--------------------
+System.IO.IOException: The filename, directory name, or volume label syntax is incorrect. : 'D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\ContentD:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Content\2024\OriginalAttachment\1025_36.webp'
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at SixLabors.ImageSharp.IO.LocalFileSystem.OpenRead(String path)
+   at SixLabors.ImageSharp.Image.Load(DecoderOptions options, String path)
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 261
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-18 22:50 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- uploadFile Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- uploadFile
+--------------------Exception--------------------
+System.IO.IOException: The filename, directory name, or volume label syntax is incorrect. : 'D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\ContentD:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Content\2024\OriginalAttachment\1025_36.webp'
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 281
+   at FileUploaderMicroService.Service.FileUploaderService.FileUpload(List`1 aFormFile, Boolean isThumbnail) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 192
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-18 23:52 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- uploadFile Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- uploadFile
+--------------------Exception--------------------
+System.IO.IOException: The filename, directory name, or volume label syntax is incorrect. : 'D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Content\2024\D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Content\1025_36(1).jpg'
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.FileStream..ctor(String path, FileMode mode)
+   at FileUploaderMicroService.Service.FileUploaderService.FileUpload(List`1 aFormFile, Boolean isThumbnail) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 186
+
+--------------------Log End--------------------

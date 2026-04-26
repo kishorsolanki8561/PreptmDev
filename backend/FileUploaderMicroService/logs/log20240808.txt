@@ -1,0 +1,939 @@
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-08 12:13 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail
+--------------------Exception--------------------
+SixLabors.ImageSharp.UnknownImageFormatException: Image cannot be loaded. Available decoders:
+ - Webp : WebpDecoder
+ - PNG : PngDecoder
+ - JPEG : JpegDecoder
+ - TIFF : TiffDecoder
+ - PBM : PbmDecoder
+ - BMP : BmpDecoder
+ - GIF : GifDecoder
+ - TGA : TgaDecoder
+ - QOI : QoiDecoder
+
+   at SixLabors.ImageSharp.Formats.ImageFormatManager.ThrowInvalidDecoder(ImageFormatManager manager)
+   at SixLabors.ImageSharp.Image.InternalDetectFormat(Configuration configuration, Stream stream)
+   at SixLabors.ImageSharp.Image.DiscoverDecoder(DecoderOptions options, Stream stream)
+   at SixLabors.ImageSharp.Image.<>c__DisplayClass80_0.<Load>b__0(Stream s)
+   at SixLabors.ImageSharp.Image.Load(DecoderOptions options, String path)
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 395
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-08 12:13 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnailByDirectories Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnailByDirectories
+--------------------Exception--------------------
+SixLabors.ImageSharp.UnknownImageFormatException: Image cannot be loaded. Available decoders:
+ - Webp : WebpDecoder
+ - PNG : PngDecoder
+ - JPEG : JpegDecoder
+ - TIFF : TiffDecoder
+ - PBM : PbmDecoder
+ - BMP : BmpDecoder
+ - GIF : GifDecoder
+ - TGA : TgaDecoder
+ - QOI : QoiDecoder
+
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 415
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnailByDirectories(String folderName, String fileName, Boolean isTransf) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 655
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-08 12:16 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail
+--------------------Exception--------------------
+SixLabors.ImageSharp.UnknownImageFormatException: Image cannot be loaded. Available decoders:
+ - JPEG : JpegDecoder
+ - Webp : WebpDecoder
+ - PBM : PbmDecoder
+ - QOI : QoiDecoder
+ - TGA : TgaDecoder
+ - PNG : PngDecoder
+ - GIF : GifDecoder
+ - BMP : BmpDecoder
+ - TIFF : TiffDecoder
+
+   at SixLabors.ImageSharp.Formats.ImageFormatManager.ThrowInvalidDecoder(ImageFormatManager manager)
+   at SixLabors.ImageSharp.Image.InternalDetectFormat(Configuration configuration, Stream stream)
+   at SixLabors.ImageSharp.Image.DiscoverDecoder(DecoderOptions options, Stream stream)
+   at SixLabors.ImageSharp.Image.<>c__DisplayClass80_0.<Load>b__0(Stream s)
+   at SixLabors.ImageSharp.Image.Load(DecoderOptions options, String path)
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 395
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-08 12:17 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnailByDirectories Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnailByDirectories
+--------------------Exception--------------------
+SixLabors.ImageSharp.UnknownImageFormatException: Image cannot be loaded. Available decoders:
+ - JPEG : JpegDecoder
+ - Webp : WebpDecoder
+ - PBM : PbmDecoder
+ - QOI : QoiDecoder
+ - TGA : TgaDecoder
+ - PNG : PngDecoder
+ - GIF : GifDecoder
+ - BMP : BmpDecoder
+ - TIFF : TiffDecoder
+
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 415
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnailByDirectories(String folderName, String fileName, Boolean isTransf) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 657
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-08 12:20 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail
+--------------------Exception--------------------
+SixLabors.ImageSharp.UnknownImageFormatException: Image cannot be loaded. Available decoders:
+ - JPEG : JpegDecoder
+ - Webp : WebpDecoder
+ - PBM : PbmDecoder
+ - QOI : QoiDecoder
+ - TGA : TgaDecoder
+ - PNG : PngDecoder
+ - GIF : GifDecoder
+ - BMP : BmpDecoder
+ - TIFF : TiffDecoder
+
+   at SixLabors.ImageSharp.Formats.ImageFormatManager.ThrowInvalidDecoder(ImageFormatManager manager)
+   at SixLabors.ImageSharp.Image.InternalDetectFormat(Configuration configuration, Stream stream)
+   at SixLabors.ImageSharp.Image.DiscoverDecoder(DecoderOptions options, Stream stream)
+   at SixLabors.ImageSharp.Image.<>c__DisplayClass80_0.<Load>b__0(Stream s)
+   at SixLabors.ImageSharp.Image.Load(DecoderOptions options, String path)
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 395
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-08 12:20 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnailByDirectories Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnailByDirectories
+--------------------Exception--------------------
+SixLabors.ImageSharp.UnknownImageFormatException: Image cannot be loaded. Available decoders:
+ - JPEG : JpegDecoder
+ - Webp : WebpDecoder
+ - PBM : PbmDecoder
+ - QOI : QoiDecoder
+ - TGA : TgaDecoder
+ - PNG : PngDecoder
+ - GIF : GifDecoder
+ - BMP : BmpDecoder
+ - TIFF : TiffDecoder
+
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 415
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnailByDirectories(String folderName, String fileName, Boolean isTransf) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 657
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-08 12:20 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail
+--------------------Exception--------------------
+SixLabors.ImageSharp.UnknownImageFormatException: Image cannot be loaded. Available decoders:
+ - JPEG : JpegDecoder
+ - Webp : WebpDecoder
+ - PBM : PbmDecoder
+ - QOI : QoiDecoder
+ - TGA : TgaDecoder
+ - PNG : PngDecoder
+ - GIF : GifDecoder
+ - BMP : BmpDecoder
+ - TIFF : TiffDecoder
+
+   at SixLabors.ImageSharp.Formats.ImageFormatManager.ThrowInvalidDecoder(ImageFormatManager manager)
+   at SixLabors.ImageSharp.Image.InternalDetectFormat(Configuration configuration, Stream stream)
+   at SixLabors.ImageSharp.Image.DiscoverDecoder(DecoderOptions options, Stream stream)
+   at SixLabors.ImageSharp.Image.<>c__DisplayClass80_0.<Load>b__0(Stream s)
+   at SixLabors.ImageSharp.Image.Load(DecoderOptions options, String path)
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 395
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-08 12:20 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnailByDirectories Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnailByDirectories
+--------------------Exception--------------------
+SixLabors.ImageSharp.UnknownImageFormatException: Image cannot be loaded. Available decoders:
+ - JPEG : JpegDecoder
+ - Webp : WebpDecoder
+ - PBM : PbmDecoder
+ - QOI : QoiDecoder
+ - TGA : TgaDecoder
+ - PNG : PngDecoder
+ - GIF : GifDecoder
+ - BMP : BmpDecoder
+ - TIFF : TiffDecoder
+
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 415
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnailByDirectories(String folderName, String fileName, Boolean isTransf) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 657
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-08 12:21 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail
+--------------------Exception--------------------
+SixLabors.ImageSharp.UnknownImageFormatException: Image cannot be loaded. Available decoders:
+ - JPEG : JpegDecoder
+ - Webp : WebpDecoder
+ - PBM : PbmDecoder
+ - QOI : QoiDecoder
+ - TGA : TgaDecoder
+ - PNG : PngDecoder
+ - GIF : GifDecoder
+ - BMP : BmpDecoder
+ - TIFF : TiffDecoder
+
+   at SixLabors.ImageSharp.Formats.ImageFormatManager.ThrowInvalidDecoder(ImageFormatManager manager)
+   at SixLabors.ImageSharp.Image.InternalDetectFormat(Configuration configuration, Stream stream)
+   at SixLabors.ImageSharp.Image.DiscoverDecoder(DecoderOptions options, Stream stream)
+   at SixLabors.ImageSharp.Image.<>c__DisplayClass80_0.<Load>b__0(Stream s)
+   at SixLabors.ImageSharp.Image.Load(DecoderOptions options, String path)
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight)
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-08 12:27 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail
+--------------------Exception--------------------
+SixLabors.ImageSharp.UnknownImageFormatException: Image cannot be loaded. Available decoders:
+ - TIFF : TiffDecoder
+ - BMP : BmpDecoder
+ - PBM : PbmDecoder
+ - Webp : WebpDecoder
+ - QOI : QoiDecoder
+ - GIF : GifDecoder
+ - TGA : TgaDecoder
+ - JPEG : JpegDecoder
+ - PNG : PngDecoder
+
+   at SixLabors.ImageSharp.Formats.ImageFormatManager.ThrowInvalidDecoder(ImageFormatManager manager)
+   at SixLabors.ImageSharp.Image.InternalDetectFormat(Configuration configuration, Stream stream)
+   at SixLabors.ImageSharp.Image.DiscoverDecoder(DecoderOptions options, Stream stream)
+   at SixLabors.ImageSharp.Image.<>c__DisplayClass80_0.<Load>b__0(Stream s)
+   at SixLabors.ImageSharp.Image.Load(DecoderOptions options, String path)
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 395
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-08 12:27 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnailByDirectories Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnailByDirectories
+--------------------Exception--------------------
+SixLabors.ImageSharp.UnknownImageFormatException: Image cannot be loaded. Available decoders:
+ - TIFF : TiffDecoder
+ - BMP : BmpDecoder
+ - PBM : PbmDecoder
+ - Webp : WebpDecoder
+ - QOI : QoiDecoder
+ - GIF : GifDecoder
+ - TGA : TgaDecoder
+ - JPEG : JpegDecoder
+ - PNG : PngDecoder
+
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 415
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnailByDirectories(String folderName, String fileName, Boolean isTransf) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 657
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-08 12:28 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail
+--------------------Exception--------------------
+SixLabors.ImageSharp.UnknownImageFormatException: Image cannot be loaded. Available decoders:
+ - TIFF : TiffDecoder
+ - BMP : BmpDecoder
+ - PBM : PbmDecoder
+ - Webp : WebpDecoder
+ - QOI : QoiDecoder
+ - GIF : GifDecoder
+ - TGA : TgaDecoder
+ - JPEG : JpegDecoder
+ - PNG : PngDecoder
+
+   at SixLabors.ImageSharp.Formats.ImageFormatManager.ThrowInvalidDecoder(ImageFormatManager manager)
+   at SixLabors.ImageSharp.Image.InternalDetectFormat(Configuration configuration, Stream stream)
+   at SixLabors.ImageSharp.Image.DiscoverDecoder(DecoderOptions options, Stream stream)
+   at SixLabors.ImageSharp.Image.<>c__DisplayClass80_0.<Load>b__0(Stream s)
+   at SixLabors.ImageSharp.Image.Load(DecoderOptions options, String path)
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 395
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-08 12:28 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnailByDirectories Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnailByDirectories
+--------------------Exception--------------------
+SixLabors.ImageSharp.UnknownImageFormatException: Image cannot be loaded. Available decoders:
+ - TIFF : TiffDecoder
+ - BMP : BmpDecoder
+ - PBM : PbmDecoder
+ - Webp : WebpDecoder
+ - QOI : QoiDecoder
+ - GIF : GifDecoder
+ - TGA : TgaDecoder
+ - JPEG : JpegDecoder
+ - PNG : PngDecoder
+
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 415
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnailByDirectories(String folderName, String fileName, Boolean isTransf) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 657
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-08 12:30 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail
+--------------------Exception--------------------
+SixLabors.ImageSharp.UnknownImageFormatException: Image cannot be loaded. Available decoders:
+ - Webp : WebpDecoder
+ - PBM : PbmDecoder
+ - TGA : TgaDecoder
+ - JPEG : JpegDecoder
+ - TIFF : TiffDecoder
+ - QOI : QoiDecoder
+ - PNG : PngDecoder
+ - GIF : GifDecoder
+ - BMP : BmpDecoder
+
+   at SixLabors.ImageSharp.Formats.ImageFormatManager.ThrowInvalidDecoder(ImageFormatManager manager)
+   at SixLabors.ImageSharp.Image.InternalDetectFormat(Configuration configuration, Stream stream)
+   at SixLabors.ImageSharp.Image.DiscoverDecoder(DecoderOptions options, Stream stream)
+   at SixLabors.ImageSharp.Image.<>c__DisplayClass80_0.<Load>b__0(Stream s)
+   at SixLabors.ImageSharp.Image.Load(DecoderOptions options, String path)
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 395
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-08 12:30 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnailByDirectories Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnailByDirectories
+--------------------Exception--------------------
+SixLabors.ImageSharp.UnknownImageFormatException: Image cannot be loaded. Available decoders:
+ - Webp : WebpDecoder
+ - PBM : PbmDecoder
+ - TGA : TgaDecoder
+ - JPEG : JpegDecoder
+ - TIFF : TiffDecoder
+ - QOI : QoiDecoder
+ - PNG : PngDecoder
+ - GIF : GifDecoder
+ - BMP : BmpDecoder
+
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 415
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnailByDirectories(String folderName, String fileName, Boolean isTransf) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 657
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-08 12:30 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail
+--------------------Exception--------------------
+SixLabors.ImageSharp.UnknownImageFormatException: Image cannot be loaded. Available decoders:
+ - Webp : WebpDecoder
+ - PBM : PbmDecoder
+ - TGA : TgaDecoder
+ - JPEG : JpegDecoder
+ - TIFF : TiffDecoder
+ - QOI : QoiDecoder
+ - PNG : PngDecoder
+ - GIF : GifDecoder
+ - BMP : BmpDecoder
+
+   at SixLabors.ImageSharp.Formats.ImageFormatManager.ThrowInvalidDecoder(ImageFormatManager manager)
+   at SixLabors.ImageSharp.Image.InternalDetectFormat(Configuration configuration, Stream stream)
+   at SixLabors.ImageSharp.Image.DiscoverDecoder(DecoderOptions options, Stream stream)
+   at SixLabors.ImageSharp.Image.<>c__DisplayClass80_0.<Load>b__0(Stream s)
+   at SixLabors.ImageSharp.Image.Load(DecoderOptions options, String path)
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight)
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-08 12:30 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnailByDirectories Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnailByDirectories
+--------------------Exception--------------------
+SixLabors.ImageSharp.UnknownImageFormatException: Image cannot be loaded. Available decoders:
+ - Webp : WebpDecoder
+ - PBM : PbmDecoder
+ - TGA : TgaDecoder
+ - JPEG : JpegDecoder
+ - TIFF : TiffDecoder
+ - QOI : QoiDecoder
+ - PNG : PngDecoder
+ - GIF : GifDecoder
+ - BMP : BmpDecoder
+
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight)
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnailByDirectories(String folderName, String fileName, Boolean isTransf)
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-08 12:30 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.NotSupportedException: Serialization and deserialization of 'System.IntPtr' instances are not supported. Path: $.TargetSite.MethodHandle.Value.
+ ---> System.NotSupportedException: Serialization and deserialization of 'System.IntPtr' instances are not supported.
+   at System.Text.Json.Serialization.Converters.UnsupportedTypeConverter`1.Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(WriteStack& state, NotSupportedException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at CommonService.JWT.JwtMiddleware.Invoke(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\JWT\JwtMiddleware.cs:line 75
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-08 12:37 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail
+--------------------Exception--------------------
+SixLabors.ImageSharp.UnknownImageFormatException: Image cannot be loaded. Available decoders:
+ - GIF : GifDecoder
+ - Webp : WebpDecoder
+ - TGA : TgaDecoder
+ - PNG : PngDecoder
+ - BMP : BmpDecoder
+ - TIFF : TiffDecoder
+ - JPEG : JpegDecoder
+ - QOI : QoiDecoder
+ - PBM : PbmDecoder
+
+   at SixLabors.ImageSharp.Formats.ImageFormatManager.ThrowInvalidDecoder(ImageFormatManager manager)
+   at SixLabors.ImageSharp.Image.InternalDetectFormat(Configuration configuration, Stream stream)
+   at SixLabors.ImageSharp.Image.DiscoverDecoder(DecoderOptions options, Stream stream)
+   at SixLabors.ImageSharp.Image.<>c__DisplayClass80_0.<Load>b__0(Stream s)
+   at SixLabors.ImageSharp.Image.Load(DecoderOptions options, String path)
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 395
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-08 12:37 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnailByDirectories Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnailByDirectories
+--------------------Exception--------------------
+SixLabors.ImageSharp.UnknownImageFormatException: Image cannot be loaded. Available decoders:
+ - GIF : GifDecoder
+ - Webp : WebpDecoder
+ - TGA : TgaDecoder
+ - PNG : PngDecoder
+ - BMP : BmpDecoder
+ - TIFF : TiffDecoder
+ - JPEG : JpegDecoder
+ - QOI : QoiDecoder
+ - PBM : PbmDecoder
+
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 415
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnailByDirectories(String folderName, String fileName, Boolean isTransf) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 657
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-08 13:18 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail
+--------------------Exception--------------------
+System.OutOfMemoryException: Out of memory.
+   at System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 398
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-08 13:18 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnailByDirectories Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnailByDirectories
+--------------------Exception--------------------
+System.OutOfMemoryException: Out of memory.
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 429
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnailByDirectories(String folderName, String fileName, Boolean isTransf) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 662
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-08 14:03 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail
+--------------------Exception--------------------
+SixLabors.ImageSharp.UnknownImageFormatException: Image cannot be loaded. Available decoders:
+ - PNG : PngDecoder
+ - TIFF : TiffDecoder
+ - BMP : BmpDecoder
+ - Webp : WebpDecoder
+ - PBM : PbmDecoder
+ - JPEG : JpegDecoder
+ - QOI : QoiDecoder
+ - GIF : GifDecoder
+ - TGA : TgaDecoder
+
+   at SixLabors.ImageSharp.Formats.ImageFormatManager.ThrowInvalidDecoder(ImageFormatManager manager)
+   at SixLabors.ImageSharp.Image.InternalDetectFormat(Configuration configuration, Stream stream)
+   at SixLabors.ImageSharp.Image.DiscoverDecoder(DecoderOptions options, Stream stream)
+   at SixLabors.ImageSharp.Image.<>c__DisplayClass80_0.<Load>b__0(Stream s)
+   at SixLabors.ImageSharp.Image.Load(DecoderOptions options, String path)
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 397
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-08 14:03 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- uploadFile Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- uploadFile
+--------------------Exception--------------------
+SixLabors.ImageSharp.UnknownImageFormatException: Image cannot be loaded. Available decoders:
+ - PNG : PngDecoder
+ - TIFF : TiffDecoder
+ - BMP : BmpDecoder
+ - Webp : WebpDecoder
+ - PBM : PbmDecoder
+ - JPEG : JpegDecoder
+ - QOI : QoiDecoder
+ - GIF : GifDecoder
+ - TGA : TgaDecoder
+
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 417
+   at FileUploaderMicroService.Service.FileUploaderService.FileUploadForWin(List`1 aFormFile, Boolean isThumbnail) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 301
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-08 14:05 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail
+--------------------Exception--------------------
+SixLabors.ImageSharp.UnknownImageFormatException: Image cannot be loaded. Available decoders:
+ - Webp : WebpDecoder
+ - QOI : QoiDecoder
+ - TIFF : TiffDecoder
+ - PNG : PngDecoder
+ - TGA : TgaDecoder
+ - JPEG : JpegDecoder
+ - PBM : PbmDecoder
+ - BMP : BmpDecoder
+ - GIF : GifDecoder
+
+   at SixLabors.ImageSharp.Formats.ImageFormatManager.ThrowInvalidDecoder(ImageFormatManager manager)
+   at SixLabors.ImageSharp.Image.InternalDetectFormat(Configuration configuration, Stream stream)
+   at SixLabors.ImageSharp.Image.DiscoverDecoder(DecoderOptions options, Stream stream)
+   at SixLabors.ImageSharp.Image.<>c__DisplayClass80_0.<Load>b__0(Stream s)
+   at SixLabors.ImageSharp.Image.Load(DecoderOptions options, String path)
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 397
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-08 14:05 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- uploadFile Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- uploadFile
+--------------------Exception--------------------
+SixLabors.ImageSharp.UnknownImageFormatException: Image cannot be loaded. Available decoders:
+ - Webp : WebpDecoder
+ - QOI : QoiDecoder
+ - TIFF : TiffDecoder
+ - PNG : PngDecoder
+ - TGA : TgaDecoder
+ - JPEG : JpegDecoder
+ - PBM : PbmDecoder
+ - BMP : BmpDecoder
+ - GIF : GifDecoder
+
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 417
+   at FileUploaderMicroService.Service.FileUploaderService.FileUploadForWin(List`1 aFormFile, Boolean isThumbnail) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 301
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-08 14:15 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail
+--------------------Exception--------------------
+SixLabors.ImageSharp.UnknownImageFormatException: Image cannot be loaded. Available decoders:
+ - PBM : PbmDecoder
+ - GIF : GifDecoder
+ - PNG : PngDecoder
+ - TGA : TgaDecoder
+ - QOI : QoiDecoder
+ - TIFF : TiffDecoder
+ - BMP : BmpDecoder
+ - Webp : WebpDecoder
+ - JPEG : JpegDecoder
+
+   at SixLabors.ImageSharp.Formats.ImageFormatManager.ThrowInvalidDecoder(ImageFormatManager manager)
+   at SixLabors.ImageSharp.Image.InternalDetectFormat(Configuration configuration, Stream stream)
+   at SixLabors.ImageSharp.Image.DiscoverDecoder(DecoderOptions options, Stream stream)
+   at SixLabors.ImageSharp.Image.<>c__DisplayClass80_0.<Load>b__0(Stream s)
+   at SixLabors.ImageSharp.Image.Load(DecoderOptions options, String path)
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 397
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-08 23:41 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail
+--------------------Exception--------------------
+SixLabors.ImageSharp.UnknownImageFormatException: Image cannot be loaded. Available decoders:
+ - BMP : BmpDecoder
+ - GIF : GifDecoder
+ - TIFF : TiffDecoder
+ - TGA : TgaDecoder
+ - Webp : WebpDecoder
+ - PBM : PbmDecoder
+ - QOI : QoiDecoder
+ - PNG : PngDecoder
+ - JPEG : JpegDecoder
+
+   at SixLabors.ImageSharp.Formats.ImageFormatManager.ThrowInvalidDecoder(ImageFormatManager manager)
+   at SixLabors.ImageSharp.Image.InternalDetectFormat(Configuration configuration, Stream stream)
+   at SixLabors.ImageSharp.Image.DiscoverDecoder(DecoderOptions options, Stream stream)
+   at SixLabors.ImageSharp.Image.<>c__DisplayClass80_0.<Load>b__0(Stream s)
+   at SixLabors.ImageSharp.Image.Load(DecoderOptions options, String path)
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 397
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-08 23:47 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail
+--------------------Exception--------------------
+SixLabors.ImageSharp.UnknownImageFormatException: Image cannot be loaded. Available decoders:
+ - BMP : BmpDecoder
+ - GIF : GifDecoder
+ - TIFF : TiffDecoder
+ - TGA : TgaDecoder
+ - Webp : WebpDecoder
+ - PBM : PbmDecoder
+ - QOI : QoiDecoder
+ - PNG : PngDecoder
+ - JPEG : JpegDecoder
+
+   at SixLabors.ImageSharp.Formats.ImageFormatManager.ThrowInvalidDecoder(ImageFormatManager manager)
+   at SixLabors.ImageSharp.Image.InternalDetectFormat(Configuration configuration, Stream stream)
+   at SixLabors.ImageSharp.Image.DiscoverDecoder(DecoderOptions options, Stream stream)
+   at SixLabors.ImageSharp.Image.<>c__DisplayClass80_0.<Load>b__0(Stream s)
+   at SixLabors.ImageSharp.Image.Load(DecoderOptions options, String path)
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 397
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-08 23:48 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail
+--------------------Exception--------------------
+SixLabors.ImageSharp.UnknownImageFormatException: Image cannot be loaded. Available decoders:
+ - BMP : BmpDecoder
+ - Webp : WebpDecoder
+ - GIF : GifDecoder
+ - TGA : TgaDecoder
+ - PNG : PngDecoder
+ - QOI : QoiDecoder
+ - TIFF : TiffDecoder
+ - JPEG : JpegDecoder
+ - PBM : PbmDecoder
+
+   at SixLabors.ImageSharp.Formats.ImageFormatManager.ThrowInvalidDecoder(ImageFormatManager manager)
+   at SixLabors.ImageSharp.Image.InternalDetectFormat(Configuration configuration, Stream stream)
+   at SixLabors.ImageSharp.Image.DiscoverDecoder(DecoderOptions options, Stream stream)
+   at SixLabors.ImageSharp.Image.<>c__DisplayClass80_0.<Load>b__0(Stream s)
+   at SixLabors.ImageSharp.Image.Load(DecoderOptions options, String path)
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 397
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-08 23:49 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail
+--------------------Exception--------------------
+SixLabors.ImageSharp.UnknownImageFormatException: Image cannot be loaded. Available decoders:
+ - PBM : PbmDecoder
+ - BMP : BmpDecoder
+ - GIF : GifDecoder
+ - JPEG : JpegDecoder
+ - TGA : TgaDecoder
+ - QOI : QoiDecoder
+ - TIFF : TiffDecoder
+ - PNG : PngDecoder
+ - Webp : WebpDecoder
+
+   at SixLabors.ImageSharp.Formats.ImageFormatManager.ThrowInvalidDecoder(ImageFormatManager manager)
+   at SixLabors.ImageSharp.Image.InternalDetectFormat(Configuration configuration, Stream stream)
+   at SixLabors.ImageSharp.Image.DiscoverDecoder(DecoderOptions options, Stream stream)
+   at SixLabors.ImageSharp.Image.<>c__DisplayClass80_0.<Load>b__0(Stream s)
+   at SixLabors.ImageSharp.Image.Load(DecoderOptions options, String path)
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 397
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-08 23:49 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail
+--------------------Exception--------------------
+SixLabors.ImageSharp.UnknownImageFormatException: Image cannot be loaded. Available decoders:
+ - PBM : PbmDecoder
+ - BMP : BmpDecoder
+ - GIF : GifDecoder
+ - JPEG : JpegDecoder
+ - TGA : TgaDecoder
+ - QOI : QoiDecoder
+ - TIFF : TiffDecoder
+ - PNG : PngDecoder
+ - Webp : WebpDecoder
+
+   at SixLabors.ImageSharp.Formats.ImageFormatManager.ThrowInvalidDecoder(ImageFormatManager manager)
+   at SixLabors.ImageSharp.Image.InternalDetectFormat(Configuration configuration, Stream stream)
+   at SixLabors.ImageSharp.Image.DiscoverDecoder(DecoderOptions options, Stream stream)
+   at SixLabors.ImageSharp.Image.<>c__DisplayClass80_0.<Load>b__0(Stream s)
+   at SixLabors.ImageSharp.Image.Load(DecoderOptions options, String path)
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 397
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-08 23:49 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail
+--------------------Exception--------------------
+SixLabors.ImageSharp.UnknownImageFormatException: Image cannot be loaded. Available decoders:
+ - PBM : PbmDecoder
+ - BMP : BmpDecoder
+ - GIF : GifDecoder
+ - JPEG : JpegDecoder
+ - TGA : TgaDecoder
+ - QOI : QoiDecoder
+ - TIFF : TiffDecoder
+ - PNG : PngDecoder
+ - Webp : WebpDecoder
+
+   at SixLabors.ImageSharp.Formats.ImageFormatManager.ThrowInvalidDecoder(ImageFormatManager manager)
+   at SixLabors.ImageSharp.Image.InternalDetectFormat(Configuration configuration, Stream stream)
+   at SixLabors.ImageSharp.Image.DiscoverDecoder(DecoderOptions options, Stream stream)
+   at SixLabors.ImageSharp.Image.<>c__DisplayClass80_0.<Load>b__0(Stream s)
+   at SixLabors.ImageSharp.Image.Load(DecoderOptions options, String path)
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 397
+
+--------------------Log End--------------------

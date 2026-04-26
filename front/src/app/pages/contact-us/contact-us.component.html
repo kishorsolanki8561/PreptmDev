@@ -1,0 +1,71 @@
+<div class="max-w-[1280px] mx-auto px-4 py-10">
+
+  <div class="max-w-2xl mx-auto">
+    <!-- Header -->
+    <div class="mb-8 pb-4 border-b border-neutral-200">
+      <h1 class="text-2xl font-bold text-neutral-900" i18n>Contact Us</h1>
+      <p class="text-sm text-neutral-500 mt-1" i18n>
+        Reach us at
+        <a href="mailto:thepreptm@gmail.com" class="text-brand-600 hover:underline">thepreptm&#64;gmail.com</a>
+      </p>
+    </div>
+
+    <!-- Form card -->
+    <div class="bg-white rounded-xl border border-neutral-200 p-6">
+      <h2 class="text-base font-semibold text-neutral-800 mb-5" i18n>Leave a Message</h2>
+
+      <div class="space-y-5" [formGroup]="form">
+
+        <!-- Message type select -->
+        <div>
+          <label class="text-xs font-semibold text-neutral-500 uppercase tracking-wider mb-1.5 block" for="msgType" i18n>
+            Message Type <span class="text-red-500">*</span>
+          </label>
+          <select id="msgType" formControlName="type"
+            class="w-full text-sm px-3 py-2.5 bg-white border border-neutral-200 rounded-lg
+                   focus:outline-none focus:ring-1 focus:ring-brand-500 focus:border-brand-500
+                   text-neutral-800 cursor-pointer">
+            @for (option of feedbackTypeDdl; track option.value) {
+              <option [value]="option.value">{{ option.text }}</option>
+            }
+          </select>
+        </div>
+
+        <!-- Message textarea -->
+        <div>
+          <label class="text-xs font-semibold text-neutral-500 uppercase tracking-wider mb-1.5 block" for="msgBody" i18n>
+            Your Message <span class="text-red-500">*</span>
+          </label>
+          <textarea id="msgBody"
+            formControlName="message"
+            i18n-placeholder placeholder="Write your message here..."
+            rows="5"
+            class="w-full text-sm px-3 py-2.5 bg-white border rounded-lg resize-none
+                   focus:outline-none focus:ring-1 focus:ring-brand-500 focus:border-brand-500
+                   placeholder-neutral-400 transition-colors"
+            [class]="form.get('message')?.touched && form.get('message')?.hasError('required')
+              ? 'border-red-400 focus:ring-red-400 focus:border-red-400'
+              : 'border-neutral-200'">
+          </textarea>
+          @if (form.get('message')?.touched && form.get('message')?.hasError('required')) {
+            <p class="text-xs text-red-500 mt-1" i18n>Message is required.</p>
+          }
+        </div>
+
+        <div class="flex justify-end">
+          <button
+            (click)="submit()"
+            [disabled]="isLoading"
+            class="inline-flex items-center gap-2 px-6 py-2.5 bg-brand-600 text-white text-sm font-semibold
+                   rounded-full hover:bg-brand-700 disabled:opacity-60 disabled:cursor-not-allowed transition-colors">
+            @if (isLoading) {
+              <preptm-loader></preptm-loader>
+            }
+            <span i18n>Send Message</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

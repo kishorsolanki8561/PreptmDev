@@ -1,0 +1,9 @@
+<app-page-header [breadcrumb]="breadcrumb">
+    <nz-space>
+        <app-button *nzSpaceItem type="back"></app-button>
+        <!-- <app-button *nzSpaceItem [show]="form.disabled" (onClick)="onEdit()" type="edit"></app-button> -->
+    </nz-space>
+</app-page-header>
+
+<app-form [addUpdateFn$]="_additionalPagesService.addUpdateAdditionalpages" [form]="form" [initialData]="additionalData"
+    [formElements]="formElements" navigationUrlOnSuccess="/transaction/additional-pages"></app-form>

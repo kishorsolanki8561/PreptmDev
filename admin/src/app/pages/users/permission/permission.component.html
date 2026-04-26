@@ -1,0 +1,51 @@
+<!-- drop down -->
+<app-page-header [breadcrumb]="breadcrumb">
+    <!-- <app-button [routerLink]="['/master/blocktype/add']" type="add"></app-button> -->
+</app-page-header>
+
+<ng-container>
+    <div>
+        <app-select [items]="UserTypes" [label]="'User Type'" [placeholder]="'User Type'"
+            (valueChange)="pagePermissionListByUserTypeCode($event)" [(value)]="userTypeCode"
+            [replaceValueWithKey]="false" [multiple]="false">
+        </app-select>
+    </div>
+    <!-- <nz-table #table nzShowSizeChanger [nzData]="pagePermissionList" [nzShowPagination]="true"
+        [nzFrontPagination]="false" nzSize="small" [nzLoading]="false" [nzScroll]="{ y: '520px' }"
+        [nzTableLayout]="'auto'" [nzHideOnSinglePage]="false">
+
+    </nz-table> -->
+    <br />
+    <nz-table #basicTable [nzFrontPagination]="false" [nzData]="pagePermissionList">
+        <thead>
+            <tr>
+                <th nzLeft nzWidth="40px">SN</th>
+                <th nzLeft nzWidth="40px">Menu</th>
+                <th nzLeft nzWidth="40px">Page</th>
+                <th nzLeft nzWidth="40px">Component</th>
+                <th nzLeft>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let permissionGroup of pagePermissionList;let i=index">
+                <td nzLeft>{{i+1}}.</td>
+                <td>{{permissionGroup[0].menuName.replace(',',' &#8702;')}}</td>
+                <td>{{permissionGroup[0].pageName}}</td>
+                <td>{{permissionGroup[0].pageComponentName}}</td>
+
+                <td>
+                    <ng-container *ngFor="let permission of permissionGroup">
+                        <div class="inline-block mx-3 text-center">
+                            <div class="flex flex-col">
+                                <span>{{getActionNameById(permission.action)?.text}}</span>
+                                <app-switch [value]="permission.isAllowed" class="permission_switch"
+                                    (valueChange)="changeStatus(permission.id)"></app-switch>
+                            </div>
+                        </div>
+                    </ng-container>
+                </td>
+
+            </tr>
+        </tbody>
+    </nz-table>
+</ng-container>

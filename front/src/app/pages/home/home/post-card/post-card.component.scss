@@ -1,0 +1,79 @@
+
+@import 'src/assets/css/variables.scss';
+
+
+.product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: auto;
+    text-align: center;
+    height: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    // transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 200px;
+    display: block;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.1);
+}
+
+.product-details {
+    padding: 12px;
+}
+
+.product-title {
+    font-size: 1em;
+    margin: 10px 0;
+    transition: color 0.3s ease;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-card:hover .product-title {
+    color: #007bff;
+}
+
+.product-description {
+    color: #777;
+    font-size: 0.9em;
+    margin: 10px 0;
+    max-lines: 2;
+}
+
+
+.product-card:hover .product-price {
+    color: #28a745;
+}
+
+
+.buy-button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+// lg
+@media (min-width:1024px) {
+    .gap-margin-x {
+      margin: 0;
+    }
+  }

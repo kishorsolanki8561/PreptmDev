@@ -1,0 +1,73 @@
+<label *ngIf="label" class="lbl">
+  {{label}}
+  <span *ngIf="isFormControl">{{formField.hasValidator(Validators.required)?'*':''}}</span>
+</label>
+
+<nz-upload class="uploader-wrapper" [(nzFileList)]="fileList" [nzBeforeUpload]="beforeUpload" nzListType="picture-card"
+  [nzShowButton]="((!multiple)?(fileList.length <1):true) && !isDisabled" [nzPreview]="handlePreview"
+  [nzAccept]="accept" [nzMultiple]="multiple" [nzShowUploadList]="{showRemoveIcon:!isDisabled,showPreviewIcon:true}"
+  nzChange [nzRemove]="onFileDelete" (focusin)="isTouched()">
+
+  <div>
+    <span nz-icon nzType="plus"></span>
+    <div style="margin-top: 8px">
+      {{label}}
+      <span *ngIf="isFormControl && label">{{hasRequiredField(formField) ?'*':''}}</span>
+    </div>
+
+    <!-- <a nz-button nzType="link" nz-popover [(nzPopoverVisible)]="urlVisible" 
+       [nzPopoverContent]="contentTemplate">
+      URL
+    </a> -->
+
+  </div>
+
+
+</nz-upload>
+
+<app-error-messages *ngIf="isFormControl" [formField]="formField" [label]="label"></app-error-messages>
+
+<nz-modal [nzVisible]="previewVisible" [nzContent]="modalContent" [nzFooter]="null"
+  (nzOnCancel)="previewVisible = false">
+  <ng-template #modalContent>
+    <img [src]="previewImg" [ngStyle]="{ width: '100%' }" />
+  </ng-template>
+</nz-modal>
+
+<!--  -->
+
+<!-- <input type="file" (change)="fileChangeEvent($event)" /> -->
+
+<nz-modal [(nzVisible)]="isShowCropper" [nzFooter]="modalFooter" [nzContent]="modalContenta" [nzTitle]="modalTitle"
+  (nzOnCancel)="isShowCropper = false">
+
+  <ng-template #modalTitle>Crop Image</ng-template>
+
+  <ng-template #modalContenta>
+
+    <image-cropper [imageFile]="imageFile" [maintainAspectRatio]="true" [aspectRatio]="croppingRatio" format="jpeg"
+      (imageCropped)="imageCropped($event)"></image-cropper>
+  </ng-template>
+
+  <ng-template #modalFooter>
+    <div>
+      <button nz-button nzType="primary" (click)="cropImage()">Crop</button>
+      <button nz-button nzType="default" (click)="isShowCropper = false">Cancel</button>
+    </div>
+  </ng-template>
+
+</nz-modal>
+
+
+<!-- popover -->
+
+
+<ng-template #contentTemplate>
+  <nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton">
+    <input type="text" #url nz-input placeholder="URL" />
+  </nz-input-group>
+  <ng-template #suffixIconButton>
+    <button nz-button nzType="primary" nzSearch (click)="onSeturl(url.value)">OK</button>
+  </ng-template>
+
+</ng-template>

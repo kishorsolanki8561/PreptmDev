@@ -1,0 +1,351 @@
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-04 10:47 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.NotSupportedException: Serialization and deserialization of 'System.Action' instances are not supported. Path: $.MoveNextAction.
+ ---> System.NotSupportedException: Serialization and deserialization of 'System.Action' instances are not supported.
+   at System.Text.Json.Serialization.Converters.UnsupportedTypeConverter`1.Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(WriteStack& state, NotSupportedException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at CommonService.JWT.JwtMiddleware.Invoke(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\JWT\JwtMiddleware.cs:line 75
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-04 10:47 
+
+<KISHOR> 
+ Failed executing DbCommand ("227"ms) [Parameters=["@p30='3', @p0='27', @p1='' (Size = 4000), @p2='1', @p3='2024-08-04T10:47:43.5540478', @p4='<p>asdasd</p><p>asdasd</p>' (Size = 4000), @p5='<p>asdasd</p>' (Size = 4000), @p6='{\"time\":1722748654280,\"blocks\":[{\"id\":\"qDFXIPVIyt\",\"type\":\"paragraph\",\"data\":{\"text\":\"asdasd\"}},{\"id\":\"HHjBTFXWMk\",\"type\":\"paragraph\",\"data\":{\"text\":\"asdasd\"}}],\"version\":\"2.29.1\"}' (Size = 4000), @p7='{\"time\":1722748655078,\"blocks\":[{\"id\":\"GWpECReS6G\",\"type\":\"paragraph\",\"data\":{\"text\":\"asdasd\"}}],\"version\":\"2.29.1\"}' (Size = 4000), @p8='' (Size = 4000), @p9='' (Size = 4000), @p10='' (Size = 4000), @p11='False', @p12='False', @p13='aasd' (Size = 4000), @p14='asd' (Size = 4000), @p15='1' (Nullable = true), @p16='2024-08-04T10:47:57.7311560+05:30' (Nullable = true), @p17=NULL (DbType = DateTime), @p18=NULL (DbType = Int32), @p19='' (Size = 4000), @p20='asdfsdf' (Size = 4000), @p21='1' (Nullable = true), @p22='asda' (Size = 4000), @p23='asd' (Size = 4000), @p24=NULL (DbType = Int32), @p25='' (Size = 4000), @p26='asdas' (Size = 4000), @p27='asdfsdf' (Nullable = false) (Size = 4000), @p28='sdfsd' (Nullable = false) (Size = 4000), @p29=NULL (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [Article] SET [ArticleType] = @p0, [Browser] = @p1, [CreatedBy] = @p2, [CreatedDate] = @p3, [Description] = @p4, [DescriptionHindi] = @p5, [DescriptionJson] = @p6, [DescriptionJsonHindi] = @p7, [IPAddress] = @p8, [IPCity] = @p9, [IPCountry] = @p10, [IsActive] = @p11, [IsDelete] = @p12, [KeywordHindi] = @p13, [Keywords] = @p14, [ModifiedBy] = @p15, [ModifiedDate] = @p16, [PublisherDate] = @p17, [PublisherId] = @p18, [ScreenName] = @p19, [SlugUrl] = @p20, [Status] = @p21, [Summary] = @p22, [SummaryHindi] = @p23, [TagId] = @p24, [Thumbnail] = @p25, [ThumbnailCredit] = @p26, [Title] = @p27, [TitleHindi] = @p28, [VisitCount] = @p29
+WHERE [Id] = @p30;
+SELECT @@ROWCOUNT;" Error Level: [Error] 
+--------------------Message--------------------
+Failed executing DbCommand ("227"ms) [Parameters=["@p30='3', @p0='27', @p1='' (Size = 4000), @p2='1', @p3='2024-08-04T10:47:43.5540478', @p4='<p>asdasd</p><p>asdasd</p>' (Size = 4000), @p5='<p>asdasd</p>' (Size = 4000), @p6='{\"time\":1722748654280,\"blocks\":[{\"id\":\"qDFXIPVIyt\",\"type\":\"paragraph\",\"data\":{\"text\":\"asdasd\"}},{\"id\":\"HHjBTFXWMk\",\"type\":\"paragraph\",\"data\":{\"text\":\"asdasd\"}}],\"version\":\"2.29.1\"}' (Size = 4000), @p7='{\"time\":1722748655078,\"blocks\":[{\"id\":\"GWpECReS6G\",\"type\":\"paragraph\",\"data\":{\"text\":\"asdasd\"}}],\"version\":\"2.29.1\"}' (Size = 4000), @p8='' (Size = 4000), @p9='' (Size = 4000), @p10='' (Size = 4000), @p11='False', @p12='False', @p13='aasd' (Size = 4000), @p14='asd' (Size = 4000), @p15='1' (Nullable = true), @p16='2024-08-04T10:47:57.7311560+05:30' (Nullable = true), @p17=NULL (DbType = DateTime), @p18=NULL (DbType = Int32), @p19='' (Size = 4000), @p20='asdfsdf' (Size = 4000), @p21='1' (Nullable = true), @p22='asda' (Size = 4000), @p23='asd' (Size = 4000), @p24=NULL (DbType = Int32), @p25='' (Size = 4000), @p26='asdas' (Size = 4000), @p27='asdfsdf' (Nullable = false) (Size = 4000), @p28='sdfsd' (Nullable = false) (Size = 4000), @p29=NULL (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [Article] SET [ArticleType] = @p0, [Browser] = @p1, [CreatedBy] = @p2, [CreatedDate] = @p3, [Description] = @p4, [DescriptionHindi] = @p5, [DescriptionJson] = @p6, [DescriptionJsonHindi] = @p7, [IPAddress] = @p8, [IPCity] = @p9, [IPCountry] = @p10, [IsActive] = @p11, [IsDelete] = @p12, [KeywordHindi] = @p13, [Keywords] = @p14, [ModifiedBy] = @p15, [ModifiedDate] = @p16, [PublisherDate] = @p17, [PublisherId] = @p18, [ScreenName] = @p19, [SlugUrl] = @p20, [Status] = @p21, [Summary] = @p22, [SummaryHindi] = @p23, [TagId] = @p24, [Thumbnail] = @p25, [ThumbnailCredit] = @p26, [Title] = @p27, [TitleHindi] = @p28, [VisitCount] = @p29
+WHERE [Id] = @p30;
+SELECT @@ROWCOUNT;"
+--------------------Exception--------------------
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<>
+2024-08-04 10:47 
+
+<KISHOR> 
+ File Name :- ArticleService.cs Method Name :- UpdateStatus Error Level: [Error] 
+--------------------Message--------------------
+File Name :- ArticleService.cs Method Name :- UpdateStatus
+--------------------Exception--------------------
+System.ObjectDisposedException: Cannot access a disposed context instance. A common cause of this error is disposing a context instance that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application. This may occur if you are calling 'Dispose' on the context instance, or wrapping it in a using statement. If you are using dependency injection, you should let the dependency injection container take care of disposing context instances.
+Object name: 'DBPreptmContext'.
+   at Microsoft.EntityFrameworkCore.DbContext.CheckDisposed()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at TranslationMicroService.Service.ArticleService.UpdateStatus(Int32 Id) in D:\Project\5GStudy\taiyari-backend\TranslationMicroService\Service\ArticleService.cs:line 264
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-04 10:47 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.NotSupportedException: Serialization and deserialization of 'System.Action' instances are not supported. Path: $.MoveNextAction.
+ ---> System.NotSupportedException: Serialization and deserialization of 'System.Action' instances are not supported.
+   at System.Text.Json.Serialization.Converters.UnsupportedTypeConverter`1.Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(WriteStack& state, NotSupportedException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at CommonService.JWT.JwtMiddleware.Invoke(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\JWT\JwtMiddleware.cs:line 75
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-04 10:47 
+
+<KISHOR> 
+ Failed executing DbCommand ("103"ms) [Parameters=["@p30='3', @p0='27', @p1='' (Size = 4000), @p2='1', @p3='2024-08-04T10:47:43.5540478', @p4='<p>asdasd</p><p>asdasd</p>' (Size = 4000), @p5='<p>asdasd</p>' (Size = 4000), @p6='{\"time\":1722748654280,\"blocks\":[{\"id\":\"qDFXIPVIyt\",\"type\":\"paragraph\",\"data\":{\"text\":\"asdasd\"}},{\"id\":\"HHjBTFXWMk\",\"type\":\"paragraph\",\"data\":{\"text\":\"asdasd\"}}],\"version\":\"2.29.1\"}' (Size = 4000), @p7='{\"time\":1722748655078,\"blocks\":[{\"id\":\"GWpECReS6G\",\"type\":\"paragraph\",\"data\":{\"text\":\"asdasd\"}}],\"version\":\"2.29.1\"}' (Size = 4000), @p8='' (Size = 4000), @p9='' (Size = 4000), @p10='' (Size = 4000), @p11='False', @p12='False', @p13='aasd' (Size = 4000), @p14='asd' (Size = 4000), @p15='1' (Nullable = true), @p16='2024-08-04T10:47:59.2999274+05:30' (Nullable = true), @p17=NULL (DbType = DateTime), @p18=NULL (DbType = Int32), @p19='' (Size = 4000), @p20='asdfsdf' (Size = 4000), @p21='1' (Nullable = true), @p22='asda' (Size = 4000), @p23='asd' (Size = 4000), @p24=NULL (DbType = Int32), @p25='' (Size = 4000), @p26='asdas' (Size = 4000), @p27='asdfsdf' (Nullable = false) (Size = 4000), @p28='sdfsd' (Nullable = false) (Size = 4000), @p29=NULL (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [Article] SET [ArticleType] = @p0, [Browser] = @p1, [CreatedBy] = @p2, [CreatedDate] = @p3, [Description] = @p4, [DescriptionHindi] = @p5, [DescriptionJson] = @p6, [DescriptionJsonHindi] = @p7, [IPAddress] = @p8, [IPCity] = @p9, [IPCountry] = @p10, [IsActive] = @p11, [IsDelete] = @p12, [KeywordHindi] = @p13, [Keywords] = @p14, [ModifiedBy] = @p15, [ModifiedDate] = @p16, [PublisherDate] = @p17, [PublisherId] = @p18, [ScreenName] = @p19, [SlugUrl] = @p20, [Status] = @p21, [Summary] = @p22, [SummaryHindi] = @p23, [TagId] = @p24, [Thumbnail] = @p25, [ThumbnailCredit] = @p26, [Title] = @p27, [TitleHindi] = @p28, [VisitCount] = @p29
+WHERE [Id] = @p30;
+SELECT @@ROWCOUNT;" Error Level: [Error] 
+--------------------Message--------------------
+Failed executing DbCommand ("103"ms) [Parameters=["@p30='3', @p0='27', @p1='' (Size = 4000), @p2='1', @p3='2024-08-04T10:47:43.5540478', @p4='<p>asdasd</p><p>asdasd</p>' (Size = 4000), @p5='<p>asdasd</p>' (Size = 4000), @p6='{\"time\":1722748654280,\"blocks\":[{\"id\":\"qDFXIPVIyt\",\"type\":\"paragraph\",\"data\":{\"text\":\"asdasd\"}},{\"id\":\"HHjBTFXWMk\",\"type\":\"paragraph\",\"data\":{\"text\":\"asdasd\"}}],\"version\":\"2.29.1\"}' (Size = 4000), @p7='{\"time\":1722748655078,\"blocks\":[{\"id\":\"GWpECReS6G\",\"type\":\"paragraph\",\"data\":{\"text\":\"asdasd\"}}],\"version\":\"2.29.1\"}' (Size = 4000), @p8='' (Size = 4000), @p9='' (Size = 4000), @p10='' (Size = 4000), @p11='False', @p12='False', @p13='aasd' (Size = 4000), @p14='asd' (Size = 4000), @p15='1' (Nullable = true), @p16='2024-08-04T10:47:59.2999274+05:30' (Nullable = true), @p17=NULL (DbType = DateTime), @p18=NULL (DbType = Int32), @p19='' (Size = 4000), @p20='asdfsdf' (Size = 4000), @p21='1' (Nullable = true), @p22='asda' (Size = 4000), @p23='asd' (Size = 4000), @p24=NULL (DbType = Int32), @p25='' (Size = 4000), @p26='asdas' (Size = 4000), @p27='asdfsdf' (Nullable = false) (Size = 4000), @p28='sdfsd' (Nullable = false) (Size = 4000), @p29=NULL (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [Article] SET [ArticleType] = @p0, [Browser] = @p1, [CreatedBy] = @p2, [CreatedDate] = @p3, [Description] = @p4, [DescriptionHindi] = @p5, [DescriptionJson] = @p6, [DescriptionJsonHindi] = @p7, [IPAddress] = @p8, [IPCity] = @p9, [IPCountry] = @p10, [IsActive] = @p11, [IsDelete] = @p12, [KeywordHindi] = @p13, [Keywords] = @p14, [ModifiedBy] = @p15, [ModifiedDate] = @p16, [PublisherDate] = @p17, [PublisherId] = @p18, [ScreenName] = @p19, [SlugUrl] = @p20, [Status] = @p21, [Summary] = @p22, [SummaryHindi] = @p23, [TagId] = @p24, [Thumbnail] = @p25, [ThumbnailCredit] = @p26, [Title] = @p27, [TitleHindi] = @p28, [VisitCount] = @p29
+WHERE [Id] = @p30;
+SELECT @@ROWCOUNT;"
+--------------------Exception--------------------
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-04 10:48 
+
+<KISHOR> 
+ Failed executing DbCommand ("22,941"ms) [Parameters=["@__Id_0='3'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ArticleType], [a].[Browser], [a].[CreatedBy], [a].[CreatedDate], [a].[Description], [a].[DescriptionHindi], [a].[DescriptionJson], [a].[DescriptionJsonHindi], [a].[IPAddress], [a].[IPCity], [a].[IPCountry], [a].[IsActive], [a].[IsDelete], [a].[KeywordHindi], [a].[Keywords], [a].[ModifiedBy], [a].[ModifiedDate], [a].[PublisherDate], [a].[PublisherId], [a].[ScreenName], [a].[SlugUrl], [a].[Status], [a].[Summary], [a].[SummaryHindi], [a].[TagId], [a].[Thumbnail], [a].[ThumbnailCredit], [a].[Title], [a].[TitleHindi], [a].[VisitCount]
+FROM [Article] AS [a]
+WHERE ([a].[IsDelete] = CAST(0 AS bit)) AND ([a].[Id] = @__Id_0)" Error Level: [Error] 
+--------------------Message--------------------
+Failed executing DbCommand ("22,941"ms) [Parameters=["@__Id_0='3'"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ArticleType], [a].[Browser], [a].[CreatedBy], [a].[CreatedDate], [a].[Description], [a].[DescriptionHindi], [a].[DescriptionJson], [a].[DescriptionJsonHindi], [a].[IPAddress], [a].[IPCity], [a].[IPCountry], [a].[IsActive], [a].[IsDelete], [a].[KeywordHindi], [a].[Keywords], [a].[ModifiedBy], [a].[ModifiedDate], [a].[PublisherDate], [a].[PublisherId], [a].[ScreenName], [a].[SlugUrl], [a].[Status], [a].[Summary], [a].[SummaryHindi], [a].[TagId], [a].[Thumbnail], [a].[ThumbnailCredit], [a].[Title], [a].[TitleHindi], [a].[VisitCount]
+FROM [Article] AS [a]
+WHERE ([a].[IsDelete] = CAST(0 AS bit)) AND ([a].[Id] = @__Id_0)"
+--------------------Exception--------------------
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<>
+2024-08-04 10:48 
+
+<KISHOR> 
+ File Name :- ArticleService.cs Method Name :- UpdateStatus Error Level: [Error] 
+--------------------Message--------------------
+File Name :- ArticleService.cs Method Name :- UpdateStatus
+--------------------Exception--------------------
+System.ObjectDisposedException: Cannot access a disposed context instance. A common cause of this error is disposing a context instance that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application. This may occur if you are calling 'Dispose' on the context instance, or wrapping it in a using statement. If you are using dependency injection, you should let the dependency injection container take care of disposing context instances.
+Object name: 'DBPreptmContext'.
+   at Microsoft.EntityFrameworkCore.DbContext.CheckDisposed()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at TranslationMicroService.Service.ArticleService.UpdateStatus(Int32 Id) in D:\Project\5GStudy\taiyari-backend\TranslationMicroService\Service\ArticleService.cs:line 264
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-04 10:48 
+
+<KISHOR> 
+ File Name :- JwtMiddleware.cs Method Name :- attachUserToContext Error Level: [Error] 
+--------------------Message--------------------
+File Name :- JwtMiddleware.cs Method Name :- attachUserToContext
+--------------------Exception--------------------
+System.NotSupportedException: Serialization and deserialization of 'System.Action' instances are not supported. Path: $.MoveNextAction.
+ ---> System.NotSupportedException: Serialization and deserialization of 'System.Action' instances are not supported.
+   at System.Text.Json.Serialization.Converters.UnsupportedTypeConverter`1.Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(WriteStack& state, NotSupportedException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.WriteStreamAsync[TValue](Stream utf8Json, TValue value, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at CommonService.JWT.JwtMiddleware.Invoke(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\JWT\JwtMiddleware.cs:line 75
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<>
+2024-08-04 10:48 
+
+<KISHOR> 
+ An exception occurred while iterating over the results of a query for context type '"DBInfrastructure.DBPreptmContext"'."
+""Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The group or resource is not in the correct state to perform the requested operation.)
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__208_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:6ee33109-abab-4350-944f-d1cf92fe176c
+Error Number:-2,State:0,Class:11" Error Level: [Error] 
+--------------------Message--------------------
+An exception occurred while iterating over the results of a query for context type '"DBInfrastructure.DBPreptmContext"'."
+""Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The group or resource is not in the correct state to perform the requested operation.)
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__208_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:6ee33109-abab-4350-944f-d1cf92fe176c
+Error Number:-2,State:0,Class:11"
+--------------------Exception--------------------
+Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The group or resource is not in the correct state to perform the requested operation.)
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__208_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:6ee33109-abab-4350-944f-d1cf92fe176c
+Error Number:-2,State:0,Class:11
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<>
+2024-08-04 10:48 
+
+<KISHOR> 
+ File Name :- ArticleService.cs Method Name :- Delete Error Level: [Error] 
+--------------------Message--------------------
+File Name :- ArticleService.cs Method Name :- Delete
+--------------------Exception--------------------
+Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The group or resource is not in the correct state to perform the requested operation.)
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__208_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at TranslationMicroService.Service.ArticleService.Delete(Int32 Id) in D:\Project\5GStudy\taiyari-backend\TranslationMicroService\Service\ArticleService.cs:line 227
+ClientConnectionId:6ee33109-abab-4350-944f-d1cf92fe176c
+Error Number:-2,State:0,Class:11
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-04 16:19 
+
+<KISHOR> 
+ File Name :- FileUploader.cs Method Name :- GetFilesPath Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploader.cs Method Name :- GetFilesPath
+--------------------Exception--------------------
+System.ArgumentException: The path is empty. (Parameter 'path')
+   at CommonService.Other.FileUploader.GetDirectories(String fileName) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\FileUploader.cs:line 125
+   at CommonService.Other.FileUploader.GetFilesPath(String path) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\FileUploader.cs:line 98
+
+--------------------Log End--------------------

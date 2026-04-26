@@ -1,0 +1,23 @@
+<!-- <mat-form-field class="w-full">
+ 
+  <input [id]="formControlName" matInput [placeholder]="placeholder" [(ngModel)]="value" [disabled]="isDisabled"
+    (input)="onChange($event)" (blur)="touched()" autocomplete="off" [maxlength]="maxLength"
+    (keypress)="onKeyPress($event)">
+</mat-form-field> -->
+
+
+<!-- <div> -->
+  <label class="block" *ngIf="label">
+    {{label}}
+    <span *ngIf="isFormControl">{{formField.hasValidator(Validators.required)?'*':''}}</span>
+  </label>
+  <nz-switch [(ngModel)]="value" [nzLoading]="isLoading" [nzDisabled]="isDisabled" (blur)="touched()"
+    (ngModelChange)="onChange($event)" [nzCheckedChildren]="checkedTemplate"
+    [nzUnCheckedChildren]="unCheckedTemplate"
+    ></nz-switch>
+  <app-error-messages *ngIf="isFormControl" [formField]="formField" [label]="label"></app-error-messages>
+
+<!-- </div> -->
+
+<ng-template #checkedTemplate><span nz-icon nzType="check"></span></ng-template>
+    <ng-template #unCheckedTemplate><span nz-icon nzType="close"></span></ng-template>

@@ -1,0 +1,8 @@
+<app-page-header [breadcrumb]="breadcrumb" addButtonUrl="/master/assets/add">
+    <!-- <app-button [routerLink]="['/master/assets/add']" type="add"></app-button> -->
+</app-page-header>
+<main class="card">
+    <app-table [initialData]="initialData" [columns]="columns" [getDataFn$]="masterService.getAssetsMasterList"
+        [changeStatusFn$]="masterService.changeStatusAssetsMaster" [deleteFn$]="masterService.deleteAssetsMaster"
+        editPageUrl='/master/assets/edit' viewPageUrl='/master/assets' [filter]="filter"></app-table>
+</main>

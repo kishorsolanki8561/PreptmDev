@@ -1,0 +1,39 @@
+<app-page-header [breadcrumb]="breadcrumb">
+    <nz-space>
+        <app-button *nzSpaceItem type="back"></app-button>
+        <!-- <app-button *nzSpaceItem [show]="form.disabled" (onClick)="onEdit()" type="edit"></app-button> -->
+    </nz-space>
+</app-page-header>
+
+
+<app-form [addUpdateFn$]="masterService.addUpdatePage" [formArrayConfig]="[{ arrayName: 'pageComponents', addFormArrayFn: addComponent }]" [form]="form"
+    [initialData]="data" [formElements]="formElements" navigationUrlOnSuccess="/master/page">
+
+    <nz-divider  [nzText]="'Page Urls'" nzOrientation="left">
+    </nz-divider>
+
+    <div [formGroup]="form">
+        <div formArrayName="pageComponents">
+            <ng-container *ngFor="let item of pageComponentsControl.controls;let i = index">
+                <div [formGroupName]="i" class="grid grid-cols-4 gap-4">
+                    <app-text [formControlName]="'name'" [label]="'Component(' +(i+1) + ')'" [form]="item"
+                        [placeholder]="'For developer only'"></app-text>
+                    <app-select [items]="actionsDdl" [formControlName]="'pageComponentsAction'" [label]="'Actions for this component'"
+                        [form]="item" [multiple]="true"></app-select>
+                    <div class="self-end">
+                        <button nz-button *ngIf="!form.disabled && i!=0" (click)="removeUrl(i)" nzShape="circle" class="mx-1">
+                            <span nz-icon nzType="close"></span>
+                        </button>
+                        <button nz-button *ngIf="pageComponentsControl.length-1===i && !form.disabled " (click)="addComponent()"
+                            nzShape="circle" class="mx-1">
+                            <span nz-icon nzType="plus"></span>
+                        </button>
+                    </div>
+                </div>
+
+            </ng-container>
+        </div>
+    </div>
+
+
+</app-form>

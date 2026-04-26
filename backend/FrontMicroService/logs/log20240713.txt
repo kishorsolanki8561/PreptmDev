@@ -1,0 +1,72 @@
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-13 17:49 
+
+<KISHOR> 
+ File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync Error Level: [Error] 
+--------------------Message--------------------
+File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync
+--------------------Exception--------------------
+System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at CommonService.Other.HelperService.Decrypt(String Text) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\HelperService.cs:line 75
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 52
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-13 17:49 
+
+<KISHOR> 
+ File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync Error Level: [Error] 
+--------------------Message--------------------
+File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync
+--------------------Exception--------------------
+System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at CommonService.Other.HelperService.Decrypt(String Text) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\HelperService.cs:line 75
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 52
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-13 17:50 
+
+<KISHOR> 
+ File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync Error Level: [Error] 
+--------------------Message--------------------
+File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync
+--------------------Exception--------------------
+System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at CommonService.Other.HelperService.Decrypt(String Text) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\HelperService.cs:line 75
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context) in D:\Project\5GStudy\taiyari-backend\CommonService\Middlewares\EncryptionMiddleware.cs:line 52
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-13 17:54 
+
+<KISHOR> 
+ File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync Error Level: [Error] 
+--------------------Message--------------------
+File Name :- EncryptionMiddleware.cs Method Name :- InvokeAsync
+--------------------Exception--------------------
+System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at CommonService.Other.HelperService.Decrypt(String Text)
+   at CommonService.Middlewares.EncryptionMiddleware.InvokeAsync(HttpContext context)
+
+--------------------Log End--------------------

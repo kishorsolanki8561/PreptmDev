@@ -1,0 +1,65 @@
+<nz-layout style="min-height: 100%;">
+    <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null" [nzWidth]="250" class="scrollabel menubar">
+        <div>
+            <div [ngClass]="{logo:!isCollapsed,'collapsed-logo':isCollapsed}">
+                <img src="assets/images/logo.png" />
+            </div>
+            <!-- menus -->
+            <ul nz-menu nzTheme="dark" nzMode="inline">
+
+                <ng-container *ngFor="let menu of menus">
+
+                    <!-- rendering expandable menu -->
+                    <li *ngIf="menu.hashChild" nz-submenu [nzTitle]="menu.menuName" [nzIcon]="menu.iconClass || 'menu'">
+                        <ul>
+                            <li *ngFor="let page of menu.pages" nz-menu-item [routerLink]="page.pageUrl"
+                                routerLinkActive="ant-menu-item-selected">
+                                <!-- <span nz-icon [nzType]="page.icon || 'file'"></span> -->
+                                <span class="material-symbols-outlined">
+                                    {{page.icon || 'star'}}
+                                </span>
+                                <span>{{page.name}}</span>
+                            </li>
+                            <app-menu [menus]="menu.childParentMenuList"></app-menu>
+                        </ul>
+                    </li>
+
+                    <!-- rendering menu -->
+                    <li *ngIf="!menu.hashChild && menu.pages.length" [routerLink]="menu.pages[0].pageUrl"
+                        routerLinkActive="ant-menu-item-selected" [routerLinkActiveOptions]="{exact:true}" nz-menu-item
+                        nz-tooltip nzTooltipPlacement="right" [nzTooltipTitle]="isCollapsed ? menu.menuName : ''">
+                        <span nz-icon [nzType]="menu.icon || 'star'"></span>
+                        <span>{{menu.menuName}}</span>
+                    </li>
+                </ng-container>
+            </ul>
+        </div>
+        <!-- references -->
+        <ul nz-menu [nzMode]="'vertical'" [nzTheme]="'dark'">
+            <li nz-submenu nzTitle="References" nzIcon="branches">
+                <ul>
+                    <li nz-menu-group nzTitle="Images">
+                        <ul>
+                            <li nz-menu-item><a href="https://pixabay.com/" target="_blank">Pixabay</a></li>
+                            <li nz-menu-item><a href="https://www.pexels.com/" target="_blank">Pexels</a></li>
+                            <li nz-menu-item><a href="https://www.freepik.com/popular-photos" target="_blank">Freepik (Attribution required)</a></li>
+                            
+                        </ul>
+                    </li>
+                   
+                </ul>
+            </li>
+
+        </ul>
+    </nz-sider>
+    <nz-layout class="bg-slate-300 scrollabel">
+        <nz-header>
+            <app-header></app-header>
+        </nz-header>
+        <nz-content class="mx-4">
+            <router-outlet></router-outlet>
+        </nz-content>
+    </nz-layout>
+
+
+</nz-layout>

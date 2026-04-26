@@ -1,0 +1,108 @@
+<div class="max-w-[1280px] mx-auto px-4 py-6"
+  itemscope itemtype="https://schema.org/ItemList">
+  <link itemprop="url" [href]="platformLocation.href">
+  <meta itemprop="numberOfItems" [content]="totalRecords" />
+  <meta itemprop="name" [content]="search || curModuleText" />
+
+  <!-- Search heading -->
+  @if (search.trim()) {
+    <div class="mb-4">
+      <h1 class="text-lg font-semibold text-neutral-800">
+        <span i18n>Search Results for</span> "<strong>{{search}}</strong>"
+      </h1>
+    </div>
+  }
+
+  <preptm-breadcrumb [breadcrumb]="breadcrumb" class="mb-4 block"></preptm-breadcrumb>
+
+  <div class="lg:flex lg:gap-6">
+
+    <!-- ── Filter sidebar ── -->
+    <!-- ngSkipHydration is kept for safety on the filter component host.
+         The custom SearchableSelectComponent is SSR-safe, but the ngSkipHydration
+         boundary prevents any future third-party dropdown from causing NG0904. -->
+    @if (showFilter || loading) {
+      <preptm-post-filter ngSkipHydration
+        class="lg:w-56 lg:flex-shrink-0"
+        [ddls]="ddls"
+        [ddlLookup]="ddlLookup"
+        [filter]="filter"
+        [type]="type"
+        [categorySlug]="categorySlug"
+        [ddlLookupEnum]="ddlLookupEnum"
+        (filterChange)="filterList()"
+        (cleared)="clearAll()">
+      </preptm-post-filter>
+    }
+
+    <!-- ── Main content ── -->
+    <main class="flex-1 min-w-0">
+
+      <!-- Initial skeleton -->
+      @if (loading) {
+        <preptm-loader type="card" [count]="8" class="block"></preptm-loader>
+      }
+
+      <!-- Result count -->
+      @if (!loading && list.length) {
+        <div class="flex items-center justify-between mb-3">
+          <p class="text-sm text-neutral-500">
+            <span class="font-bold text-neutral-800">{{ totalRecords }}</span>
+            <span i18n> results found</span>
+          </p>
+          <span class="text-xs text-neutral-400">
+            <span i18n>Showing </span>{{ list.length }}<span i18n> of </span>{{ totalRecords }}
+          </span>
+        </div>
+      }
+
+      <!-- Post grid -->
+      @if (!loading && list.length) {
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          @for (postItem of list; track postItem.slugUrl; let i = $index) {
+            <preptm-post [index]="i + 1" [post]="postItem"></preptm-post>
+          }
+        </div>
+      }
+
+      <!-- Empty state -->
+      @if (!loading && !list.length) {
+        <preptm-no-records></preptm-no-records>
+      }
+
+      <!-- Loading more skeleton -->
+      @if (loadingMore) {
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-2">
+          @for (i of [0,1,2,3]; track $index) {
+            <div class="bg-white rounded-xl border border-neutral-200 p-4 animate-pulse">
+              <div class="flex gap-3">
+                <div class="h-4 w-4 rounded bg-neutral-200 flex-shrink-0 mt-1"></div>
+                <div class="flex-1 space-y-2">
+                  <div class="h-4 bg-neutral-200 rounded w-full"></div>
+                  <div class="h-3 bg-neutral-100 rounded w-2/3"></div>
+                  <div class="flex gap-2 mt-1">
+                    <div class="h-5 w-14 bg-neutral-100 rounded-full"></div>
+                    <div class="h-5 w-20 bg-neutral-100 rounded-full"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          }
+        </div>
+      }
+
+      <!-- End of list indicator -->
+      @if (!loading && !loadingMore && !hasMore && list.length) {
+        <div class="text-center py-8">
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-neutral-100 rounded-full">
+            <svg class="h-4 w-4 text-neutral-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-xs text-neutral-500 font-medium" i18n>You've seen all results</span>
+          </div>
+        </div>
+      }
+
+    </main>
+  </div>
+</div>

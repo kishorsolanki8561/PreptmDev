@@ -1,0 +1,16 @@
+<label *ngIf="label" class="lbl">
+  {{label}}
+  <span *ngIf="isFormControl">{{formField.hasValidator(Validators.required)?'*':''}}</span>
+</label>
+<nz-input-group [nzSearch]="!isPassword" [nzAddOnAfter]="isPassword?'':suffixTemplateRef" [nzSuffix]="isPassword?suffixTemplate:undefined">
+  <input  (focusout)="focusOut()" [ngClass]="{'txt-box':!suffixTemplateRef, 'txt-box-suffix':suffixTemplateRef}" [nzStatus]="hasError?'error':''" nz-input
+   [attr.maxlength]="maxLength" [placeholder]="placeholder" [(ngModel)]="value" [disabled]="isDisabled"
+    (input)="onChange($event)" (blur)="touched()" [type]="!passwordVisible && isPassword ? 'password' : 'text'"
+    (keypress)="onKeyPress($event)" />
+</nz-input-group>
+<app-error-messages *ngIf="isFormControl" [formField]="formField" [label]="label"
+  [maxLength]="maxLength"></app-error-messages>
+<ng-template #suffixTemplate>
+  <span class="cursor-pointer" nz-icon [nzType]="passwordVisible ? 'eye-invisible' : 'eye'"
+    (click)="passwordVisible = !passwordVisible"></span>
+</ng-template>

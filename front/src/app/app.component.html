@@ -1,0 +1,16 @@
+<div itemscope itemtype="https://schema.org/WebSite">
+  <meta itemprop="url" content="https://preptm.com/" />
+  <meta itemprop="name" content="Preptm"/>
+  <meta property="og:type" content="website">
+  <preptm-header></preptm-header>
+  <div class="spacer"></div>
+  <main>
+    <div class="container mx-auto main-content">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+  @defer (hydrate on idle) {
+    <preptm-footer></preptm-footer>
+  }
+  <preptm-toast></preptm-toast>
+</div>

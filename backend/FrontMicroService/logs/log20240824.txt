@@ -1,0 +1,19 @@
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-24 20:51 
+
+<KISHOR> 
+ File Name :- ArticleService.cs Method Name :- GetFrontRecruitmentList Error Level: [Error] 
+--------------------Message--------------------
+File Name :- ArticleService.cs Method Name :- GetFrontRecruitmentList
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: SSL Provider, error: 0 - The wait operation timed out.)
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at CommonService.Dapper.DapperGenericRepo.QueryMultiple(String query, Object perams) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 215
+   at FrontMicroService.Service.ArticleService.GetArticles(ArticleFilterDTO filterModel) in D:\Project\5GStudy\taiyari-backend\FrontMicroService\Service\ArticleService.cs:line 28
+ClientConnectionId:d7f8aac2-53eb-44c1-8cf5-29a26399722e
+Error Number:258,State:0,Class:20
+
+--------------------Log End--------------------

@@ -1,0 +1,115 @@
+<footer class="bg-neutral-900 text-neutral-400 mt-12">
+  <div class="max-w-[1280px] mx-auto px-4 py-12">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+
+      <!-- Column 1: Brand + social -->
+      <div class="sm:col-span-2 lg:col-span-1">
+        <a routerLink="/">
+          <img class="h-8 w-auto mb-4" src="assets/img/logo-black-bg.svg" i18n-alt alt="Preptm Logo" width="140" height="32" loading="lazy">
+        </a>
+        <p class="text-sm leading-relaxed mb-6" i18n>
+          Making the job hunt easy with the latest notifications, admit cards, results, and exam updates.
+        </p>
+
+        <!-- App download -->
+        <div class="mb-6" itemscope itemtype="https://schema.org/SoftwareApplication">
+          <a target="_blank" href="https://play.google.com/store/apps/details?id=com.preptm.study" class="inline-block">
+            <img class="h-9" src="assets/svg/google play.svg" i18n-alt alt="Download on Google Play" width="135" height="36" loading="lazy">
+          </a>
+          <meta itemprop="name" content="Preptm">
+          <meta itemprop="operatingSystem" content="ANDROID">
+          <meta itemprop="applicationCategory" content="Education">
+        </div>
+
+        <!-- Social icons -->
+        <div class="flex gap-3">
+          <a target="_blank" href="https://chat.whatsapp.com/BW9AIPdks2DJcjZlGQ24Tp"
+            class="h-9 w-9 rounded-full bg-neutral-800 hover:bg-[#25d366] flex items-center justify-center transition-colors"
+            i18n-title title="WhatsApp">
+            <img class="h-5 w-5" src="assets/img/whatsApp-icon.svg" i18n-alt alt="WhatsApp" width="20" height="20" loading="lazy">
+          </a>
+          <a target="_blank" href="https://www.facebook.com/profile.php?id=100092545592455"
+            class="h-9 w-9 rounded-full bg-neutral-800 hover:bg-[#3b5998] flex items-center justify-center transition-colors"
+            i18n-title title="Facebook">
+            <img class="h-5 w-5" src="assets/img/facebook-icon.svg" i18n-alt alt="Facebook" width="20" height="20" loading="lazy">
+          </a>
+          <a target="_blank" href="https://www.instagram.com/preptm_job.update/"
+            class="h-9 w-9 rounded-full bg-neutral-800 hover:bg-[#e1306c] flex items-center justify-center transition-colors"
+            i18n-title title="Instagram">
+            <img class="h-5 w-5" src="assets/img/intagram.svg" i18n-alt alt="Instagram" width="20" height="20" loading="lazy">
+          </a>
+          <a target="_blank" href="https://x.com/thepreptm"
+            class="h-9 w-9 rounded-full bg-neutral-800 hover:bg-neutral-600 flex items-center justify-center transition-colors"
+            i18n-title title="X / Twitter">
+            <img class="h-5 w-5" src="assets/img/twitter.svg" i18n-alt alt="Twitter" width="20" height="20" loading="lazy">
+          </a>
+          <a target="_blank" href="https://t.me/official_5study"
+            class="h-9 w-9 rounded-full bg-neutral-800 hover:bg-[#229ED9] flex items-center justify-center transition-colors"
+            i18n-title title="Telegram">
+            <img class="h-5 w-5" src="assets/img/telegram.svg" i18n-alt alt="Telegram" width="20" height="20" loading="lazy">
+          </a>
+        </div>
+      </div>
+
+      <!-- Column 2: Quick Links -->
+      <div>
+        <h3 class="text-white font-semibold text-sm uppercase tracking-wider mb-4" i18n>Quick Links</h3>
+        <ul class="space-y-2 columns-2">
+          <li><a routerLink="/accountant" class="text-sm hover:text-white transition-colors" i18n>Accountant</a></li>
+          <li><a routerLink="/admission" class="text-sm hover:text-white transition-colors" i18n>Admission</a></li>
+          <li><a routerLink="/agriculture" class="text-sm hover:text-white transition-colors" i18n>Agriculture</a></li>
+          <li><a routerLink="/airforce" class="text-sm hover:text-white transition-colors" i18n>Airforce</a></li>
+          <li><a routerLink="/banking" class="text-sm hover:text-white transition-colors" i18n>Banking</a></li>
+          <li><a routerLink="/upsc" class="text-sm hover:text-white transition-colors" i18n>Civil Services</a></li>
+          <li><a routerLink="/engineering" class="text-sm hover:text-white transition-colors" i18n>Engineering</a></li>
+          <li><a routerLink="/high-court" class="text-sm hover:text-white transition-colors" i18n>High Court</a></li>
+          <li><a routerLink="/insurance" class="text-sm hover:text-white transition-colors" i18n>Insurance</a></li>
+          <li><a routerLink="/medical" class="text-sm hover:text-white transition-colors" i18n>Medical</a></li>
+          <li><a routerLink="/police" class="text-sm hover:text-white transition-colors" i18n>Police</a></li>
+          <li><a routerLink="/railway" class="text-sm hover:text-white transition-colors" i18n>Railway</a></li>
+          <li><a routerLink="/teaching" class="text-sm hover:text-white transition-colors" i18n>Teaching</a></li>
+          <li><a routerLink="/typing-jobs" class="text-sm hover:text-white transition-colors" i18n>Typing</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Resources -->
+      <div>
+        <h3 class="text-white font-semibold text-sm uppercase tracking-wider mb-4" i18n>Resources</h3>
+        <ul class="space-y-2">
+          <li><a routerLink="/jobs" class="text-sm hover:text-white transition-colors" i18n>Government Jobs</a></li>
+          <li><a routerLink="/admit-cards" class="text-sm hover:text-white transition-colors" i18n>Admit Cards</a></li>
+          <li><a routerLink="/results" class="text-sm hover:text-white transition-colors" i18n>Results</a></li>
+          <li><a routerLink="/syllabus" class="text-sm hover:text-white transition-colors" i18n>Syllabus</a></li>
+          <li><a routerLink="/exams" class="text-sm hover:text-white transition-colors" i18n>Exams</a></li>
+          <li><a routerLink="/answer-keys" class="text-sm hover:text-white transition-colors" i18n>Answer Keys</a></li>
+          <li><a routerLink="/admissions" class="text-sm hover:text-white transition-colors" i18n>Admissions</a></li>
+          <li><a routerLink="/schemes" class="text-sm hover:text-white transition-colors" i18n>Schemes</a></li>
+          <li><a routerLink="/article" class="text-sm hover:text-white transition-colors" i18n>Articles</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Company -->
+      <div>
+        <h3 class="text-white font-semibold text-sm uppercase tracking-wider mb-4" i18n>Company</h3>
+        <ul class="space-y-2">
+          <li><a routerLink="/about-us" class="text-sm hover:text-white transition-colors" i18n>About Us</a></li>
+          <li><a routerLink="/contact" class="text-sm hover:text-white transition-colors" i18n>Contact Us</a></li>
+          <li><a routerLink="/disclaimer" class="text-sm hover:text-white transition-colors" i18n>Disclaimer</a></li>
+          <li><a routerLink="/privacy-policy" class="text-sm hover:text-white transition-colors" i18n>Privacy Policy</a></li>
+          <li><a routerLink="/terms-and-conditions" class="text-sm hover:text-white transition-colors" i18n>Terms &amp; Conditions</a></li>
+          <li><a target="_blank" [href]="'https://api.preptm.com/api/front/Dashboard/GetSitemap'+lang"
+              class="text-sm hover:text-white transition-colors" i18n>Sitemap</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="border-t border-neutral-800">
+    <div class="max-w-[1280px] mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-neutral-500">
+      <span>© Preptm 2023–2025. All rights reserved.</span>
+      <span i18n>Made with ❤ for job seekers across India</span>
+    </div>
+  </div>
+</footer>

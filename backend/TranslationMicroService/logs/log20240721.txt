@@ -1,0 +1,585 @@
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-21 09:48 
+
+<KISHOR> 
+ File Name :- RecruitmentService.cs Method Name :- AddUpDate Error Level: [Error] 
+--------------------Message--------------------
+File Name :- RecruitmentService.cs Method Name :- AddUpDate
+--------------------Exception--------------------
+Newtonsoft.Json.JsonReaderException: Could not convert string to integer: dfssdf. Path 'totalPost', line 1, position 354.
+   at Newtonsoft.Json.JsonReader.ReadInt32String(String s)
+   at Newtonsoft.Json.JsonTextReader.FinishReadQuotedNumber(ReadType readType)
+   at Newtonsoft.Json.JsonTextReader.ReadNumberValue(ReadType readType)
+   at Newtonsoft.Json.JsonTextReader.ReadAsInt32()
+   at Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at TranslationMicroService.Controllers.RecruitmentController.AddUpDate(String model, List`1 files, IFormFile thumbnail, IFormFile notificationFile)
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-21 14:20 
+
+<KISHOR> 
+ File Name :- BlockContentsService.cs Method Name :- AddUpdate Error Level: [Error] 
+--------------------Message--------------------
+File Name :- BlockContentsService.cs Method Name :- AddUpdate
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting the nvarchar value 'DFG' to data type bit.
+   at CommonService.Dapper.DapperGenericRepo.Execute(String aQuery, Object aObj, SqlTransaction aTrans, Nullable`1 aCommandTimeout) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 96
+   at TranslationMicroService.Service.BlockContentsService.AddUpdate(BlockContentsModel model, List`1 attachment, IFormFile notificationFile)
+ClientConnectionId:d34312e3-3773-46a3-b697-949f71d6446d
+Error Number:245,State:1,Class:16
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-21 14:21 
+
+<KISHOR> 
+ File Name :- BlockContentsService.cs Method Name :- AddUpdate Error Level: [Error] 
+--------------------Message--------------------
+File Name :- BlockContentsService.cs Method Name :- AddUpdate
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting the nvarchar value 'DFG' to data type bit.
+   at CommonService.Dapper.DapperGenericRepo.Execute(String aQuery, Object aObj, SqlTransaction aTrans, Nullable`1 aCommandTimeout) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 96
+   at TranslationMicroService.Service.BlockContentsService.AddUpdate(BlockContentsModel model, List`1 attachment, IFormFile notificationFile)
+ClientConnectionId:9c73f327-42a1-4ba0-a51e-b06f89d991ca
+Error Number:245,State:1,Class:16
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-21 14:24 
+
+<KISHOR> 
+ File Name :- BlockContentsService.cs Method Name :- AddUpdate Error Level: [Error] 
+--------------------Message--------------------
+File Name :- BlockContentsService.cs Method Name :- AddUpdate
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting the nvarchar value 'DFG' to data type bit.
+   at CommonService.Dapper.DapperGenericRepo.Execute(String aQuery, Object aObj, SqlTransaction aTrans, Nullable`1 aCommandTimeout) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 96
+   at TranslationMicroService.Service.BlockContentsService.AddUpdate(BlockContentsModel model, List`1 attachment, IFormFile notificationFile)
+ClientConnectionId:d34312e3-3773-46a3-b697-949f71d6446d
+Error Number:245,State:1,Class:16
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-21 14:24 
+
+<KISHOR> 
+ File Name :- BlockContentsService.cs Method Name :- AddUpdate Error Level: [Error] 
+--------------------Message--------------------
+File Name :- BlockContentsService.cs Method Name :- AddUpdate
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting the nvarchar value 'DFG' to data type bit.
+   at CommonService.Dapper.DapperGenericRepo.Execute(String aQuery, Object aObj, SqlTransaction aTrans, Nullable`1 aCommandTimeout) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 96
+   at TranslationMicroService.Service.BlockContentsService.AddUpdate(BlockContentsModel model, List`1 attachment, IFormFile notificationFile)
+ClientConnectionId:d34312e3-3773-46a3-b697-949f71d6446d
+Error Number:245,State:1,Class:16
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-21 14:25 
+
+<KISHOR> 
+ File Name :- BlockContentsService.cs Method Name :- AddUpdate Error Level: [Error] 
+--------------------Message--------------------
+File Name :- BlockContentsService.cs Method Name :- AddUpdate
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting the nvarchar value 'DFG' to data type bit.
+   at CommonService.Dapper.DapperGenericRepo.Execute(String aQuery, Object aObj, SqlTransaction aTrans, Nullable`1 aCommandTimeout) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 96
+   at TranslationMicroService.Service.BlockContentsService.AddUpdate(BlockContentsModel model, List`1 attachment, IFormFile notificationFile)
+ClientConnectionId:d34312e3-3773-46a3-b697-949f71d6446d
+Error Number:245,State:1,Class:16
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-21 14:26 
+
+<KISHOR> 
+ File Name :- BlockContentsService.cs Method Name :- AddUpdate Error Level: [Error] 
+--------------------Message--------------------
+File Name :- BlockContentsService.cs Method Name :- AddUpdate
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting the nvarchar value 'DFG' to data type bit.
+   at CommonService.Dapper.DapperGenericRepo.Execute(String aQuery, Object aObj, SqlTransaction aTrans, Nullable`1 aCommandTimeout) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 96
+   at TranslationMicroService.Service.BlockContentsService.AddUpdate(BlockContentsModel model, List`1 attachment, IFormFile notificationFile)
+ClientConnectionId:9c73f327-42a1-4ba0-a51e-b06f89d991ca
+Error Number:245,State:1,Class:16
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-21 14:29 
+
+<KISHOR> 
+ File Name :- BlockContentsService.cs Method Name :- AddUpdate Error Level: [Error] 
+--------------------Message--------------------
+File Name :- BlockContentsService.cs Method Name :- AddUpdate
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting the nvarchar value 'sa' to data type bit.
+   at CommonService.Dapper.DapperGenericRepo.Execute(String aQuery, Object aObj, SqlTransaction aTrans, Nullable`1 aCommandTimeout) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 96
+   at TranslationMicroService.Service.BlockContentsService.AddUpdate(BlockContentsModel model, List`1 attachment, IFormFile notificationFile)
+ClientConnectionId:9c73f327-42a1-4ba0-a51e-b06f89d991ca
+Error Number:245,State:1,Class:16
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-21 14:29 
+
+<KISHOR> 
+ File Name :- BlockContentsService.cs Method Name :- AddUpdate Error Level: [Error] 
+--------------------Message--------------------
+File Name :- BlockContentsService.cs Method Name :- AddUpdate
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting the nvarchar value 'sa' to data type bit.
+   at CommonService.Dapper.DapperGenericRepo.Execute(String aQuery, Object aObj, SqlTransaction aTrans, Nullable`1 aCommandTimeout) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 96
+   at TranslationMicroService.Service.BlockContentsService.AddUpdate(BlockContentsModel model, List`1 attachment, IFormFile notificationFile)
+ClientConnectionId:d34312e3-3773-46a3-b697-949f71d6446d
+Error Number:245,State:1,Class:16
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-21 14:29 
+
+<KISHOR> 
+ File Name :- BlockContentsService.cs Method Name :- AddUpdate Error Level: [Error] 
+--------------------Message--------------------
+File Name :- BlockContentsService.cs Method Name :- AddUpdate
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting the nvarchar value 'sa' to data type bit.
+   at CommonService.Dapper.DapperGenericRepo.Execute(String aQuery, Object aObj, SqlTransaction aTrans, Nullable`1 aCommandTimeout) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 96
+   at TranslationMicroService.Service.BlockContentsService.AddUpdate(BlockContentsModel model, List`1 attachment, IFormFile notificationFile)
+ClientConnectionId:d34312e3-3773-46a3-b697-949f71d6446d
+Error Number:245,State:1,Class:16
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-21 15:04 
+
+<KISHOR> 
+ File Name :- BlockContentsService.cs Method Name :- AddUpdate Error Level: [Error] 
+--------------------Message--------------------
+File Name :- BlockContentsService.cs Method Name :- AddUpdate
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting the nvarchar value 'sa' to data type bit.
+   at CommonService.Dapper.DapperGenericRepo.Execute(String aQuery, Object aObj, SqlTransaction aTrans, Nullable`1 aCommandTimeout) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 96
+   at TranslationMicroService.Service.BlockContentsService.AddUpdate(BlockContentsModel model, List`1 attachment, IFormFile notificationFile)
+ClientConnectionId:dc656ad1-4493-4412-a6da-b50fc34c9d5a
+Error Number:245,State:1,Class:16
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-21 15:05 
+
+<KISHOR> 
+ File Name :- BlockContentsService.cs Method Name :- AddUpdate Error Level: [Error] 
+--------------------Message--------------------
+File Name :- BlockContentsService.cs Method Name :- AddUpdate
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting the nvarchar value 'sa' to data type bit.
+   at CommonService.Dapper.DapperGenericRepo.Execute(String aQuery, Object aObj, SqlTransaction aTrans, Nullable`1 aCommandTimeout) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 96
+   at TranslationMicroService.Service.BlockContentsService.AddUpdate(BlockContentsModel model, List`1 attachment, IFormFile notificationFile) in D:\Project\5GStudy\taiyari-backend\TranslationMicroService\Service\BlockContentsService.cs:line 188
+ClientConnectionId:9b1d0c6f-fdf8-40e0-9f2c-5f2869bbc4ee
+Error Number:245,State:1,Class:16
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-21 15:09 
+
+<KISHOR> 
+ File Name :- BlockContentsService.cs Method Name :- AddUpdate Error Level: [Error] 
+--------------------Message--------------------
+File Name :- BlockContentsService.cs Method Name :- AddUpdate
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting the nvarchar value 'asdasd' to data type bit.
+   at CommonService.Dapper.DapperGenericRepo.Execute(String aQuery, Object aObj, SqlTransaction aTrans, Nullable`1 aCommandTimeout) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 96
+   at TranslationMicroService.Service.BlockContentsService.AddUpdate(BlockContentsModel model, List`1 attachment, IFormFile notificationFile) in D:\Project\5GStudy\taiyari-backend\TranslationMicroService\Service\BlockContentsService.cs:line 188
+ClientConnectionId:9ca6f879-5411-4ac3-ac16-277157c3bb36
+Error Number:245,State:1,Class:16
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-21 15:10 
+
+<KISHOR> 
+ File Name :- BlockContentsService.cs Method Name :- AddUpdate Error Level: [Error] 
+--------------------Message--------------------
+File Name :- BlockContentsService.cs Method Name :- AddUpdate
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting the nvarchar value 'asdasd' to data type bit.
+   at CommonService.Dapper.DapperGenericRepo.Execute(String aQuery, Object aObj, SqlTransaction aTrans, Nullable`1 aCommandTimeout) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 96
+   at TranslationMicroService.Service.BlockContentsService.AddUpdate(BlockContentsModel model, List`1 attachment, IFormFile notificationFile) in D:\Project\5GStudy\taiyari-backend\TranslationMicroService\Service\BlockContentsService.cs:line 188
+ClientConnectionId:9ca6f879-5411-4ac3-ac16-277157c3bb36
+Error Number:245,State:1,Class:16
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-21 15:23 
+
+<KISHOR> 
+ File Name :- BlockContentsService.cs Method Name :- AddUpDate Error Level: [Error] 
+--------------------Message--------------------
+File Name :- BlockContentsService.cs Method Name :- AddUpDate
+--------------------Exception--------------------
+Newtonsoft.Json.JsonSerializationException: Error converting value {null} to type 'System.Boolean'. Path 'howToApplyAndQuickLinkLookup[3].isUpdate', line 1, position 2335.
+ ---> System.InvalidCastException: Null object cannot be converted to a value type.
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateList(IList list, JsonReader reader, JsonArrayContract contract, JsonProperty containerProperty, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, Object existingValue, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at TranslationMicroService.Controllers.BlockContentsController.AddUpdate(String model, List`1 attachment, IFormFile notificationFile) in D:\Project\5GStudy\taiyari-backend\TranslationMicroService\Controllers\BlockContentsController.cs:line 31
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-21 15:29 
+
+<KISHOR> 
+ File Name :- BlockContentsService.cs Method Name :- AddUpDate Error Level: [Error] 
+--------------------Message--------------------
+File Name :- BlockContentsService.cs Method Name :- AddUpDate
+--------------------Exception--------------------
+Newtonsoft.Json.JsonSerializationException: Error converting value {null} to type 'System.Boolean'. Path 'howToApplyAndQuickLinkLookup[2].isUpdate', line 1, position 1765.
+ ---> System.InvalidCastException: Null object cannot be converted to a value type.
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateList(IList list, JsonReader reader, JsonArrayContract contract, JsonProperty containerProperty, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, Object existingValue, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at TranslationMicroService.Controllers.BlockContentsController.AddUpdate(String model, List`1 attachment, IFormFile notificationFile)
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-21 15:30 
+
+<KISHOR> 
+ File Name :- BlockContentsService.cs Method Name :- AddUpDate Error Level: [Error] 
+--------------------Message--------------------
+File Name :- BlockContentsService.cs Method Name :- AddUpDate
+--------------------Exception--------------------
+Newtonsoft.Json.JsonSerializationException: Error converting value {null} to type 'System.Boolean'. Path 'howToApplyAndQuickLinkLookup[2].isUpdate', line 1, position 1765.
+ ---> System.InvalidCastException: Null object cannot be converted to a value type.
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateList(IList list, JsonReader reader, JsonArrayContract contract, JsonProperty containerProperty, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, Object existingValue, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at TranslationMicroService.Controllers.BlockContentsController.AddUpdate(String model, List`1 attachment, IFormFile notificationFile)
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-21 15:30 
+
+<KISHOR> 
+ File Name :- BlockContentsService.cs Method Name :- AddUpDate Error Level: [Error] 
+--------------------Message--------------------
+File Name :- BlockContentsService.cs Method Name :- AddUpDate
+--------------------Exception--------------------
+Newtonsoft.Json.JsonSerializationException: Error converting value {null} to type 'System.Boolean'. Path 'howToApplyAndQuickLinkLookup[2].isUpdate', line 1, position 1765.
+ ---> System.InvalidCastException: Null object cannot be converted to a value type.
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateList(IList list, JsonReader reader, JsonArrayContract contract, JsonProperty containerProperty, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, Object existingValue, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at TranslationMicroService.Controllers.BlockContentsController.AddUpdate(String model, List`1 attachment, IFormFile notificationFile)
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-21 15:30 
+
+<KISHOR> 
+ File Name :- BlockContentsService.cs Method Name :- AddUpDate Error Level: [Error] 
+--------------------Message--------------------
+File Name :- BlockContentsService.cs Method Name :- AddUpDate
+--------------------Exception--------------------
+Newtonsoft.Json.JsonSerializationException: Error converting value {null} to type 'System.Boolean'. Path 'howToApplyAndQuickLinkLookup[2].isUpdate', line 1, position 1765.
+ ---> System.InvalidCastException: Null object cannot be converted to a value type.
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateList(IList list, JsonReader reader, JsonArrayContract contract, JsonProperty containerProperty, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, Object existingValue, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at TranslationMicroService.Controllers.BlockContentsController.AddUpdate(String model, List`1 attachment, IFormFile notificationFile)
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-21 15:34 
+
+<KISHOR> 
+ File Name :- BlockContentsService.cs Method Name :- AddUpDate Error Level: [Error] 
+--------------------Message--------------------
+File Name :- BlockContentsService.cs Method Name :- AddUpDate
+--------------------Exception--------------------
+Newtonsoft.Json.JsonSerializationException: Error converting value {null} to type 'System.Boolean'. Path 'howToApplyAndQuickLinkLookup[2].isUpdate', line 1, position 1765.
+ ---> System.InvalidCastException: Null object cannot be converted to a value type.
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateList(IList list, JsonReader reader, JsonArrayContract contract, JsonProperty containerProperty, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, Object existingValue, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at TranslationMicroService.Controllers.BlockContentsController.AddUpdate(String model, List`1 attachment, IFormFile notificationFile)
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-21 17:10 
+
+<KISHOR> 
+ File Name :- SchemeService.cs Method Name :- AddUpDate Error Level: [Error] 
+--------------------Message--------------------
+File Name :- SchemeService.cs Method Name :- AddUpDate
+--------------------Exception--------------------
+Newtonsoft.Json.JsonSerializationException: Error converting value {null} to type 'System.Boolean'. Path 'faqLookups[0].isUpdate', line 1, position 1511.
+ ---> System.InvalidCastException: Null object cannot be converted to a value type.
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateList(IList list, JsonReader reader, JsonArrayContract contract, JsonProperty containerProperty, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, Object existingValue, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at TranslationMicroService.Controllers.SchemeController.AddUpdate(String model, List`1 files, IFormFile ThumbnailFile)
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-21 17:11 
+
+<KISHOR> 
+ File Name :- SchemeService.cs Method Name :- AddUpDate Error Level: [Error] 
+--------------------Message--------------------
+File Name :- SchemeService.cs Method Name :- AddUpDate
+--------------------Exception--------------------
+Newtonsoft.Json.JsonSerializationException: Error converting value {null} to type 'System.Boolean'. Path 'faqLookups[0].isUpdate', line 1, position 1511.
+ ---> System.InvalidCastException: Null object cannot be converted to a value type.
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateList(IList list, JsonReader reader, JsonArrayContract contract, JsonProperty containerProperty, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, Object existingValue, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at TranslationMicroService.Controllers.SchemeController.AddUpdate(String model, List`1 files, IFormFile ThumbnailFile)
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-21 17:11 
+
+<KISHOR> 
+ File Name :- SchemeService.cs Method Name :- AddUpDate Error Level: [Error] 
+--------------------Message--------------------
+File Name :- SchemeService.cs Method Name :- AddUpDate
+--------------------Exception--------------------
+Newtonsoft.Json.JsonSerializationException: Error converting value {null} to type 'System.Boolean'. Path 'faqLookups[0].isUpdate', line 1, position 1511.
+ ---> System.InvalidCastException: Null object cannot be converted to a value type.
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateList(IList list, JsonReader reader, JsonArrayContract contract, JsonProperty containerProperty, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateList(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, Object existingValue, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at TranslationMicroService.Controllers.SchemeController.AddUpdate(String model, List`1 files, IFormFile ThumbnailFile)
+
+--------------------Log End--------------------

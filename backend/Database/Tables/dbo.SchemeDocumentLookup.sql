@@ -1,0 +1,8 @@
+CREATE TABLE [dbo].[SchemeDocumentLookup] (
+    [Id]        INT  IDENTITY(1,1) NOT NULL,
+    [SchemeId]  INT  NOT NULL,
+    [Document]  NVARCHAR(MAX) NULL,
+    [SortOrder] INT  NULL DEFAULT 0,
+    CONSTRAINT [PK_SchemeDocumentLookup] PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+GO

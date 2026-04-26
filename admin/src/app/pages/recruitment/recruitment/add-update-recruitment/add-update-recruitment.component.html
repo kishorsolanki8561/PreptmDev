@@ -1,0 +1,261 @@
+<app-page-header [breadcrumb]="breadcrumb">
+    <nz-space>
+        <app-button *nzSpaceItem type="back"></app-button>
+    </nz-space>
+</app-page-header>
+<app-form [addUpdateFn$]="recruitmentService.addUpdateRecruitment" [form]="form" [initialData]="recruitment"
+    [formElements]="formElements" [navigationUrlOnSuccess]="navigationUrlOnSuccess">
+
+    <!-- how to add section -->
+    <nz-collapse style="margin-bottom: 8px;">
+        <nz-collapse-panel [nzHeader]="'How to Apply'" [nzActive]="false" [nzDisabled]="false">
+            <div *ngIf="!form.disabled" [formGroup]="howToOtherLinksForm">
+                <div class="grid grid-cols-4 gap-4">
+                    <app-text class="col-span-2" [formControlName]="'title'" [label]="'Title' "
+                    (onFocusOut)="translate($event,$any(howToOtherLinksForm.get('titleHindi')))"
+                        [form]="howToOtherLinksForm" [placeholder]="'titleHindi'"></app-text>
+                    <app-text class="col-span-2" [formControlName]="'titleHindi'" [label]="'Title (Hindi)' "
+                        [form]="howToOtherLinksForm" [placeholder]="'Title (Hindi)'"></app-text>
+
+                    <app-html-editor class="col-span-4" [formControlName]="'description'" [label]="'Description'"
+                        [form]="howToOtherLinksForm" [placeholder]="'Description'"
+                        [editorId]="'howToDescription'"></app-html-editor>
+                    <app-html-editor class="col-span-4" [formControlName]="'descriptionHindi'"
+                        [editorId]="'howToDescriptionHi'" [label]="'Description (Hindi)'" [form]="howToOtherLinksForm"
+                        [placeholder]="'Description (Hindi)'"></app-html-editor>
+
+                    <app-text class="col-span-4" [formControlName]="'linkUrl'" [label]="'Image Url'"
+                        [form]="howToOtherLinksForm" [placeholder]="'Image Url'"></app-text>
+                    <div class="text-left" *ngIf="howToOtherLinksForm.enabled">
+                        <button [disabled]="!(howToOtherLinksForm.value.title || howToOtherLinksForm.value.titleHindi)"
+                            *ngIf="howToOtherLinksForm.value.id==0" nz-button
+                            (click)="addHowToApplyData(howToOtherLinksForm.value)" nzType="primary"
+                            class="my-4 p-2 btn">
+                            <span nz-icon nzType="plus" nzTheme="outline" class="align-text-top"></span>
+                            Add
+                        </button>
+                        <button *ngIf="howToOtherLinksForm.value.id >0" nz-button
+                            (click)="addHowToApplyData(howToOtherLinksForm.value)" nzType="primary"
+                            class="my-4 p-2 btn">
+                            <span nz-icon nzType="edit" nzTheme="outline" class="align-text-top"></span>
+                            Update
+                        </button>
+                        <button [disabled]="!(howToOtherLinksForm.value.title || howToOtherLinksForm.value.titleHindi)"
+                            nz-button (click)="resetHowToApply(howToOtherLinksForm.value);" nzType="text"
+                            class="my-4 p-2 btn">
+                            <span nz-icon nzType="sync" nzTheme="outline" class="align-text-top"></span>
+                            Reset
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+            <ng-container
+                *ngIf="recruitment.howToApplyAndQuickLinkLookup.length && recruitment.howToApplyAndQuickLinkLookup.length > 0">
+                <nz-table #htable nzShowSizeChanger [nzData]="recruitment.howToApplyAndQuickLinkLookup"
+                    class="css-serial" [nzShowPagination]="false" [nzLoading]="false" [nzHideOnSinglePage]="false"
+                    [nzScroll]="{ y: '520px' }" [nzTableLayout]="'auto'">
+                    <thead>
+                        <tr>
+                            <th nzLeft nzWidth="40px">SN</th>
+                            <th nzLeft nzWidth="40px">Title</th>
+                            <th nzLeft nzWidth="40px">Title Hindi</th>
+                            <th nzRight nzWidth="40px">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <ng-container *ngFor="let data of htable.nzData;let i=index">
+                            <tr *ngIf="!data.isQuickLink">
+                                <td></td>
+                                <td>{{data.title}}</td>
+                                <td>{{data.titleHindi}}</td>
+                                <td>
+
+                                    <button [disabled]="isUpdateHow2Apply" nz-button [nzLoading]="false" #deleteBtn
+                                        nzShape="circle" nzDanger class="mx-1" nz-popconfirm [nzIcon]="iconTpl">
+                                        <span nz-icon nzType="delete" *ngIf="!deleteBtn.nzLoading" nzTheme="twotone"
+                                            (click)="deleteHowToApply(i,deleteBtn)" [nzTwotoneColor]="'#f00'"></span>
+                                    </button>
+
+                                    <button (click)="updateHowToApply(data,i)" [disabled]="isUpdateHow2Apply" nz-button
+                                        nzShape="circle" class="mx-1">
+                                        <span nz-icon nzType="edit" nzTheme="outline"></span>
+                                    </button>
+                                    <ng-template #iconTpl>
+                                        <span nz-icon nzType="question-circle-o" style="color: red;"></span>
+                                    </ng-template>
+                                </td>
+                            </tr>
+                        </ng-container>
+                    </tbody>
+                </nz-table>
+            </ng-container>
+        </nz-collapse-panel>
+    </nz-collapse>
+
+    <!-- other links section -->
+    <nz-collapse style="margin-bottom: 8px;">
+        <nz-collapse-panel [nzHeader]="'Other Links'" [nzActive]="false" [nzDisabled]="false">
+            <div *ngIf="!form.disabled" [formGroup]="OtherLinksForm">
+                <div class="grid grid-cols-4 gap-4">
+                    <app-text class="col-span-2" [formControlName]="'title'" [label]="'Title '" [form]="OtherLinksForm"
+                    (onFocusOut)="translate($event,$any(OtherLinksForm.get('titleHindi')))"
+                        [placeholder]="'Title'"></app-text>
+                    <app-text class="col-span-2" [formControlName]="'titleHindi'" [label]="'Title (Hindi)'"
+                        [form]="OtherLinksForm" [placeholder]="'Title'"></app-text>
+                    <app-select class="col-span-2" [replaceValueWithKey]='true'
+                        [items]="ddlLookups[lookupEnum.IconClassQuickLinks.toString()]" #tt
+                        [placeholder]="'Please Choose Icon'" [label]="'Icon Class'" [formControlName]="'iconClass'"
+                        [form]="OtherLinksForm" [multiple]="false" [otherKeyValue]="'Description'"
+                        [addPrefixIconClass]="true">
+                    </app-select>
+                    <app-text class="col-span-2" [formControlName]="'linkUrl'" [label]="'Link'" [form]="OtherLinksForm"
+                        [placeholder]="'Link'"></app-text>
+                    <div class="col-span-4 text-left" *ngIf="OtherLinksForm.enabled">
+                        <button [disabled]="!(OtherLinksForm.value.title || OtherLinksForm.value.titleHindi)"
+                            *ngIf="OtherLinksForm.value.id==0" nz-button
+                            (click)="addOtherLinksData(OtherLinksForm.value)" nzType="primary" class="my-4 p-2 btn">
+                            <span nz-icon nzType="plus" nzTheme="outline" class="align-text-top"></span>
+                            Add
+                        </button>
+                        <button *ngIf="OtherLinksForm.value.id >0" nz-button
+                            (click)="addOtherLinksData(OtherLinksForm.value)" nzType="primary" class="my-4 p-2 btn">
+                            <span nz-icon nzType="edit" nzTheme="outline" class="align-text-top"></span>
+                            Update
+                        </button>
+                        <button [disabled]="!(OtherLinksForm.value.title || OtherLinksForm.value.titleHindi)" nz-button
+                            (click)="resetOtherLinks(OtherLinksForm.value);" nzType="text" class="my-4 p-2 btn">
+                            <span nz-icon nzType="sync" nzTheme="outline" class="align-text-top"></span>
+                            Reset
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+            <ng-container
+                *ngIf="recruitment.howToApplyAndQuickLinkLookup && recruitment.howToApplyAndQuickLinkLookup.length > 0">
+                <nz-table #qtable nzShowSizeChanger [nzData]="recruitment.howToApplyAndQuickLinkLookup"
+                    class="css-serial" [nzShowPagination]="false" [nzLoading]="false" [nzHideOnSinglePage]="false"
+                    [nzScroll]="{ y: '520px' }" [nzTableLayout]="'auto'">
+                    <thead>
+                        <tr>
+                            <th nzLeft nzWidth="40px">SN</th>
+                            <th nzLeft nzWidth="40px">Title</th>
+                            <th nzLeft nzWidth="40px">Title (hindi)</th>
+                            <th nzLeft nzWidth="40px">Link</th>
+                            <th nzRight nzWidth="40px">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <ng-container *ngFor="let data of qtable.nzData;let i=index; let even = even;">
+                            <tr *ngIf="data.isQuickLink">
+                                <td></td>
+                                <td>{{data.title}}</td>
+                                <td>{{data.titleHindi}}</td>
+                                <td>{{data.linkUrl}}</td>
+                                <td>
+                                    <!-- delete -->
+                                    <!--  (nzOnConfirm)="faqDelete(data.id,deleteBtn)" -->
+                                    <button [disabled]="isUpdateOtherLinks" nz-button [nzLoading]="false" #deleteBtn
+                                        nzShape="circle" nzDanger class="mx-1" nz-popconfirm [nzIcon]="iconTpl">
+                                        <span nz-icon nzType="delete" *ngIf="!deleteBtn.nzLoading" nzTheme="twotone"
+                                            (click)="deleteOtherLinks(i,deleteBtn)" [nzTwotoneColor]="'#f00'"></span>
+                                    </button>
+                                    <!-- edit -->
+                                    <!-- (click)="faqedit(data.id)" -->
+                                    <button (click)="updateOtherLinks(data,i)" [disabled]="isUpdateOtherLinks" nz-button
+                                        nzShape="circle" class="mx-1">
+                                        <span nz-icon nzType="edit" nzTheme="outline"></span>
+                                    </button>
+                                    <ng-template #iconTpl>
+                                        <span nz-icon nzType="question-circle-o" style="color: red;"></span>
+                                    </ng-template>
+                                </td>
+                            </tr>
+                        </ng-container>
+                    </tbody>
+                </nz-table>
+            </ng-container>
+        </nz-collapse-panel>
+    </nz-collapse>
+
+    <!-- FAQ section -->
+    <nz-collapse style="margin-bottom: 8px;">
+        <nz-collapse-panel [nzHeader]="'FAQ'" [nzActive]="false" [nzDisabled]="false">
+            <div *ngIf="!form.disabled" [formGroup]="faqForm">
+                <div class="grid grid-cols-4 gap-4">
+                    <app-text class="col-span-2" [formControlName]="'que'" [label]="'Question'" [form]="faqForm"
+                    (onFocusOut)="translate($event,$any(faqForm.get('queHindi')))"
+                        [placeholder]="'Question'"></app-text>
+                    <app-text class="col-span-2" [formControlName]="'ans'" [label]="'Answer'" [form]="faqForm"
+                    (onFocusOut)="translate($event,$any(faqForm.get('ansHindi')))"
+                        [placeholder]="'Answer'"></app-text>
+                    <app-text class="col-span-2" [formControlName]="'queHindi'" [label]="'Question(Hindi)'"
+                        [form]="faqForm" [placeholder]="'Question(Hindi)'"></app-text>
+                    <app-text class="col-span-2" [formControlName]="'ansHindi'" [label]="'Answer(Hindi)'"
+                        [form]="faqForm" [placeholder]="'Answer(Hindi)'"></app-text>
+                    <div class="text-left" *ngIf="faqForm.enabled">
+                        <button [disabled]="!(faqForm.value.que || faqForm.value.ans)" *ngIf="faqForm.value.id==0"
+                            nz-button (click)="addFaqData(faqForm.value)" nzType="primary" class="my-4 p-2 btn">
+                            <span nz-icon nzType="plus" nzTheme="outline" class="align-text-top"></span>
+                            Add
+                        </button>
+                        <button *ngIf="faqForm.value.id >0" nz-button (click)="addFaqData(faqForm.value)"
+                            nzType="primary" class="my-4 p-2 btn">
+                            <span nz-icon nzType="edit" nzTheme="outline" class="align-text-top"></span>
+                            Update
+                        </button>
+                        <button [disabled]="!(faqForm.value.que || faqForm.value.ans)" nz-button
+                            (click)="resetFaq(faqForm.value);" nzType="text" class="my-4 p-2 btn">
+                            <span nz-icon nzType="sync" nzTheme="outline" class="align-text-top"></span>
+                            Reset
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+            <ng-container *ngIf="recruitment.faqLookup && recruitment.faqLookup.length > 0">
+                <nz-table #table1 nzShowSizeChanger [nzData]="recruitment.faqLookup" [nzShowPagination]="false"
+                    [nzLoading]="false" [nzHideOnSinglePage]="false" [nzScroll]="{ y: '520px' }"
+                    [nzTableLayout]="'auto'">
+                    <thead>
+                        <tr>
+                            <th nzLeft nzWidth="40px">SN</th>
+                            <th nzLeft nzWidth="40px">Question</th>
+                            <th nzLeft nzWidth="40px">Answer</th>
+                            <th nzRight nzWidth="40px">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr *ngFor="let data of table1.nzData;let i=index">
+                            <td>{{i+1}}</td>
+                            <td>{{data.que}}</td>
+                            <td>{{data.ans}}</td>
+                            <td>
+
+                                <button [disabled]="isUpdateFaq" nz-button [nzLoading]="false" #deleteBtn
+                                    nzShape="circle" nzDanger class="mx-1" nz-popconfirm [nzIcon]="iconTpl">
+                                    <span nz-icon nzType="delete" *ngIf="!deleteBtn.nzLoading" nzTheme="twotone"
+                                        (click)="deleteFaq(i,deleteBtn)" [nzTwotoneColor]="'#f00'"></span>
+                                </button>
+
+                                <button (click)="updateFaq(data,i)" [disabled]="isUpdateFaq" nz-button nzShape="circle"
+                                    class="mx-1">
+                                    <span nz-icon nzType="edit" nzTheme="outline"></span>
+                                </button>
+                                <ng-template #iconTpl>
+                                    <span nz-icon nzType="question-circle-o" style="color: red;"></span>
+                                </ng-template>
+                            </td>
+                        </tr>
+                    </tbody>
+                </nz-table>
+            </ng-container>
+
+        </nz-collapse-panel>
+    </nz-collapse>
+
+
+</app-form>

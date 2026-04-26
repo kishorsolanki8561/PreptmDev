@@ -1,0 +1,36 @@
+.breadcrumb-wrapper {
+    white-space: nowrap;
+    scrollbar-width: none;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+  
+  .breadcrumb-wrapper a {
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+    color: #4b5563; /* Gray 700 */
+  }
+  
+  .breadcrumb-wrapper a:hover {
+    color: #9ca3af; /* Gray 500 */
+  }
+  
+  .current {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+    font-weight: 500;
+    color: #6b7280; /* Gray 600 */
+  }
+  
+  
+  @media (max-width: 640px) {
+    .breadcrumb-wrapper {
+      font-size: 12px;
+      padding: 4px;
+    }
+  }

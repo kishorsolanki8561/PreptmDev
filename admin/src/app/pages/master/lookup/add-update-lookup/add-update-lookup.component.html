@@ -1,0 +1,11 @@
+<app-page-header [breadcrumb]="breadcrumb" *ngIf="!dialogMode">
+    <nz-space>
+        <app-button *nzSpaceItem type="back"></app-button>
+        <!-- <app-button *nzSpaceItem [show]="form.disabled" (onClick)="onEdit()" type="edit"></app-button> -->
+    </nz-space>
+</app-page-header>
+
+
+<app-form [addUpdateFn$]="masterService.addUpdateLookupMaster" [form]="form" [initialData]="lookup"
+    [formElements]="formElements" navigationUrlOnSuccess="/master/lookup" [dialogMode]="dialogMode"
+    (dialogClosed)="close($event)"></app-form>

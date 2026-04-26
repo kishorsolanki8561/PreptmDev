@@ -1,0 +1,44 @@
+<section class="bg-white rounded-xl border border-neutral-200 overflow-hidden">
+  <!-- Section header -->
+  <div class="flex items-center justify-between px-3 py-2.5 border-b border-neutral-100 bg-neutral-50">
+    <h2 class="text-xs font-bold text-neutral-700 uppercase tracking-widest flex items-center gap-1.5">
+      <span class="inline-block w-2 h-2 rounded-full bg-brand-500"></span>
+      {{heading()}}
+    </h2>
+    <a [routerLink]="viewMoreUrl()"
+      class="text-xs text-brand-600 font-medium hover:underline flex items-center gap-0.5 whitespace-nowrap">
+      <span i18n>View All</span>
+      <span aria-hidden="true"> →</span>
+    </a>
+  </div>
+
+  <!-- Skeleton -->
+  @if (showLoader()) {
+    <div class="p-2 space-y-1.5">
+      @for (i of [0,1,2,3,4]; track $index) {
+        <div class="bg-neutral-50 rounded-lg p-3 animate-pulse border border-neutral-100">
+          <div class="h-3.5 bg-neutral-200 rounded w-full mb-2"></div>
+          <div class="h-3 bg-neutral-100 rounded w-3/4 mb-2"></div>
+          <div class="flex gap-1.5">
+            <div class="h-4 bg-neutral-100 rounded-full w-16"></div>
+            <div class="h-4 bg-neutral-100 rounded-full w-12"></div>
+          </div>
+        </div>
+      }
+    </div>
+  }
+
+  <!-- Post cards -->
+  @if (!showLoader()) {
+    <div class="p-2 flex flex-col gap-1.5">
+      @for (post of enrichedPosts(); track $index; let i = $index) {
+        <preptm-post [post]="post" [index]="i + 1"></preptm-post>
+      }
+      @if (!enrichedPosts()?.length) {
+        <div class="px-4 py-6 text-center text-sm text-neutral-400">
+          No posts available
+        </div>
+      }
+    </div>
+  }
+</section>

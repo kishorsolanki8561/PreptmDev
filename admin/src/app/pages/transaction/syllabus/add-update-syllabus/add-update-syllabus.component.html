@@ -1,0 +1,9 @@
+<app-page-header [breadcrumb]="breadcrumb">
+    <nz-space>
+        <app-button *nzSpaceItem type="back"></app-button>
+    </nz-space>
+</app-page-header>
+<app-form [addUpdateFn$]="_syllabusService.addUpdate" [form]="form" [initialData]="syllabus"
+    [formElements]="formElements" navigationUrlOnSuccess="/transaction/syllabus">
+</app-form>
+

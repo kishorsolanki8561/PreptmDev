@@ -1,0 +1,9 @@
+<app-page-header [breadcrumb]="breadcrumb"  addButtonUrl="/master/tags/add">
+    <!-- <app-button [routerLink]="['/master/group/add']" type="add"></app-button> -->
+</app-page-header>
+<main class="card">
+    <app-table [initialData]="initialData" [columns]="columns" [getDataFn$]="masterService.getGroupMasterList"
+        [changeStatusFn$]="masterService.changeStatusGroupMaster" editPageUrl='/master/tags/edit'
+        viewPageUrl='/master/tags'
+        [deleteFn$]="masterService.deleteGroupMaster" [filter]="filter"></app-table>
+</main>

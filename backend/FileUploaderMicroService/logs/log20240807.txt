@@ -1,0 +1,113 @@
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-07 19:44 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail
+--------------------Exception--------------------
+System.InvalidOperationException: Manual resizing requires a target location and size.
+   at SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeHelper.ThrowInvalid(String message)
+   at SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeHelper.CalculateManualRectangle(ResizeOptions options, Int32 width, Int32 height)
+   at SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeHelper.CalculateTargetLocationAndBounds(Size sourceSize, ResizeOptions options)
+   at SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeProcessor..ctor(ResizeOptions options, Size sourceSize)
+   at SixLabors.ImageSharp.Processing.ResizeExtensions.Resize(IImageProcessingContext source, ResizeOptions options)
+   at FileUploaderMicroService.Service.FileUploaderService.<>c__DisplayClass12_0.<GenerateThumbnail>b__0(IImageProcessingContext i) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 397
+   at SixLabors.ImageSharp.Processing.ProcessingExtensions.ProcessingVisitor.Visit[TPixel](Image`1 image)
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 397
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-07 19:44 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- uploadFile Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- uploadFile
+--------------------Exception--------------------
+System.InvalidOperationException: Manual resizing requires a target location and size.
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 414
+   at FileUploaderMicroService.Service.FileUploaderService.FileUploadForWin(List`1 aFormFile, Boolean isThumbnail) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 298
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-07 19:45 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail
+--------------------Exception--------------------
+System.InvalidOperationException: Manual resizing requires a target location and size.
+   at SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeHelper.ThrowInvalid(String message)
+   at SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeHelper.CalculateManualRectangle(ResizeOptions options, Int32 width, Int32 height)
+   at SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeHelper.CalculateTargetLocationAndBounds(Size sourceSize, ResizeOptions options)
+   at SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeProcessor..ctor(ResizeOptions options, Size sourceSize)
+   at SixLabors.ImageSharp.Processing.ResizeExtensions.Resize(IImageProcessingContext source, ResizeOptions options)
+   at FileUploaderMicroService.Service.FileUploaderService.<>c__DisplayClass12_0.<GenerateThumbnail>b__0(IImageProcessingContext i)
+   at SixLabors.ImageSharp.Processing.ProcessingExtensions.ProcessingVisitor.Visit[TPixel](Image`1 image)
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight)
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-07 19:45 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- uploadFile Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- uploadFile
+--------------------Exception--------------------
+System.InvalidOperationException: Manual resizing requires a target location and size.
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight)
+   at FileUploaderMicroService.Service.FileUploaderService.FileUploadForWin(List`1 aFormFile, Boolean isThumbnail)
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-07 19:56 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail
+--------------------Exception--------------------
+System.InvalidOperationException: Target width 0 and height 0 must be greater than zero.
+   at SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeHelper.ThrowInvalid(String message)
+   at SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeHelper.CalculateTargetLocationAndBounds(Size sourceSize, ResizeOptions options)
+   at SixLabors.ImageSharp.Processing.Processors.Transforms.ResizeProcessor..ctor(ResizeOptions options, Size sourceSize)
+   at SixLabors.ImageSharp.Processing.ResizeExtensions.Resize(IImageProcessingContext source, ResizeOptions options)
+   at FileUploaderMicroService.Service.FileUploaderService.<>c.<GenerateThumbnail>b__12_0(IImageProcessingContext i) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 397
+   at SixLabors.ImageSharp.Processing.ProcessingExtensions.ProcessingVisitor.Visit[TPixel](Image`1 image)
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 397
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-07 19:56 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- uploadFile Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- uploadFile
+--------------------Exception--------------------
+System.InvalidOperationException: Target width 0 and height 0 must be greater than zero.
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 414
+   at FileUploaderMicroService.Service.FileUploaderService.FileUploadForWin(List`1 aFormFile, Boolean isThumbnail) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 298
+
+--------------------Log End--------------------

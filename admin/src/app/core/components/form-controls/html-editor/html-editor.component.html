@@ -1,0 +1,15 @@
+<label *ngIf="label" class="lbl">
+  {{label}}
+  <span *ngIf="isFormControl">{{formField.hasValidator(Validators.required)?'*':''}}</span>
+</label>
+<button *ngIf="value?.html" nz-button nzType="default" nzShape="circle" (click)="copyText(value.html)"><span nz-icon
+    nzType="copy" nzTheme="outline"></span></button>
+<!-- <quill-editor [placeholder]="placeholder" [(ngModel)]="value" [disabled]="isDisabled" (focusout)="touched()"
+  (onEditorChanged)="onChange($event)"></quill-editor> -->
+<!-- <ckeditor [config]="config" [formControl]="formControl" [editor]="Editor" [(ngModel)]="value" [disabled]="isDisabled" (focusout)="touched()" tagName="textarea"></ckeditor> -->
+
+<!-- <div [ngxSummernote]="summerconfig" [formControl]="formControl" [(ngModel)]="value" [disabled]="isDisabled" (focusout)="touched()" tagName="textarea"></div> -->
+
+<div style="z-index: 1;" [id]="editorId"></div>
+<app-error-messages *ngIf="isFormControl" [formField]="formField" [label]="label"
+  [maxLength]="maxLength"></app-error-messages>

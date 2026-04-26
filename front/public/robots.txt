@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /sadmin/
+
+Sitemap: https://www.preptm.com/sitemap.xml
+Sitemap: https://www.preptm.com/hi/sitemap.xml

@@ -1,0 +1,17 @@
+.banner-wrap {
+  position: relative;
+}
+
+// Pure-CSS scroll-snap track — zero JavaScript carousel library
+.banner-track {
+  display: flex;
+  height: 100%;
+  overflow-x: hidden;       // hide scrollbar; JS scrollTo() drives navigation
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.banner-slide {
+  scroll-snap-align: start;
+}

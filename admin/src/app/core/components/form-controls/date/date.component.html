@@ -1,0 +1,14 @@
+<label class="lbl block" *ngIf="label">{{ label }} <span *ngIf="isFormControl && label"
+                class="err">{{formField.hasValidator(Validators.required)?'*':''}}</span> </label>
+
+<nz-date-picker  class="w-full date-picker" *ngIf="type!='dateRange'" [(ngModel)]="value" (nzOnOpenChange)="onChange()" [nzPlaceHolder]="placeholder"
+        [nzFormat]="'dd/MM/yyyy'" [nzDisabled]="isDisabled" [nzSize]="'large'" [nzDisabledDate]="disabledDate"
+        [nzStatus]="formField.invalid?'error':''" ></nz-date-picker>
+<nz-range-picker class="date-picker" *ngIf="type=='dateRange'" [(ngModel)]="value" (nzOnOpenChange)="onChange()" [nzPlaceHolder]="['Start Date','End Date']"
+        [nzFormat]="'dd/MM/yyyy'" [nzDisabled]="isDisabled" [nzSize]="'large'" [nzDisabledDate]="disabledDate"
+        [nzStatus]="formField.invalid?'error':''" ></nz-range-picker>
+
+<!-- <input type="text" [(bsValue)]="value" [disabled]="isDisabled" (bsValueChange)="onChange($event)"
+ [placeholder]="placeholder" (blur)="touched()" class="form-control" autocomplete="off" bsDatepicker
+ [bsConfig]="{dateInputFormat: 'DD/MM/YYYY'}" [minDate]="minDate" [maxDate]="maxDate"/> -->
+<app-error-messages *ngIf="isFormControl" [formField]="formField" [label]="label"></app-error-messages>

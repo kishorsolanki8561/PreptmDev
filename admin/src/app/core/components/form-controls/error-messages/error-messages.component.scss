@@ -1,0 +1,21 @@
+.err {
+  color: red;
+  font-size: 12px;
+}
+
+.err-list {
+  position: relative;
+  z-index: 0;
+}
+
+.err-list mat-error{
+  position: relative;
+  top: -16px;
+}
+
+.word-counter {
+  position: absolute;
+  top: -16px;
+  right: 0px;
+  font-size: 12px;
+}

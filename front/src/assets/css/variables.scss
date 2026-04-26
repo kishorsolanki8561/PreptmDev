@@ -1,0 +1,46 @@
+// CSS Custom Properties (design system)
+:root {
+  --color-primary: #0284c7;
+  --color-primary-light: #e0f2fe;
+  --color-text: #27272a;
+  --color-muted: #71717a;
+  --color-border: #e4e4e7;
+  --color-surface: #fafafa;
+  --shadow-card: 0 1px 3px 0 rgb(0 0 0/0.07), 0 1px 2px -1px rgb(0 0 0/0.07);
+  --shadow-card-hover: 0 4px 6px -1px rgb(0 0 0/0.1), 0 2px 4px -2px rgb(0 0 0/0.1);
+}
+
+// $primary-color:#2874f0;
+// $primary-color:#182a48;
+$primary-color: #087B82;
+$primary-color-light: #def2f3;
+// $primary-color:#0a9d89;
+$on-primary-color: #F1D217;
+$secondary-color: #6C757D;
+$table-head: #f4f4f4;
+$table-row-hover: #f9f9f9;
+$outline: #f4f4f4;
+$outline-hover: #0a9d89;
+$text-color: #333;
+// $background-color: #0a9d8910;
+$background-color: #f4f4f5;
+// $background-color: #f1f3f6;
+// $background-color: #ffffff;
+$container: #ffffff;
+$border-color: #d8d8d8;
+$instagram-bg-color: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+$twitter-bg-color: #000;
+$telegram-bg-color: #229ED9;
+$whatsapp-bg-color: #128C7E;
+$facebook-bg-color: #3b5998;
+$whatsapp-bg-color: #25d366;
+
+
+$post-list-1: #3d1616;
+$post-list-2: #0d4715;
+$post-list-3: #181c1f;
+$post-list-4: #4d3b00;
+
+
+$header-background-color: $primary-color;
+$footer-background-color: #212121;

@@ -1,0 +1,476 @@
+<app-page-header [breadcrumb]="breadcrumb">
+    <nz-space>
+        <app-button *nzSpaceItem type="back"></app-button>
+    </nz-space>
+</app-page-header>
+<app-form [addUpdateFn$]="onAddUpdate" [form]="form" [initialData]="scheme" [formElements]="formElements"
+    navigationUrlOnSuccess="/transaction/scheme">
+
+    <!-- Contact Details -->
+    <nz-collapse style="margin-bottom: 8px;">
+        <nz-collapse-panel [nzHeader]="'Contact Detail'" [nzActive]="false" [nzDisabled]="false">
+            <div *ngIf="!form.disabled" [formGroup]="contentDetailsForm">
+                <div class="grid grid-cols-4 gap-4">
+
+                    <app-select class="col-span-2" [items]="ddls['ddlDepartment']" [formControlName]="'departmentId'"
+                        [placeholder]="'Please Choose Department'" [label]="'Department'" [form]="contentDetailsForm"
+                        [multiple]="false"></app-select>
+                    <app-text class="col-span-2" [formControlName]="'nodalOfficerName'" [label]="'Nodal Officer Name'"
+                        [form]="contentDetailsForm" [placeholder]="'Nodal Officer Name'"
+                        (onFocusOut)="translate($event,$any(contentDetailsForm.get('nodalOfficerNameHindi')))"></app-text>
+                    <app-text class="col-span-2" [formControlName]="'nodalOfficerNameHindi'"
+                        [label]="'Nodal Officer Name(Hindi)'" [form]="contentDetailsForm"
+                        [placeholder]="'Nodal Officer Name(Hindi)'"></app-text>
+                    <app-text class="col-span-2" [formControlName]="'phoneNo'" [label]="'Phone No'"
+                        [form]="contentDetailsForm" [placeholder]="'Phone No'"></app-text>
+                    <app-text class="col-span-2" [formControlName]="'email'" [label]="'Email'"
+                        [form]="contentDetailsForm" [placeholder]="'abc@xyz.com'"></app-text>
+
+                    <div class="col-span-4 text-left" *ngIf="contentDetailsForm.enabled">
+                        <button
+                            [disabled]="!(contentDetailsForm.value.departmentId || contentDetailsForm.value.nodalOfficerName  || contentDetailsForm.value.phoneNo || contentDetailsForm.value.email)"
+                            *ngIf="contentDetailsForm.value.id==0" nz-button
+                            (click)="addContactData(contentDetailsForm.value)" nzType="primary" class="my-4 p-2 btn">
+                            <span nz-icon nzType="plus" nzTheme="outline" class="align-text-top"></span>
+                            Add
+                        </button>
+                        <button *ngIf="contentDetailsForm.value.id >0" nz-button
+                            (click)="addContactData(contentDetailsForm.value)" nzType="primary" class="my-4 p-2 btn">
+                            <span nz-icon nzType="edit" nzTheme="outline" class="align-text-top"></span>
+                            Update
+                        </button>
+                        <button
+                            [disabled]="!(contentDetailsForm.value.departmentId || contentDetailsForm.value.nodalOfficerName  || contentDetailsForm.value.phoneNo || contentDetailsForm.value.email)"
+                            nz-button (click)="resetContact(contentDetailsForm.value);" nzType="text"
+                            class="my-4 p-2 btn">
+                            <span nz-icon nzType="sync" nzTheme="outline" class="align-text-top"></span>
+                            Reset
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+            <ng-container *ngIf="scheme.contactDetail && scheme.contactDetail.length > 0">
+                <nz-table #ctable nzShowSizeChanger [nzData]="scheme.contactDetail" [nzShowPagination]="false"
+                    [nzLoading]="false" [nzHideOnSinglePage]="false" [nzScroll]="{ y: '520px' }"
+                    [nzTableLayout]="'auto'">
+                    <thead>
+                        <tr>
+                            <th nzLeft nzWidth="10px">SN</th>
+                            <th nzLeft nzWidth="40px">Department</th>
+                            <th nzLeft nzWidth="40px">Nodal Officer</th>
+                            <th nzLeft nzWidth="40px">Nodal Officer (Hindi)</th>
+                            <th nzLeft nzWidth="40px">Phone No</th>
+                            <th nzRight nzWidth="40px">Email</th>
+                            <th nzRight nzWidth="40px">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let data of ctable.nzData;let i=index">
+                            <td>{{i+1}}</td>
+                            <td>{{data.departmentId | findValue:'value':'text':ddls['ddlDepartment']}}</td>
+                            <td>{{data.nodalOfficerName}}</td>
+                            <td>{{data.nodalOfficerNameHindi}}</td>
+                            <td>{{data.phoneNo}}</td>
+                            <td>{{data.email}}</td>
+                            <td>
+                                <!-- delete -->
+                                <!--  (nzOnConfirm)="faqDelete(data.id,deleteBtn)" -->
+                                <button [disabled]="isContactDetail" nz-button [nzLoading]="false" #deleteBtn
+                                    nzShape="circle" nzDanger class="mx-1" nz-popconfirm [nzIcon]="iconTpl">
+                                    <span nz-icon nzType="delete" *ngIf="!deleteBtn.nzLoading" nzTheme="twotone"
+                                        (click)="deleteContact(i,deleteBtn)" [nzTwotoneColor]="'#f00'"></span>
+                                </button>
+                                <!-- edit -->
+                                <!-- (click)="faqedit(data.id)" -->
+                                <button (click)="updateContact(data,i)" [disabled]="isContactDetail" nz-button
+                                    nzShape="circle" class="mx-1">
+                                    <span nz-icon nzType="edit" nzTheme="outline"></span>
+                                </button>
+                                <ng-template #iconTpl>
+                                    <span nz-icon nzType="question-circle-o" style="color: red;"></span>
+                                </ng-template>
+                            </td>
+                        </tr>
+                    </tbody>
+                </nz-table>
+            </ng-container>
+        </nz-collapse-panel>
+    </nz-collapse>
+
+    <!-- Attachment Details -->
+    <nz-collapse style="margin-bottom: 8px;">
+        <nz-collapse-panel [nzHeader]="'Attachments'" [nzActive]="false" [nzDisabled]="false">
+            <div *ngIf="!form.disabled" [formGroup]="schemeAttchamentForm">
+                <div class="grid grid-cols-4 gap-4">
+
+                    <app-text class="col-span-2" [formControlName]="'title'" [label]="'Title'"
+                        (onFocusOut)="translate($event,$any(schemeAttchamentForm.get('titleHindi')))"
+                        [form]="schemeAttchamentForm" [placeholder]="'Title'"></app-text>
+                    <app-text class="col-span-2" [formControlName]="'titleHindi'" [label]="'TitleHindi'"
+                        [form]="schemeAttchamentForm" [placeholder]="'Title(Hindi)'"></app-text>
+                    <app-text class="col-span-2" [formControlName]="'description'" [label]="'Description'"
+                        (onFocusOut)="translate($event,$any(schemeAttchamentForm.get('descriptionHindi')))"
+                        [form]="schemeAttchamentForm" [placeholder]="'Description'"></app-text>
+                    <app-text class="col-span-2" [formControlName]="'descriptionHindi'" [label]="'Description Hindi'"
+                        [form]="schemeAttchamentForm" [placeholder]="'Description(Hindi)'"></app-text>
+                    <app-select class="col-span-2" [items]="attachmentTypeDdl" [formControlName]="'type'" #tt
+                        [placeholder]="'Please Choose Upload Type'" [label]="'Upload Type'"
+                        [form]="schemeAttchamentForm" [multiple]="false"></app-select>
+                    <ng-container>
+                        <div [class]="fileElements.class">
+                            <app-uploader *ngIf="schemeAttchamentForm.value.type" [label]="fileElements.label"
+                                [multiple]="fileElements.fileConfig?.isMultiple" formControlName="path"
+                                [accept]="$any(setFileType(tt.value)) || '*' " (getRawFiles)="getRawFiles($event)"
+                                [maxFileSize]="$any(fileElements.fileConfig)?.maxFileSize"
+                                [minFileSize]="$any(fileElements.fileConfig)?.minFileSize"></app-uploader>
+                        </div>
+                    </ng-container>
+
+                    <div class="col-span-4 text-left" *ngIf="schemeAttchamentForm.enabled">
+                        <button
+                            [disabled]="!(schemeAttchamentForm.value.title || schemeAttchamentForm.value.description || schemeAttchamentForm.value.type)"
+                            *ngIf="schemeAttchamentForm.value.id==0" nz-button
+                            (click)="addAttachmentData(schemeAttchamentForm.value)" nzType="primary"
+                            class="my-4 p-2 btn">
+                            <span nz-icon nzType="plus" nzTheme="outline" class="align-text-top"></span>
+                            Add
+                        </button>
+                        <button *ngIf="schemeAttchamentForm.value.id >0" nz-button
+                            (click)="addAttachmentData(schemeAttchamentForm.value)" nzType="primary"
+                            class="my-4 p-2 btn">
+                            <span nz-icon nzType="edit" nzTheme="outline" class="align-text-top"></span>
+                            Update
+                        </button>
+                        <button
+                            [disabled]="!(schemeAttchamentForm.value.title || schemeAttchamentForm.value.description || schemeAttchamentForm.value.type)"
+                            nz-button (click)="resetAttachment(schemeAttchamentForm.value);" nzType="text"
+                            class="my-4 p-2 btn">
+                            <span nz-icon nzType="sync" nzTheme="outline" class="align-text-top"></span>
+                            Reset
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+            <ng-container *ngIf="scheme.schemeAttachmentLookups && scheme.schemeAttachmentLookups.length > 0">
+                <nz-table #atable nzShowSizeChanger [nzData]="scheme.schemeAttachmentLookups" [nzShowPagination]="false"
+                    [nzLoading]="false" [nzHideOnSinglePage]="false" [nzScroll]="{ y: '520px' }"
+                    [nzTableLayout]="'auto'">
+                    <thead>
+                        <tr>
+                            <th nzLeft nzWidth="10px" (click)="test()">SN</th>
+                            <th nzLeft nzWidth="40px">title</th>
+                            <th nzLeft nzWidth="40px">Title (Hindi)</th>
+                            <th nzLeft nzWidth="40px">Upload Type</th>
+                            <th nzLeft nzWidth="40px">Attachment</th>
+                            <th nzRight nzWidth="40px">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let data of atable.nzData;let i=index">
+                            <td>{{i+1}}</td>
+                            <td>{{data.title}}</td>
+                            <td>{{data.titleHindi}}</td>
+                            <td>{{data.type | findValue:'value':'text':attachmentTypeDdl}}</td>
+                            <td>
+                                <img *ngIf="data.type === 1;else other_content" class="cursor-pointer" nz-image
+                                    width="50px" height="50px"
+                                    [nzSrc]="(attachmentFiles[i].files[0]?.url) ? (fileBasePath+attachmentFiles[i].files[0]?.url) : (attachmentFiles[i].pendingToUpload[0]?.url || ' ')"
+                                    [nzFallback]="imageFallback" alt="" />
+                                <ng-template #other_content>
+
+                                    <!-- download https url file -->
+                                    <button *ngIf="attachmentFiles[i]?.files?.length; else other"
+                                        (click)="_coreService.downloadFile(fileBasePath + (attachmentFiles[i].files[0].url || ''),(data.title || i.toString()))"
+                                        nz-button nzShape="round" class="mx-1">
+                                        <span nz-icon nzType="arrow-down" nzTheme="outline"></span>
+                                    </button>
+
+                                    <!-- download base64 file -->
+                                    <ng-template #other>
+                                        <button *ngIf="attachmentFiles[i]?.pendingToUpload?.length"
+                                            (click)="_coreService.downloadFile((attachmentFiles[i].pendingToUpload[0]?.url || ''),(data.title || i.toString()))"
+                                            nz-button nzShape="round" class="mx-1">
+                                            <span nz-icon nzType="arrow-down" nzTheme="outline"></span>
+                                        </button>
+
+                                    </ng-template>
+
+                                </ng-template>
+
+                            </td>
+                            <td>
+
+                                <button [disabled]="isAttachment" nz-button [nzLoading]="false" #deleteBtn
+                                    nzShape="circle" nzDanger class="mx-1" nz-popconfirm [nzIcon]="iconTpl">
+                                    <span nz-icon nzType="delete" *ngIf="!deleteBtn.nzLoading" nzTheme="twotone"
+                                        (click)="deleteAttachment(i,deleteBtn)" [nzTwotoneColor]="'#f00'"></span>
+                                </button>
+
+                                <button (click)="updateAttachment(data,i)" [disabled]="isAttachment" nz-button
+                                    nzShape="circle" class="mx-1">
+                                    <span nz-icon nzType="edit" nzTheme="outline"></span>
+                                </button>
+                                <ng-template #iconTpl>
+                                    <span nz-icon nzType="question-circle-o" style="color: red;"></span>
+                                </ng-template>
+                            </td>
+                        </tr>
+                    </tbody>
+                </nz-table>
+            </ng-container>
+        </nz-collapse-panel>
+    </nz-collapse>
+
+    <!-- how to add section -->
+    <nz-collapse style="margin-bottom: 8px;">
+        <nz-collapse-panel [nzHeader]="'How to Apply'" [nzActive]="false" [nzDisabled]="false">
+            <div *ngIf="!form.disabled" [formGroup]="howToOtherLinksForm">
+                <div class="grid grid-cols-4 gap-4">
+                    <app-text class="col-span-2" [formControlName]="'title'" [label]="'Title' "
+                    (onFocusOut)="translate($event,$any(howToOtherLinksForm.get('titleHindi')))"
+                        [form]="howToOtherLinksForm" [placeholder]="'Title'"></app-text>
+                    <app-text class="col-span-2" [formControlName]="'titleHindi'" [label]="'Title (Hindi)' "
+                        [form]="howToOtherLinksForm" [placeholder]="'Title (Hindi)'"></app-text>
+
+                    <app-html-editor class="col-span-4" [formControlName]="'description'" [label]="'Description'"
+                        [editorId]="'how_to_description'" [form]="howToOtherLinksForm"
+                        [placeholder]="'Description'"></app-html-editor>
+                    <app-html-editor class="col-span-4" [formControlName]="'descriptionHindi'"
+                        [editorId]="'how_to_descriptionHindi'" [label]="'Description (Hindi)'"
+                        [form]="howToOtherLinksForm" [placeholder]="'Description (Hindi)'"></app-html-editor>
+
+                    <app-text class="col-span-4" [formControlName]="'linkUrl'" [label]="'Image Url'"
+                        [form]="howToOtherLinksForm" [placeholder]="'Image Url'"></app-text>
+                    <div class="text-left" *ngIf="howToOtherLinksForm.enabled">
+                        <button [disabled]="!howToOtherLinksForm.value.title" *ngIf="howToOtherLinksForm.value.id==0"
+                            nz-button (click)="addHowToApplyData(howToOtherLinksForm.value)" nzType="primary"
+                            class="my-4 p-2 btn">
+                            <span nz-icon nzType="plus" nzTheme="outline" class="align-text-top"></span>
+                            Add
+                        </button>
+                        <button *ngIf="howToOtherLinksForm.value.id >0" nz-button
+                            (click)="addHowToApplyData(howToOtherLinksForm.value)" nzType="primary"
+                            class="my-4 p-2 btn">
+                            <span nz-icon nzType="edit" nzTheme="outline" class="align-text-top"></span>
+                            Update
+                        </button>
+                        <button [disabled]="!howToOtherLinksForm.value.title" nz-button
+                            (click)="resetHowToApply(howToOtherLinksForm.value);" nzType="text" class="my-4 p-2 btn">
+                            <span nz-icon nzType="sync" nzTheme="outline" class="align-text-top"></span>
+                            Reset
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+            <ng-container *ngIf="scheme.howToApplyAndQuickLinkLookup && scheme.howToApplyAndQuickLinkLookup.length > 0">
+                <nz-table #htable nzShowSizeChanger [nzData]="scheme.howToApplyAndQuickLinkLookup"
+                    [nzShowPagination]="false" [nzLoading]="false" [nzHideOnSinglePage]="false"
+                    [nzScroll]="{ y: '520px' }" class="css-serial" [nzTableLayout]="'auto'">
+                    <thead>
+                        <tr>
+                            <th nzLeft nzWidth="40px">SN</th>
+                            <th nzLeft nzWidth="40px">Title</th>
+                            <th nzLeft nzWidth="40px">Title Hindi</th>
+                            <th nzRight nzWidth="40px">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <ng-container *ngFor="let data of htable.nzData;let i=index">
+                            <tr *ngIf="!data.isQuickLink">
+                                <td></td>
+                                <td>{{data.title}}</td>
+                                <td>{{data.titleHindi}}</td>
+                                <td>
+                                    <!-- delete -->
+                                    <!--  (nzOnConfirm)="faqDelete(data.id,deleteBtn)" -->
+                                    <button [disabled]="isUpdateHow2Apply" nz-button [nzLoading]="false" #deleteBtn
+                                        nzShape="circle" nzDanger class="mx-1" nz-popconfirm [nzIcon]="iconTpl">
+                                        <span nz-icon nzType="delete" *ngIf="!deleteBtn.nzLoading" nzTheme="twotone"
+                                            (click)="deleteHowToApply(i,deleteBtn)" [nzTwotoneColor]="'#f00'"></span>
+                                    </button>
+                                    <!-- edit -->
+                                    <!-- (click)="faqedit(data.id)" -->
+                                    <button (click)="updateHowToApply(data,i)" [disabled]="isUpdateHow2Apply" nz-button
+                                        nzShape="circle" class="mx-1">
+                                        <span nz-icon nzType="edit" nzTheme="outline"></span>
+                                    </button>
+                                    <ng-template #iconTpl>
+                                        <span nz-icon nzType="question-circle-o" style="color: red;"></span>
+                                    </ng-template>
+                                </td>
+                            </tr>
+                        </ng-container>
+                    </tbody>
+                </nz-table>
+            </ng-container>
+        </nz-collapse-panel>
+    </nz-collapse>
+
+    <!-- other links section -->
+    <nz-collapse style="margin-bottom: 8px;">
+        <nz-collapse-panel [nzHeader]="'Other Links'" [nzActive]="false" [nzDisabled]="false">
+            <div *ngIf="!form.disabled" [formGroup]="OtherLinksForm">
+                <div class="grid grid-cols-4 gap-4">
+                    <app-text class="col-span-2" [formControlName]="'title'" [label]="'Title '" [form]="OtherLinksForm"
+                    (onFocusOut)="translate($event,$any(OtherLinksForm.get('titleHindi')))"
+                        [placeholder]="'Title'"></app-text>
+                    <app-text class="col-span-2" [formControlName]="'titleHindi'" [label]="'Title (Hindi)'"
+                        [form]="OtherLinksForm" [placeholder]="'Title'"></app-text>
+                    <app-select class="col-span-2" [replaceValueWithKey]='true'
+                        [items]="ddlLookups[lookupEnum.IconClassQuickLinks.toString()]" #tt
+                        [placeholder]="'Please Choose Icon'" [label]="'Icon Class'" [formControlName]="'iconClass'"
+                        [form]="OtherLinksForm" [multiple]="false" [otherKeyValue]="'Description'"
+                        [addPrefixIconClass]="true">
+                    </app-select>
+                    <!-- <app-text class="col-span-2" [formControlName]="'iconClass'" [label]="'Icon Class'"
+                        [form]="OtherLinksForm" [placeholder]="'Icon Class'"></app-text> -->
+                    <app-text class="col-span-2" [formControlName]="'linkUrl'" [label]="'Link'" [form]="OtherLinksForm"
+                        [placeholder]="'Link'"></app-text>
+                    <div class="col-span-4 text-left" *ngIf="OtherLinksForm.enabled">
+                        <button [disabled]="!OtherLinksForm.value.title" *ngIf="OtherLinksForm.value.id==0" nz-button
+                            (click)="addOtherLinksData(OtherLinksForm.value)" nzType="primary" class="my-4 p-2 btn">
+                            <span nz-icon nzType="plus" nzTheme="outline" class="align-text-top"></span>
+                            Add
+                        </button>
+                        <button *ngIf="OtherLinksForm.value.id >0" nz-button
+                            (click)="addOtherLinksData(OtherLinksForm.value)" nzType="primary" class="my-4 p-2 btn">
+                            <span nz-icon nzType="edit" nzTheme="outline" class="align-text-top"></span>
+                            Update
+                        </button>
+                        <button [disabled]="!OtherLinksForm.value.title" nz-button
+                            (click)="resetOtherLinks(OtherLinksForm.value);" nzType="text" class="my-4 p-2 btn">
+                            <span nz-icon nzType="sync" nzTheme="outline" class="align-text-top"></span>
+                            Reset
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+            <ng-container *ngIf="scheme.howToApplyAndQuickLinkLookup && scheme.howToApplyAndQuickLinkLookup.length > 0">
+                <nz-table #qtable nzShowSizeChanger [nzData]="scheme.howToApplyAndQuickLinkLookup"
+                    [nzShowPagination]="false" [nzLoading]="false" [nzHideOnSinglePage]="false" class="css-serial"
+                    [nzScroll]="{ y: '520px' }" [nzTableLayout]="'auto'">
+                    <thead>
+                        <tr>
+                            <th nzLeft nzWidth="40px">SN</th>
+                            <th nzLeft nzWidth="40px">Title</th>
+                            <th nzLeft nzWidth="40px">Title (hindi)</th>
+                            <th nzLeft nzWidth="40px">Link</th>
+                            <th nzRight nzWidth="40px">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <ng-container *ngFor="let data of qtable.nzData;let i=index">
+                            <tr *ngIf="data.isQuickLink">
+                                <td></td>
+                                <td>{{data.title}}</td>
+                                <td>{{data.titleHindi}}</td>
+                                <td>{{data.linkUrl}}</td>
+                                <td>
+                                    <!-- delete -->
+                                    <!--  (nzOnConfirm)="faqDelete(data.id,deleteBtn)" -->
+                                    <button [disabled]="isUpdateOtherLinks" nz-button [nzLoading]="false" #deleteBtn
+                                        nzShape="circle" nzDanger class="mx-1" nz-popconfirm [nzIcon]="iconTpl">
+                                        <span nz-icon nzType="delete" *ngIf="!deleteBtn.nzLoading" nzTheme="twotone"
+                                            (click)="deleteOtherLinks(i,deleteBtn)" [nzTwotoneColor]="'#f00'"></span>
+                                    </button>
+                                    <!-- edit -->
+                                    <!-- (click)="faqedit(data.id)" -->
+                                    <button (click)="updateOtherLinks(data,i)" [disabled]="isUpdateOtherLinks" nz-button
+                                        nzShape="circle" class="mx-1">
+                                        <span nz-icon nzType="edit" nzTheme="outline"></span>
+                                    </button>
+                                    <ng-template #iconTpl>
+                                        <span nz-icon nzType="question-circle-o" style="color: red;"></span>
+                                    </ng-template>
+                                </td>
+                            </tr>
+                        </ng-container>
+                    </tbody>
+                </nz-table>
+            </ng-container>
+        </nz-collapse-panel>
+    </nz-collapse>
+
+    <!-- FAQ section -->
+    <nz-collapse style="margin-bottom: 8px;">
+        <nz-collapse-panel [nzHeader]="'FAQ'" [nzActive]="false" [nzDisabled]="false">
+            <div *ngIf="!form.disabled" [formGroup]="faqForm">
+                <div class="grid grid-cols-4 gap-4">
+                    <app-text class="col-span-2" [formControlName]="'que'" [label]="'Question'" [form]="faqForm"
+                    (onFocusOut)="translate($event,$any(faqForm.get('queHindi')))"
+                        [placeholder]="'Question'"></app-text>
+                    <app-text class="col-span-2" [formControlName]="'ans'" [label]="'Answer'" [form]="faqForm"
+                    (onFocusOut)="translate($event,$any(faqForm.get('ansHindi')))"
+                        [placeholder]="'Answer'"></app-text>
+                    <app-text class="col-span-2" [formControlName]="'queHindi'" [label]="'Question(Hindi)'"
+                        [form]="faqForm" [placeholder]="'Question(Hindi)'"></app-text>
+                    <app-text class="col-span-2" [formControlName]="'ansHindi'" [label]="'Answer(Hindi)'"
+                        [form]="faqForm" [placeholder]="'Answer(Hindi)'"></app-text>
+                    <div class="col-span-4" class="text-left" *ngIf="faqForm.enabled">
+                        <button *ngIf="faqForm.value.id==0" [disabled]="!(faqForm.value.que || faqForm.value.ans)"
+                            nz-button (click)="addFaqData(faqForm.value)" nzType="primary" class="my-4 p-2 btn">
+                            <span nz-icon nzType="plus" nzTheme="outline" class="align-text-top"></span>
+                            Add
+                        </button>
+                        <button *ngIf="faqForm.value.id >0" nz-button (click)="addFaqData(faqForm.value)"
+                            nzType="primary" class="my-4 p-2 btn">
+                            <span nz-icon nzType="edit" nzTheme="outline" class="align-text-top"></span>
+                            Update
+                        </button>
+                        <button [disabled]="!(faqForm.value.que || faqForm.value.ans)" nz-button
+                            (click)="resetFaq(faqForm.value);" nzType="text" class="my-4 p-2 btn">
+                            <span nz-icon nzType="sync" nzTheme="outline" class="align-text-top"></span>
+                            Reset
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+            <ng-container *ngIf="scheme.faqLookups && scheme.faqLookups.length > 0">
+                <nz-table #table nzShowSizeChanger [nzData]="scheme.faqLookups" [nzShowPagination]="false"
+                    [nzLoading]="false" [nzHideOnSinglePage]="false" [nzScroll]="{ y: '520px' }"
+                    [nzTableLayout]="'auto'">
+                    <thead>
+                        <tr>
+                            <th nzLeft nzWidth="40px">SN</th>
+                            <th nzLeft nzWidth="40px">Question</th>
+                            <th nzLeft nzWidth="40px">Answer</th>
+                            <th nzRight nzWidth="40px">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let data of table.nzData;let i=index">
+                            <td>{{i+1}}</td>
+                            <td>{{data.que}}</td>
+                            <td>{{data.ans}}</td>
+                            <td>
+                                <!-- delete -->
+                                <!--  (nzOnConfirm)="faqDelete(data.id,deleteBtn)" -->
+                                <button [disabled]="isUpdateFaq" nz-button [nzLoading]="false" #deleteBtn
+                                    nzShape="circle" nzDanger class="mx-1" nz-popconfirm [nzIcon]="iconTpl">
+                                    <span nz-icon nzType="delete" *ngIf="!deleteBtn.nzLoading" nzTheme="twotone"
+                                        (click)="deleteFaq(i,deleteBtn)" [nzTwotoneColor]="'#f00'"></span>
+                                </button>
+                                <!-- edit -->
+                                <!-- (click)="faqedit(data.id)" -->
+                                <button (click)="updateFaq(data,i)" [disabled]="isUpdateFaq" nz-button nzShape="circle"
+                                    class="mx-1">
+                                    <span nz-icon nzType="edit" nzTheme="outline"></span>
+                                </button>
+                                <ng-template #iconTpl>
+                                    <span nz-icon nzType="question-circle-o" style="color: red;"></span>
+                                </ng-template>
+                            </td>
+                        </tr>
+                    </tbody>
+                </nz-table>
+            </ng-container>
+        </nz-collapse-panel>
+    </nz-collapse>
+
+</app-form>

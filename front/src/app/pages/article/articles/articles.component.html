@@ -1,0 +1,51 @@
+<div class="max-w-[1280px] mx-auto px-4 py-6">
+
+  <preptm-breadcrumb [breadcrumb]="breadcrumb" class="mb-4 block"></preptm-breadcrumb>
+
+  <div class="mb-6 pb-4 border-b border-neutral-200 flex items-center justify-between">
+    <h1 class="text-xl font-bold text-neutral-800" i18n>Article Categories</h1>
+    <a routerLink="/article"
+      class="text-xs text-brand-600 hover:underline font-medium" i18n>View All Articles →</a>
+  </div>
+
+  <!-- Skeleton -->
+  @if (isLoading) {
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+      @for (i of [0,1,2,3,4,5,6,7]; track $index) {
+        <div class="bg-white rounded-xl border border-neutral-200 p-5 animate-pulse">
+          <div class="h-10 w-10 rounded-lg bg-neutral-200 mb-3"></div>
+          <div class="h-4 bg-neutral-200 rounded w-3/4 mb-1.5"></div>
+          <div class="h-3 bg-neutral-100 rounded w-1/2"></div>
+        </div>
+      }
+    </div>
+  }
+
+  <!-- Category cards -->
+  @if (!isLoading && articleTypeList?.length) {
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+      @for (article of articleTypeList; track article.value; let i = $index) {
+        <a [routerLink]="[article.otherData?.slugUrl]"
+          class="group bg-white border border-neutral-200 rounded-xl p-5 flex flex-col
+                 hover:shadow-card-hover hover:-translate-y-0.5 hover:border-brand-200
+                 transition-all duration-200 cursor-pointer">
+          <div class="h-10 w-10 rounded-lg flex items-center justify-center mb-3 flex-shrink-0"
+            [style.backgroundColor]="getColor(i)">
+            <svg class="h-5 w-5 text-brand-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+            </svg>
+          </div>
+          <span class="text-sm font-semibold text-neutral-800 group-hover:text-brand-600 transition-colors leading-snug">
+            {{ article.text }}
+          </span>
+        </a>
+      }
+    </div>
+  }
+
+  @if (!isLoading && !articleTypeList?.length) {
+    <preptm-no-records></preptm-no-records>
+  }
+
+</div>

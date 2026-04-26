@@ -1,0 +1,10 @@
+<app-page-header [breadcrumb]="breadcrumb" इ>
+    <nz-space>
+        <app-button *nzSpaceItem type="back"></app-button>
+        <!-- <app-button *nzSpaceItem [show]="form.disabled" (onClick)="onEdit()" type="edit"></app-button> -->
+    </nz-space>
+</app-page-header>
+
+
+<app-form [addUpdateFn$]="masterService.addUpdateBannerMaster" [form]="form" [initialData]="banner"
+    [formElements]="formElements" navigationUrlOnSuccess="/master/banner"></app-form>

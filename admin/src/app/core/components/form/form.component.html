@@ -1,0 +1,148 @@
+<main [ngClass]="{'card':!inlineForm}">
+  <div [formGroup]="form" autocomplete="on">
+    <div class="grid grid-cols-4 gap-4">
+      <ng-container *ngFor="let formElement of formElements">
+        <!-- textbox -->
+        <ng-container *ngIf="formElement.type==='text' || formElement.type==='slug'">
+          <div [class]="formElement.class">
+            <app-text (onFocusOut)="focusOut($event,formElement)" [numberFormat]="formElement.numberFormat"
+              [suffixTemplateRef]="(formElement.type=='slug')?suffixIconButton:''"
+              [formControlName]="formElement.controlName" [label]="formElement.label" [form]="form"
+              [placeholder]="formElement.placeholder?.toString()">
+            </app-text>
+            <ng-template #suffixIconButton>
+              <button nz-button nzType="primary" class="link" (click)="generateSlug(formElement.slugFrom, formElement.controlName)"
+                nzSearch><span nz-icon nzType="link" nzTheme="outline"></span></button>
+            </ng-template>
+            <div
+              *ngIf="formElement.type==='text' && formElement.isOtherApi && formElement.otherApiCall && searchDataModel && searchDataModel.length"
+              class="search-list search-list-open">
+              <ul>
+                <li class="flex justify-between" *ngFor="let row of searchDataModel">
+                  <ng-container *ngIf="row.slugUrl;else  test">
+                    <a [href]="row.slugUrl" target="_blank">
+                      {{row.title}} - {{row.status}}
+                    </a>
+                  </ng-container>
+                  <ng-template #test>
+                    {{row.title}} - {{row.status}}
+                  </ng-template>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </ng-container>
+
+        <!-- radio -->
+        <ng-container *ngIf="formElement.type==='radio'">
+          <div [class]="formElement.class">
+            <app-radio [formControlName]="formElement.controlName" [formControlName]="formElement.controlName"
+              [optionList]="formElement.radtioOptions" [label]="formElement.label" [form]="form">
+            </app-radio>
+          </div>
+        </ng-container>
+
+        <!-- html editor -->
+        <ng-container *ngIf="formElement.type==='htmlEditor'">
+          <div [class]="formElement.class">
+            <app-html-editor [formControlName]="formElement.controlName" [label]="formElement.label" [form]="form"
+              [placeholder]="formElement.placeholder?.toString()"
+              [editorId]="formElement.id || formElement.controlName"></app-html-editor>
+          </div>
+        </ng-container>
+
+        <!-- textarea -->
+        <ng-container *ngIf="formElement.type==='textarea'">
+          <div [class]="formElement.class">
+            <app-textarea (onFocusOut)="focusOut($event,formElement)"  [formControlName]="formElement.controlName" [label]="formElement.label" [form]="form"
+              [placeholder]="formElement.placeholder?.toString()"></app-textarea>
+          </div>
+        </ng-container>
+
+        <!-- table form -->
+        <ng-container *ngIf="formElement.type==='tableForm'">
+          <div [class]="(formElement.class || '') + ' col-span-4'">
+            <app-table-form [formControlName]="formElement.controlName" [label]="formElement.label" [form]="form"
+              [childForm]="formElement.tableFormConfig?.childForm" [childFormElements]="formElement.tableFormConfig?.childFormElements"></app-table-form>
+          </div>
+        </ng-container>
+
+        <!-- drop down -->
+        <ng-container *ngIf="formElement.type==='select'">
+          <div [ngClass]="{'add-element':positivePermissions.includes(formElement.controlName) && !this.viewOnly}">
+            <div [class]="formElement.class">
+              <app-select [isDisabled]="formElement.isDisabled"
+                (valueChange)="getChildDdl($event,formElement.selectConfig)"
+                (valueChangedOutside)="getChildDdl($event,formElement.selectConfig,true)"
+                [items]="formElement.selectConfig?.selectOptions" [formControlName]="formElement.controlName"
+                [label]="formElement.label" [form]="form" [placeholder]="formElement.placeholder"
+                [replaceValueWithKey]="formElement.selectConfig?.replaceValueWithKey || false"
+                [multiple]="formElement.selectConfig?.isMultiple"></app-select>
+            </div>
+            <button *ngIf="positivePermissions.includes(formElement.controlName) && !this.viewOnly"
+              (click)="openDialog(formElement)">+</button>
+          </div>
+        </ng-container>
+
+        <!-- switch -->
+        <ng-container *ngIf="formElement.type==='switch'">
+          <div [class]="formElement.class">
+            <app-switch [label]="formElement.label" [form]="form"
+              [formControlName]="formElement.controlName"></app-switch>
+          </div>
+        </ng-container>
+
+        <!-- file uploader -->
+        <ng-container *ngIf="formElement.type==='file'">
+          <div [class]="formElement.class">
+            <app-uploader [label]="formElement.label" [form]="form" #fileUploadRef
+              [formControlName]="formElement.controlName" [multiple]="formElement.fileConfig?.isMultiple"
+              [accept]="formElement?.fileConfig?.accept || '*' "
+              [showCropper]="formElement.fileConfig?.showCropper || false"
+              [isThumbnail]="formElement.fileConfig?.isThumbnail || false"
+              [maxFileSize]="formElement?.fileConfig?.maxFileSize || MaxFileSize"
+              [minFileSize]="formElement?.fileConfig?.minFileSize || MinFileSize"></app-uploader>
+          </div>
+        </ng-container>
+
+        <!-- date & date-range picker -->
+        <ng-container *ngIf="formElement.type==='date' || formElement.type=='dateRange'">
+          <div [class]="formElement.class">
+            <app-date [type]="formElement.type" [label]="formElement.label" [form]="form"
+              [placeholder]="formElement.placeholder" [formControlName]="formElement.controlName"
+              [maxDate]="formElement.dateConfig?.maxDate" [minDate]="formElement.dateConfig?.minDate"></app-date>
+          </div>
+        </ng-container>
+
+
+      </ng-container>
+
+    </div>
+    <ng-content></ng-content>
+  </div>
+
+  <div class="text-right" *ngIf="form.enabled && !inlineForm">
+    <app-button (onClick)="onReset()" type="reset"></app-button>
+    <app-button (onClick)="onSubmit()" type="submit" [isLoading]="isLoading"></app-button>
+  </div>
+
+</main>
+
+<div class="backdrop" [ngStyle]="{display:shouldShowModel?'block':'none'}" (click)="closeDialog(false)">
+  <div class="dialog" (click)="$event.stopPropagation()">
+    <h1 class="dialog-title">{{dialogTitle}} <button (click)="shouldShowModel =false" type="button"
+        class="float-right text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+        data-modal-hide="default-modal">
+        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+        </svg>
+        <span class="sr-only">Close modal</span>
+      </button></h1>
+    <div class="content">
+      <div #dialogContent></div>
+    </div>
+  </div>
+</div>
+
+<!-- <p>{{positivePermissions|json}}</p> -->

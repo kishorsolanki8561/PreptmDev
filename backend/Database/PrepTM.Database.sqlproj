@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>PrepTM.Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{C8F4B1E2-3A5D-4F67-89AB-1234567890CD}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>PrepTM.Database</RootNamespace>
+    <AssemblyName>PrepTM.Database</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetConnectionString>
+    </TargetConnectionString>
+    <TargetDatabase>PrepTM</TargetDatabase>
+    <AnsiNulls>True</AnsiNulls>
+    <QuotedIdentifier>True</QuotedIdentifier>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <SuppressTSqlWarnings>
+    </SuppressTSqlWarnings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+
+  <!-- ═══════════════ TABLES ═══════════════ -->
+  <ItemGroup>
+    <!-- Core Content -->
+    <Build Include="Tables\dbo.Recruitment.sql" />
+    <Build Include="Tables\dbo.RecruitmentDocumentLookup.sql" />
+    <Build Include="Tables\dbo.RecruitmentHowToApplyAndQuickLinkLookup.sql" />
+    <Build Include="Tables\dbo.RecruitmentJobDesignationLookup.sql" />
+    <Build Include="Tables\dbo.RecruitmentQualificationLookup.sql" />
+    <Build Include="Tables\dbo.RecruitmentTags.sql" />
+    <Build Include="Tables\dbo.Article.sql" />
+    <Build Include="Tables\dbo.ArticleFaq.sql" />
+    <Build Include="Tables\dbo.ArticleTags.sql" />
+    <Build Include="Tables\dbo.BlockContents.sql" />
+    <Build Include="Tables\dbo.BlockContentAttachmentLookup.sql" />
+    <Build Include="Tables\dbo.BlockContentsHowToApplyAndQuickLinkLookup.sql" />
+    <Build Include="Tables\dbo.BlockContentsTags.sql" />
+    <Build Include="Tables\dbo.Scheme.sql" />
+    <Build Include="Tables\dbo.SchemeAttchamentLookup.sql" />
+    <Build Include="Tables\dbo.SchemeContactDetailsLookup.sql" />
+    <Build Include="Tables\dbo.SchemeDocumentLookup.sql" />
+    <Build Include="Tables\dbo.SchemeEligibilityLookup.sql" />
+    <Build Include="Tables\dbo.SchemeHowToApplyAndQuickLinkLookup.sql" />
+    <Build Include="Tables\dbo.Paper.sql" />
+    <Build Include="Tables\dbo.PaperSubject.sql" />
+    <Build Include="Tables\dbo.PaperTags.sql" />
+    <Build Include="Tables\dbo.Note.sql" />
+    <Build Include="Tables\dbo.Note_Subject.sql" />
+    <Build Include="Tables\dbo.NoteTags.sql" />
+    <Build Include="Tables\dbo.Syllabus.sql" />
+    <Build Include="Tables\dbo.Syllabus_Subject.sql" />
+    <Build Include="Tables\dbo.SyllabusTags.sql" />
+    <Build Include="Tables\dbo.FAQ.sql" />
+    <!-- Masters -->
+    <Build Include="Tables\dbo.DepartmentMaster.sql" />
+    <Build Include="Tables\dbo.CategoryMaster.sql" />
+    <Build Include="Tables\dbo.SubCategory.sql" />
+    <Build Include="Tables\dbo.GroupMaster.sql" />
+    <Build Include="Tables\dbo.BlockType.sql" />
+    <Build Include="Tables\dbo.BannerMaster.sql" />
+    <Build Include="Tables\dbo.AssetsMaster.sql" />
+    <Build Include="Tables\dbo.State.sql" />
+    <Build Include="Tables\dbo.Lookup.sql" />
+    <Build Include="Tables\dbo.LookupType.sql" />
+    <Build Include="Tables\dbo.QualificationMaster.sql" />
+    <Build Include="Tables\dbo.JobDesignationMaster.sql" />
+    <Build Include="Tables\dbo.PopularSearch.sql" />
+    <Build Include="Tables\dbo.AdditionalPages.sql" />
+    <Build Include="Tables\dbo.SiteMap.sql" />
+    <Build Include="Tables\dbo.Logs.sql" />
+    <!-- Auth/Users -->
+    <Build Include="Tables\dbo.User.sql" />
+    <Build Include="Tables\dbo.UserType.sql" />
+    <Build Include="Tables\dbo.FrontUser.sql" />
+    <Build Include="Tables\dbo.UserFeedback.sql" />
+    <Build Include="Tables\dbo.Bookmark.sql" />
+    <!-- Navigation/Permissions -->
+    <Build Include="Tables\dbo.MenuMaster.sql" />
+    <Build Include="Tables\dbo.MenuMasterMapping.sql" />
+    <Build Include="Tables\dbo.PageMaster.sql" />
+    <Build Include="Tables\dbo.PageComponent.sql" />
+    <Build Include="Tables\dbo.PageComponentAction.sql" />
+    <Build Include="Tables\dbo.PageComponentPermission.sql" />
+  </ItemGroup>
+
+  <!-- ═══════════════ VIEWS ═══════════════ -->
+  <ItemGroup>
+    <Build Include="Views\dbo.Vw_Scheme.sql" />
+  </ItemGroup>
+
+  <!-- ═══════════════ STORED PROCEDURES — Front/Public API ═══════════════ -->
+  <ItemGroup>
+    <Build Include="StoredProcedures\dbo.Sp_GetDashboardData.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_FrontDashboardPagination.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_DashboardRecentPostList.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_DashboardPopularPostList.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_DashboardSearchFilter.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_PopularBySearchText.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_FrontGetSiteMap.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_BannerMasterByPageSizeOnFront.sql" />
+    <!-- Recruitment (public) -->
+    <Build Include="StoredProcedures\dbo.Sp_FrontRecruitmentPagination.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_FrontRecruitmentDetailsOfIdAndSlug.sql" />
+    <!-- Article (public) -->
+    <Build Include="StoredProcedures\dbo.Sp_FrontArticles.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_FrontArticleDetails.sql" />
+    <!-- BlockContent (public) -->
+    <Build Include="StoredProcedures\dbo.Sp_FrontBlockContentPagination.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_FrontBlockContentsDetailsOfIdAndSlug.sql" />
+    <!-- Scheme (public) -->
+    <Build Include="StoredProcedures\dbo.Sp_SchemeDetailsOfIdAndSlug.sql" />
+    <!-- Department (public) -->
+    <Build Include="StoredProcedures\dbo.Sp_DepartmentDetailsofIdAndSlug.sql" />
+    <!-- User / Bookmarks (public) -->
+    <Build Include="StoredProcedures\dbo.Sp_FrontUserAddUpdate.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_BookmarkAddUpdate.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_BookmarkPostListByUser.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_UserFeedbackAddUpdate.sql" />
+  </ItemGroup>
+
+  <!-- ═══════════════ STORED PROCEDURES — Admin/Translation ═══════════════ -->
+  <ItemGroup>
+    <!-- Recruitment (admin) -->
+    <Build Include="StoredProcedures\dbo.Sp_RecruitmentAddUpdate.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_RecruitmentDeleteUpdateStatus.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_RecruitmentPagination.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_CheckRecruitmentTitle.sql" />
+    <!-- Article (admin) -->
+    <Build Include="StoredProcedures\dbo.Sp_ArticlePagination.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_CheckArticleTitle.sql" />
+    <!-- BlockContents (admin) -->
+    <Build Include="StoredProcedures\dbo.Sp_BlockContentsAddUpdate.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_BlockContentsDeleteUpdateStatus.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_BlockContentsPagination.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_CheckBlockContentsTitle.sql" />
+    <!-- Scheme (admin) -->
+    <Build Include="StoredProcedures\dbo.Sp_SchemeAddUpdate.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_SchemeDeleteUpdateStatus.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_SchemePagination.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_CheckSchemeTitle.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_SchemeAttachmentLookupAddUpdate.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_SchemeAttachmentDelete.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_SchemeDocumentLookupAddUpdate.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_SchemeDocumentDelete.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_GetSchemeDocumentAndAttachmentLookupDataBySchemeId.sql" />
+    <!-- Paper / Note / Syllabus (admin) -->
+    <Build Include="StoredProcedures\dbo.Sp_PaperPagination.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_CheckPaperTitle.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_NotePagination.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_CheckNoteTitle.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_SyllabusPagination.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_CheckSyllabusTitle.sql" />
+    <!-- Additional Pages (admin) -->
+    <Build Include="StoredProcedures\dbo.Sp_AdditionalPagesAddUpdate.sql" />
+    <!-- User Management (admin) -->
+    <Build Include="StoredProcedures\dbo.Sp_UserAddUpdate.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_UserDeleteUpdateStatus.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_UserPagination.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_UserFeedbackDeleteUpdateStatus.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_FrontUserReport.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_FeedbackPagination.sql" />
+    <!-- Masters (admin) -->
+    <Build Include="StoredProcedures\dbo.Sp_BannerMasterAddUpdate.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_BannerMasterDeleteUpdateStatus.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_BannerMasterPagination.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_AssetsMasterAddUpdate.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_AssetsMasterDeleteUpdateStatus.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_AssetsMasterPagination.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_CategoryMasterAddUpdate.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_CategoryMasterDeleteUpdateStatus.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_CategoryMasterPagination.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_SubCategoryMasterAddUpdate.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_SubCategoryMasterDeleteUpdateStatus.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_SubCategoryMasterPagination.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_DepartmentMasterAddUpdate.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_DepartmentMasterDeleteUpdateStatus.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_DepartmentMasterPagination.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_GroupMasterAddUpdate.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_GroupMasterDeleteUpdateStatus.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_GroupMasterPagination.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_BlockTypeAddUpdate.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_BlockTypeDeleteUpdateStatus.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_BlockTypePagination.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_QualificationMasterAddUpdate.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_QualificationMasterDeleteUpdateStatus.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_QualificationMasterPagination.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_JobDesignationMasterAddUpdate.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_JobDesignationMasterDeleteUpdateStatus.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_JobDesignationMasterPagination.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_LookupAddUpdate.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_LookupDeleteUpdateStatus.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_LookupPagination.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_LookupTypeAddUpdate.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_LookupTypeDeleteUpdateStatus.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_LookupTypePagination.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_MenuMasterAddUpdate.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_MenuMasterDeleteUpdateStatus.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_MenuMasterMappingAddUpdate.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_MenuMasterPagination.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_PageMasterAddUpdate.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_PageMasterDeleteUpdateStatus.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_PageMasterPagination.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_PageMasterPermissionAddUpdate.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_PageMasterComponentPermissionAddUpdate.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_PageMappingDelete.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_PageUrlMappingAddUpdate.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_PagePermissionUrlsByUserType.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_PageComponentAddUpdate.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_PageComponentDelete.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_PageComponentActionAddUpdate.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_PageComponentActionDelete.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_PageComponentPermissionModified.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_UserTypeAddUpdate.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_UserTypeDeleteUpdateStatus.sql" />
+    <!-- DDL (Dropdowns) -->
+    <Build Include="StoredProcedures\dbo.Sp_DDLSubCategoryByCategoryIdAndSlug.sql" />
+    <Build Include="StoredProcedures\dbo.Sp_GetDDLLookupDataByLookupTypeIdAndLookupType.sql" />
+  </ItemGroup>
+
+  <!-- ═══════════════ SCRIPTS ═══════════════ -->
+  <ItemGroup>
+    <PreDeploy Include="Scripts\PreDeployment.sql" />
+    <PostDeploy Include="Scripts\PostDeployment.sql" />
+    <None Include="Scripts\SEO_SP_Guards_And_Indexes.sql" />
+  </ItemGroup>
+
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" Condition="'$(VisualStudioVersion)' != '' And Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v16.0\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" Condition="'$(VisualStudioVersion)' == '' And Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v16.0\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')" />
+</Project>

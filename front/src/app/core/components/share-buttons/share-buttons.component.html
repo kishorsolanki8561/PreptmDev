@@ -1,0 +1,49 @@
+<!-- share button -->
+@if (content()) {
+  <div class="share-wrapper">
+    @if (showShareButtons()) {
+      <button class="share copy" title="Copy" (click)="copy();close()">
+        <div class="share-button">
+          <img src="assets/img/copy.svg" alt="copy" width="24" height="24" [attr.loading]="'lazy'" />
+        </div>
+      </button>
+      <a [href]="socialMediaShareLink().telegram" target="_blank" (click)="close()"
+        class="share telegram" title="telegram">
+        <div class="share-button">
+          <img src="assets/img/telegram.svg" alt="telegram" width="24" height="24" [attr.loading]="'lazy'" />
+        </div>
+      </a>
+      <a [href]="socialMediaShareLink().twitter" target="_blank" (click)="close()"
+        class="share twitter" title="X">
+        <div class="share-button">
+          <img src="assets/img/twitter.svg" alt="twitter" width="24" height="24" [attr.loading]="'lazy'" />
+        </div>
+      </a>
+      <a [href]="socialMediaShareLink().facebook" target="_blank" (click)="close()"
+        class="share facebook" title="Facebook">
+        <div class="share-button">
+          <img src="assets/img/facebook-icon.svg" alt="facebook" width="24" height="24" [attr.loading]="'lazy'" />
+        </div>
+      </a>
+      <a [href]="socialMediaShareLink().whatsapp" target="_blank" (click)="close()"
+        class="share whatsapp" title="Whatsapp">
+        <div class="share-button">
+          <img src="assets/img/whatsApp-icon.svg" alt="whatsapp" width="24" height="24" [attr.loading]="'lazy'" />
+        </div>
+      </a>
+    }
+    <button class="share-btn" [title]="!showShareButtons()?'Share Article':'Close'" (click)="toggle()">
+      <div class="share-button">
+        @if (!showShareButtons()) {
+          <img src="assets/img/share-nodes.svg" alt="share" width="24" height="24" [attr.loading]="'lazy'" />
+        }
+        @if (showShareButtons()) {
+          <img src="assets/img/cross.svg" alt="close-share" width="24" height="24" [attr.loading]="'lazy'" />
+        }
+      </div>
+    </button>
+  </div>
+  <div class="share-lbl">
+    <p i18n>Share</p>
+  </div>
+}

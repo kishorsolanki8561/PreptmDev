@@ -1,0 +1,23 @@
+<preptm-header-tile titleName="{{title}}" viewMoreUrl="{{viewMoreUrl}}"></preptm-header-tile>
+
+<div class="gap-top">
+  <div class="gap-margin-x h-full">
+    <div class="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+      @for (item of posts; track $index) {
+        <div>
+          <a [routerLink]="['/', item.blockTypeSlug, item.slugUrl]">
+            <div class="product-card bg-gray-200">
+              <div class="product-image">
+                <img [src]="item.thumbnail" alt="Product Image" width="400" height="225" [attr.loading]="'lazy'">
+              </div>
+              <div class="product-details">
+                <h2 class="product-title">{{item.title}}</h2>
+                <p class="product-description">Published Date : {{item.publishedDate | date}}</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      }
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<app-page-header [breadcrumb]="breadcrumb" addButtonUrl="/master/banner/add">
+</app-page-header>
+<main class="card">
+    <app-table [initialData]="initialData" [columns]="columns" [getDataFn$]="masterService.getBannerMasterList"
+        [changeStatusFn$]="masterService.changeStatusBannerMaster" editPageUrl='/master/banner/edit'
+        viewPageUrl='/master/banner'
+        [deleteFn$]="masterService.deleteBannerMaster" [filter]="filter"></app-table>
+</main>

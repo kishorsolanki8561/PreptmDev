@@ -1,0 +1,210 @@
+@import "src/assets/css/variables.scss";
+@import "src/assets/css/article.scss";
+
+.bg-gray {
+    background-color: #eff3fb !important;
+}
+
+
+.publish-date {
+    .date {
+        font-size: 1em;
+    }
+
+    // span,
+    // i {
+    //     font-size: 13px !important;
+    // }
+}
+
+.post-header {
+    img {
+        margin: 0 auto;
+        width: 150px;
+    }
+
+    h1 {
+        margin: 10px 0 5px;
+        font-weight: bold;
+        // color: $primary-color;
+        font-size: 18px;
+    }
+
+    .dept {
+        // margin: 7px 0px;
+        // color: $secondary-color;
+
+        a {
+            font-size: 20px;
+        }
+    }
+
+    .state {
+        font-size: 18px;
+    }
+
+    .posts {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin: 10px;
+
+        p {
+            background: rgba(25, 103, 210, 0.06);
+            color: #1967d2;
+            padding: 0 10px;
+            border-radius: 10px;
+
+            &:nth-child(2n) {
+                background: rgba(52, 168, 83, 0.06);
+                color: #34a853;
+            }
+
+            &:nth-child(3n) {
+                background: #5d169a12;
+                color: #5d169a;
+            }
+        }
+    }
+
+    .apply-btn {
+        background: #182a48;
+        padding: 5px 15px;
+        color: white;
+        border-radius: 5px;
+        margin: 10px;
+        font-size: 15px;
+        padding: 10px 35px;
+        display: inline-block;
+
+        i {
+            margin-right: 10px;
+        }
+    }
+
+    .draft {
+        border-radius: 5px;
+        font-size: 21px;
+        vertical-align: middle;
+
+        i {
+            font-size: 22px;
+        }
+    }
+}
+
+.dates {
+    .icon {
+        font-size: 17px;
+        color: gray;
+    }
+
+    .section-title {
+        font-size: 13px;
+        color: #565555;
+        font-weight: 400;
+    }
+
+    .section-val {
+        font-size: 15px;
+        font-weight: bold;
+    }
+}
+
+.related-section-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.side-nav {
+    position: sticky;
+    top: 60px;
+}
+
+.qualificationAndDesig {
+    li {
+        line-height: 30px;
+
+        i {
+            margin-right: 10px;
+            vertical-align: middle;
+            color: rgb(36 36 37 / 36%);
+            font-size: 14px;
+        }
+    }
+}
+
+.images {
+    img {
+        max-height: 100px;
+        max-width: 100px;
+        margin: 20px;
+        cursor: pointer;
+        display: inline;
+        padding: 10px;
+        width: auto;
+
+        &:hover {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #a7a7a74f;
+            transition: 0.2s ease;
+        }
+    }
+}
+
+.imp-link-btn {
+    min-height: 100px;
+    min-width: 150px;
+    border-radius: 10px;
+
+    text-align: center;
+    padding: 20px;
+    border: 1px solid;
+    cursor: pointer;
+}
+
+.how-to {
+    .how-to-item {
+        img {
+            margin: 20px 0;
+            max-height: 400px;
+            text-align: center;
+        }
+
+        .how-to-title {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.mobile-view {
+    display: grid;
+}
+
+.desktop-view {
+    display: none;
+}
+
+.faq-container {
+    list-style: auto;
+    margin-left: 25px;
+
+    .faq {
+        margin-bottom: 15px;
+    }
+
+    .que {
+        font-size: 18px;
+    }
+}
+
+
+
+.states {
+    border: 1px solid gray;
+    padding: 0 10px;
+    border-radius: 4px;
+}
+

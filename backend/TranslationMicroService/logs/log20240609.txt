@@ -1,0 +1,372 @@
+
+--------------------Log Start --------------------
+2024-06-09 12:33 
+
+<KISHOR> 
+ File Name :- RecruitmentService.cs Method Name :- GetPagination Error Level: [Error] 
+--------------------Source Context --------------------
+() 
+--------------------Message--------------------
+File Name :- RecruitmentService.cs Method Name :- GetPagination
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Error converting data type nvarchar to int.
+   at CommonService.Dapper.DapperGenericRepo.QueryList[T](String query, Object perams) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 182
+   at TranslationMicroService.Service.RecruitmentService.GetPagination(RecruitmentFilterModel filterModel) in D:\Project\5GStudy\taiyari-backend\TranslationMicroService\Service\RecruitmentService.cs:line 361
+ClientConnectionId:7df9d6a9-8b2a-45ef-82cb-9f6fc939d675
+Error Number:8114,State:1,Class:16
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+2024-06-09 12:35 
+
+<KISHOR> 
+ File Name :- RecruitmentService.cs Method Name :- GetPagination Error Level: [Error] 
+--------------------Source Context --------------------
+() 
+--------------------Message--------------------
+File Name :- RecruitmentService.cs Method Name :- GetPagination
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Error converting data type nvarchar to int.
+   at CommonService.Dapper.DapperGenericRepo.QueryList[T](String query, Object perams) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 182
+   at TranslationMicroService.Service.RecruitmentService.GetPagination(RecruitmentFilterModel filterModel) in D:\Project\5GStudy\taiyari-backend\TranslationMicroService\Service\RecruitmentService.cs:line 361
+ClientConnectionId:c4ffa59a-ce10-4494-9789-68a8a8c5a08c
+Error Number:8114,State:1,Class:16
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+2024-06-09 12:39 
+
+<KISHOR> 
+ File Name :- RecruitmentService.cs Method Name :- GetPagination Error Level: [Error] 
+--------------------Source Context --------------------
+() 
+--------------------Message--------------------
+File Name :- RecruitmentService.cs Method Name :- GetPagination
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Error converting data type nvarchar to int.
+   at CommonService.Dapper.DapperGenericRepo.QueryList[T](String query, Object perams) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 182
+   at TranslationMicroService.Service.RecruitmentService.GetPagination(RecruitmentFilterModel filterModel) in D:\Project\5GStudy\taiyari-backend\TranslationMicroService\Service\RecruitmentService.cs:line 361
+ClientConnectionId:b439c0e3-7186-4389-a2ec-8d62ba41db4e
+Error Number:8114,State:1,Class:16
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+2024-06-09 12:40 
+
+<KISHOR> 
+ File Name :- RecruitmentService.cs Method Name :- GetPagination Error Level: [Error] 
+--------------------Source Context --------------------
+() 
+--------------------Message--------------------
+File Name :- RecruitmentService.cs Method Name :- GetPagination
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'Sp_RecruitmentPaginationd'.
+   at CommonService.Dapper.DapperGenericRepo.QueryList[T](String query, Object perams) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 182
+   at TranslationMicroService.Service.RecruitmentService.GetPagination(RecruitmentFilterModel filterModel) in D:\Project\5GStudy\taiyari-backend\TranslationMicroService\Service\RecruitmentService.cs:line 361
+ClientConnectionId:17e5b133-1ebd-4d79-a33d-036dc74d61d2
+Error Number:2812,State:62,Class:16
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+2024-06-09 15:24 
+
+<KISHOR> 
+ File Name :- RecruitmentService.cs Method Name :- GetPagination Error Level: [Error] 
+--------------------Source Context --------------------
+() 
+--------------------Message--------------------
+File Name :- RecruitmentService.cs Method Name :- GetPagination
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'Sp_RecruitmentPaginationd'.
+   at CommonService.Dapper.DapperGenericRepo.QueryList[T](String query, Object perams) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 182
+   at TranslationMicroService.Service.RecruitmentService.GetPagination(RecruitmentFilterModel filterModel) in D:\Project\5GStudy\taiyari-backend\TranslationMicroService\Service\RecruitmentService.cs:line 361
+ClientConnectionId:334cbf7a-5937-48e1-9573-bd746a0fc10f
+Error Number:2812,State:62,Class:16
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+2024-06-09 15:30 
+
+<KISHOR> 
+ Application startup exception Error Level: [Fatal] 
+--------------------Source Context --------------------
+(Microsoft.AspNetCore.Hosting.Diagnostics) 
+--------------------Message--------------------
+Application startup exception
+--------------------Exception--------------------
+System.InvalidOperationException: Unable to resolve service for type 'Serilog.Extensions.Hosting.DiagnosticContext' while attempting to activate 'Serilog.AspNetCore.RequestLoggingMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+2024-06-09 15:30 
+
+<KISHOR> 
+ Application startup exception Error Level: [Fatal] 
+--------------------Source Context --------------------
+(Microsoft.AspNetCore.Hosting.Diagnostics) 
+--------------------Message--------------------
+Application startup exception
+--------------------Exception--------------------
+System.InvalidOperationException: Unable to resolve service for type 'Serilog.Extensions.Hosting.DiagnosticContext' while attempting to activate 'Serilog.AspNetCore.RequestLoggingMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+2024-06-09 15:31 
+
+<KISHOR> 
+ Application startup exception Error Level: [Fatal] 
+--------------------Source Context --------------------
+(Microsoft.AspNetCore.Hosting.Diagnostics) 
+--------------------Message--------------------
+Application startup exception
+--------------------Exception--------------------
+System.InvalidOperationException: Unable to resolve service for type 'Serilog.Extensions.Hosting.DiagnosticContext' while attempting to activate 'Serilog.AspNetCore.RequestLoggingMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+2024-06-09 15:32 
+
+<KISHOR> 
+ Application startup exception Error Level: [Fatal] 
+--------------------Source Context --------------------
+(Microsoft.AspNetCore.Hosting.Diagnostics) 
+--------------------Message--------------------
+Application startup exception
+--------------------Exception--------------------
+System.InvalidOperationException: Unable to resolve service for type 'Serilog.Extensions.Hosting.DiagnosticContext' while attempting to activate 'Serilog.AspNetCore.RequestLoggingMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+2024-06-09 15:35 
+
+<KISHOR> 
+ Application startup exception Error Level: [Fatal] 
+--------------------Source Context --------------------
+(Microsoft.AspNetCore.Hosting.Diagnostics) 
+--------------------Message--------------------
+Application startup exception
+--------------------Exception--------------------
+System.InvalidOperationException: Unable to resolve service for type 'Serilog.Extensions.Hosting.DiagnosticContext' while attempting to activate 'Serilog.AspNetCore.RequestLoggingMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+2024-06-09 15:37 
+
+<KISHOR> 
+ Application startup exception Error Level: [Fatal] 
+--------------------Source Context --------------------
+(Microsoft.AspNetCore.Hosting.Diagnostics) 
+--------------------Message--------------------
+Application startup exception
+--------------------Exception--------------------
+System.InvalidOperationException: Unable to resolve service for type 'Serilog.Extensions.Hosting.DiagnosticContext' while attempting to activate 'Serilog.AspNetCore.RequestLoggingMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+2024-06-09 15:38 
+
+<KISHOR> 
+ Application startup exception Error Level: [Fatal] 
+--------------------Source Context --------------------
+(Microsoft.AspNetCore.Hosting.Diagnostics) 
+--------------------Message--------------------
+Application startup exception
+--------------------Exception--------------------
+System.InvalidOperationException: Unable to resolve service for type 'Serilog.Extensions.Hosting.DiagnosticContext' while attempting to activate 'Serilog.AspNetCore.RequestLoggingMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+2024-06-09 15:40 
+
+<KISHOR> 
+ Application startup exception Error Level: [Fatal] 
+--------------------Source Context --------------------
+(Microsoft.AspNetCore.Hosting.Diagnostics) 
+--------------------Message--------------------
+Application startup exception
+--------------------Exception--------------------
+System.InvalidOperationException: Unable to resolve service for type 'Serilog.Extensions.Hosting.DiagnosticContext' while attempting to activate 'Serilog.AspNetCore.RequestLoggingMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+2024-06-09 15:41 
+
+<KISHOR> 
+ Application startup exception Error Level: [Fatal] 
+--------------------Source Context --------------------
+(Microsoft.AspNetCore.Hosting.Diagnostics) 
+--------------------Message--------------------
+Application startup exception
+--------------------Exception--------------------
+System.InvalidOperationException: Unable to resolve service for type 'CommonService.JWT.JWTAuthManager' while attempting to activate 'CommonService.JWT.JwtMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+2024-06-09 15:41 
+
+<KISHOR> 
+ Application startup exception Error Level: [Fatal] 
+--------------------Source Context --------------------
+(Microsoft.AspNetCore.Hosting.Diagnostics) 
+--------------------Message--------------------
+Application startup exception
+--------------------Exception--------------------
+System.InvalidOperationException: Unable to resolve service for type 'Serilog.Extensions.Hosting.DiagnosticContext' while attempting to activate 'Serilog.AspNetCore.RequestLoggingMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+2024-06-09 15:44 
+
+<KISHOR> 
+ File Name :- RecruitmentService.cs Method Name :- GetPagination Error Level: [Error] 
+--------------------Source Context --------------------
+() 
+--------------------Message--------------------
+File Name :- RecruitmentService.cs Method Name :- GetPagination
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'Sp_RecruitmentPaginationd'.
+   at CommonService.Dapper.DapperGenericRepo.QueryList[T](String query, Object perams) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 182
+   at TranslationMicroService.Service.RecruitmentService.GetPagination(RecruitmentFilterModel filterModel) in D:\Project\5GStudy\taiyari-backend\TranslationMicroService\Service\RecruitmentService.cs:line 361
+ClientConnectionId:e39bbe49-f166-45f9-bc2e-1548a29c4e1c
+Error Number:2812,State:62,Class:16
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+2024-06-09 15:57 
+
+<KISHOR> 
+ File Name :- RecruitmentService.cs Method Name :- GetPagination Error Level: [Error] 
+--------------------Source Context --------------------
+() 
+--------------------Message--------------------
+File Name :- RecruitmentService.cs Method Name :- GetPagination
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): The number of rows provided for a FETCH clause must be greater then zero.
+   at CommonService.Dapper.DapperGenericRepo.QueryList[T](String query, Object perams) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 182
+   at TranslationMicroService.Service.RecruitmentService.GetPagination(RecruitmentFilterModel filterModel) in D:\Project\5GStudy\taiyari-backend\TranslationMicroService\Service\RecruitmentService.cs:line 361
+ClientConnectionId:e27c4147-8cc0-4182-a79f-8deeede6f8b6
+Error Number:10744,State:1,Class:15
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+2024-06-09 15:57 
+
+<KISHOR> 
+ File Name :- RecruitmentService.cs Method Name :- GetPagination Error Level: [Error] 
+--------------------Source Context --------------------
+() 
+--------------------Message--------------------
+File Name :- RecruitmentService.cs Method Name :- GetPagination
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): The number of rows provided for a FETCH clause must be greater then zero.
+   at CommonService.Dapper.DapperGenericRepo.QueryList[T](String query, Object perams) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 182
+   at TranslationMicroService.Service.RecruitmentService.GetPagination(RecruitmentFilterModel filterModel) in D:\Project\5GStudy\taiyari-backend\TranslationMicroService\Service\RecruitmentService.cs:line 361
+ClientConnectionId:e27c4147-8cc0-4182-a79f-8deeede6f8b6
+Error Number:10744,State:1,Class:15
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+2024-06-09 16:05 
+
+<KISHOR> 
+ File Name :- RecruitmentService.cs Method Name :- GetById Error Level: [Error] 
+--------------------Source Context --------------------
+() 
+--------------------Message--------------------
+File Name :- RecruitmentService.cs Method Name :- GetById
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Could not find stored procedure 'SP_GetDetailOfRecruitmentByIds'.
+   at CommonService.Dapper.DapperGenericRepo.QueryMultiple(String query, Object perams) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 210
+   at TranslationMicroService.Service.RecruitmentService.GetById(Int32 Id) in D:\Project\5GStudy\taiyari-backend\TranslationMicroService\Service\RecruitmentService.cs:line 318
+ClientConnectionId:23ecff6a-2e41-4ba0-92fb-f737aaebc98c
+Error Number:2812,State:62,Class:16
+
+--------------------Log End--------------------

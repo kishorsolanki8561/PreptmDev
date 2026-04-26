@@ -1,0 +1,35 @@
+@import 'src/assets/css/variables.scss';
+
+// Tailwind handles the main layout.
+// These are residual overrides for ng-zorro and specific states.
+
+.whatsapp-notification-container {
+  background-color: #25d366;
+  color: #fff;
+
+  .ant-notification-notice-close-x { color: #fff; }
+
+  .ant-notification-notice-description {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-right: 20px;
+  }
+
+  .msg { color: #fff; font-size: 17px; font-weight: 500; }
+  .whatsapp-icon { font-size: 50px; color: #8ff7b6; }
+
+  .action-btn {
+    margin-top: 10px;
+    .sub {
+      text-align: center;
+      display: inline-block;
+      background: white;
+      color: #25d366;
+      padding: 4px 14px;
+      border-radius: 5px;
+      margin-right: 10px;
+      width: 100%;
+    }
+  }
+}

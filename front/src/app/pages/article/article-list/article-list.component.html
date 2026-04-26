@@ -1,0 +1,194 @@
+<div class="max-w-[1280px] mx-auto px-4 py-6">
+  <preptm-breadcrumb class="mb-4 block" [breadcrumb]="breadcrumb"></preptm-breadcrumb>
+
+  <!-- Page heading -->
+  @if (moduleName) {
+    <div class="mb-5 pb-3 border-b border-neutral-200">
+      <h1 class="text-xl font-bold text-neutral-800">{{moduleName}}</h1>
+    </div>
+  }
+
+  <!-- Skeleton -->
+  @if (loading) {
+    <div class="lg:flex lg:gap-6">
+      <div class="flex-1 min-w-0">
+        <preptm-loader type="card" [count]="6"></preptm-loader>
+      </div>
+      <aside class="hidden lg:block w-64 flex-shrink-0">
+        <preptm-loader type="list" [count]="5"></preptm-loader>
+      </aside>
+    </div>
+  }
+
+  @if (!loading) {
+    <div class="lg:flex lg:gap-6">
+
+      <!-- ── Main column ── -->
+      <div class="flex-1 min-w-0">
+
+        @if (!articleItems?.length) {
+          <preptm-no-records></preptm-no-records>
+        }
+
+        @if (articleItems?.length) {
+          <!-- Featured article (first) -->
+          <a [routerLink]="'/' + articleItems[0].slugUrl"
+            class="group flex flex-col sm:flex-row rounded-xl overflow-hidden border border-neutral-200 bg-white
+                   hover:shadow-card-hover transition-all duration-200 mb-5">
+            <!-- Image -->
+            <div class="relative sm:w-64 sm:flex-shrink-0 overflow-hidden bg-neutral-100">
+              <preptm-image
+                [skipSmall]="true"
+                [alt]="articleItems[0].title"
+                [onlyLow]="false"
+                [priority]="true"
+                className="w-full h-48 sm:h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                [src]="articleItems[0].thumbnail">
+              </preptm-image>
+              <span class="absolute top-3 left-3 bg-brand-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full shadow">
+                Latest
+              </span>
+            </div>
+            <!-- Text -->
+            <div class="flex flex-col justify-between p-4 sm:p-5">
+              <div>
+                <h2 class="text-base sm:text-lg font-bold text-neutral-800 group-hover:text-brand-600 transition-colors leading-snug mb-2">
+                  {{articleItems[0].title}}
+                </h2>
+              </div>
+              <span class="text-xs text-neutral-400 flex items-center gap-1.5">
+                <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+                {{articleItems[0].modifiedDate | date:'d MMM yyyy'}}
+              </span>
+            </div>
+          </a>
+
+          <!-- Articles 1–4: compact list -->
+          <div class="flex flex-col gap-2 mb-5">
+            @for (article of articleItems?.slice(1, 5); track $index) {
+              <a [routerLink]="'/' + article.slugUrl"
+                class="group flex items-center gap-3 bg-white rounded-lg border border-neutral-200 p-3
+                       hover:shadow-card-hover hover:border-brand-200 transition-all duration-200">
+                <div class="flex-shrink-0 h-16 w-20 rounded-md overflow-hidden bg-neutral-100">
+                  <preptm-image
+                    [alt]="article.title"
+                    [onlyLow]="true"
+                    className="h-16 w-20 object-cover group-hover:scale-105 transition-transform duration-200"
+                    [src]="article.thumbnail">
+                  </preptm-image>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <p class="text-sm font-semibold text-neutral-800 group-hover:text-brand-600 transition-colors line-clamp-2 leading-snug mb-1">
+                    {{article.title}}
+                  </p>
+                  <span class="text-xs text-neutral-400">{{article.modifiedDate | date:'d MMM yyyy'}}</span>
+                </div>
+                <svg class="h-4 w-4 text-neutral-300 group-hover:text-brand-400 flex-shrink-0 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </a>
+            }
+          </div>
+
+          <!-- Remaining articles: 2-col grid -->
+          @if ((articleItems?.length ?? 0) > 5) {
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+              @for (article of articleItems?.slice(5); track $index) {
+                <a [routerLink]="'/' + article.slugUrl"
+                  class="group flex items-start gap-3 bg-white rounded-lg border border-neutral-200 p-3
+                         hover:shadow-card-hover hover:border-brand-200 transition-all duration-200">
+                  <div class="flex-shrink-0 h-14 w-16 rounded-md overflow-hidden bg-neutral-100">
+                    <preptm-image
+                      [alt]="article.title"
+                      [onlyLow]="true"
+                      className="h-14 w-16 object-cover group-hover:scale-105 transition-transform duration-200"
+                      [src]="article.thumbnail">
+                    </preptm-image>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <p class="text-sm font-medium text-neutral-800 group-hover:text-brand-600 transition-colors line-clamp-2 leading-snug">
+                      {{article.title}}
+                    </p>
+                    <span class="text-xs text-neutral-400 mt-0.5 block">{{article.modifiedDate | date:'d MMM yyyy'}}</span>
+                  </div>
+                </a>
+              }
+            </div>
+          }
+        }
+
+        <!-- Pagination -->
+        <preptm-pagination
+          [currentPage]="payload.page"
+          [totalItems]="pagination.totalItems"
+          [pageSize]="pagination.itemsPerPage"
+          [maxSize]="6">
+        </preptm-pagination>
+
+      </div>
+
+      <!-- ── Sidebar — desktop only, hydrated on idle ── -->
+      @defer (hydrate on idle) {
+        <aside class="hidden lg:block w-64 flex-shrink-0">
+          <div class="sticky top-20 space-y-4">
+
+            <!-- App promo -->
+            <div class="bg-white rounded-xl border border-neutral-200 overflow-hidden">
+              <a href="https://play.google.com/store/apps/details?id=com.preptm.study" target="_blank" rel="noopener">
+                <img src="https://file.preptm.com/Content/2024/OriginalAttachment/GET LATEST UPDATE.png"
+                  alt="Download PrepTM App" width="256" height="256"
+                  class="w-full rounded-xl" [attr.loading]="'lazy'">
+              </a>
+            </div>
+
+            <!-- Latest articles -->
+            @if (latestArticles?.length) {
+              <div class="bg-white rounded-xl border border-neutral-200 overflow-hidden">
+                <div class="px-4 py-2.5 border-b border-neutral-100 bg-neutral-50 flex items-center gap-2">
+                  <span class="inline-block w-2 h-2 rounded-full bg-brand-500"></span>
+                  <h3 class="text-xs font-bold text-neutral-600 uppercase tracking-widest" i18n>Latest Articles</h3>
+                </div>
+                <div class="flex flex-col divide-y divide-neutral-100">
+                  @for (article of latestArticles; track $index) {
+                    <a [routerLink]="'/' + article.slugUrl"
+                      class="group flex items-start gap-3 p-3 hover:bg-neutral-50 transition-colors">
+                      <div class="flex-shrink-0 h-12 w-14 rounded-md overflow-hidden bg-neutral-100">
+                        <preptm-image
+                          [alt]="article.title"
+                          [onlyLow]="true"
+                          className="h-12 w-14 object-cover group-hover:scale-105 transition-transform duration-200"
+                          [src]="article.thumbnail">
+                        </preptm-image>
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <p class="text-xs font-medium text-neutral-800 group-hover:text-brand-600 transition-colors line-clamp-2 leading-snug">
+                          {{article.title}}
+                        </p>
+                        <span class="text[11px] text-neutral-400 mt-0.5 block">{{article.modifiedDate | date:'d MMM yyyy'}}</span>
+                      </div>
+                    </a>
+                  }
+                </div>
+              </div>
+            }
+
+            <!-- Browse categories link -->
+            <a routerLink="/article"
+              class="flex items-center justify-between bg-brand-600 text-white rounded-xl p-4 hover:bg-brand-700 transition-colors group">
+              <div>
+                <p class="text-sm font-bold" i18n>Browse All Categories</p>
+                <p class="text-brand-200 text-xs mt-0.5" i18n>Find articles by topic</p>
+              </div>
+              <svg class="h-5 w-5 text-brand-300 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+
+          </div>
+        </aside>
+      }
+    </div>
+  }
+</div>

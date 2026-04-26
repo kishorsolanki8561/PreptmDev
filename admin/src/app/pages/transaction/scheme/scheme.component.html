@@ -1,0 +1,8 @@
+<app-page-header [breadcrumb]="breadcrumb" addButtonUrl="/transaction/scheme/add">
+</app-page-header>
+<main class="card">
+    <app-table [initialData]="initialData" [columns]="columns" [getDataFn$]="_schemeService.getList"
+        [changeStatusFn$]="_schemeService.changeStatus" editPageUrl='//transaction/scheme/edit'
+        [progressUpdateFn$]="_schemeService.updateProgress" viewPageUrl='/transaction/scheme'
+        [deleteFn$]="_schemeService.delete" [filter]="filter"></app-table>
+</main>

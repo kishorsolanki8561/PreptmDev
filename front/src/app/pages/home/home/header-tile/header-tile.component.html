@@ -1,0 +1,12 @@
+<div class="title-view gap-margin-x">
+  <h2 class="font-semibold px-4 content-center">
+    {{titleName}}
+  </h2>
+  @if (viewMoreUrl.length) {
+    <button
+      class="px-8 py-1 m-1 bg-[#469deb] text-white font-normal rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+      routerLink="{{viewMoreUrl}}">
+      View More
+    </button>
+  }
+</div>

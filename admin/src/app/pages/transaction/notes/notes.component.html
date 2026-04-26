@@ -1,0 +1,9 @@
+<app-page-header [breadcrumb]="breadcrumb" addButtonUrl="/transaction/notes/add">
+</app-page-header>
+
+<main class="card">
+    <app-table [initialData]="notes" [columns]="columns" [getDataFn$]="_notesService.getList"
+        [changeStatusFn$]="_notesService.changeStatus" editPageUrl='/transaction/notes/edit'
+        viewPageUrl='/transaction/notes' [progressUpdateFn$]="_notesService.updateProgress" 
+        [deleteFn$]="_notesService.delete" [filter]="filter"></app-table>
+</main>

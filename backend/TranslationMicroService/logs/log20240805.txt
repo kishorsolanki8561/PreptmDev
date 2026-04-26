@@ -1,0 +1,15 @@
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-05 21:40 
+
+<KISHOR> 
+ File Name :- BlockContentsService.cs Method Name :- BlockContentProgressStatus Error Level: [Error] 
+--------------------Message--------------------
+File Name :- BlockContentsService.cs Method Name :- BlockContentProgressStatus
+--------------------Exception--------------------
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at TranslationMicroService.Service.BlockContentsService.BlockContentProgressStatus(Int32 Id, Int32 ProgressStatus) in D:\Project\5GStudy\taiyari-backend\TranslationMicroService\Service\BlockContentsService.cs:line 685
+
+--------------------Log End--------------------

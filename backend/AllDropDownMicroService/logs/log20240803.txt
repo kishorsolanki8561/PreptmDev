@@ -1,0 +1,56 @@
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-03 14:13 
+
+<KISHOR> 
+ File Name :- AllDropDownService.cs Method Name :- GetDDLLookupDataByLookupTypeIdAndLookupType Error Level: [Error] 
+--------------------Message--------------------
+File Name :- AllDropDownService.cs Method Name :- GetDDLLookupDataByLookupTypeIdAndLookupType
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near '('.
+   at CommonService.Dapper.DapperGenericRepo.QueryList[T](String query, Object perams) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 187
+   at AllDropDownMicroService.Service.AllDropDownService.GetDDLLookupDataByLookupTypeIdAndLookupType(String SlugUrl, String LookupType, String LookupTypeId) in D:\Project\5GStudy\taiyari-backend\AllDropDownMicroService\Service\AllDropDownService.cs:line 503
+ClientConnectionId:e871e8da-99d3-49df-8d50-3ca6edba4105
+Error Number:102,State:1,Class:15
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-03 14:16 
+
+<KISHOR> 
+ File Name :- AllDropDownService.cs Method Name :- GetDDLLookupDataByLookupTypeIdAndLookupType Error Level: [Error] 
+--------------------Message--------------------
+File Name :- AllDropDownService.cs Method Name :- GetDDLLookupDataByLookupTypeIdAndLookupType
+--------------------Exception--------------------
+System.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near '('.
+   at CommonService.Dapper.DapperGenericRepo.QueryList[T](String query, Object perams) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 187
+   at AllDropDownMicroService.Service.AllDropDownService.GetDDLLookupDataByLookupTypeIdAndLookupType(String SlugUrl, String LookupType, String LookupTypeId)
+ClientConnectionId:e871e8da-99d3-49df-8d50-3ca6edba4105
+Error Number:102,State:1,Class:15
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-08-03 17:14 
+
+<KISHOR> 
+ Connection id ""0HN5JM67NBT2B"", Request id ""0HN5JM67NBT2B:00000003"": An unhandled exception was thrown by the application. Error Level: [Error] 
+--------------------Message--------------------
+Connection id ""0HN5JM67NBT2B"", Request id ""0HN5JM67NBT2B:00000003"": An unhandled exception was thrown by the application.
+--------------------Exception--------------------
+System.OperationCanceledException: The operation was canceled.
+   at System.Threading.CancellationToken.ThrowOperationCanceledException()
+   at System.Threading.CancellationToken.ThrowIfCancellationRequested()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseStream.WriteAsync(ReadOnlyMemory`1 source, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserScriptMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.InvokeCore(HttpContext context, PathString matchedPath, PathString remainingPath)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+
+--------------------Log End--------------------

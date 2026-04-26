@@ -1,0 +1,30 @@
+<!-- Submit button -->
+<button (click)="click()" *ngIf="type==='submit' && show" nz-button nzType="primary" [nzLoading]="isLoading" class="my-4 p-2 btn">
+    <span nz-icon nzType="send" nzTheme="outline" class="align-text-top"></span>
+    Submit
+</button>
+
+<!-- Reset button -->
+<button (click)="click()" *ngIf="type==='reset' && show" nz-button nzType="text" [nzLoading]="isLoading" class="my-4 p-2 btn">
+    <span nz-icon nzType="sync" nzTheme="outline" class="align-text-top"></span>
+    Reset
+</button>
+
+
+<!-- Back button -->
+<button (click)="onBack()" *ngIf="type==='back' && show" nz-button nzType="default" [nzLoading]="isLoading" class="my-4 p-2 btn">
+    <span nz-icon nzType="arrow-left" nzTheme="outline" class="align-text-top"></span>
+    Back
+</button>
+
+<!-- Edit button -->
+<button (click)="click()" *ngIf="type==='edit' && show" nz-button nzType="primary" [nzLoading]="isLoading" class="my-4 p-2 btn">
+    <span nz-icon nzType="edit" nzTheme="outline" class="align-text-top"></span>
+    Edit
+</button>
+
+
+<button (click)="click()" *ngIf="type==='add' && show" nz-button nzType="primary" [nzLoading]="isLoading" class="my-4 p-2 btn">
+    <span nz-icon nzType="plus" nzTheme="outline" class="align-text-top"></span>
+    Add
+</button>

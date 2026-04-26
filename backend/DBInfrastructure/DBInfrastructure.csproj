@@ -1,0 +1,94 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ConfigModel\Master\AdditionalPages_Config.cs" />
+    <Compile Remove="ConfigModel\Master\AssetsMaster_Config.cs" />
+    <Compile Remove="ConfigModel\Master\BannerMaster_Config.cs" />
+    <Compile Remove="ConfigModel\Master\BlockType_Config.cs" />
+    <Compile Remove="ConfigModel\Master\Bookmark_Config.cs" />
+    <Compile Remove="ConfigModel\Master\CategoryMaster_Config.cs" />
+    <Compile Remove="ConfigModel\Master\DepartmentMaster_Config.cs" />
+    <Compile Remove="ConfigModel\Master\FrontUser_Config.cs" />
+    <Compile Remove="ConfigModel\Master\GroupMaster_Config.cs" />
+    <Compile Remove="ConfigModel\Master\JobDesignationMaster_Config.cs" />
+    <Compile Remove="ConfigModel\Master\Logs_Config.cs" />
+    <Compile Remove="ConfigModel\Master\LookupType_Config.cs" />
+    <Compile Remove="ConfigModel\Master\Lookup_Config.cs" />
+    <Compile Remove="ConfigModel\Master\MenuMasterMapping_Config.cs" />
+    <Compile Remove="ConfigModel\Master\MenuMaster_Config.cs" />
+    <Compile Remove="ConfigModel\Master\PageComponentAction_Config.cs" />
+    <Compile Remove="ConfigModel\Master\PageComponentPermission_Config.cs" />
+    <Compile Remove="ConfigModel\Master\PageComponent_Config.cs" />
+    <Compile Remove="ConfigModel\Master\PageMaster_Config.cs" />
+    <Compile Remove="ConfigModel\Master\PopularSearch_Config.cs" />
+    <Compile Remove="ConfigModel\Master\QualificationMaster_Config.cs" />
+    <Compile Remove="ConfigModel\Master\State_Config.cs" />
+    <Compile Remove="ConfigModel\Master\SubCategory_Config.cs" />
+    <Compile Remove="ConfigModel\Master\UserFeedback_Config.cs" />
+    <Compile Remove="ConfigModel\Master\UserType_Config.cs" />
+    <Compile Remove="ConfigModel\Master\User_Config.cs" />
+    <Compile Remove="ConfigModel\Translation\SchemeAttchamentLookup_Config.cs" />
+    <Compile Remove="ConfigModel\Translation\SchemeContactDetailsLookup_Config.cs" />
+    <Compile Remove="ConfigModel\Translation\SchemeDocumentLookup_Config.cs" />
+    <Compile Remove="ConfigModel\Translation\SchemeEligibilityLookup_Config.cs" />
+    <Compile Remove="ConfigModel\Translation\SchemeHowToApplyAndQuickLinkLookup_Config.cs" />
+    <Compile Remove="ConfigModel\Translation\Scheme_Config.cs" />
+    <Compile Remove="ConfigModel\Translation\SiteMap_Config.cs" />
+    <Compile Remove="Migrations\20240929105122_CreateNewMigration_20240929_V1.cs" />
+    <Compile Remove="Migrations\20240929105122_CreateNewMigration_20240929_V1.Designer.cs" />
+    <Compile Remove="Migrations\20240929112023_ReqHowTo_20240929_V2.cs" />
+    <Compile Remove="Migrations\20240929112023_ReqHowTo_20240929_V2.Designer.cs" />
+    <Compile Remove="Migrations\20240929112238_ReqHowTo_20240929_V3.cs" />
+    <Compile Remove="Migrations\20240929112238_ReqHowTo_20240929_V3.Designer.cs" />
+    <Compile Remove="Migrations\20240929112453_ReqHowTo_20240929_V4.cs" />
+    <Compile Remove="Migrations\20240929112453_ReqHowTo_20240929_V4.Designer.cs" />
+    <Compile Remove="Migrations\20241221060549_Paper_Kishor_20241221_V1.cs" />
+    <Compile Remove="Migrations\20241221060549_Paper_Kishor_20241221_V1.Designer.cs" />
+    <Compile Remove="Migrations\20241221065028_Notes_Kishor_20241221_V2.cs" />
+    <Compile Remove="Migrations\20241221065028_Notes_Kishor_20241221_V2.Designer.cs" />
+    <Compile Remove="Migrations\20241221070958_Syllabus_Kishor_20241221_V3.cs" />
+    <Compile Remove="Migrations\20241221070958_Syllabus_Kishor_20241221_V3.Designer.cs" />
+    <Compile Remove="Migrations\20241221072455_Paper_notes_syllabus_Kishor_20241221_V4.cs" />
+    <Compile Remove="Migrations\20241221072455_Paper_notes_syllabus_Kishor_20241221_V4.Designer.cs" />
+    <Compile Remove="Migrations\20241221072720_Paper_notes_syllabus_Kishor_20241221_V5.cs" />
+    <Compile Remove="Migrations\20241221072720_Paper_notes_syllabus_Kishor_20241221_V5.Designer.cs" />
+    <Compile Remove="Migrations\20241221100219_Paper_notes_syllabus_Kishor_20241221_V6.cs" />
+    <Compile Remove="Migrations\20241221100219_Paper_notes_syllabus_Kishor_20241221_V6.Designer.cs" />
+    <Compile Remove="Migrations\20250830140250_ShortDesc_20250830_V1.cs" />
+    <Compile Remove="Migrations\20250830140250_ShortDesc_20250830_V1.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    
+    
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.20" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.20">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.20" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="7.0.20" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.20" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.20" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.20">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CommonService\CommonService.csproj" />
+    <ProjectReference Include="..\ModelService\ModelService.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ConfigModel\Master\" />
+  </ItemGroup>
+
+</Project>

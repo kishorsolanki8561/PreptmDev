@@ -1,0 +1,14 @@
+[
+    {
+      "relation": [
+        "delegate_permission/common.handle_all_urls"
+      ],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.preptm.study",
+        "sha256_cert_fingerprints": [
+          "A2:45:CE:EF:8F:A7:EC:76:EA:41:58:C1:AA:73:A9:2E:BF:A1:95:60:2C:11:04:EA:FD:B9:6B:E5:CE:E5:69:F2"
+        ]
+      }
+    }
+  ]

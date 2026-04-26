@@ -1,0 +1,82 @@
+@if (pages().length > 0) {
+  <nav aria-label="Pagination" class="flex items-center justify-center gap-1 py-4">
+
+    <!-- Prev -->
+    @if (currentPage() > 1) {
+      <a [routerLink]="[]" [queryParams]="{ page: currentPage() - 1 }" queryParamsHandling="merge"
+        class="inline-flex items-center justify-center w-8 h-8 rounded-lg border border-neutral-200
+               text-sm text-neutral-600 hover:bg-neutral-50 hover:border-neutral-300 transition-colors">
+        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+      </a>
+    } @else {
+      <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg border border-neutral-100
+                   text-sm text-neutral-300 cursor-not-allowed">
+        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+      </span>
+    }
+
+    <!-- First page + ellipsis -->
+    @if (pages()[0] > 1) {
+      <a [routerLink]="[]" [queryParams]="{ page: 1 }" queryParamsHandling="merge"
+        class="inline-flex items-center justify-center w-8 h-8 rounded-lg border border-neutral-200
+               text-sm text-neutral-600 hover:bg-neutral-50 hover:border-neutral-300 transition-colors">
+        1
+      </a>
+      @if (pages()[0] > 2) {
+        <span class="inline-flex items-center justify-center w-8 h-8 text-sm text-neutral-400">…</span>
+      }
+    }
+
+    <!-- Visible page numbers -->
+    @for (p of pages(); track p) {
+      @if (p === currentPage()) {
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-brand-600
+                     text-sm font-semibold text-white border border-brand-600"
+              [attr.aria-current]="'page'">
+          {{ p }}
+        </span>
+      } @else {
+        <a [routerLink]="[]" [queryParams]="{ page: p }" queryParamsHandling="merge"
+          class="inline-flex items-center justify-center w-8 h-8 rounded-lg border border-neutral-200
+                 text-sm text-neutral-600 hover:bg-neutral-50 hover:border-neutral-300 transition-colors">
+          {{ p }}
+        </a>
+      }
+    }
+
+    <!-- Last page + ellipsis -->
+    @if (pages()[pages().length - 1] < totalPages()) {
+      @if (pages()[pages().length - 1] < totalPages() - 1) {
+        <span class="inline-flex items-center justify-center w-8 h-8 text-sm text-neutral-400">…</span>
+      }
+      <a [routerLink]="[]" [queryParams]="{ page: totalPages() }" queryParamsHandling="merge"
+        class="inline-flex items-center justify-center w-8 h-8 rounded-lg border border-neutral-200
+               text-sm text-neutral-600 hover:bg-neutral-50 hover:border-neutral-300 transition-colors">
+        {{ totalPages() }}
+      </a>
+    }
+
+    <!-- Next -->
+    @if (currentPage() < totalPages()) {
+      <a [routerLink]="[]" [queryParams]="{ page: currentPage() + 1 }" queryParamsHandling="merge"
+        class="inline-flex items-center justify-center w-8 h-8 rounded-lg border border-neutral-200
+               text-sm text-neutral-600 hover:bg-neutral-50 hover:border-neutral-300 transition-colors">
+        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </a>
+    } @else {
+      <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg border border-neutral-100
+                   text-sm text-neutral-300 cursor-not-allowed">
+        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </span>
+    }
+
+  </nav>
+}

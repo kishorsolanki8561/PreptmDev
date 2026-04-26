@@ -1,0 +1,126 @@
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-19 00:07 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- uploadFile Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- uploadFile
+--------------------Exception--------------------
+System.ArgumentNullException: Value cannot be null. (Parameter 'path1')
+   at System.IO.Path.Combine(String path1, String path2)
+   at FileUploaderMicroService.Service.FileUploaderService.FileUpload(List`1 aFormFile, Boolean isThumbnail) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 178
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-19 12:19 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail
+--------------------Exception--------------------
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Content\2024\Th1200x628\2024\1025_36 (3).png'.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.File.OpenWrite(String path)
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 309
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-19 12:19 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- uploadFile Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- uploadFile
+--------------------Exception--------------------
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Content\2024\Th1200x628\2024\1025_36 (3).png'.
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 318
+   at FileUploaderMicroService.Service.FileUploaderService.FileUpload(List`1 aFormFile, Boolean isThumbnail) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 203
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-19 12:22 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail
+--------------------Exception--------------------
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Content\2024\Th1200x628\2024\1025_36 (5).png'.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.File.OpenWrite(String path)
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 309
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-19 12:22 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- uploadFile Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- uploadFile
+--------------------Exception--------------------
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Content\2024\Th1200x628\2024\1025_36 (5).png'.
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 318
+   at FileUploaderMicroService.Service.FileUploaderService.FileUpload(List`1 aFormFile, Boolean isThumbnail) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 203
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-19 12:35 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- GenerateThumbnail
+--------------------Exception--------------------
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Content\OriginalAttachment\2024\1025_36.webp'.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at SixLabors.ImageSharp.IO.LocalFileSystem.OpenRead(String path)
+   at SixLabors.ImageSharp.Image.Load(DecoderOptions options, String path)
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 298
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-19 12:35 
+
+<KISHOR> 
+ File Name :- FileUploaderService.cs Method Name :- uploadFile Error Level: [Error] 
+--------------------Message--------------------
+File Name :- FileUploaderService.cs Method Name :- uploadFile
+--------------------Exception--------------------
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Content\OriginalAttachment\2024\1025_36.webp'.
+   at FileUploaderMicroService.Service.FileUploaderService.GenerateThumbnail(String originalImagePath, String thumbnailPath, Int32 thumbnailWidth, Int32 thumbnailHeight) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 318
+   at FileUploaderMicroService.Service.FileUploaderService.FileUpload(List`1 aFormFile, Boolean isThumbnail) in D:\Project\5GStudy\taiyari-backend\FileUploaderMicroService\Service\FileUploaderService.cs:line 203
+
+--------------------Log End--------------------

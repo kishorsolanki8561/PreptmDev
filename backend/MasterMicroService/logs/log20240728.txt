@@ -1,0 +1,151 @@
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-28 00:09 
+
+<KISHOR> 
+ File Name :- DepartmentService.cs Method Name :- AddUpDate Error Level: [Error] 
+--------------------Message--------------------
+File Name :- DepartmentService.cs Method Name :- AddUpDate
+--------------------Exception--------------------
+System.ArgumentNullException: Value cannot be null. (Parameter 'instance')
+   at System.ComponentModel.DataAnnotations.ValidationContext..ctor(Object instance, IServiceProvider serviceProvider, IDictionary`2 items)
+   at CommonService.Other.UtilityManager.PostValidator`1.IsValid(Boolean& IsSuccess, T model) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\UtilityManager.cs:line 136
+   at MasterMicroService.Controllers.DepartmentController.AddUpDate(DepartmentMasterModel model) in D:\Project\5GStudy\taiyari-backend\MasterMicroService\Controllers\DepartmentController.cs:line 32
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-28 00:10 
+
+<KISHOR> 
+ File Name :- DepartmentService.cs Method Name :- AddUpDate Error Level: [Error] 
+--------------------Message--------------------
+File Name :- DepartmentService.cs Method Name :- AddUpDate
+--------------------Exception--------------------
+System.ArgumentNullException: Value cannot be null. (Parameter 'instance')
+   at System.ComponentModel.DataAnnotations.ValidationContext..ctor(Object instance, IServiceProvider serviceProvider, IDictionary`2 items)
+   at CommonService.Other.UtilityManager.PostValidator`1.IsValid(Boolean& IsSuccess, T model) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\UtilityManager.cs:line 136
+   at MasterMicroService.Controllers.DepartmentController.AddUpDate(DepartmentMasterModel model) in D:\Project\5GStudy\taiyari-backend\MasterMicroService\Controllers\DepartmentController.cs:line 32
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-28 00:10 
+
+<KISHOR> 
+ File Name :- DepartmentService.cs Method Name :- AddUpDate Error Level: [Error] 
+--------------------Message--------------------
+File Name :- DepartmentService.cs Method Name :- AddUpDate
+--------------------Exception--------------------
+System.ArgumentNullException: Value cannot be null. (Parameter 'instance')
+   at System.ComponentModel.DataAnnotations.ValidationContext..ctor(Object instance, IServiceProvider serviceProvider, IDictionary`2 items)
+   at CommonService.Other.UtilityManager.PostValidator`1.IsValid(Boolean& IsSuccess, T model) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\UtilityManager.cs:line 136
+   at MasterMicroService.Controllers.DepartmentController.AddUpDate(DepartmentMasterModel model) in D:\Project\5GStudy\taiyari-backend\MasterMicroService\Controllers\DepartmentController.cs:line 32
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-28 00:10 
+
+<KISHOR> 
+ File Name :- DepartmentService.cs Method Name :- AddUpDate Error Level: [Error] 
+--------------------Message--------------------
+File Name :- DepartmentService.cs Method Name :- AddUpDate
+--------------------Exception--------------------
+System.ArgumentNullException: Value cannot be null. (Parameter 'instance')
+   at System.ComponentModel.DataAnnotations.ValidationContext..ctor(Object instance, IServiceProvider serviceProvider, IDictionary`2 items)
+   at CommonService.Other.UtilityManager.PostValidator`1.IsValid(Boolean& IsSuccess, T model) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\UtilityManager.cs:line 136
+   at MasterMicroService.Controllers.DepartmentController.AddUpDate(DepartmentMasterModel model) in D:\Project\5GStudy\taiyari-backend\MasterMicroService\Controllers\DepartmentController.cs:line 32
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-28 00:12 
+
+<KISHOR> 
+ File Name :- DepartmentService.cs Method Name :- AddUpDate Error Level: [Error] 
+--------------------Message--------------------
+File Name :- DepartmentService.cs Method Name :- AddUpDate
+--------------------Exception--------------------
+System.ArgumentNullException: Value cannot be null. (Parameter 'instance')
+   at System.ComponentModel.DataAnnotations.ValidationContext..ctor(Object instance, IServiceProvider serviceProvider, IDictionary`2 items)
+   at CommonService.Other.UtilityManager.PostValidator`1.IsValid(Boolean& IsSuccess, T model) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\UtilityManager.cs:line 136
+   at MasterMicroService.Controllers.DepartmentController.AddUpDate(DepartmentMasterModel model) in D:\Project\5GStudy\taiyari-backend\MasterMicroService\Controllers\DepartmentController.cs:line 32
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-28 00:13 
+
+<KISHOR> 
+ File Name :- DepartmentService.cs Method Name :- AddUpDate Error Level: [Error] 
+--------------------Message--------------------
+File Name :- DepartmentService.cs Method Name :- AddUpDate
+--------------------Exception--------------------
+System.ArgumentNullException: Value cannot be null. (Parameter 'instance')
+   at System.ComponentModel.DataAnnotations.ValidationContext..ctor(Object instance, IServiceProvider serviceProvider, IDictionary`2 items)
+   at CommonService.Other.UtilityManager.PostValidator`1.IsValid(Boolean& IsSuccess, T model) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\UtilityManager.cs:line 136
+   at MasterMicroService.Controllers.DepartmentController.AddUpDate(DepartmentMasterModel model) in D:\Project\5GStudy\taiyari-backend\MasterMicroService\Controllers\DepartmentController.cs:line 32
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-28 00:14 
+
+<KISHOR> 
+ File Name :- DepartmentService.cs Method Name :- AddUpDate Error Level: [Error] 
+--------------------Message--------------------
+File Name :- DepartmentService.cs Method Name :- AddUpDate
+--------------------Exception--------------------
+System.ArgumentNullException: Value cannot be null. (Parameter 'instance')
+   at System.ComponentModel.DataAnnotations.ValidationContext..ctor(Object instance, IServiceProvider serviceProvider, IDictionary`2 items)
+   at CommonService.Other.UtilityManager.PostValidator`1.IsValid(Boolean& IsSuccess, T model) in D:\Project\5GStudy\taiyari-backend\CommonService\Other\UtilityManager.cs:line 136
+   at MasterMicroService.Controllers.DepartmentController.AddUpDate(DepartmentMasterModel model) in D:\Project\5GStudy\taiyari-backend\MasterMicroService\Controllers\DepartmentController.cs:line 32
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-28 00:21 
+
+<KISHOR> 
+ File Name :- DepartmentMasterService.cs Method Name :- AddUpdate Error Level: [Error] 
+--------------------Message--------------------
+File Name :- DepartmentMasterService.cs Method Name :- AddUpdate
+--------------------Exception--------------------
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at CommonService.Dapper.DapperGenericRepo.Execute(String aQuery, Object aObj, SqlTransaction aTrans, Nullable`1 aCommandTimeout) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 94
+   at MasterMicroService.Service.DepartmentMasterService.AddUpdate(DepartmentMasterModel model) in D:\Project\5GStudy\taiyari-backend\MasterMicroService\Service\DepartmentMasterService.cs:line 37
+
+--------------------Log End--------------------
+
+--------------------Log Start --------------------
+--------------------IP--------------------
+<::1>
+2024-07-28 00:22 
+
+<KISHOR> 
+ File Name :- DepartmentMasterService.cs Method Name :- AddUpdate Error Level: [Error] 
+--------------------Message--------------------
+File Name :- DepartmentMasterService.cs Method Name :- AddUpdate
+--------------------Exception--------------------
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at CommonService.Dapper.DapperGenericRepo.Execute(String aQuery, Object aObj, SqlTransaction aTrans, Nullable`1 aCommandTimeout) in D:\Project\5GStudy\taiyari-backend\CommonService\Dapper\DapperGenericRepo.cs:line 94
+   at MasterMicroService.Service.DepartmentMasterService.AddUpdate(DepartmentMasterModel model) in D:\Project\5GStudy\taiyari-backend\MasterMicroService\Service\DepartmentMasterService.cs:line 37
+
+--------------------Log End--------------------

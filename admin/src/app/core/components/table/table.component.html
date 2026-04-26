@@ -1,0 +1,151 @@
+<!-- [nzScroll]="{ y: '520px' }" -->
+<nz-table #table nzShowSizeChanger [nzData]="data" [nzShowPagination]="true" [nzLoading]="isTableLoading"
+    [nzFrontPagination]="false" nzSize="small" [nzTotal]="totalRecords" [nzPageIndex]="filter?.page"
+    (nzQueryParams)="onQueryParamsChange($event)" [nzScroll]="{ y: '520px' }" [nzTableLayout]="'auto'"
+    [nzPageSize]="filter?.pageSize" [nzPageSizeOptions]="[defaultTableLength,20,30,40]" [nzHideOnSinglePage]="false">
+    <thead>
+        <tr>
+            <th nzLeft nzWidth="40px">SN</th>
+            <ng-container *ngFor="let column of columns">
+                <!-- *ngIf="!(column.type=='updateProgress' && !permissions.updateProgress)" -->
+                <th *ngIf="!column.isHide" [nzCustomFilter]="searchableColumn[column.filterKey || column.columnKey]"
+                    [nzColumnKey]="column.filterKey || column.columnKey" [nzSortFn]="!!column.sorting"
+                    [nzShowSort]="!!column.sorting" [nzWidth]="column.columnWidth || ''"
+                    [nzLeft]="column.columnAlign=='left'" [nzRight]="column.columnAlign=='right'">
+                    {{column.columnText}}
+                    <nz-filter-trigger *ngIf="searchableColumn[column.filterKey || column.columnKey]"
+                        [(nzVisible)]="searchableColumn[column.filterKey || column.columnKey].isVisible"
+                        [nzActive]="searchableColumn[column.filterKey || column.columnKey].value"
+                        [nzDropdownMenu]="menu">
+                        <span nz-icon nzType="search"></span>
+                    </nz-filter-trigger>
+                    <nz-dropdown-menu #menu="nzDropdownMenu">
+                        <div class="ant-table-filter-dropdown"
+                            *ngIf="searchableColumn[column.filterKey || column.columnKey]">
+                            <div class="search-box">
+                                <!-- search text filter -->
+                                <input *ngIf="searchableColumn[column.filterKey || column.columnKey].type=='text'"
+                                    type="text" nz-input placeholder="Search"
+                                    [(ngModel)]="searchableColumn[column.filterKey || column.columnKey].value" />
+
+                                <!-- single select filter -->
+                                <nz-select nzShowSearch nzAllowClear nzPlaceHolder="Select filter"
+                                    *ngIf="searchableColumn[column.filterKey || column.columnKey].type=='singleSelect'"
+                                    [(ngModel)]="searchableColumn[column.filterKey || column.columnKey].value">
+                                    <nz-option *ngFor="let item of column.filterOptions" [nzLabel]="item.text"
+                                        [nzValue]="item.value"></nz-option>
+                                </nz-select>
+
+                                <!-- multiple select filter -->
+                                <nz-select [nzMaxTagCount]="3" [nzMaxTagPlaceholder]="tagPlaceHolder" nzMode="multiple"
+                                    nzPlaceHolder="Select"
+                                    *ngIf="searchableColumn[column.filterKey || column.columnKey].type=='multiSelect'"
+                                    [(ngModel)]="searchableColumn[column.filterKey || column.columnKey].value">
+                                    <nz-option *ngFor="let item of column.filterOptions" [nzLabel]="item.text"
+                                        [nzValue]="item.value"></nz-option>
+                                </nz-select>
+                                <ng-template #tagPlaceHolder let-selectedList>+ {{ selectedList.length }}</ng-template>
+
+
+                                <button nz-button nzSize="small" nzType="primary"
+                                    (click)="search(searchableColumn[column.filterKey || column.columnKey])"
+                                    class="search-button">Search</button>
+                                <button nz-button nzSize="small"
+                                    (click)="reset(searchableColumn[column.filterKey || column.columnKey])">Reset</button>
+                            </div>
+                        </div>
+                    </nz-dropdown-menu>
+                </th>
+            </ng-container>
+            <!-- <th nzRight nzWidth="60px">Active</th> -->
+            <th nzRight nzWidth="260px"
+                *ngIf="permissions.changeStatus || permissions.delete || permissions.edit || permissions.viewDetails">
+                Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of table.data;let i=index">
+            <td nzLeft *ngIf="filter">{{(filter.page-1)*filter.pageSize+i+1}}.</td>
+            <td nzLeft *ngIf="!filter">{{i+1}}.</td>
+            <ng-container *ngFor="let col of columns">
+                <!-- *ngIf="!(col.type=='updateProgress' && !permissions.updateProgress)" -->
+                <td *ngIf="!col.isHide" [nzLeft]="col.columnAlign=='left'" [nzRight]="col.columnAlign=='right'">
+                    <ng-container *ngIf="col.type=='date'">
+                        {{(data[col.columnKey] | date:'dd MMM, YYYY' )||"-"}}
+                    </ng-container>
+                    <ng-container *ngIf="col.type ==='updateProgress'">
+                        <app-select
+                            [isDisabled]="!data.isActive || (col.type=='updateProgress' && !permissions.updateProgress) "
+                            [clearable]="false" [items]="col.statusDdl" [value]="data[col.columnKey]"
+                            (valueChange)="onProgressUpdate(data.id,$event)"></app-select>
+                    </ng-container>
+                    <ng-container *ngIf="col.type ==='isenum'">
+                        {{data[col.columnKey]}}
+                    </ng-container>
+                    <ng-container *ngIf="col.type=='text' || col.type==undefined">
+                        {{data[col.columnKey]||"-"}}
+                    </ng-container>
+                    <!-- <ng-container *ngIf="col.isHide && col.type=='copyIcon'">
+                        <p nz-typography nzCopyable [nzCopyText]="data[col.columnKey]"></p>
+                    </ng-container> -->
+
+
+                    <!-- <ng-container *ngIf="col.type=='switch'">
+                        <app-switch [isLoading]="currentlyChangingStateId===data.id" [value]="data.isActive"
+                            (valueChange)="changeStatus(data.id)"></app-switch>
+                    </ng-container> -->
+                    <ng-container *ngIf="col.type=='image'">
+                        <img class="cursor-pointer" nz-image width="50px" height="50px"
+                            [nzSrc]="fileBasePath + data[col.columnKey]" [nzFallback]="imageFallback" alt="" />
+                    </ng-container>
+                </td>
+            </ng-container>
+            <!-- <td nzRight>
+                <app-switch [isLoading]="currentlyChangingStateId===data.id" [value]="data.isActive"
+                    (valueChange)="changeStatus(data.id)"></app-switch>
+            </td> -->
+
+            <!-- actions -->
+            <td nzRight
+                *ngIf="permissions.changeStatus || permissions.delete || permissions.edit || permissions.viewDetails">
+                <!-- change status -->
+                <app-switch *ngIf="permissions.changeStatus" [isLoading]="currentlyChangingStateId===data.id"
+                    [value]="data.isActive" (valueChange)="changeStatus(data.id)"></app-switch>
+                <!-- delete -->
+                <button *ngIf="permissions.delete" nz-button [nzLoading]="false" #deleteBtn nzShape="circle" nzDanger
+                    class="mx-1" nz-popconfirm [nzPopconfirmTitle]="message.confirm.delete"
+                    (nzOnConfirm)="onDelete(data.id,deleteBtn)" [nzIcon]="iconTpl">
+                    <span nz-icon nzType="delete" *ngIf="!deleteBtn.nzLoading" nzTheme="twotone"
+                        [nzTwotoneColor]="'#f00'"></span>
+                </button>
+                <!-- edit -->
+                <button *ngIf="permissions.edit" nz-button [nzLoading]="goingToEditId==data.id"
+                    (click)="edit($event,data.id)" nzShape="circle" class="mx-1">
+                    <span nz-icon nzType="edit" nzTheme="outline"></span>
+                </button>
+
+                <!-- view -->
+                <button *ngIf="permissions.viewDetails && viewPageUrl" nz-button [nzLoading]="goingToViewId==data.id"
+                    (click)="view($event,data.id)" nzShape="circle" class="mx-1">
+                    <span nz-icon nzType="eye" nzTheme="outline"></span>
+                </button>
+
+                <!-- copy link -->
+                <button *ngIf="slugKey && data[slugKey]" nz-button nzShape="circle" class="mx-1">
+                    <p nz-typography nzCopyable [nzCopyText]="environment.siteUrl + '/' +data[slugKey]" nz-icon
+                        nzTheme="outline"></p>
+                </button>
+
+                <!-- siteview -->
+                <button *ngIf="slugKey && data[slugKey]" nzShape="circle" class="mx-1" nz-button>
+                    <a target="_blank" [routerLink]="'/siteview/'+data[slugKey]" nz-icon nzType="global"
+                        nzTheme="outline"></a>
+                </button>
+
+                <ng-template #iconTpl>
+                    <span nz-icon nzType="question-circle-o" style="color: red;"></span>
+                </ng-template>
+            </td>
+        </tr>
+    </tbody>
+</nz-table>

@@ -1,0 +1,16 @@
+<div class="flex justify-between">
+  <div class="my-4">
+    <nz-breadcrumb>
+      <nz-breadcrumb-item class="cursor-pointer" [routerLink]="['/']">Dashboard</nz-breadcrumb-item>
+      <ng-container *ngFor="let item of breadcrumb;let isLast=last">
+        <nz-breadcrumb-item [ngClass]="{'cursor-pointer':!isLast}" [routerLink]="isLast?[]:[item.path]">
+          {{item.name}}
+        </nz-breadcrumb-item>
+      </ng-container>
+    </nz-breadcrumb>
+  </div>
+  <div>
+    <app-button *ngIf="addButtonUrl && permissions.add" [routerLink]="[addButtonUrl]" type="add"></app-button>
+    <ng-content></ng-content>
+  </div>
+</div>

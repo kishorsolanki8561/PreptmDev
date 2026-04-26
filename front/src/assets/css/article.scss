@@ -1,0 +1,155 @@
+// title css
+.article-container {
+    font-family: Arial, sans-serif;
+    margin: auto;
+    width: 100%;
+    // box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+    padding: 12px 12px;
+    // border: 1px solid $outline;
+    // border-radius: 4px;
+    h1 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    .author {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .avatar {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+    }
+
+    .author-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .author-name {
+        // font-weight: bold;
+        margin-bottom: 0px;
+    }
+
+    .article-meta {
+        padding: 4px 0px 4px 0px;
+
+        border-bottom: 1px solid #e0e0e0;
+        border-top: 1px solid #e0e0e0;
+
+        .dept-lbl {
+            color: #565555;
+            font-size: 14px;
+        }
+
+        .dept-lbl,
+        .dept-name {
+            display: block;
+        }
+
+        .seperator {
+            display: none;
+        }
+
+        a {
+            color: #00008b;
+        }
+    }
+
+    .icon {
+        font-size: 17px;
+        color: rgb(36 36 37 / 20%);
+    }
+
+    .author-and-state {
+        color: #000000;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 10px;
+    }
+
+    .profile {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    // .imp-link-btn {
+    //     width: 100px;
+    //     height: 80px;
+    //     margin: 9px;
+    //     padding: 10px;
+    // }
+}
+
+@media only screen and (min-width: 1023px) {
+    .post-header {
+        h1 {
+            font-size: 23px;
+        }
+    }
+
+    .article-container {
+        h1 {
+            font-size: 25px !important;
+        }
+
+
+        background: #ffffff;
+    }
+
+    .publish-date {
+        span,
+        i {
+            font-size: 1rem !important;
+        }
+    }
+
+    .mobile-view {
+        display: none;
+    }
+
+    .desktop-view {
+        display: grid;
+    }
+
+    .side-nav {
+        height: calc(100vh - 68px);
+        overflow-y: scroll;
+    }
+
+    .article-container {
+        .article-meta {
+            .dept-lbl,
+            .dept-name {
+                font-size: 14px;
+                display: inline;
+            }
+
+            .seperator {
+                display: inline;
+            }
+        }
+    }
+}
+
+
+.section {
+    // border: 2px solid white;
+
+    padding: 12px 16px;
+    background-color: #fff;
+    border: 1px solid #d8d8d8;
+    border-radius: 4px;
+
+    .title {
+        padding: 6px 15px 6px;
+        font-size: 17px;
+        background-color: #f4f4f4;
+    }
+}
