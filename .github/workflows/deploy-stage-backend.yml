@@ -62,6 +62,7 @@ jobs:
             project: backend/FileUploaderMicroService/FileUploaderMicroService.csproj
             systemd: preptm-fileupload-api
             secret_suffix: FILEUPLOAD
+            extra_rsync_args: --exclude='Content/'
 
           - service: TranslationMicroService
             project: backend/TranslationMicroService/TranslationMicroService.csproj
@@ -127,6 +128,7 @@ jobs:
         run: |
           rsync -az --delete \
             --exclude='appsettings.Development.json' \
+            ${{ matrix.extra_rsync_args }} \
             --rsync-path="mkdir -p ~/preptm/BackEnd/Stage/${{ matrix.service }} && rsync" \
             publish/${{ matrix.service }}/ \
             "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:~/preptm/BackEnd/Stage/${{ matrix.service }}/"
