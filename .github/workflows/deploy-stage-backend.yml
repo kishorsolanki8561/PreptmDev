@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       service:
-        description: 'Service to deploy (choose All to deploy every service)'
+        description: 'Service to deploy'
         required: true
         default: 'All'
         type: choice
@@ -34,7 +34,6 @@ jobs:
   deploy:
     name: Deploy ${{ matrix.service }}
     runs-on: ubuntu-latest
-    if: github.event.inputs.service == 'All' || github.event.inputs.service == '' || github.event.inputs.service == matrix.service
     strategy:
       fail-fast: false
       matrix:
@@ -70,13 +69,26 @@ jobs:
             secret_suffix: TRANSLATION
 
     steps:
+      - name: Check if this service is selected
+        id: gate
+        run: |
+          INPUT="${{ github.event.inputs.service }}"
+          if [ -z "$INPUT" ] || [ "$INPUT" = "All" ] || [ "$INPUT" = "${{ matrix.service }}" ]; then
+            echo "deploy=true" >> $GITHUB_OUTPUT
+          else
+            echo "deploy=false" >> $GITHUB_OUTPUT
+          fi
+
       - uses: actions/checkout@v4
+        if: steps.gate.outputs.deploy == 'true'
 
       - uses: actions/setup-dotnet@v4
+        if: steps.gate.outputs.deploy == 'true'
         with:
           dotnet-version: '6.x'
 
       - name: Publish ${{ matrix.service }}
+        if: steps.gate.outputs.deploy == 'true'
         run: |
           dotnet publish ${{ matrix.project }} \
             -c Release \
@@ -84,6 +96,7 @@ jobs:
             --no-self-contained
 
       - name: Inject staging appsettings
+        if: steps.gate.outputs.deploy == 'true'
         env:
           APPSETTINGS: ${{ secrets[format('STAGE_APPSETTINGS_{0}', matrix.secret_suffix)] }}
         run: |
@@ -94,19 +107,23 @@ jobs:
           printf '%s' "$APPSETTINGS" > "publish/${{ matrix.service }}/appsettings.json"
 
       - name: Set up SSH agent
+        if: steps.gate.outputs.deploy == 'true'
         uses: webfactory/ssh-agent@v0.9.0
         with:
           ssh-private-key: ${{ secrets.DEPLOY_SSH_KEY }}
 
       - name: Trust server host key
+        if: steps.gate.outputs.deploy == 'true'
         run: ssh-keyscan -H "${{ secrets.DEPLOY_HOST }}" >> ~/.ssh/known_hosts
 
       - name: Stop service
+        if: steps.gate.outputs.deploy == 'true'
         run: |
           ssh "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}" \
             "sudo systemctl stop ${{ matrix.systemd }} || true"
 
       - name: Upload build artifacts to server
+        if: steps.gate.outputs.deploy == 'true'
         run: |
           rsync -az --delete \
             --exclude='appsettings.Development.json' \
@@ -115,6 +132,7 @@ jobs:
             "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:~/preptm/BackEnd/Stage/${{ matrix.service }}/"
 
       - name: Register systemd service
+        if: steps.gate.outputs.deploy == 'true'
         run: |
           DLL=$(basename "${{ matrix.project }}" .csproj)
           REMOTE_HOME=$(ssh "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}" 'echo $HOME')
@@ -147,6 +165,7 @@ jobs:
           "
 
       - name: Start service
+        if: steps.gate.outputs.deploy == 'true'
         run: |
           ssh "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}" \
             "sudo systemctl start ${{ matrix.systemd }}"
