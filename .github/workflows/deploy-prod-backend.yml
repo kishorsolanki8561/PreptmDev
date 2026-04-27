@@ -1,0 +1,138 @@
+name: Deploy — Prod Backend (.NET 6)
+
+on:
+  push:
+    branches: [production]
+    paths:
+      - 'backend/**'
+      - '.github/workflows/deploy-prod-backend.yml'
+  workflow_dispatch:
+
+# GitHub Secrets required (one per service — full JSON content):
+#   PROD_APPSETTINGS_GATEWAY
+#   PROD_APPSETTINGS_FRONT
+#   PROD_APPSETTINGS_MASTER
+#   PROD_APPSETTINGS_DROPDOWN
+#   PROD_APPSETTINGS_FILEUPLOAD
+#   PROD_APPSETTINGS_TRANSLATION
+
+jobs:
+  deploy:
+    name: Deploy ${{ matrix.service }}
+    runs-on: ubuntu-latest
+    environment: production
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - service: Gateway
+            project: backend/5GStudyGateway/Gateway.csproj
+            systemd: preptm-prod-gateway
+            secret_suffix: GATEWAY
+
+          - service: FrontMicroService
+            project: backend/FrontMicroService/FrontMicroService.csproj
+            systemd: preptm-prod-front-api
+            secret_suffix: FRONT
+
+          - service: MasterMicroService
+            project: backend/MasterMicroService/MasterMicroService.csproj
+            systemd: preptm-prod-master-api
+            secret_suffix: MASTER
+
+          - service: AllDropDownMicroService
+            project: backend/AllDropDownMicroService/AllDropDownMicroService.csproj
+            systemd: preptm-prod-dropdown-api
+            secret_suffix: DROPDOWN
+
+          - service: FileUploaderMicroService
+            project: backend/FileUploaderMicroService/FileUploaderMicroService.csproj
+            systemd: preptm-prod-fileupload-api
+            secret_suffix: FILEUPLOAD
+
+          - service: TranslationMicroService
+            project: backend/TranslationMicroService/TranslationMicroService.csproj
+            systemd: preptm-prod-translation-api
+            secret_suffix: TRANSLATION
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '6.x'
+
+      - name: Publish ${{ matrix.service }}
+        run: |
+          dotnet publish ${{ matrix.project }} \
+            -c Release \
+            -o publish/${{ matrix.service }} \
+            --no-self-contained
+
+      - name: Inject production appsettings
+        env:
+          APPSETTINGS: ${{ secrets[format('PROD_APPSETTINGS_{0}', matrix.secret_suffix)] }}
+        run: |
+          if [ -z "$APPSETTINGS" ]; then
+            echo "::error::Secret PROD_APPSETTINGS_${{ matrix.secret_suffix }} is not set in GitHub Secrets"
+            exit 1
+          fi
+          printf '%s' "$APPSETTINGS" > "publish/${{ matrix.service }}/appsettings.json"
+
+      - name: Set up SSH agent
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.DEPLOY_SSH_KEY }}
+
+      - name: Trust server host key
+        run: ssh-keyscan -H "${{ secrets.DEPLOY_HOST }}" >> ~/.ssh/known_hosts
+
+      - name: Stop service
+        run: |
+          ssh "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}" \
+            "sudo systemctl stop ${{ matrix.systemd }} || true"
+
+      - name: Upload build artifacts to server
+        run: |
+          rsync -az --delete \
+            --exclude='appsettings.Development.json' \
+            --rsync-path="mkdir -p ~/preptm/BackEnd/Prod/${{ matrix.service }} && rsync" \
+            publish/${{ matrix.service }}/ \
+            "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:~/preptm/BackEnd/Prod/${{ matrix.service }}/"
+
+      - name: Register systemd service
+        run: |
+          DLL=$(basename "${{ matrix.project }}" .csproj)
+          REMOTE_HOME=$(ssh "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}" 'echo $HOME')
+          DEPLOY_DIR="${REMOTE_HOME}/preptm/BackEnd/Prod/${{ matrix.service }}"
+          cat > /tmp/${{ matrix.systemd }}.service << UNIT
+          [Unit]
+          Description=PrepTM Prod ${{ matrix.service }}
+          After=network.target
+
+          [Service]
+          WorkingDirectory=${DEPLOY_DIR}
+          ExecStart=/usr/bin/dotnet ${DEPLOY_DIR}/${DLL}.dll
+          Restart=always
+          RestartSec=10
+          KillSignal=SIGINT
+          SyslogIdentifier=${{ matrix.systemd }}
+          User=${{ secrets.DEPLOY_USER }}
+          Environment=ASPNETCORE_ENVIRONMENT=Production
+          Environment=DOTNET_PRINT_TELEMETRY_MESSAGE=false
+
+          [Install]
+          WantedBy=multi-user.target
+          UNIT
+          scp /tmp/${{ matrix.systemd }}.service \
+            "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:/tmp/${{ matrix.systemd }}.service"
+          ssh "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}" "
+            sudo mv /tmp/${{ matrix.systemd }}.service /etc/systemd/system/${{ matrix.systemd }}.service
+            sudo systemctl daemon-reload
+            sudo systemctl enable ${{ matrix.systemd }}
+          "
+
+      - name: Start service
+        run: |
+          ssh "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}" \
+            "sudo systemctl start ${{ matrix.systemd }}"
