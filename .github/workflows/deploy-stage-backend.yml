@@ -1,4 +1,4 @@
-name: Deploy — Stage Backend (.NET 6)
+name: Deploy — Stage Backend API
 
 on:
   push:
