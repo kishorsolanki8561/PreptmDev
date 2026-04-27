@@ -42,32 +42,38 @@ jobs:
             project: backend/5GStudyGateway/Gateway.csproj
             systemd: preptm-gateway
             secret_suffix: GATEWAY
+            http_port: 5229
 
           - service: FrontMicroService
             project: backend/FrontMicroService/FrontMicroService.csproj
             systemd: preptm-front-api
             secret_suffix: FRONT
+            http_port: 5080
 
           - service: MasterMicroService
             project: backend/MasterMicroService/MasterMicroService.csproj
             systemd: preptm-master-api
             secret_suffix: MASTER
+            http_port: 5256
 
           - service: AllDropDownMicroService
             project: backend/AllDropDownMicroService/AllDropDownMicroService.csproj
             systemd: preptm-dropdown-api
             secret_suffix: DROPDOWN
+            http_port: 5294
 
           - service: FileUploaderMicroService
             project: backend/FileUploaderMicroService/FileUploaderMicroService.csproj
             systemd: preptm-fileupload-api
             secret_suffix: FILEUPLOAD
+            http_port: 5129
             extra_rsync_args: --exclude='Content/'
 
           - service: TranslationMicroService
             project: backend/TranslationMicroService/TranslationMicroService.csproj
             systemd: preptm-translation-api
             secret_suffix: TRANSLATION
+            http_port: 5233
 
     steps:
       - name: Check if this service is selected
@@ -153,6 +159,7 @@ jobs:
           SyslogIdentifier=${{ matrix.systemd }}
           User=${{ secrets.DEPLOY_USER }}
           Environment=ASPNETCORE_ENVIRONMENT=Staging
+          Environment=ASPNETCORE_URLS=http://127.0.0.1:${{ matrix.http_port }}
           Environment=DOTNET_PRINT_TELEMETRY_MESSAGE=false
 
           [Install]
