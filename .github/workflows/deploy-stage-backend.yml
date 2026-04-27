@@ -7,6 +7,20 @@ on:
       - 'backend/**'
       - '.github/workflows/deploy-stage-backend.yml'
   workflow_dispatch:
+    inputs:
+      service:
+        description: 'Service to deploy (leave empty to deploy all)'
+        required: false
+        default: ''
+        type: choice
+        options:
+          - ''
+          - Gateway
+          - FrontMicroService
+          - MasterMicroService
+          - AllDropDownMicroService
+          - FileUploaderMicroService
+          - TranslationMicroService
 
 # GitHub Secrets required (one per service — full JSON content):
 #   STAGE_APPSETTINGS_GATEWAY
@@ -53,6 +67,9 @@ jobs:
             project: backend/TranslationMicroService/TranslationMicroService.csproj
             systemd: preptm-translation-api
             secret_suffix: TRANSLATION
+
+    # Skip this matrix entry if a specific service was selected and it doesn't match
+    if: ${{ github.event.inputs.service == '' || github.event.inputs.service == matrix.service }}
 
     steps:
       - uses: actions/checkout@v4
