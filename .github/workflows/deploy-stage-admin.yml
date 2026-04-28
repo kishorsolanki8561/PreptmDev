@@ -7,21 +7,11 @@ on:
       - 'admin/**'
       - '.github/workflows/deploy-stage-admin.yml'
   workflow_dispatch:
-    inputs:
-      server:
-        description: 'Target server'
-        required: true
-        default: 'new'
-        type: choice
-        options:
-          - new
-          - old
 
 jobs:
   deploy:
-    name: Build & Deploy (${{ github.event.inputs.server || 'new' }} server)
+    name: Build & Deploy
     runs-on: ubuntu-latest
-    environment: stage-${{ github.event.inputs.server || 'new' }}
 
     steps:
       - uses: actions/checkout@v4

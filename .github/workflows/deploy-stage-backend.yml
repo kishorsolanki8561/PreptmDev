@@ -8,14 +8,6 @@ on:
       - '.github/workflows/deploy-stage-backend.yml'
   workflow_dispatch:
     inputs:
-      server:
-        description: 'Target server'
-        required: true
-        default: 'new'
-        type: choice
-        options:
-          - new
-          - old
       service:
         description: 'Service to deploy'
         required: true
@@ -40,9 +32,8 @@ on:
 
 jobs:
   deploy:
-    name: Deploy ${{ matrix.service }} (${{ github.event.inputs.server || 'new' }} server)
+    name: Deploy ${{ matrix.service }}
     runs-on: ubuntu-latest
-    environment: stage-${{ github.event.inputs.server || 'new' }}
     strategy:
       fail-fast: false
       matrix:
