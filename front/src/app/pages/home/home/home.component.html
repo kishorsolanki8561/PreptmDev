@@ -37,7 +37,9 @@
 </div>
 
 <!-- Categories -->
-<preptm-categories></preptm-categories>
+@defer (hydrate on idle; prefetch on immediate) {
+  <preptm-categories></preptm-categories>
+}
 
 <!-- Post sections — SSR renders full content; hydration deferred to idle so
      the main thread is free for LCP/FCP and Angular bootstrap first.

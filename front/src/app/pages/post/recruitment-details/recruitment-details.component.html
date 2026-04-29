@@ -1,3 +1,4 @@
+@defer (hydrate on idle) {
 @if (isLoading) {
   <div class="max-w-[1280px] mx-auto px-4 py-6">
     <preptm-loader type="detail"></preptm-loader>
@@ -400,5 +401,6 @@
     }
   </div>
 }
+} <!-- /defer hydrate on idle -->
 
 <div [innerHTML]="jsonLD"></div>
