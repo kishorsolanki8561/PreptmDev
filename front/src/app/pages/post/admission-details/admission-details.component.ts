@@ -1,4 +1,4 @@
-import { isPlatformServer, PlatformLocation, CommonModule } from '@angular/common';
+import { isPlatformBrowser, isPlatformServer, PlatformLocation, CommonModule } from '@angular/common';
 import { Component, Inject, OnInit, Optional, PLATFORM_ID, Renderer2 } from '@angular/core';
 import { MetaDefinition } from '@angular/platform-browser';
 import { ActivatedRoute, Params, RouterModule } from '@angular/router';
@@ -67,7 +67,9 @@ export class AdmissionDetailsComponent implements OnInit {
   }
 
   getDetails() {
-    this.isLoading = true
+    if (isPlatformBrowser(this.platformId)) {
+      this.isLoading = true
+    }
     this.post = undefined;
     this._postService.getAdmissionDetails(this.slug).subscribe(res => {
       this.isLoading = false

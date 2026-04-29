@@ -1,4 +1,4 @@
-import { isPlatformServer, CommonModule, PlatformLocation } from '@angular/common';
+import { isPlatformBrowser, isPlatformServer, CommonModule, PlatformLocation } from '@angular/common';
 import {
   ChangeDetectionStrategy, Component, inject, OnInit,
   PLATFORM_ID, Renderer2, signal
@@ -49,7 +49,9 @@ export class NpsDetailsComponent implements OnInit {
   }
 
   private getDetails(slug: string): void {
-    this.isLoading.set(true);
+    if (isPlatformBrowser(this.platformId)) {
+      this.isLoading.set(true);
+    }
     this.post.set(undefined);
     this._postService.getBlockContaintDetails(slug).subscribe({
       next: (res) => {

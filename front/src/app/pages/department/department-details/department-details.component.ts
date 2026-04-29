@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Component, Inject, OnInit, Optional, PLATFORM_ID, Renderer2 } from '@angular/core';
 import { MetaDefinition } from '@angular/platform-browser';
 import { ActivatedRoute, Params, RouterModule } from '@angular/router';
@@ -39,7 +39,9 @@ export class DepartmentDetailsComponent implements OnInit {
   }
   getDetails(payload: DepartmentDetailsFilter) {
     this.department = undefined;
-    this.isLoading = true
+    if (isPlatformBrowser(this.platformId)) {
+      this.isLoading = true
+    }
     this._postService.getDepartmentDetails(payload).subscribe(res => {
       this.isLoading = false
       if (res.isSuccess) {

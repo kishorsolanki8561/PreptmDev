@@ -26,11 +26,10 @@ export class BannerComponent implements OnInit, OnDestroy {
   private _timer: ReturnType<typeof setInterval> | undefined;
 
   ngOnInit(): void {
-    if (isPlatformBrowser(this._platformId)) {
-      this.isLoading.set(true);
-    }
+    let settled = false;
     this._searchService.GetBanners().subscribe({
       next: (res) => {
+        settled = true;
         this.isLoading.set(false);
         if (res.isSuccess && res.data?.length) {
           this.banners.set(res.data);
@@ -39,8 +38,14 @@ export class BannerComponent implements OnInit, OnDestroy {
           }
         }
       },
-      error: () => this.isLoading.set(false)
+      error: () => {
+        settled = true;
+        this.isLoading.set(false);
+      }
     });
+    if (!settled && isPlatformBrowser(this._platformId)) {
+      this.isLoading.set(true);
+    }
   }
 
   ngOnDestroy(): void {

@@ -28,10 +28,9 @@ export class HomeComponent implements OnInit {
 
   constructor(@Inject(PLATFORM_ID) private platformId: object) {
     this._coreService.setPageTitle('Preptm : Latest Job Updates');
-    if (isPlatformBrowser(this.platformId)) {
-      this.isLoading.set(true);
-    }
+    let settled = false;
     this._postService.getPostsForCockpitPanels().subscribe(res => {
+      settled = true;
       this.isLoading.set(false);
       if (res.isSuccess) {
         if (res?.data?.privateRecruitments) {
@@ -44,6 +43,9 @@ export class HomeComponent implements OnInit {
         this._coreService.addCommonTags(this.renderer);
       }
     });
+    if (!settled && isPlatformBrowser(this.platformId)) {
+      this.isLoading.set(true);
+    }
   }
 
   ngOnInit(): void {

@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { ActivatedRoute, Params, RouterModule } from '@angular/router';
 import { CoreModule } from 'src/app/core/core.module';
 import { DdlLookupSlug } from 'src/app/core/fixed-values';
@@ -22,7 +22,8 @@ export class ArticlesComponent implements OnInit {
 
   constructor(
     private _route: ActivatedRoute,
-    private _coreService: CoreService
+    private _coreService: CoreService,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 
   getColor(index: number): string {
@@ -36,7 +37,9 @@ export class ArticlesComponent implements OnInit {
   }
 
   getArticles() {
-    this.isLoading = true;
+    if (isPlatformBrowser(this.platformId)) {
+      this.isLoading = true;
+    }
     this._coreService.GetDDLLookupData(DdlLookupSlug.Article, '', '').subscribe({
       next: (res) => {
         this.isLoading = false;

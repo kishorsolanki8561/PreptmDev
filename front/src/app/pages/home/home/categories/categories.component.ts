@@ -20,18 +20,23 @@ export class CategoriesComponent implements OnInit {
   private readonly _platformId = inject(PLATFORM_ID);
 
   ngOnInit(): void {
-    if (isPlatformBrowser(this._platformId)) {
-      this.isLoading.set(true);
-    }
+    let settled = false;
     this._coreService.getDdl('ddlCategory').subscribe({
       next: (res) => {
+        settled = true;
         if (res.isSuccess) {
           this.categories.set(res.data.ddlCategory ?? []);
         }
         this.isLoading.set(false);
       },
-      error: () => this.isLoading.set(false)
+      error: () => {
+        settled = true;
+        this.isLoading.set(false);
+      }
     });
+    if (!settled && isPlatformBrowser(this._platformId)) {
+      this.isLoading.set(true);
+    }
   }
 
   /** On broken image: hide the <img> and show the first-letter fallback */

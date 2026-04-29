@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { API_ROUTES } from 'src/app/core/api.routes';
 import { AdditionalPages } from 'src/app/core/fixed-values';
 import { AdditionalPagesService } from 'src/app/core/services/additional-pages.service';
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { CoreModule } from 'src/app/core/core.module';
 
 @Component({
@@ -21,11 +21,14 @@ export class AdditionalPagesComponent implements OnInit {
 
   constructor(
     private _route: ActivatedRoute,
-    private _additionaPageService:AdditionalPagesService
+    private _additionaPageService:AdditionalPagesService,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) { }
 
   ngOnInit(): void {
-    this.isLoading = true
+    if (isPlatformBrowser(this.platformId)) {
+      this.isLoading = true
+    }
     this._additionaPageService.getAdditionalPage(this.pageType).subscribe((resp) => {
       this.isLoading = false
       if (resp.isSuccess) {

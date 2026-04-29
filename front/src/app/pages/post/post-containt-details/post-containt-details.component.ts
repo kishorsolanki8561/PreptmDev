@@ -59,7 +59,9 @@ export class PostContaintDetailsComponent implements OnInit {
 
   private getBlockContaintDetails(slug: string): void {
     this.post.set(undefined);
-    this.isLoading.set(true);
+    if (isPlatformBrowser(this.platformId)) {
+      this.isLoading.set(true);
+    }
     this._postService.getBlockContaintDetails(slug).subscribe({
       next: (res) => {
         this.isLoading.set(false);

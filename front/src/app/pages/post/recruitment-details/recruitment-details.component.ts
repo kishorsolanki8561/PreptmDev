@@ -8,7 +8,7 @@ import { AlertService } from 'src/app/core/services/alert.service';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { CoreService } from 'src/app/core/services/core.service';
 import { PostService } from 'src/app/core/services/post.service';
-import { isPlatformServer, PlatformLocation, CommonModule } from '@angular/common';
+import { isPlatformBrowser, isPlatformServer, PlatformLocation, CommonModule } from '@angular/common';
 import { CoreModule } from 'src/app/core/core.module';
 import { CustomAdsComponent } from 'src/app/core/components/custom-ads/custom-ads.component';
 import { LoaderComponent } from 'src/app/core/components/loader/loader.component';
@@ -70,7 +70,9 @@ export class RecruitmentDetailsComponent implements OnInit {
   }
 
   getDetails() {
-    this.isLoading = true
+    if (isPlatformBrowser(this.platformId)) {
+      this.isLoading = true
+    }
     this.post = undefined;
     this._postService.getRecruitmentDetails(this.slug).subscribe(res => {
       if (res.isSuccess && res.data) {

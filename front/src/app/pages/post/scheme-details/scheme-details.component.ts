@@ -1,4 +1,4 @@
-import { isPlatformServer, PlatformLocation, CommonModule } from '@angular/common';
+import { isPlatformBrowser, isPlatformServer, PlatformLocation, CommonModule } from '@angular/common';
 import { AfterViewInit, Component, Inject, OnInit, Optional, PLATFORM_ID, Renderer2 } from '@angular/core';
 import { MetaDefinition } from '@angular/platform-browser';
 import { ActivatedRoute, Params, RouterModule } from '@angular/router';
@@ -123,7 +123,9 @@ export class SchemeDetailsComponent implements OnInit, AfterViewInit {
     return shareContent
   }
   getDetails() {
-    this.isLoading = true
+    if (isPlatformBrowser(this.platformId)) {
+      this.isLoading = true
+    }
     this.post = undefined;
     this._postService.getSchemeDetails(this.slug).subscribe(res => {
       if (res.isSuccess) {
