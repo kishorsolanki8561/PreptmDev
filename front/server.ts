@@ -77,6 +77,9 @@ export function app(): express.Express {
       'preptm.com',
       'localhost',
       '127.0.0.1',
+      // Server IP — nginx passes Host: <ip> for direct-IP requests (port scans,
+      // Cloudflare health checks, certbot probes) before the domain resolves.
+      '188.241.62.206',
     ],
   });
 
