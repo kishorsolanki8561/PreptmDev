@@ -9,7 +9,7 @@ builder.Services.AddOcelot(builder.Configuration);
 // Add services to the container.
 builder.Services.AddCors(p => p.AddPolicy("Gateway", builder =>
 {
-    builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader().WithHeaders();
+    builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
 }));
 builder.Services.AddRazorPages();
 var app = builder.Build();

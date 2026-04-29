@@ -19,7 +19,7 @@ namespace CommonService.Other
         {
             services.AddCors(p => p.AddPolicy(appName, builder =>
             {
-                builder.WithOrigins(path).AllowAnyMethod().AllowAnyHeader().WithHeaders();
+                builder.WithOrigins(path).AllowAnyMethod().AllowAnyHeader();
             }));
         }
 
