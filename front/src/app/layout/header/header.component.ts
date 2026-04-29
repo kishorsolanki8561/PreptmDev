@@ -2,7 +2,7 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, Inject, OnInit, PLATFORM_ID, Renderer2, ViewChild } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { ActivatedRoute, NavigationEnd, Params, Router, RouterModule } from '@angular/router';
-import { debounceTime, of, switchMap } from 'rxjs';
+import { debounceTime, of, skip, switchMap } from 'rxjs';
 import { ENABLE_LOGIN } from 'src/app/core/fixed-values';
 import { LoginReq } from 'src/app/core/models/auth.model';
 import { user } from 'src/app/core/models/user.model';
@@ -106,7 +106,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     ).subscribe();
 
     if (ENABLE_LOGIN) {
-      this._authService.isLoggedIn$.subscribe(isLoggedIn => {
+      this._authService.isLoggedIn$.pipe(skip(1)).subscribe(isLoggedIn => {
         if (isLoggedIn) {
           const u = this._authService.getUserDetails();
           this.userDetails = u ? { ...u } : null;
