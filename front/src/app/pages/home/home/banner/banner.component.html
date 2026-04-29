@@ -39,17 +39,17 @@
       }
     </div>
 
-    <!-- Dot indicators -->
+    <!-- Dot indicators — each button is 44×44px for touch accessibility -->
     @if (banners().length > 1) {
-      <div class="absolute bottom-2 left-0 right-0 flex items-center justify-center gap-1.5 pointer-events-none">
+      <div class="absolute bottom-0 left-0 right-0 flex items-end justify-center pointer-events-none">
         @for (item of banners(); track $index; let i = $index) {
           <button
-            class="pointer-events-auto rounded-full transition-all duration-300"
-            [class]="i === activeIndex()
-              ? 'w-4 h-1.5 bg-white'
-              : 'w-1.5 h-1.5 bg-white/55 hover:bg-white/80'"
+            class="pointer-events-auto flex items-center justify-center h-11 min-w-[44px]"
             [attr.aria-label]="'Go to slide ' + (i + 1)"
             (click)="goTo(i)">
+            <span class="rounded-full block transition-all duration-300"
+              [class]="i === activeIndex() ? 'w-4 h-1.5 bg-white' : 'w-1.5 h-1.5 bg-white/55 hover:bg-white/80'">
+            </span>
           </button>
         }
       </div>
