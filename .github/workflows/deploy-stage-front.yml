@@ -46,6 +46,12 @@ jobs:
             front/dist/preptm/ \
             "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:~/preptm/FrontEnd/Stage/client/preptm/"
 
+      - name: Install server dependencies on remote
+        run: |
+          ssh "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}" "
+            cd ~/preptm/FrontEnd/Stage/client/preptm && npm install --omit=dev
+          "
+
       - name: Reload SSR process (zero-downtime)
         run: |
           ssh "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}" "
