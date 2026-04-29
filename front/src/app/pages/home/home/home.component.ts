@@ -1,9 +1,9 @@
-import { ChangeDetectionStrategy, Component, OnInit, Renderer2, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Inject, OnInit, PLATFORM_ID, Renderer2, inject, signal } from '@angular/core';
 import { MetaDefinition } from '@angular/platform-browser';
 import { CockpitPanelsPosts, Post } from 'src/app/core/models/post.model';
 import { CoreService } from 'src/app/core/services/core.service';
 import { PostService } from 'src/app/core/services/post.service';
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { BannerComponent } from './banner/banner.component';
 import { PostContainerComponent } from './post-container/post-container.component';
@@ -20,14 +20,17 @@ import { AboutSiteComponent } from './about-site/about-site.component';
 })
 export class HomeComponent implements OnInit {
   readonly allPosts = signal<CockpitPanelsPosts | undefined>(undefined);
-  readonly isLoading = signal(true);
+  readonly isLoading = signal(false);
 
   private readonly _postService = inject(PostService);
   private readonly _coreService = inject(CoreService);
   private readonly renderer = inject(Renderer2);
 
-  constructor() {
+  constructor(@Inject(PLATFORM_ID) private platformId: object) {
     this._coreService.setPageTitle('Preptm : Latest Job Updates');
+    if (isPlatformBrowser(this.platformId)) {
+      this.isLoading.set(true);
+    }
     this._postService.getPostsForCockpitPanels().subscribe(res => {
       this.isLoading.set(false);
       if (res.isSuccess) {
