@@ -34,18 +34,63 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
 
-  <!-- ── Google Analytics ── -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXZ3M4ZYY4"></script>
+  <!-- ── Google Analytics (deferred) ──────────────────────────────────────────
+       Same deferral strategy as index.html — keeps GA off the critical path.
+  ── -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-ZXZ3M4ZYY4');
+    (function () {
+      var loaded = false;
+      function loadGa() {
+        if (loaded) return;
+        loaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZXZ3M4ZYY4';
+        document.head.appendChild(s);
+        s.onload = function () {
+          gtag('js', new Date());
+          gtag('config', 'G-ZXZ3M4ZYY4');
+        };
+      }
+      ['mousedown', 'mousemove', 'touchstart', 'keydown', 'scroll', 'click'].forEach(function (e) {
+        window.addEventListener(e, loadGa, { once: true, passive: true });
+      });
+      if (document.readyState === 'complete') {
+        setTimeout(loadGa, 4000);
+      } else {
+        window.addEventListener('load', function () { setTimeout(loadGa, 4000); });
+      }
+    })();
   </script>
 
-  <!-- ── Google AdSense (production only) ── -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2333639821213975"
-    crossorigin="anonymous"></script>
+  <!-- ── Google AdSense (deferred — production only) ───────────────────────────
+       Loaded after user interaction or 5 s. AdSense layout is reserved via
+       fixed-height ad slots so deferring it does not cause CLS.
+  ── -->
+  <script>
+    (function () {
+      var adsLoaded = false;
+      function loadAds() {
+        if (adsLoaded) return;
+        adsLoaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.crossOrigin = 'anonymous';
+        s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2333639821213975';
+        document.head.appendChild(s);
+      }
+      ['mousedown', 'mousemove', 'touchstart', 'keydown', 'scroll', 'click'].forEach(function (e) {
+        window.addEventListener(e, loadAds, { once: true, passive: true });
+      });
+      if (document.readyState === 'complete') {
+        setTimeout(loadAds, 5000);
+      } else {
+        window.addEventListener('load', function () { setTimeout(loadAds, 5000); });
+      }
+    })();
+  </script>
 </head>
 
 <body>

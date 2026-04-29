@@ -42,13 +42,39 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
   </noscript>
 
-  <!-- ── Google Analytics ── -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXZ3M4ZYY4"></script>
+  <!-- ── Google Analytics (deferred) ──────────────────────────────────────────
+       Loaded 4 s after page-load OR on first user interaction — whichever
+       comes first. Keeps GA off the critical path so it cannot block LCP or
+       cause the GTM forced-reflow that contributes to CLS.
+  ── -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-ZXZ3M4ZYY4');
+    (function () {
+      var loaded = false;
+      function loadGa() {
+        if (loaded) return;
+        loaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZXZ3M4ZYY4';
+        document.head.appendChild(s);
+        s.onload = function () {
+          gtag('js', new Date());
+          gtag('config', 'G-ZXZ3M4ZYY4');
+        };
+      }
+      // Fire on first user interaction
+      ['mousedown', 'mousemove', 'touchstart', 'keydown', 'scroll', 'click'].forEach(function (e) {
+        window.addEventListener(e, loadGa, { once: true, passive: true });
+      });
+      // Fallback: fire 4 seconds after load (catches bots / users who don't interact)
+      if (document.readyState === 'complete') {
+        setTimeout(loadGa, 4000);
+      } else {
+        window.addEventListener('load', function () { setTimeout(loadGa, 4000); });
+      }
+    })();
   </script>
 
   <!-- Google AdSense: loaded only in production build (see index.prod.html) -->
