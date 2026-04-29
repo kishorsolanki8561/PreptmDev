@@ -20,6 +20,7 @@ namespace AllDropDownMicroService.Controllers
             _allDropDownServcie = allDropDownServcie;
         }
         [HttpGet]
+        [ResponseCache(Duration = 3600, Location = ResponseCacheLocation.Any, VaryByHeader = "lang", VaryByQueryKeys = new[] { "*" })]
         public ServiceResponse<IDictionary<string, object>> AllDropDown(string keys, string? userType = "", int? userid = 0)
         {
             ServiceResponse<IDictionary<string, object>> objReturn = new ServiceResponse<IDictionary<string, object>>();
@@ -42,6 +43,7 @@ namespace AllDropDownMicroService.Controllers
         }
 
         [HttpGet]
+        [ResponseCache(Duration = 3600, Location = ResponseCacheLocation.Any, VaryByQueryKeys = new[] { "*" })]
         public object GetSubCategory(string? categorySlugUrl, int? cateCode)
         {
             ServiceResponse<List<SelectListsItem>> objReturn = new ServiceResponse<List<SelectListsItem>>();
@@ -58,6 +60,7 @@ namespace AllDropDownMicroService.Controllers
         }
 
         [HttpGet]
+        [ResponseCache(Duration = 3600, Location = ResponseCacheLocation.Any, VaryByHeader = "lang", VaryByQueryKeys = new[] { "*" })]
         public object GetDDLLookupDataByLookupTypeIdAndLookupType(string? SlugUrl="", string? LookupType = "", string? LookupTypeId = "")
         {
             return _allDropDownServcie.GetDDLLookupDataByLookupTypeIdAndLookupType(SlugUrl,LookupType,LookupTypeId);

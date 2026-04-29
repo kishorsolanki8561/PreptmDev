@@ -5,6 +5,8 @@ import { API_ROUTES } from '../api.routes';
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { Meta, MetaDefinition, Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
+import { shareReplay } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -102,12 +104,28 @@ export class CoreService {
     return isPlatformBrowser(this.platformId);
   }
 
-  getDdl(ddlKeys: string) {
-    return this._apiService.get<ddl>(API_ROUTES.ddl + ddlKeys)
+  private readonly _ddlCache = new Map<string, Observable<any>>();
+  private readonly _ddlLookupCache = new Map<string, Observable<any>>();
+
+  getDdl(ddlKeys: string): Observable<any> {
+    if (!this._ddlCache.has(ddlKeys)) {
+      this._ddlCache.set(
+        ddlKeys,
+        this._apiService.get<ddl>(API_ROUTES.ddl + ddlKeys).pipe(shareReplay(1))
+      );
+    }
+    return this._ddlCache.get(ddlKeys)!;
   }
 
-  GetDDLLookupData(SlugUrl: string = '', LookupType: string = '', LookupTypeId: string = '') {
-    return this._apiService.get<ddlLookup>(API_ROUTES.getDDLLookupDataBy, { SlugUrl: SlugUrl, LookupType: LookupType, LookupTypeId: LookupTypeId })
+  GetDDLLookupData(SlugUrl: string = '', LookupType: string = '', LookupTypeId: string = ''): Observable<any> {
+    const cacheKey = `${SlugUrl}|${LookupType}|${LookupTypeId}`;
+    if (!this._ddlLookupCache.has(cacheKey)) {
+      this._ddlLookupCache.set(
+        cacheKey,
+        this._apiService.get<ddlLookup>(API_ROUTES.getDDLLookupDataBy, { SlugUrl, LookupType, LookupTypeId }).pipe(shareReplay(1))
+      );
+    }
+    return this._ddlLookupCache.get(cacheKey)!;
   }
 
   jwtDecode(token: string) {
