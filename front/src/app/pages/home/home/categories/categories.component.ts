@@ -20,7 +20,9 @@ export class CategoriesComponent implements OnInit {
   private readonly _platformId = inject(PLATFORM_ID);
 
   ngOnInit(): void {
-    this.isLoading.set(true);
+    if (isPlatformBrowser(this._platformId)) {
+      this.isLoading.set(true);
+    }
     this._coreService.getDdl('ddlCategory').subscribe({
       next: (res) => {
         if (res.isSuccess) {

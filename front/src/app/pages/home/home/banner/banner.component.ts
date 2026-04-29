@@ -2,7 +2,7 @@ import {
   ChangeDetectionStrategy, Component, ElementRef, OnDestroy, OnInit,
   PLATFORM_ID, ViewChild, inject, signal
 } from '@angular/core';
-import { isPlatformServer } from '@angular/common';
+import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 import { BannerListModel } from 'src/app/core/models/Banner.model';
 import { SearchService } from 'src/app/core/services/search.service';
 
@@ -15,7 +15,7 @@ import { SearchService } from 'src/app/core/services/search.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BannerComponent implements OnInit, OnDestroy {
-  readonly isLoading   = signal(true);
+  readonly isLoading   = signal(false);
   readonly banners     = signal<BannerListModel[]>([]);
   readonly activeIndex = signal(0);
 
@@ -26,6 +26,9 @@ export class BannerComponent implements OnInit, OnDestroy {
   private _timer: ReturnType<typeof setInterval> | undefined;
 
   ngOnInit(): void {
+    if (isPlatformBrowser(this._platformId)) {
+      this.isLoading.set(true);
+    }
     this._searchService.GetBanners().subscribe({
       next: (res) => {
         this.isLoading.set(false);
